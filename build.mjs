@@ -76,6 +76,7 @@ function layout(site, page, { title, description, path, body, extraLd = [], body
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
+${site.prelaunch ? '<meta name="robots" content="noindex,follow">' : '<meta name="robots" content="index,follow">'}
 <link rel="canonical" href="${url}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
@@ -97,6 +98,7 @@ ${ld}
     </nav>
   </div>
 </header>
+${site.prelaunch ? `<aside class="prelaunch" role="status"><div class="wrap"><strong>Sitio en preparación.</strong> Las tarifas, plazos y alcance están pendientes de confirmación profesional. Todavía no se aceptan encargos desde esta web.</div></aside>` : ''}
 <main id="contenido" class="wrap">
 ${body}
 </main>
@@ -131,7 +133,11 @@ ${body}
 // ---------- bloques reutilizables ----------
 const blockAnswer = (t) => `<p class="respuesta-directa">${t}</p>`;
 
-const blockCta = (site, text = null) => `
+const blockCta = (site, text = null) => site.prelaunch ? `
+<div class="cta cta-prelaunch">
+  <p class="cta-titulo">Próxima apertura</p>
+  <p>La infraestructura y la información están preparadas. El servicio se abrirá cuando Carla confirme personalmente tarifas, plazos y alcance.</p>
+</div>` : `
 <div class="cta">
   <p class="cta-titulo">${text || esc(site.ctaTitle)}</p>
   <p class="cta-botones">
@@ -314,6 +320,7 @@ function llmsTxt(site) {
   return `# ${site.name} — ${site.tagline}
 
 > ${site.llmsSummary}
+${site.prelaunch ? '\n> Estado: sitio en preparación. Tarifas, plazos y alcance pendientes de confirmación profesional; todavía no acepta encargos.\n' : ''}
 
 ## Páginas
 - [Inicio](https://${site.domain}/): qué es el servicio y cómo pedirlo.

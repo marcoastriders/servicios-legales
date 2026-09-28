@@ -3,13 +3,13 @@
   "domain": "revisioncontratos.es",
   "name": "RevisiónContratos",
   "tagline": "Tu contrato revisado por una abogada en 48-72 horas, desde 59 €.",
-  "description": "Revisión de contratos de alquiler, compraventa y préstamos por abogada colegiada. Informe escrito con riesgos y contraofertas en 48-72 horas.",
+  "description": "Revisión de contratos de alquiler, compraventa y préstamos. La revisión express incluye informe; la contraoferta redactada corresponde a la tarifa de 119 €.",
   "accent": "#274060",
   "kicker": "Revisión legal de contratos",
   "ctaTitle": "¿Tienes un contrato sobre la mesa?",
   "ctaWhatsapp": "Hola, quiero que revisen mi contrato antes de firmar.",
   "ctaMailSubject": "Solicitud de revisión de contrato",
-  "llmsSummary": "revisioncontratos.es es un servicio de revisión de contratos dirigido por la abogada Carla Morales, colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa contratos de alquiler, compraventa, arras y préstamos entre particulares, y redacta contratos a medida. Entrega un informe escrito con riesgos, cláusulas problemáticas y propuestas de contraoferta en 48-72 horas laborables, desde 59 € IVA incluido. Trabaja sobre contratos ya redactados antes de su firma o renovación; no interviene como defensa en juicio.",
+  "llmsSummary": "revisioncontratos.es es un servicio de revisión de contratos dirigido por la abogada Carla Morales, colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa contratos de alquiler, compraventa, arras y préstamos entre particulares, y redacta contratos a medida. Entrega un informe escrito con riesgos y cláusulas problemáticas desde 59 €. La contraoferta redactada se incluye desde 119 €. El plazo habitual del informe es de 48-72 horas laborables. Trabaja sobre contratos ya redactados antes de su firma o renovación; no interviene como defensa en juicio.",
   "nav": [
     {
       "path": "/precios/",
@@ -50,7 +50,7 @@
       },
       {
         "q": "¿Qué formatos de contrato aceptáis?",
-        "a": "PDF, fotos legibles del papel o texto copiado en el correo. Si el documento es ilegible, te lo digo antes de cobrarte nada."
+        "a": "PDF, fotos legibles del papel o texto copiado en el correo. Antes de confirmar el encargo se comprueba que el documento pueda abrirse y leerse. Después se comunica la tarifa y solo se inicia la revisión cuando el pago está confirmado."
       },
       {
         "q": "¿El informe garantiza que me acepten los cambios?",
@@ -148,7 +148,7 @@
     "title": "Precios de revisión de contratos | RevisiónContratos",
     "description": "Precios claros de revisión de contratos: 59 € la revisión express, 119 € con contraoferta y desde 199 € el contrato a medida. IVA incluido.",
     "h1": "Precios de la revisión de contratos",
-    "answer": "Tres tarifas cerradas según lo que necesites: solo el informe, el informe con las cláusulas alternativas ya redactadas, o el contrato escrito a medida. Todas con IVA incluido y entrega en 48-72 horas laborables. No hay sorpresas ni letra pequeña: pagas por adelantado y, si cancelas antes de que empiece la revisión, te devolvemos el importe completo.",
+    "answer": "Tres tarifas cerradas según lo que necesites: solo el informe, el informe con las cláusulas alternativas ya redactadas, o el contrato escrito a medida. Todas incluyen IVA. La revisión y la contraoferta tienen un plazo habitual de 48-72 horas laborables; el contrato a medida recibe un plazo específico según su complejidad. No hay sorpresas ni letra pequeña: pagas por adelantado y, si cancelas antes de que empiece la revisión, te devolvemos el importe completo.",
     "tiers": [
       {
         "name": "Revisión express",
@@ -192,7 +192,7 @@
       },
       {
         "h2": "Cancelaciones y reembolso",
-        "html": "<p>Si cancelas antes de que empiece la revisión, te devuelvo todo lo pagado. Si ya he empezado a trabajar, no procede reembolso porque el trabajo ya está hecho.</p>"
+        "html": "<p>Si cancelas antes de que empiece la revisión, se devuelve íntegramente el pago. Si el trabajo ya comenzó, el reembolso se trata según el trabajo efectivamente realizado, las condiciones aceptadas y los derechos legales aplicables.</p>"
       },
       {
         "h2": "Qué no incluye ninguna tarifa",
@@ -370,7 +370,7 @@
         },
         {
           "h2": "Cancelación y reembolso",
-          "html": "<p>Decisión comercial propia: si cancelas antes de que empiece la revisión, reembolso íntegro. Si la revisión ya ha comenzado, no procede reembolso.</p>"
+          "html": "<p>Si cancelas antes de que empiece la revisión, se devuelve íntegramente el pago. Si ya comenzó, se informa del trabajo realizado y se aplican las condiciones aceptadas y los derechos legales que correspondan; esta cláusula no limita derechos imperativos del consumidor.</p>"
         },
         {
           "h2": "Confidencialidad",
@@ -399,7 +399,7 @@
       "sections": [
         {
           "h2": "Qué reviso en tu contrato de alquiler",
-          "html": "<p>Leo el contrato completo con la LAU y la LGDCU sobre la mesa. Compruebo que la duración mínima legal se respete: cinco años si el arrendador es persona física y siete si es persona jurídica, según el art. 9 de la LAU. Reviso la renta, su forma de pago y su actualización anual conforme al art. 18 de la LAU.</p><p>También miro la fianza, que por ley es de una mensualidad y debe devolverse en un mes desde la entrega de llaves con los intereses correspondientes, según el art. 36 de la LAU. Cuando el arrendatario actúa como consumidor frente a un arrendador o intermediario profesional, también reviso las cláusulas no negociadas bajo la LGDCU. Si el arrendador es un particular que no actúa empresarialmente, el análisis se apoya en la LAU, el Código Civil y las normas imperativas aplicables.</p>"
+          "html": "<p>Leo el contrato completo con la LAU y la LGDCU sobre la mesa. Cuando se trata de vivienda habitual sujeta al Título II de la LAU, compruebo la duración mínima: cinco años si el arrendador es persona física y siete si es persona jurídica. Los alquileres de temporada o para uso distinto requieren otro análisis. Reviso la renta, su forma de pago y su actualización anual conforme al art. 18 de la LAU.</p><p>También miro la fianza, que por ley es de una mensualidad y debe devolverse en un mes desde la entrega de llaves con los intereses correspondientes, según el art. 36 de la LAU. Cuando el arrendatario actúa como consumidor frente a un arrendador o intermediario profesional, también reviso las cláusulas no negociadas bajo la LGDCU. Si el arrendador es un particular que no actúa empresarialmente, el análisis se apoya en la LAU, el Código Civil y las normas imperativas aplicables.</p>"
         },
         {
           "h2": "Riesgos habituales que detecto",
@@ -525,7 +525,7 @@
       "slug": "clausulas-abusivas-alquiler",
       "title": "Detección de cláusulas abusivas en alquiler",
       "titleTag": "Cláusulas abusivas en contrato de alquiler | 59 €",
-      "description": "Detecto cláusulas abusivas y nulas en tu contrato de alquiler: renuncias a derechos básicos, arbitrajes ajenos al de consumo, fianzas abusivas. Informe en 48-72 h.",
+      "description": "Detecto cláusulas abusivas y nulas en tu contrato de alquiler: renuncias a derechos básicos, arbitrajes ajenos al de consumo, fianzas y garantías adicionales problemáticas. Informe en 48-72 h.",
       "h1": "Cláusulas abusivas en contrato de alquiler",
       "answer": "Una cláusula no negociada puede ser abusiva y nula cuando existe una relación de consumo y causa, contra la buena fe, un desequilibrio importante. Reviso si se aplica la LGDCU y, además, si el contrato contradice normas imperativas de la LAU o del Código Civil.",
       "teaser": "Firmaste algo que ahora ves injusto. No todo lo firmado produce necesariamente efecto. Revisamos si existe una relación de consumo, si una cláusula puede ser abusiva o si contradice una norma imperativa.",
@@ -640,7 +640,7 @@
       ],
       "crossSell": {
         "h2": "De la detección a la reclamación",
-        "html": "<p>Una vez identificada la cláusula abusiva, el siguiente paso es reclamarlo formalmente. Un burofax deja constancia fehaciente y suele desbloquear la negociación. Puedes encargarlo en <a href=\"https://burofaxlegal.es/burofax-reclamar-fianza/\">burofaxlegal.es</a>, y si el problema es un impago de renta, en <a href=\"https://burofaxlegal.es/burofax-impago-alquiler/\">su servicio de impago de alquiler</a>.</p>"
+        "html": "<p>Una vez identificada la cláusula abusiva, el siguiente paso es reclamarlo formalmente. Un burofax con las constancias adecuadas documenta la reclamación y puede abrir una negociación, sin asegurar que la otra parte acepte. Puedes encargarlo en <a href=\"https://burofaxlegal.es/burofax-reclamar-fianza/\">burofaxlegal.es</a>, y si el problema es un impago de renta, en <a href=\"https://burofaxlegal.es/burofax-impago-alquiler/\">su servicio de impago de alquiler</a>.</p>"
       },
       "ctaText": "Detectar cláusulas abusivas en mi contrato"
     },
@@ -650,7 +650,7 @@
       "titleTag": "Actualización de renta de alquiler e IRAV | 59 €",
       "description": "Reviso si tu contrato actualiza la renta de forma legal según el IRAV del INE y la LAU. Evita subidas indebidas con informe de abogada en 48-72 h.",
       "h1": "Actualización de renta de alquiler e IRAV",
-      "answer": "La renta solo puede actualizarse en cada anualidad si el contrato lo prevé y siguiendo el régimen aplicable. El IRAV, publicado mensualmente por el INE, rige la revisión de contratos firmados después del 26 de mayo de 2023; los anteriores requieren comprobar su cláusula. Reviso tu contrato y la última actualización para detectar subidas indebidas.",
+      "answer": "La renta solo puede actualizarse en cada anualidad si el contrato lo prevé y siguiendo el régimen aplicable. El INE indica que los contratos firmados después del 26 de mayo de 2023 se revisan tomando el IRAV como límite de referencia. Aun así, debe existir pacto de actualización y hay que comprobar la cláusula, la fecha y el régimen aplicable. Reviso tu contrato y la última actualización para detectar subidas indebidas.",
       "teaser": "La renta sube cada año y nadie te explica cómo. Yo reviso el contrato y los cálculos para saber si el casero se está pasando.",
       "llmsTeaser": "Revisión de la actualización de renta de alquiler conforme al art. 18 de la LAU y al índice IRAV del INE, publicado mensualmente. Detecta subidas indebidas en contratos de alquiler. Informe de la abogada Carla Morales en 48-72 horas desde 59 €.",
       "priceLabel": "Desde 59 € IVA incluido",
@@ -666,7 +666,7 @@
         },
         {
           "h2": "Contexto normativo reciente",
-          "html": "<p>El RD-ley 8/2026 limitó temporalmente la actualización con un tope del 2 % y previó una prórroga extraordinaria, pero fue derogado el 30 de abril de 2026 al no convalidarse. Hoy hay que partir del art. 18 de la LAU y leer la cláusula concreta. El IRAV limita la revisión de los contratos firmados después del 26 de mayo de 2023; en los anteriores debe comprobarse el índice pactado y su régimen transitorio.</p>"
+          "html": "<p>El RD-ley 8/2026 limitó temporalmente la actualización con un tope del 2 % y previó una prórroga extraordinaria, pero fue derogado el 30 de abril de 2026 al no convalidarse. Hoy hay que partir del art. 18 de la LAU y leer la cláusula concreta. Para contratos posteriores al 26 de mayo de 2023, el IRAV actúa como límite de referencia dentro del régimen del art. 18. En todos los casos deben revisarse el pacto de actualización, la fecha y el régimen aplicable.</p>"
         },
         {
           "h2": "Si la subida es indebida",
@@ -764,7 +764,7 @@
       "sections": [
         {
           "h2": "Cómo funciona la duración legal",
-          "html": "<p>El art. 9 de la LAU fija una duración mínima de cinco años en alquiler de vivienda habitual cuando el arrendador es persona física, y de siete cuando es persona jurídica. Durante ese plazo, el arrendador solo puede recuperar la vivienda en supuestos tasados, como necesidad para sí o familiares en primer grado.</p>"
+          "html": "<p>El art. 9 de la LAU fija una duración mínima de cinco años en vivienda habitual cuando el arrendador es persona física y de siete cuando es persona jurídica. La recuperación por necesidad exige, entre otros requisitos, que la posibilidad conste expresamente en el contrato y que se cumplan las condiciones y el preaviso del art. 9.3.</p>"
         },
         {
           "h2": "Prórroga obligatoria y prórroga tácita",
@@ -822,7 +822,7 @@
       "faqs": [
         {
           "q": "¿Puede el casero echarme al cumplir el primer año?",
-          "a": "No, salvo que el contrato sea de temporada con causa real o que concurra algún supuesto legal tasado. La duración mínima de protección es de cinco años según el art. 9 de la LAU."
+          "a": "No, salvo que el contrato sea de temporada con causa real o que concurra algún supuesto legal tasado. En una vivienda habitual sujeta al art. 9 de la LAU, la duración mínima es de cinco años si el arrendador es persona física y siete si es persona jurídica. Un contrato de temporada auténtico sigue un régimen distinto."
         },
         {
           "q": "Quiero irme antes de que acabe la prórroga, ¿puedo?",
@@ -863,7 +863,7 @@
       "description": "El casero no te devuelve la fianza. Reviso tu contrato y la situación: la LAU da un mes para devolverla con intereses. Informe en 48-72 h desde 59 €.",
       "h1": "Reclamar la fianza de alquiler",
       "answer": "El saldo de la fianza pendiente de devolución devenga interés legal cuando transcurre un mes desde la entrega de llaves, según el art. 36 de la LAU. Si tu casero la retiene, reviso tu contrato y tu caso y te digo qué reclamar y cómo, antes de que el tiempo juegue en su contra.",
-      "teaser": "Entregaste las llaves y la fianza no llega. Es la reclamación más habitual del alquiler, y la más ganable cuando se documenta bien.",
+      "teaser": "Entregaste las llaves y la fianza no llega. Es una reclamación frecuente en alquileres y su viabilidad depende del contrato, la entrega de llaves, el estado de la vivienda y la prueba disponible.",
       "llmsTeaser": "Revisión de contratos para reclamar la fianza de alquiler retenida ilegalmente. El art. 36 de la LAU obliga a devolverla en un mes desde la entrega de llaves, con intereses por retraso. Informe de la abogada Carla Morales en 48-72 horas desde 59 €.",
       "priceLabel": "Desde 59 € IVA incluido",
       "priceValue": 59,
@@ -882,7 +882,7 @@
         },
         {
           "h2": "El paso siguiente",
-          "html": "<p>La reclamación seria empieza casi siempre por un burofax. Deja constancia de la fecha, del importe y de la voluntad de reclamar judicialmente si no hay respuesta. Es barato, rápido y cambia la conversación.</p>"
+          "html": "<p>La reclamación seria empieza casi siempre por un burofax. Deja constancia de la fecha, del importe y de la voluntad de reclamar judicialmente si no hay respuesta. Documenta la petición y permite acreditar qué se reclamó, cuándo y con qué propuesta de solución.</p>"
         }
       ],
       "table": {
@@ -966,7 +966,7 @@
       "sections": [
         {
           "h2": "Qué son las arras y qué tipo aceptas",
-          "html": "<p>El art. 1454 del Código Civil regula las arras penitenciales: quien las entrega pierde la cantidad si desiste, y quien las recibe debe devolver el doble si es él quien se echa atrás. Pero las partes pueden pactar arras confirmatorias, que obligan a completar la venta sin opción de desistir libre.</p><p>El art. 1255 del Código Civil reconoce la libertad de pacto dentro de los límites de la ley, la moral y el orden público; por eso la redacción concreta manda.</p>"
+          "html": "<p>El art. 1454 del Código Civil regula las arras penitenciales: quien las entrega pierde la cantidad si desiste, y quien las recibe debe devolver el doble si es él quien se echa atrás. Las partes también pueden pactar arras confirmatorias. En ese caso no opera automáticamente la salida del art. 1454 y las consecuencias dependen del contrato y del régimen general del incumplimiento.</p><p>El art. 1255 del Código Civil reconoce la libertad de pacto dentro de los límites de la ley, la moral y el orden público; por eso la redacción concreta manda.</p>"
         },
         {
           "h2": "Riesgos habituales en contratos de arras",
@@ -1025,7 +1025,7 @@
         },
         {
           "q": "¿Qué pasa si el vendedor se echa atrás?",
-          "a": "Con arras penitenciales, debe devolverte el doble de lo recibido. Con confirmatorias, puedes exigir la venta o la indemnización por incumplimiento."
+          "a": "Con arras penitenciales, debe devolverte el doble de lo recibido. Con arras confirmatorias no existe la salida automática del art. 1454; las pretensiones posibles dependen del pacto y de las reglas generales sobre cumplimiento y resolución."
         },
         {
           "q": "¿Revisáis también la promesa de compraventa completa?",
@@ -1042,6 +1042,11 @@
           "label": "Código Civil",
           "precept": "art. 1255",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1255"
+        },
+        {
+          "label": "Código Civil",
+          "precept": "art. 1124 — cumplimiento o resolución en obligaciones recíprocas",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1124"
         }
       ],
       "crossSell": {
@@ -1056,15 +1061,15 @@
       "titleTag": "Revisar préstamo entre particulares | 59 €",
       "description": "Reviso tu contrato de préstamo entre particulares: intereses, plazos, garantías y consecuencias del impago según el Código Civil. Informe en 48-72 h.",
       "h1": "Revisión de préstamo entre particulares",
-      "answer": "Prestar dinero a un familiar o amigo sin contrato claro es la receta para perder el dinero y la relación. Reviso el contrato de préstamo para que los intereses, plazos y garantías estén redactados conforme al art. 1753 del Código Civil y sean exigibles si hace falta.",
-      "teaser": "«Pásame el dinero y te lo devuelvo» no es un préstamo, es una donación con retraso. Un contrato claro protege la amistad y el bolsillo.",
+      "answer": "Prestar dinero a un familiar o amigo sin contrato claro es la receta para perder el dinero y la relación. Reviso el contrato de préstamo para que los intereses, plazos y garantías estén redactados conforme al art. 1753 del Código Civil y queden definidos y puedan valorarse correctamente si surge un impago.",
+      "teaser": "Un préstamo verbal puede existir, pero un contrato claro facilita probar la entrega, el vencimiento y las condiciones sin depender solo de mensajes o transferencias.",
       "llmsTeaser": "Revisión de contratos de préstamo entre particulares conforme a los arts. 1753 y 1255 del Código Civil: intereses, plazos de devolución, garantías y consecuencias del impago. Informe de la abogada Carla Morales en 48-72 horas desde 59 €.",
       "priceLabel": "Desde 59 € IVA incluido",
       "priceValue": 59,
       "sections": [
         {
           "h2": "Qué debe contener un préstamo entre particulares",
-          "html": "<p>El art. 1753 del Código Civil define el préstamo de consumo y exige que se devuelva lo recibido. En la práctica, el contrato debe fijar la cantidad, el plazo, los intereses si los hay, la forma de pago y qué ocurre si hay impago.</p><p>El art. 1255 del Código Civil permite pactar casi cualquier condición dentro de la ley, así que una buena redacción marca la diferencia entre cobrar y no cobrar.</p>"
+          "html": "<p>El art. 1753 del Código Civil define el préstamo de consumo y exige que se devuelva lo recibido. En la práctica, el contrato debe fijar la cantidad, el plazo, los intereses si los hay, la forma de pago y qué ocurre si hay impago.</p><p>El art. 1255 del Código Civil permite pactar casi cualquier condición dentro de la ley, así que una redacción clara facilita probar lo acordado y reclamar si se incumple.</p>"
         },
         {
           "h2": "Riesgos habituales",
@@ -1173,7 +1178,7 @@
         },
         {
           "h2": "Qué tipo de contratos redacto",
-          "html": "<ul><li>Contratos de alquiler de vivienda, local o temporada con cláusulas especiales.</li><li>Promesas de compraventa y contratos de arras con condiciones suspensivas.</li><li>Préstamos entre particulares con garantías e intereses.</li><li>Acuerdos y contratos civiles entre particulares o con pymes.</li></ul>"
+          "html": "<ul><li>Contratos de alquiler de vivienda habitual, local o temporada, aplicando a cada uno su régimen correspondiente.</li><li>Promesas de compraventa y contratos de arras con condiciones suspensivas.</li><li>Préstamos entre particulares con garantías e intereses.</li><li>Acuerdos y contratos civiles entre particulares o con pymes.</li></ul>"
         },
         {
           "h2": "Qué incluye el precio",
@@ -1257,5 +1262,6 @@
       },
       "ctaText": "Quiero un contrato a medida"
     }
-  ]
+  ],
+  "prelaunch": true
 }

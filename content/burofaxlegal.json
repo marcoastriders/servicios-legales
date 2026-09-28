@@ -32,7 +32,7 @@
     "sections": [
       {
         "h2": "Qué es un burofax y qué acredita exactamente",
-        "html": "<p>Un burofax es un servicio postal de Correos que acredita el contenido del envío, el momento de la entrega y la identidad del destinatario. Es lo que la ley llama un <strong>requerimiento fehaciente</strong>: prueba que tú pediste algo a alguien en una fecha concreta.</p><p>Esa prueba importa. Por ejemplo, en un desahucio por impago de alquiler, si el arrendador requirió el pago al arrendatario al menos 30 días antes de demandar, el arrendatario <strong>no puede enervar el desahucio</strong> pagando la deuda una vez iniciado el juicio, según la LEC art. 22.4, modificado por la LO 1/2025 con efectos desde el 3 de abril de 2025.</p><p>También queda constancia de una <strong>actividad negociadora previa</strong>, el llamado requisito MASC de la LEC art. 264.4º, exigible cuando la norma que regula tu vía lo reclama.</p>"
+        "html": "<p>Un burofax permite obtener constancias distintas según las opciones contratadas con Correos. La certificación de contenido acredita el texto enviado y el acuse o prueba de entrega documenta el resultado de la entrega. Es lo que la ley llama un <strong>requerimiento fehaciente</strong>: prueba que tú pediste algo a alguien en una fecha concreta.</p><p>Esa prueba importa. Por ejemplo, en un desahucio por impago de alquiler, la LEC art. 22.4 excluye la enervación cuando hubo requerimiento fehaciente al menos 30 días antes de demandar, la deuda seguía impagada al presentar la demanda y concurren los demás requisitos legales. La redacción vigente produce efectos desde el 3 de abril de 2025.</p><p>Un requerimiento unilateral no equivale por sí solo a una negociación. Si el texto formula una propuesta real de acuerdo y cumple los requisitos aplicables al procedimiento, puede contribuir a documentar el intento negociador que deba acreditarse según la LEC art. 264.4º.</p>"
       },
       {
         "h2": "Por qué redactado por abogada y no una plantilla",
@@ -54,11 +54,11 @@
     "faqs": [
       {
         "q": "¿Un burofax sirve como prueba en un juicio?",
-        "a": "<p>Sí. El burofax acredita el contenido, la fecha de entrega y la identidad del destinatario. Es un requerimiento fehaciente admisible como prueba escrita en la mayoría de procedimientos civiles, y es la forma estándar de justificar que exigiste algo antes de demandar.</p>"
+        "a": "<p>Puede aportar prueba documental si contratas y conservas las constancias adecuadas: certificación de contenido, justificante de admisión y prueba o acuse de entrega. Su valor concreto depende del producto contratado, del resultado de la entrega y del asunto discutido.</p>"
       },
       {
         "q": "¿Qué diferencia hay entre el burofax de BurofaxLegal y uno hecho con una plantilla?",
-        "a": "<p>La plantilla no conoce tu caso. Nosotros redactamos sobre tus hechos concretos, calculamos plazos según la norma aplicable y una abogada revisa el texto antes del envío. Si tu situación no encaja en un burofax, te lo decimos antes de cobrarte.</p>"
+        "a": "<p>La plantilla no conoce tu caso. Nosotros redactamos sobre tus hechos concretos, revisamos los plazos aplicables a partir de los documentos y fechas que aportas y una abogada revisa el texto antes del envío. Si tu situación no encaja en un burofax, te lo decimos antes de cobrarte.</p>"
       },
       {
         "q": "¿Cuánto tarda el envío una vez redactado?",
@@ -113,9 +113,9 @@
   },
   "pricing": {
     "title": "Precios de burofax con revisión de abogada | BurofaxLegal",
-    "description": "Precio cerrado para burofaxes redactados por abogada: 79 € el revisado, 149 € con estrategia y 249 € el precontencioso completo. IVA incluido, sin sorpresas.",
-    "h1": "Precios cerrados, sin letra pequeña",
-    "answer": "<p>Tres opciones con precio cerrado e IVA incluido. El nivel revisado (79 €) cubre redacción y corrección por abogada. El nivel con estrategia (149 €) añade análisis de escenarios y documento de respaldo probatorio. El precontencioso completo (249 €) incluye negociación posterior y preparación de la vía judicial si no hay respuesta.</p>",
+    "description": "Tarifas propuestas para la redacción jurídica: 79 €, 149 € y 249 €, IVA incluido. La tarifa postal de Correos se informa y paga aparte.",
+    "h1": "Tarifas propuestas del servicio jurídico",
+    "answer": "<p>Tres opciones con tarifa jurídica cerrada e IVA incluido; el coste postal de Correos se informa y paga aparte. El nivel revisado (79 €) cubre redacción y corrección por abogada. El nivel con estrategia (149 €) añade análisis de escenarios y documento de respaldo probatorio. El precontencioso completo (249 €) incluye negociación posterior y preparación de la vía judicial si no hay respuesta.</p>",
     "tiers": [
       {
         "name": "Burofax revisado",
@@ -124,7 +124,7 @@
         "includes": [
           "Redacción del burofax sobre tus hechos concretos",
           "Revisión y firma interna de abogada antes del envío",
-          "Cálculo de plazos y cantidades según la norma aplicable",
+          "Revisión de los plazos y cantidades a partir de los documentos e información que aportas",
           "Una ronda de cambios tras tu lectura",
           "Orientación sobre el servicio de Correos que te conviene"
         ]
@@ -138,7 +138,7 @@
           "Análisis de escenarios: qué pasa si paga, si no paga o si contesta",
           "Documento de respaldo con la estrategia probatoria",
           "Recomendación sobre el siguiente paso si no hay respuesta",
-          "Prioridad de entrega en 24 horas laborables"
+          "Objetivo prioritario de 24 horas laborables, sujeto a documentación completa y confirmación al aceptar el encargo"
         ]
       },
       {
@@ -183,11 +183,11 @@
       },
       {
         "q": "¿Puedo cancelar después de pagar?",
-        "a": "<p>Sí. Si cancelas antes de que enviemos el encargo a Correos, reembolsamos el importe completo. Esta condición es una decisión comercial nuestra, más favorable que lo habitual en servicios jurídicos.</p>"
+        "a": "<p>Sí. Si cancelas antes de que empiece la redacción, se devuelve íntegramente el pago. Si el trabajo ya comenzó, se informa del trabajo realizado y se aplican las condiciones aceptadas y los derechos legales que correspondan. El envío postal nunca se realiza sin tu aprobación del texto.</p>"
       },
       {
         "q": "¿Cuánto tardáis en entregar el burofax redactado?",
-        "a": "<p>Entre 24 y 48 horas laborables desde que recibimos toda la documentación. El nivel Burofax + estrategia y el Precontencioso llevan prioridad de 24 horas. El plazo postal posterior lo marca Correos.</p>"
+        "a": "<p>Entre 24 y 48 horas laborables desde que recibimos toda la documentación. En los niveles superiores se ofrece un objetivo prioritario de 24 horas, que se confirma al aceptar el encargo según la documentación y carga de trabajo. El plazo postal posterior lo marca Correos.</p>"
       }
     ]
   },
@@ -204,7 +204,7 @@
         },
         {
           "h2": "Paso 2: Redacción y revisión por abogada",
-          "html": "<p>Redactamos el requerimiento sobre tus hechos concretos, no sobre una plantilla. Calculamos plazos según la norma aplicable, ciframos cantidades con precisión y citamos la consecuencia jurídica de no responder.</p><p>La abogada revisa el texto antes de enviártelo. Recibes el borrador marcado y una explicación de qué hace cada párrafo.</p>"
+          "html": "<p>Redactamos el requerimiento sobre tus hechos concretos, no sobre una plantilla. Revisamos plazos y cantidades con la documentación aportada, identificamos las hipótesis utilizadas y explicamos las posibles consecuencias de no responder.</p><p>La abogada revisa el texto antes de enviártelo. Recibes el borrador marcado y una explicación de qué hace cada párrafo.</p>"
         },
         {
           "h2": "Paso 3: Tu aprobación y el envío por Correos",
@@ -254,7 +254,7 @@
         },
         {
           "h2": "Contacto directo",
-          "html": "<p>Puedes escribirle directamente a <strong>abogada@carlamorales.es</strong>, llamar o escribir al <strong>694 213 393</strong> (WhatsApp disponible) o consultar su <a href=\"https://share.google/PUlSd9c6os8oD7jUk\">ficha de Google</a>. La respuesta inicial a tu caso la das tú, no un formulario automatizado.</p>"
+          "html": "<p>Puedes escribirle directamente a <strong>abogada@carlamorales.es</strong>, llamar o escribir al <strong>694 213 393</strong> (WhatsApp disponible) o consultar su <a href=\"https://share.google/PUlSd9c6os8oD7jUk\">ficha de Google</a>. La respuesta inicial la prepara Carla o el despacho a partir de la información que facilitas, no una decisión jurídica automatizada.</p>"
         }
       ]
     },
@@ -334,7 +334,7 @@
       "sections": [
         {
           "h2": "El encargo y su objeto",
-          "html": "<p>El encargo se formaliza cuando tú aceptas el presupuesto y nos facilitas la documentación. El objeto es la redacción y revisión de un requerimiento fehaciente (burofax) sobre los hechos que nos describes. No incluye la presentación de demanda, la representación en juicio ni la tramitación de procedimientos administrativos.</p>"
+          "html": "<p>El encargo se formaliza cuando tú aceptas el presupuesto y nos facilitas la documentación. El objeto básico es redactar y revisar un requerimiento sobre los hechos aportados. El nivel Precontencioso completo añade una actuación negociadora posterior y preparación documental; ningún nivel incluye presentar la demanda, representar en juicio ni tramitar procedimientos administrativos salvo presupuesto separado.</p>"
         },
         {
           "h2": "Pago y plazos",
@@ -342,7 +342,7 @@
         },
         {
           "h2": "Cancelación y reembolso",
-          "html": "<p>Puedes cancelar el encargo en cualquier momento antes de que enviemos el texto final a tu aprobación. Si cancelas antes de que el burofax salga hacia Correos, reembolsamos el importe íntegro. Esta política es una decisión comercial nuestra, más favorable que la práctica habitual en servicios jurídicos.</p>"
+          "html": "<p>Puedes cancelar antes de que empiece la redacción con reembolso íntegro. Si el trabajo ya comenzó, el tratamiento del reembolso se ajusta al trabajo efectivamente realizado, a las condiciones aceptadas y a los derechos legales aplicables. Nunca se envía nada a Correos sin que apruebes el texto final.</p>"
         },
         {
           "h2": "Responsabilidad y límites del servicio",
@@ -350,7 +350,7 @@
         },
         {
           "h2": "Legislación aplicable",
-          "html": "<p>Estas condiciones se rigen por el derecho español. Para cualquier controversia derivada del encargo serán competentes los juzgados del domicilio del consumidor cuando así lo disponga la normativa de consumidores, y en su defecto los del partido judicial de Jerez de la Frontera.</p>"
+          "html": "<p>Estas condiciones se rigen por el derecho español. La competencia judicial se determina por las normas imperativas aplicables, incluida la protección del domicilio del consumidor cuando corresponda. Estas condiciones no alteran ningún fuero legal obligatorio.</p>"
         }
       ]
     }
@@ -362,19 +362,19 @@
       "titleTag": "Burofax por impago de alquiler | BurofaxLegal",
       "description": "Requiere fehacientemente al inquilino el pago de rentas adeudadas. Un requerimiento bien redactado impide la enervación del desahucio según la LEC art. 22.4.",
       "h1": "Burofax de <strong>requerimiento de pago de rentas</strong> al inquilino",
-      "answer": "<p>Este servicio redacta un requerimiento fehaciente para exigir al inquilino el pago de las rentas que adeuda. Si el arrendador requiere el pago al menos 30 días antes de demandar, el inquilino no puede enervar el desahucio pagando después, según la LEC art. 22.4. Si el texto ofrece una vía razonable de acuerdo, también ayuda a documentar la actividad negociadora previa que debe acreditarse cuando sea requisito de procedibilidad (LEC art. 264.4º).</p>",
-      "teaser": "Requiere al inquilino el pago de rentas y cierra la puerta a la enervación del desahucio.",
+      "answer": "<p>Este servicio redacta un requerimiento fehaciente para exigir al inquilino el pago de las rentas que adeuda. La LEC art. 22.4 puede excluir la enervación cuando hubo requerimiento fehaciente al menos 30 días antes de demandar y no se pagó antes de presentar la demanda; deben verificarse además los restantes requisitos del caso. Un requerimiento unilateral no constituye automáticamente un MASC. Cuando el texto incorpora una propuesta real de acuerdo, puede contribuir a documentar el intento negociador exigible, siempre que cumpla los requisitos del procedimiento concreto (LEC art. 264.4º).</p>",
+      "teaser": "Requiere al inquilino el pago de rentas y prepara, si se cumplen todos los requisitos legales, la oposición a una posterior enervación.",
       "llmsTeaser": "Servicio de redacción de burofax para requerir el pago de alquileres adeudados, evitando la enervación del desahucio mediante requerimiento previo de 30 días (LEC art. 22.4).",
       "priceLabel": "Desde 79 € IVA incluido",
       "priceValue": 79,
       "sections": [
         {
-          "h2": "Por qué 30 días cambian el resultado del desahucio",
-          "html": "<p>La LEC art. 22.4, con la redacción vigente desde el 3 de abril de 2025 tras la LO 1/2025, establece que el arrendatario <strong>no puede enervar el desahucio por impago</strong> si el arrendador le requirió fehacientemente el pago al menos 30 días antes de presentar la demanda.</p><p>Sin ese requerimiento previo, el inquilino puede conservar la posibilidad de enervar el desahucio si reúne los demás requisitos. Con el requerimiento efectuado correctamente, ese pago posterior no enerva la acción.</p>"
+          "h2": "Cuándo el requerimiento previo puede impedir la enervación",
+          "html": "<p>La LEC art. 22.4, con la redacción vigente desde el 3 de abril de 2025 tras la LO 1/2025, excluye la enervación cuando el arrendador requirió fehacientemente el pago al menos 30 días antes de presentar la demanda, la deuda seguía impagada al demandar y concurren los demás requisitos legales.</p><p>Sin ese requerimiento previo, el inquilino puede conservar la posibilidad de enervar el desahucio si reúne los demás requisitos. Con el requerimiento efectuado correctamente, ese pago posterior no enerva la acción.</p>"
         },
         {
           "h2": "Qué debe contener el requerimiento",
-          "html": "<p>El texto debe identificar el contrato, enumerar las mensualidades impagadas, señalar un plazo de pago razonable y advertir de la vía judicial prevista en el LAU art. 27 (resolución del contrato por incumplimiento). También conviene acreditar la actividad negociadora previa que la ley puede exigir según la LEC art. 264.4º.</p><p>El art. 17 de la LAU establece el pago mensual en los siete primeros días del mes salvo pacto en contrario, sin que pueda exigirse el pago anticipado de más de una mensualidad.</p>"
+          "html": "<p>El texto debe identificar el contrato, enumerar las mensualidades impagadas, señalar un plazo de pago razonable y advertir de la vía judicial prevista en el LAU art. 27 (resolución del contrato por incumplimiento). Si el procedimiento exige actividad negociadora previa, el requerimiento debe diseñarse como una propuesta real de acuerdo y cumplir los requisitos específicos; una reclamación unilateral no basta automáticamente.</p><p>El art. 17 de la LAU establece el pago mensual en los siete primeros días del mes salvo pacto en contrario, sin que pueda exigirse el pago anticipado de más de una mensualidad.</p>"
         },
         {
           "h2": "Casos reales en los que encaja",
@@ -497,7 +497,7 @@
       "sections": [
         {
           "h2": "Qué dice la ley sobre tu fianza",
-          "html": "<p>El art. 36 de la LAU establece que la fianza equivale a <strong>una mensualidad de renta</strong> en vivienda y a dos en uso distinto de vivienda. El saldo pendiente de restitución devenga interés legal cuando transcurre un mes desde la entrega de las llaves sin ser devuelto.</p><p>Si ese mes pasa sin devolución, la cantidad devenga <strong>intereses legales</strong> desde el día siguiente al vencimiento del plazo, sin necesidad de reclamación previa.</p>"
+          "html": "<p>El art. 36 de la LAU establece que la fianza equivale a <strong>una mensualidad de renta</strong> en vivienda y a dos en uso distinto de vivienda. El saldo pendiente de restitución devenga interés legal cuando transcurre un mes desde la entrega de las llaves sin ser devuelto.</p><p>Si ese mes pasa sin devolución, el saldo pendiente de restitución devenga <strong>interés legal</strong> desde el día siguiente al vencimiento del plazo, sin necesidad de reclamación previa.</p>"
         },
         {
           "h2": "Por qué el burofax importa en la fianza",
@@ -617,11 +617,11 @@
         },
         {
           "h2": "Para qué contratos funciona",
-          "html": "<p>Sirve para compraventas privadas, servicios profesionales, suministros, obra, acuerdos entre socios y cualquier contrato civil o mercantil con obligaciones reciprocas. Cuanto más claro sea el contrato, más contundente el requerimiento.</p><p>No sustituye la vía específica de cada sector: un arrendamiento tiene su régimen propio en la LAU y un contrato de consumo, sus normas de protección. Si tu caso encaja mejor en un servicio específico, te lo indicamos.</p>"
+          "html": "<p>Sirve para compraventas privadas, servicios profesionales, suministros, obra, acuerdos entre socios y cualquier contrato civil o mercantil con obligaciones recíprocas. Cuanto más claro sea el contrato, más contundente el requerimiento.</p><p>No sustituye la vía específica de cada sector: un arrendamiento tiene su régimen propio en la LAU y un contrato de consumo, sus normas de protección. Si tu caso encaja mejor en un servicio específico, te lo indicamos.</p>"
         },
         {
           "h2": "Si la otra parte no responde",
-          "html": "<p>Pasado el plazo del requerimiento puedes optar por la resolución del contrato con indemnización o por exigir el cumplimiento forzado cuando sea posible, vía judicial. El burofax acredita que diste oportunidad al otro de cumplir antes de litigar.</p><p>Te orientamos sobre la vía que encaja con tu contrato y el importe en disputa, siempre fuera de este encargo de redacción.</p>"
+          "html": "<p>Pasado el plazo, se valora si procede exigir el cumplimiento o solicitar la resolución conforme al art. 1124, teniendo en cuenta el tipo de obligación, el pacto y la entidad del incumplimiento. El burofax no produce por sí solo la resolución judicial. El burofax acredita que diste oportunidad al otro de cumplir antes de litigar.</p><p>Te orientamos sobre la vía que encaja con tu contrato y el importe en disputa, siempre fuera de este encargo de redacción.</p>"
         }
       ],
       "table": {
@@ -726,15 +726,15 @@
       "sections": [
         {
           "h2": "Qué exige la LPH antes de reclamar judicialmente",
-          "html": "<p>La LPH art. 21 establece que para reclamar judicialmente las cuotas se necesita un <strong>acuerdo de la junta de propietarios</strong> que determine el importe adeudado por el moroso, con la <strong>certificación del secretario con el visto del presidente</strong>.</p><p>Con ese acuerdo en regla, la comunidad puede acudir al <strong>proceso monitorio</strong>, una vía ágil para reclamar cantidades líquidas documentadas. El burofax previo acredita el requerimiento amistoso antes de iniciar esa vía.</p>"
+          "html": "<p>La LPH art. 21 establece que para reclamar judicialmente las cuotas se necesita un <strong>acuerdo de la junta de propietarios</strong> que determine el importe adeudado por el moroso, con la <strong>certificación del secretario con el visto del presidente</strong>.</p><p>Con ese acuerdo en regla, la comunidad puede acudir al <strong>proceso monitorio</strong>, una vía ágil para reclamar cantidades líquidas documentadas. El burofax puede documentar la notificación o reclamación, pero no sustituye por sí solo el resto de documentos y requisitos del art. 21 de la LPH.</p>"
         },
         {
           "h2": "Cómo se encadena con el proceso monitorio",
-          "html": "<p>Primero, la junta acuerda reclamar y el secretario certifica la deuda con el visto del presidente. Segundo, el burofax requiere el pago al vecino con desglose de cuotas, recargos e intereses si los hubiera. Tercero, si no paga en el plazo, se presenta la solicitud de proceso monitorio con el acuerdo, la certificación y el acuse del burofax.</p><p>Ese orden importa: la documentación exigida por el art. 21 de la LPH debe estar preparada antes de presentar la petición monitoria.</p>"
+          "html": "<p>Primero se comprueban el acuerdo y la certificación de deuda. Después debe acreditarse la notificación al propietario deudor en la forma prevista por el art. 21 de la LPH; un burofax puede ser uno de los medios utilizados. Si la deuda continúa, se prepara la petición monitoria con la documentación exigible.</p><p>Ese orden importa: la documentación exigida por el art. 21 de la LPH debe estar preparada antes de presentar la petición monitoria.</p>"
         },
         {
           "h2": "Qué puede deducir el vecino y qué no",
-          "html": "<p>El propietario requerido puede oponerse y discutir la deuda. Por eso conviene comprobar el acuerdo, la certificación, los pagos ya realizados y el desglose de cada cuota antes de reclamar.</p><p>El requerimiento se redacta con el desglose exacto por períodos para que cualquier oposición posterior tenga que ser concreta y documentada.</p>"
+          "html": "<p>El propietario requerido puede oponerse y discutir la deuda. Por eso conviene comprobar el acuerdo, la certificación, los pagos ya realizados y el desglose de cada cuota antes de reclamar.</p><p>El requerimiento se redacta con un desglose exacto por períodos para reducir ambigüedades y facilitar la valoración de cualquier pago u oposición posterior.</p>"
         },
         {
           "h2": "Para qué comunidades funciona",
@@ -869,7 +869,7 @@
           ],
           [
             "Préstamo entre familiares sin intereses",
-            "Exigible el capital; los intereses legales solo desde el requerimiento o vencimiento"
+            "La devolución del capital se analiza según lo acordado y probado; cualquier interés exige revisar el pacto, el vencimiento y la norma aplicable"
           ]
         ]
       },
@@ -888,7 +888,7 @@
       "faqs": [
         {
           "q": "¿Puedo reclamar un préstamo entre hermanos sin contrato?",
-          "a": "<p>Sí. La transferencia bancaria y los mensajes donde se reconoce la deuda son prueba válida. El Código Civil art. 1753 regula el mutuo aunque no haya documento formal. El burofax formaliza la reclamación con esa base.</p>"
+          "a": "<p>La transferencia y los mensajes pueden ser elementos de prueba relevantes, pero su suficiencia depende del contenido, del contexto y del resto de documentos. El Código Civil art. 1753 regula el mutuo aunque no haya documento formal. El burofax formaliza la reclamación con esa base.</p>"
         },
         {
           "q": "¿Puedo pedir intereses de un préstamo sin intereses pactados?",
@@ -931,5 +931,6 @@
       },
       "ctaText": "Quiero reclamar mi préstamo"
     }
-  ]
+  ],
+  "prelaunch": true
 }

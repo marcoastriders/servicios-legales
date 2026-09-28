@@ -399,7 +399,7 @@
       "sections": [
         {
           "h2": "Qué reviso en tu contrato de alquiler",
-          "html": "<p>Leo el contrato completo con la LAU y la LGDCU sobre la mesa. Cuando se trata de vivienda habitual sujeta al Título II de la LAU, compruebo la duración mínima: cinco años si el arrendador es persona física y siete si es persona jurídica. Los alquileres de temporada o para uso distinto requieren otro análisis. Reviso la renta, su forma de pago y su actualización anual conforme al art. 18 de la LAU.</p><p>También miro la fianza, que por ley es de una mensualidad y debe devolverse en un mes desde la entrega de llaves con los intereses correspondientes, según el art. 36 de la LAU. Cuando el arrendatario actúa como consumidor frente a un arrendador o intermediario profesional, también reviso las cláusulas no negociadas bajo la LGDCU. Si el arrendador es un particular que no actúa empresarialmente, el análisis se apoya en la LAU, el Código Civil y las normas imperativas aplicables.</p>"
+          "html": "<p>Leo el contrato completo con la LAU y la LGDCU sobre la mesa. Cuando se trata de vivienda habitual sujeta al Título II de la LAU, compruebo la duración mínima: cinco años si el arrendador es persona física y siete si es persona jurídica. Los alquileres de temporada o para uso distinto requieren otro análisis. Reviso la renta, su forma de pago y su actualización anual conforme al art. 18 de la LAU.</p><p>También miro la fianza legal, que en vivienda es de una mensualidad. Según el art. 36 de la LAU, el saldo pendiente de restitución devenga interés legal cuando transcurre un mes desde la entrega de llaves sin ser devuelto. Cuando el arrendatario actúa como consumidor frente a un arrendador o intermediario profesional, también reviso las cláusulas no negociadas bajo la LGDCU. Si el arrendador es un particular que no actúa empresarialmente, el análisis se apoya en la LAU, el Código Civil y las normas imperativas aplicables.</p>"
         },
         {
           "h2": "Riesgos habituales que detecto",
@@ -447,7 +447,7 @@
         "title": "Antes de firmar un alquiler, comprueba",
         "items": [
           "Que la duración mínima legal aparezca o se explique su ausencia.",
-          "Que la fianza no supere una mensualidad.",
+          "Que el contrato diferencie la fianza legal de cualquier garantía adicional y explique su importe.",
           "Que la actualización de renta mencione el índice IRAV o el pactado legalmente.",
           "Que no haya renuncia a derechos irrenunciables.",
           "Quién paga los gastos de comunidad, IBI y suministros.",
@@ -582,7 +582,7 @@
           "Penalizaciones que solo afectan al arrendatario.",
           "Obligación de abogados o arbitrajes lejanos en caso de conflicto.",
           "Renuncias expresas a derechos que la ley llama irrenunciables.",
-          "Fianzas, depósitos o avales superiores a una mensualidad.",
+          "Fianza legal y garantías adicionales mezcladas, sin explicar su naturaleza o límites.",
           "Obligaciones desproporcionadas de reparación o mantenimiento.",
           "Facultades del arrendador para entrar en la vivienda sin aviso."
         ]
@@ -864,7 +864,7 @@
       "h1": "Reclamar la fianza de alquiler",
       "answer": "El saldo de la fianza pendiente de devolución devenga interés legal cuando transcurre un mes desde la entrega de llaves, según el art. 36 de la LAU. Si tu casero la retiene, reviso tu contrato y tu caso y te digo qué reclamar y cómo, antes de que el tiempo juegue en su contra.",
       "teaser": "Entregaste las llaves y la fianza no llega. Es una reclamación frecuente en alquileres y su viabilidad depende del contrato, la entrega de llaves, el estado de la vivienda y la prueba disponible.",
-      "llmsTeaser": "Revisión de contratos para reclamar la fianza de alquiler retenida ilegalmente. El art. 36 de la LAU obliga a devolverla en un mes desde la entrega de llaves, con intereses por retraso. Informe de la abogada Carla Morales en 48-72 horas desde 59 €.",
+      "llmsTeaser": "Revisión del contrato y de la documentación para reclamar el saldo de una fianza. El art. 36 de la LAU prevé interés legal si transcurre un mes desde la entrega de llaves sin restituir el saldo debido. Informe de la abogada Carla Morales en 48-72 horas desde 59 €.",
       "priceLabel": "Desde 59 € IVA incluido",
       "priceValue": 59,
       "sections": [

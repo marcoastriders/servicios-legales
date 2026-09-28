@@ -1,0 +1,86 @@
+/* Servicios legales — burofaxlegal.es / revisioncontratos.es */
+:root {
+  --acento: #0e4f4f;
+  --acento-suave: #e6f2f2;
+  --tinta: #1d2a2a;
+  --tinta-suave: #4a5a5a;
+  --fondo: #fbfaf7;
+  --tarjeta: #ffffff;
+  --linea: #d8ded9;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--fondo); color: var(--tinta);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 1.05rem; line-height: 1.65;
+}
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; color: var(--tinta); }
+h1 { font-size: 2rem; margin: 0.4em 0 0.5em; }
+h2 { font-size: 1.45rem; margin-top: 2em; border-bottom: 2px solid var(--acento-suave); padding-bottom: 0.25em; }
+h3 { font-size: 1.15rem; }
+a { color: var(--acento); }
+.wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.1rem; }
+.skip { position: absolute; left: -9999px; top: 0; background: var(--acento); color: #fff; padding: 0.5rem 1rem; z-index: 10; }
+.skip:focus { left: 0; }
+
+.cabecera { background: var(--acento); color: #fff; padding: 0.9rem 0; }
+.cabecera-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem; max-width: 62rem; }
+.marca { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.35rem; font-weight: 700; }
+.marca-sub { display: block; font-size: 0.72rem; font-family: "Segoe UI", system-ui, sans-serif; font-weight: 400; opacity: 0.85; letter-spacing: 0.02em; }
+.nav a { color: #fff; text-decoration: none; margin-left: 1.1rem; font-size: 0.95rem; opacity: 0.92; }
+.nav a:hover { opacity: 1; text-decoration: underline; }
+
+main { padding: 1.6rem 0 3rem; }
+.migas { font-size: 0.85rem; color: var(--tinta-suave); }
+.kicker { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; color: var(--acento); font-weight: 700; margin-bottom: 0.2rem; }
+.hero { padding: 1.2rem 0 0.5rem; }
+.respuesta-directa {
+  font-size: 1.18rem; line-height: 1.6; background: var(--acento-suave);
+  border-left: 4px solid var(--acento); padding: 0.9rem 1.1rem; border-radius: 0 8px 8px 0;
+}
+.hero-botones { margin-top: 1.2rem; }
+.boton {
+  display: inline-block; background: var(--acento); color: #fff !important; text-decoration: none;
+  padding: 0.7rem 1.4rem; border-radius: 6px; font-weight: 600; margin: 0.2rem 0.4rem 0.2rem 0;
+}
+.boton-sec { background: transparent; color: var(--acento) !important; border: 2px solid var(--acento); }
+
+.tabla { overflow-x: auto; margin: 1.4rem 0; }
+table { border-collapse: collapse; width: 100%; background: var(--tarjeta); }
+caption { text-align: left; font-weight: 700; padding: 0.5rem 0; font-family: Georgia, serif; }
+th, td { border: 1px solid var(--linea); padding: 0.6rem 0.75rem; text-align: left; vertical-align: top; font-size: 0.97rem; }
+th { background: var(--acento-suave); }
+
+.checklist ul, .faq details { background: var(--tarjeta); }
+.checklist li { margin: 0.45rem 0; }
+.faq details { border: 1px solid var(--linea); border-radius: 8px; padding: 0.7rem 1rem; margin: 0.6rem 0; }
+.faq summary { font-weight: 600; cursor: pointer; }
+.faq details p { margin-bottom: 0.3rem; }
+
+.tarjetas { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; max-width: 62rem; }
+.tarjeta { background: var(--tarjeta); border: 1px solid var(--linea); border-radius: 10px; padding: 1rem 1.2rem; }
+.tarjeta h3 { margin-top: 0.2rem; }
+.tarjeta-precio { font-weight: 700; color: var(--acento); }
+
+.cta { background: var(--acento); color: #fff; border-radius: 12px; padding: 1.4rem 1.6rem; margin-top: 2.6rem; }
+.cta-titulo { font-family: Georgia, serif; font-size: 1.3rem; margin-top: 0; }
+.cta .boton { background: #fff; color: var(--acento) !important; }
+.cta .boton-sec { background: transparent; color: #fff !important; border-color: #fff; }
+
+.fuentes { font-size: 0.92rem; color: var(--tinta-suave); }
+.fuentes h2 { font-size: 1.1rem; }
+.comprobado { font-style: italic; }
+.precio-linea { font-weight: 700; color: var(--acento); }
+.relacionado { background: var(--acento-suave); border-radius: 10px; padding: 0.4rem 1.2rem 1rem; margin-top: 2rem; }
+.relacionado h2 { border: none; margin-top: 0.8rem; }
+
+.pie { background: #10312f; color: #cfe0dd; margin-top: 3rem; padding: 2rem 0; font-size: 0.9rem; }
+.pie-in { display: grid; grid-template-columns: 1.4fr 1fr; gap: 2rem; max-width: 62rem; }
+.pie a { color: #fff; }
+.pie-marca { font-family: Georgia, serif; font-size: 1.1rem; color: #fff; margin-bottom: 0.3rem; }
+.pie-copy { opacity: 0.7; }
+@media (max-width: 40rem) {
+  .pie-in { grid-template-columns: 1fr; }
+  h1 { font-size: 1.6rem; }
+}

@@ -1,0 +1,1261 @@
+{
+  "id": "revisioncontratos",
+  "domain": "revisioncontratos.es",
+  "name": "RevisiónContratos",
+  "tagline": "Tu contrato revisado por una abogada en 48-72 horas, desde 59 €.",
+  "description": "Revisión de contratos de alquiler, compraventa y préstamos por abogada colegiada. Informe escrito con riesgos y contraofertas en 48-72 horas.",
+  "accent": "#274060",
+  "kicker": "Revisión legal de contratos",
+  "ctaTitle": "¿Tienes un contrato sobre la mesa?",
+  "ctaWhatsapp": "Hola, quiero que revisen mi contrato antes de firmar.",
+  "ctaMailSubject": "Solicitud de revisión de contrato",
+  "llmsSummary": "revisioncontratos.es es un servicio de revisión de contratos dirigido por la abogada Carla Morales, colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa contratos de alquiler, compraventa, arras y préstamos entre particulares, y redacta contratos a medida. Entrega un informe escrito con riesgos, cláusulas problemáticas y propuestas de contraoferta en 48-72 horas laborables, desde 59 € IVA incluido. Trabaja sobre contratos ya redactados antes de su firma o renovación; no interviene como defensa en juicio.",
+  "nav": [
+    {
+      "path": "/precios/",
+      "label": "Precios"
+    },
+    {
+      "path": "/como-funciona/",
+      "label": "Cómo funciona"
+    },
+    {
+      "path": "/quien-revisa/",
+      "label": "Quién revisa"
+    }
+  ],
+  "home": {
+    "title": "Revisión de contratos por abogada | RevisiónContratos",
+    "h1": "Revisa tu contrato antes de firmar",
+    "answer": "Firmar un contrato sin leerlo bien es el error más caro que puedes cometer. Por 59 € una abogada lo revisa entero y te dice qué riesgos esconde, qué cláusulas conviene cambiar y cómo pedirlo a la otra parte. Tienes el informe en 48-72 horas laborables.",
+    "servicesTitle": "Qué puedo revisar por ti",
+    "sections": [
+      {
+        "h2": "El error caro no es pagar la revisión, es firmar a ciegas",
+        "html": "<p>Los contratos se firman con prisa y se leen después, cuando ya hay un problema. Entonces descubres que la fianza no te la devuelven, que la renta sube más de la cuenta o que renunciaste a derechos sin darte cuenta.</p><p>Un informe de revisión te muestra esos puntos antes de firmar. Sabrás qué aceptas, qué rechazas y qué negociar.</p>"
+      },
+      {
+        "h2": "Cómo trabajamos",
+        "html": "<p>Subes el contrato en PDF o fotos y me cuentas tu situación. Yo lo leo completo y te entrego un informe escrito con tres cosas: los riesgos que veo, las cláusulas que deberías pedir que cambien, y una contraoferta razonable si la otra parte se resiste.</p><p>El informe no sustituye tu decisión. Tú decides si firmas, negocias o rechazas.</p>"
+      },
+      {
+        "h2": "Qué no hacemos",
+        "html": "<p>No prometemos que la otra parte acepte tus cambios: eso depende de la negociación. Tampoco actuamos como abogada en un juicio; si el conflicto ya existe, te oriento sobre los pasos y te remito a los servicios adecuados.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Cuánto tarda la revisión?",
+        "a": "Entre 48 y 72 horas laborables desde que recibo el contrato y el pago. Si el contrato es muy extenso o complejo, te aviso antes de empezar si necesitaré más tiempo."
+      },
+      {
+        "q": "¿Qué formatos de contrato aceptáis?",
+        "a": "PDF, fotos legibles del papel o texto copiado en el correo. Si el documento es ilegible, te lo digo antes de cobrarte nada."
+      },
+      {
+        "q": "¿El informe garantiza que me acepten los cambios?",
+        "a": "No. El informe te dice qué pedir y cómo pedirlo, pero la otra parte puede negarse. Sabrás con qué riesgo firmas si decides aceptar igualmente."
+      },
+      {
+        "q": "¿Quién revisa mi contrato?",
+        "a": "Yo directamente, Carla Morales, abogada civil y mercantil colegiada en Jerez. No se subcontrata a terceros ni a plantillas automáticas."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ley de Arrendamientos Urbanos",
+        "precept": "art. 9",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a9"
+      },
+      {
+        "label": "Ley de Arrendamientos Urbanos",
+        "precept": "art. 10",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a10"
+      },
+      {
+        "label": "Ley de Arrendamientos Urbanos",
+        "precept": "art. 17",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a17"
+      },
+      {
+        "label": "Ley de Arrendamientos Urbanos",
+        "precept": "art. 18",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a18"
+      },
+      {
+        "label": "Ley de Arrendamientos Urbanos",
+        "precept": "art. 27",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a27"
+      },
+      {
+        "label": "Ley de Arrendamientos Urbanos",
+        "precept": "art. 36",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a36"
+      },
+      {
+        "label": "Ley General para la Defensa de Consumidores y Usuarios",
+        "precept": "art. 82",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a82"
+      },
+      {
+        "label": "Ley General para la Defensa de Consumidores y Usuarios",
+        "precept": "art. 83",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a83"
+      },
+      {
+        "label": "Ley General para la Defensa de Consumidores y Usuarios",
+        "precept": "art. 86",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a86"
+      },
+      {
+        "label": "Ley General para la Defensa de Consumidores y Usuarios",
+        "precept": "art. 89",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a89"
+      },
+      {
+        "label": "Ley General para la Defensa de Consumidores y Usuarios",
+        "precept": "art. 90.1",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a90"
+      },
+      {
+        "label": "Código Civil",
+        "precept": "art. 1101",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1101"
+      },
+      {
+        "label": "Código Civil",
+        "precept": "art. 1124",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1124"
+      },
+      {
+        "label": "Código Civil",
+        "precept": "art. 1255",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1255"
+      },
+      {
+        "label": "Código Civil",
+        "precept": "art. 1454",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1454"
+      },
+      {
+        "label": "Código Civil",
+        "precept": "art. 1753",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1753"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Precios de revisión de contratos | RevisiónContratos",
+    "description": "Precios claros de revisión de contratos: 59 € la revisión express, 119 € con contraoferta y desde 199 € el contrato a medida. IVA incluido.",
+    "h1": "Precios de la revisión de contratos",
+    "answer": "Tres tarifas cerradas según lo que necesites: solo el informe, el informe con las cláusulas alternativas ya redactadas, o el contrato escrito a medida. Todas con IVA incluido y entrega en 48-72 horas laborables. No hay sorpresas ni letra pequeña: pagas por adelantado y, si cancelas antes de que empiece la revisión, te devolvemos el importe completo.",
+    "tiers": [
+      {
+        "name": "Revisión express",
+        "price": "59 €",
+        "priceValue": 59,
+        "includes": [
+          "Lectura completa del contrato por la abogada",
+          "Informe escrito con riesgos detectados",
+          "Listado de cláusulas que conviene modificar",
+          "Entrega en 48-72 horas laborables",
+          "Una ronda de dudas por escrito"
+        ]
+      },
+      {
+        "name": "Revisión + contraoferta",
+        "price": "119 €",
+        "priceValue": 119,
+        "includes": [
+          "Todo lo de la Revisión express",
+          "Redacción de una contraoferta concreta lista para enviar",
+          "Propuesta de redacción alternativa de cada cláusula problemática",
+          "Estrategia breve de negociación según tu caso"
+        ]
+      },
+      {
+        "name": "Contrato a medida",
+        "price": "desde 199 €",
+        "priceValue": 199,
+        "includes": [
+          "Entrevista previa para entender la operación",
+          "Redacción de un contrato adaptado a tu situación",
+          "Una revisión incluida tras recibir observaciones",
+          "Asesoramiento sobre impuestos y gastos ajenos al texto"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "h2": "Cómo se paga",
+        "html": "<p>El pago se realiza por adelantado mediante Bizum o transferencia. Empiezo a revisar cuando confirmo el pago y tengo todos los documentos legibles.</p>"
+      },
+      {
+        "h2": "Cancelaciones y reembolso",
+        "html": "<p>Si cancelas antes de que empiece la revisión, te devuelvo todo lo pagado. Si ya he empezado a trabajar, no procede reembolso porque el trabajo ya está hecho.</p>"
+      },
+      {
+        "h2": "Qué no incluye ninguna tarifa",
+        "html": "<p>Ninguna tarifa incluye negociación directa con la otra parte, comparecencia en juicio o reclamaciones posteriores. Para eso existen otros servicios que te indicaré si los necesitas.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Puedo cambiar de tarifa después de pagar?",
+        "a": "Sí, puedes pasar de la Revisión express a la de contraoferta pagando la diferencia, siempre antes de que entregue el informe."
+      },
+      {
+        "q": "¿Emitís factura?",
+        "a": "Sí, se emite factura a tu nombre o al de tu empresa con IVA desglosado."
+      },
+      {
+        "q": "¿El precio depende de la longitud del contrato?",
+        "a": "No para los dos primeros niveles. Si el contrato es extraordinariamente extenso o hay varios documentos, te lo advierto antes de cobrar y acordamos el suplemento."
+      }
+    ]
+  },
+  "pages": {
+    "comoFunciona": {
+      "title": "Cómo funciona la revisión de contratos | RevisiónContratos",
+      "description": "Cuatro pasos para revisar tu contrato: subes el documento, pagas, la abogada revisa y recibes un informe con riesgos y contraofertas en 48-72 horas.",
+      "h1": "Cómo funciona",
+      "answer": "Subes tu contrato en PDF o fotos y me cuentas tu situación. Pagas la tarifa elegida y yo reviso el documento completo. En 48-72 horas laborables recibes un informe escrito con los riesgos y las cláusulas que deberías pedir que cambien.",
+      "sections": [
+        {
+          "h2": "Los cuatro pasos",
+          "html": "<ul><li><strong>1. Cuéntame tu caso.</strong> Envíame el contrato en PDF, fotos legibles o texto, y explícame quién eres en la operación y qué te preocupa.</li><li><strong>2. Paga la tarifa.</strong> Bizum o transferencia por adelantado. Confirmo la recepción antes de empezar.</li><li><strong>3. Revisión por la abogada.</strong> Leo el contrato entero, contrasto las cláusulas con la norma aplicable y detecto riesgos para tu posición.</li><li><strong>4. Informe escrito.</strong> Recibes el documento con riesgos, cláusulas a modificar y, si contrataste la contraoferta, una propuesta de redacción lista para enviar.</li></ul>"
+        },
+        {
+          "h2": "Qué contiene el informe",
+          "html": "<p>Cada informe incluye un resumen ejecutivo, un análisis cláusula por cláusula de los puntos relevantes, los riesgos concretos para tu posición y una recomendación práctica: aceptar, pedir cambios o rechazar.</p><p>Si contrataste la contraoferta, recibes además el texto alternativo redactado para cada cláusula problemática.</p>"
+        },
+        {
+          "h2": "Qué formatos acepto",
+          "html": "<ul><li>PDF escaneado o generado desde ordenador.</li><li>Fotos nítidas de cada página del papel, numeradas.</li><li>Texto pegado en el cuerpo del correo si no hay documento.</li></ul><p>Si alguna página no se lee, te lo digo antes de empezar y me la pides de nuevo.</p>"
+        },
+        {
+          "h2": "Qué pasa si faltan datos",
+          "html": "<p>Sin contexto no puedo valorar el riesgo real. Si no me cuentas quién eres en la operación o qué quieres conseguir, te escribo pidiendo ese dato antes de empezar. La revisión no comienza hasta tener el contrato legible y la información mínima.</p>"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Puedo hablar contigo por teléfono?",
+          "a": "Trabajo por escrito para dejar constancia de todo. Resuelvo las dudas por correo o WhatsApp y, si el caso lo requiere, concertamos una llamada puntual."
+        },
+        {
+          "q": "¿Qué ocurre si el contrato ya está firmado?",
+          "a": "También lo reviso. El informe te dirá qué obligaciones tienes vigentes, qué cláusulas podrían ser discutibles y qué opciones tienes desde ese momento."
+        }
+      ]
+    },
+    "quienRevisa": {
+      "title": "Quién revisa tu contrato | RevisiónContratos",
+      "description": "Tu contrato lo revisa Carla Morales, abogada civil y mercantil colegiada en el Ilustre Colegio de Abogados de Jerez, con Máster de Acceso a la Abogacía.",
+      "h1": "Quién revisa tu contrato",
+      "answer": "Yo, Carla Morales. Soy abogada civil y mercantil, colegiada en el Ilustre Colegio de Abogados de Jerez de la Frontera. Licenciada en Derecho por la Universidad de Cádiz y Máster de Acceso a la Abogacía. Cada contrato que entra lo leo yo personalmente.",
+      "sections": [
+        {
+          "h2": "Formación y colegiación",
+          "html": "<p>Licenciada en Derecho por la Universidad de Cádiz, con Máster de Acceso a la Abogacía y colegiada en el Ilustre Colegio de Abogados de Jerez de la Frontera. Ejercicio la práctica civil y mercantil, con especial dedicación a contratos y derecho inmobiliario.</p>"
+        },
+        {
+          "h2": "Cómo trabajo",
+          "html": "<p>Cada encargo lo reviso personalmente, sin plantillas automáticas ni subcontratas. Leo el contrato completo, no solo las cláusulas que crees problemáticas, porque los riesgos suelen esconderse en párrafos que nadie mira.</p>"
+        },
+        {
+          "h2": "Contacto directo",
+          "html": "<ul><li>Correo: abogada@carlamorales.es</li><li>WhatsApp: 694 213 393</li><li>Jerez de la Frontera, Cádiz</li></ul><p>También puedes conocer más sobre mi trabajo en <a href=\"https://carlamorales.es/\">carlamorales.es</a>, en mi <a href=\"https://es.linkedin.com/in/carla-morales-rivero\">perfil de LinkedIn</a> y en mi <a href=\"https://share.google/PUlSd9c6os8oD7jUk\">ficha de Google</a>.</p>"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Revisas tú misma todos los contratos?",
+          "a": "Sí. No trabajo con revisoras externas ni con software que decida por mí. Uso herramientas para ordenar el texto, pero la valoración jurídica es mía."
+        },
+        {
+          "q": "¿Puedes representarme después si hay conflicto?",
+          "a": "La revisión no incluye representación procesal. Si surge un litigio, valoro tu caso y te propongo el encargo adecuado o te derivo a un servicio específico como burofaxlegal.es."
+        }
+      ]
+    },
+    "avisoLegal": {
+      "title": "Aviso legal | RevisiónContratos",
+      "description": "Aviso legal de revisioncontratos.es: titular del sitio, datos de contacto, condiciones de uso y responsabilidad sobre los contenidos.",
+      "h1": "Aviso legal",
+      "sections": [
+        {
+          "h2": "Titular del sitio",
+          "html": "<p>El sitio revisioncontratos.es es titularidad de Jean Carla Morales Rivero, abogada civil y mercantil colegiada en el Ilustre Colegio de Abogados de Jerez de la Frontera, con domicilio profesional en Jerez de la Frontera, Cádiz.</p><ul><li>Correo: abogada@carlamorales.es</li><li>WhatsApp: 694 213 393</li><li>Web profesional: <a href=\"https://carlamorales.es/\">carlamorales.es</a></li></ul>"
+        },
+        {
+          "h2": "Objeto del sitio",
+          "html": "<p>Este sitio ofrece servicios de revisión de contratos y redacción de contratos a medida. Los contenidos informativos tienen carácter general y no sustituyen el análisis de un caso concreto.</p>"
+        },
+        {
+          "h2": "Responsabilidad",
+          "html": "<p>La información publicada se mantiene con diligencia, pero la normativa cambia y puede quedar desactualizada sin previo aviso. El uso del sitio no crea relación abogado-cliente hasta la aceptación expresa del encargo.</p>"
+        },
+        {
+          "h2": "Propiedad intelectual",
+          "html": "<p>Los textos, la estructura y los diseños de este sitio son titularidad de su propietaria. Su reproducción total o parcial requiere autorización previa.</p>"
+        }
+      ],
+      "noCta": true
+    },
+    "privacidad": {
+      "title": "Política de privacidad | RevisiónContratos",
+      "description": "Política de privacidad de revisioncontratos.es: responsable, finalidades, base jurídica, conservación y ejercicio de derechos conforme al RGPD.",
+      "h1": "Política de privacidad",
+      "sections": [
+        {
+          "h2": "Responsable del tratamiento",
+          "html": "<p>Responsable: Jean Carla Morales Rivero. Contacto: abogada@carlamorales.es. Los datos que me facilitas se tratan con absoluta confidencialidad y bajo deber de secreto profesional.</p>"
+        },
+        {
+          "h2": "Qué datos trato y para qué",
+          "html": "<ul><li><strong>Datos de contacto</strong> (nombre, correo, teléfono) para gestionar tu solicitud y responder a tus consultas.</li><li><strong>Documentos que subes</strong> (contratos, fotos, correos) para realizar la revisión encargada. Estos documentos contienen datos personales tuyos y de terceros, y se tratan estrictamente para el encargo.</li><li><strong>Datos de pago</strong> para emitir la factura correspondiente.</li></ul>"
+        },
+        {
+          "h2": "Base jurídica y conservación",
+          "html": "<p>La base jurídica es la ejecución del encargo profesional y el cumplimiento de obligaciones legales fiscales. Conservo los documentos del encargo durante los plazos legalmente exigidos y los elimino después.</p>"
+        },
+        {
+          "h2": "Cesiones",
+          "html": "<p>No cedo tus datos a terceros salvo obligación legal. No uso tus documentos para ninguna finalidad distinta del encargo ni los comparto con nadie.</p>"
+        },
+        {
+          "h2": "Tus derechos",
+          "html": "<p>Puedes ejercer los derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a abogada@carlamorales.es. También puedes reclamar ante la Agencia Española de Protección de Datos.</p>"
+        }
+      ],
+      "noCta": true
+    },
+    "cookies": {
+      "title": "Política de cookies | RevisiónContratos",
+      "description": "Política de cookies de revisioncontratos.es: este sitio no utiliza cookies de seguimiento ni herramientas de analítica en este momento.",
+      "h1": "Política de cookies",
+      "sections": [
+        {
+          "h2": "Sin cookies de seguimiento",
+          "html": "<p>Este sitio no instala cookies de analítica, publicidad ni perfilado de ningún tipo. No usamos Google Analytics, píxeles de redes sociales ni herramientas comparables.</p>"
+        },
+        {
+          "h2": "Qué es una cookie",
+          "html": "<p>Una cookie es un pequeño archivo que un sitio guarda en tu navegador para recordar información. Las cookies de terceros permiten a otras empresas seguir tu navegación fuera del sitio que visitas.</p>"
+        },
+        {
+          "h2": "Cambios futuros",
+          "html": "<p>Si en el futuro incorporáramos alguna herramienta que use cookies, actualizaríamos esta política y te pediríamos consentimiento cuando la ley lo exija.</p>"
+        }
+      ],
+      "noCta": true
+    },
+    "condiciones": {
+      "title": "Condiciones del servicio | RevisiónContratos",
+      "description": "Condiciones del servicio de revisión de contratos: encargo, pago por adelantado, plazo de entrega de 48-72 horas laborables, cancelación y límites del informe.",
+      "h1": "Condiciones del servicio",
+      "sections": [
+        {
+          "h2": "Aceptación del encargo",
+          "html": "<p>El encargo se perfecciona cuando tú envías el contrato y la información del caso, y yo confirmo la aceptación junto con la tarifa aplicable. A partir de ahí empieza a contar el plazo de entrega.</p>"
+        },
+        {
+          "h2": "Pago",
+          "html": "<p>El pago se realiza por adelantado mediante Bizum o transferencia. No se inicia la revisión sin pago confirmado, salvo acuerdo expreso en contrario.</p>"
+        },
+        {
+          "h2": "Plazo de entrega",
+          "html": "<p>El informe se entrega en un plazo habitual de 48-72 horas laborables desde la aceptación. Si el contrato es excepcionalmente complejo, te comunico un plazo mayor antes de empezar.</p>"
+        },
+        {
+          "h2": "Cancelación y reembolso",
+          "html": "<p>Decisión comercial propia: si cancelas antes de que empiece la revisión, reembolso íntegro. Si la revisión ya ha comenzado, no procede reembolso.</p>"
+        },
+        {
+          "h2": "Confidencialidad",
+          "html": "<p>Todos los documentos y comunicaciones se tratan de forma confidencial y bajo secreto profesional. Solo se comunican a proveedores necesarios para prestar el servicio o cuando exista una obligación legal, con las garantías correspondientes.</p>"
+        },
+        {
+          "h2": "Límites del servicio",
+          "html": "<p>El informe es un análisis jurídico orientativo sobre el documento aportado. No constituye defensa en juicio, no garantiza la aceptación de cambios por la otra parte, y no cubre la negociación posterior salvo encargo específico.</p>"
+        }
+      ],
+      "noCta": true
+    }
+  },
+  "services": [
+    {
+      "slug": "revision-contrato-alquiler",
+      "title": "Revisión de contrato de alquiler antes de firmar",
+      "titleTag": "Revisar contrato de alquiler antes de firmar | 59 €",
+      "description": "Revisión de contrato de alquiler por abogada antes de firmar o renovar. Detecta riesgos en fianza, renta, duración y cláusulas abusivas en 48-72 h.",
+      "h1": "Revisión de contrato de alquiler",
+      "answer": "Antes de firmar o renovar un alquiler, una abogada revisa el contrato completo: fianza, renta, duración, prórrogas, gastos y cláusulas que limitan tus derechos. Recibes un informe escrito en 48-72 horas con los riesgos y qué pedir cambiar, por 59 € IVA incluido.",
+      "teaser": "Firmar un alquiler sin revisarlo puede dejarte con una fianza retenida, una renta que sube sin control o una duración que no esperabas. Reviso el contrato antes de que pase.",
+      "llmsTeaser": "Servicio de revisión de contratos de alquiler antes de la firma o renovación. La abogada Carla Morales analiza fianza, renta, duración, prórrogas y cláusulas abusivas conforme a la LAU y la LGDCU. Informe en 48-72 horas desde 59 €.",
+      "priceLabel": "Desde 59 € IVA incluido",
+      "priceValue": 59,
+      "sections": [
+        {
+          "h2": "Qué reviso en tu contrato de alquiler",
+          "html": "<p>Leo el contrato completo con la LAU y la LGDCU sobre la mesa. Compruebo que la duración mínima legal se respete: cinco años si el arrendador es persona física y siete si es persona jurídica, según el art. 9 de la LAU. Reviso la renta, su forma de pago y su actualización anual conforme al art. 18 de la LAU.</p><p>También miro la fianza, que por ley es de una mensualidad y debe devolverse en un mes desde la entrega de llaves con los intereses correspondientes, según el art. 36 de la LAU. Cuando el arrendatario actúa como consumidor frente a un arrendador o intermediario profesional, también reviso las cláusulas no negociadas bajo la LGDCU. Si el arrendador es un particular que no actúa empresarialmente, el análisis se apoya en la LAU, el Código Civil y las normas imperativas aplicables.</p>"
+        },
+        {
+          "h2": "Riesgos habituales que detecto",
+          "html": "<ul><li>Confusión entre la fianza legal de una mensualidad y las garantías adicionales, que tienen naturaleza y límites distintos.</li><li>Actualización de renta con un índice que no corresponde a la fecha y a la cláusula del contrato.</li><li>Cláusulas que permiten al arrendador rescindir unilateralmente sin causa.</li><li>Reparto de gastos que la ley no permite trasladar al arrendatario.</li><li>Renuncias anticipadas a derechos que el art. 83 de la LGDCU considera nulas.</li></ul>"
+        },
+        {
+          "h2": "Qué recibes y qué no",
+          "html": "<p>Recibes un informe escrito con los riesgos, las cláusulas que deberías negociar y una recomendación clara. Si contratas la opción de contraoferta, te redacto el texto alternativo listo para enviar.</p><p>La otra parte puede rechazar los cambios. El informe identifica qué firmas, qué riesgos asumes y qué cláusulas conviene negociar.</p>"
+        },
+        {
+          "h2": "Si el contrato ya está firmado",
+          "html": "<p>También reviso contratos vigentes. Te indico qué obligaciones tienes, qué cláusulas podrían ser discutibles y qué caminos tienes si hay un conflicto abierto. Si necesitas reclamar formalmente, te oriento sobre el burofax como primer paso serio.</p>"
+        }
+      ],
+      "table": {
+        "caption": "Qué se revisa en un contrato de alquiler",
+        "head": [
+          "Aspecto",
+          "Qué comprobamos"
+        ],
+        "rows": [
+          [
+            "Duración",
+            "Mínimo legal de 5 años (7 si el arrendador es persona jurídica), prórrogas y desistimiento."
+          ],
+          [
+            "Renta y actualización",
+            "Importe, forma de pago y sistema de actualización anual permitido."
+          ],
+          [
+            "Fianza y garantías",
+            "Distinguir la fianza legal de una mensualidad de cualquier garantía adicional y revisar su devolución."
+          ],
+          [
+            "Gastos y suministros",
+            "Reparto correcto entre arrendador y arrendatario."
+          ],
+          [
+            "Cláusulas abusivas",
+            "Renuncias a derechos imperativos y, cuando existe relación de consumo, cláusulas no negociadas que puedan ser abusivas."
+          ]
+        ]
+      },
+      "checklist": {
+        "title": "Antes de firmar un alquiler, comprueba",
+        "items": [
+          "Que la duración mínima legal aparezca o se explique su ausencia.",
+          "Que la fianza no supere una mensualidad.",
+          "Que la actualización de renta mencione el índice IRAV o el pactado legalmente.",
+          "Que no haya renuncia a derechos irrenunciables.",
+          "Quién paga los gastos de comunidad, IBI y suministros.",
+          "Qué ocurre si rescindes antes de plazo y qué penalización aplican.",
+          "El estado de la vivienda y el inventario anexado."
+        ]
+      },
+      "faqs": [
+        {
+          "q": "¿Cuánto cuesta revisar un contrato de alquiler?",
+          "a": "La revisión express cuesta 59 € IVA incluido. Si además quieres una contraoferta redactada para enviar a la otra parte, son 119 €."
+        },
+        {
+          "q": "¿Revisas contratos de temporada o de estudiantes?",
+          "a": "Sí. La LAU tiene reglas distintas según el tipo de arrendamiento, y precisamente por eso conviene revisar qué figura se aplica realmente."
+        },
+        {
+          "q": "El casero me pide dos fianzas, ¿es legal?",
+          "a": "La fianza legal es de una mensualidad según el art. 36 de la LAU. Otras garantías adicionales tienen un tratamiento distinto y deben analizarse con cuidado."
+        },
+        {
+          "q": "¿Puedes negociar tú con la inmobiliaria?",
+          "a": "No incluyo la negociación directa en estas tarifas. Te entrego el informe y la contraoferta, y tú decides cómo plantearla."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "art. 9",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a9"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "art. 10",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a10"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "art. 17",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a17"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "art. 18",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a18"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "art. 36",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a36"
+        },
+        {
+          "label": "Ley General para la Defensa de Consumidores y Usuarios",
+          "precept": "art. 82",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a82"
+        },
+        {
+          "label": "Ley General para la Defensa de Consumidores y Usuarios",
+          "precept": "art. 83",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a83"
+        },
+        {
+          "label": "Ley General para la Defensa de Consumidores y Usuarios",
+          "precept": "art. 86",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a86"
+        }
+      ],
+      "crossSell": {
+        "h2": "¿Ya firmaste y hay problemas?",
+        "html": "<p>Si el contrato ya está firmado y el casero no devuelve la fianza o incumple, el siguiente paso serio es un burofax. En <a href=\"https://burofaxlegal.es/burofax-reclamar-fianza/\">burofaxlegal.es</a> gestionan la reclamación formal que deja constancia legal. También tienes guías útiles en <a href=\"https://tramitesjuridicos.com/guias/\">tramitesjuridicos.com</a>.</p>"
+      },
+      "ctaText": "Quiero que revisen mi contrato de alquiler"
+    },
+    {
+      "slug": "clausulas-abusivas-alquiler",
+      "title": "Detección de cláusulas abusivas en alquiler",
+      "titleTag": "Cláusulas abusivas en contrato de alquiler | 59 €",
+      "description": "Detecto cláusulas abusivas y nulas en tu contrato de alquiler: renuncias a derechos básicos, arbitrajes ajenos al de consumo, fianzas abusivas. Informe en 48-72 h.",
+      "h1": "Cláusulas abusivas en contrato de alquiler",
+      "answer": "Una cláusula no negociada puede ser abusiva y nula cuando existe una relación de consumo y causa, contra la buena fe, un desequilibrio importante. Reviso si se aplica la LGDCU y, además, si el contrato contradice normas imperativas de la LAU o del Código Civil.",
+      "teaser": "Firmaste algo que ahora ves injusto. No todo lo firmado produce necesariamente efecto. Revisamos si existe una relación de consumo, si una cláusula puede ser abusiva o si contradice una norma imperativa.",
+      "llmsTeaser": "Servicio de detección de cláusulas abusivas en contratos de alquiler conforme a la LGDCU: arts. 82 (definición), 83 (nulidad), 86 (limitación de derechos básicos) y 90.1 (arbitrajes no de consumo). Informe de la abogada Carla Morales en 48-72 horas desde 59 €.",
+      "priceLabel": "Desde 59 € IVA incluido",
+      "priceValue": 59,
+      "sections": [
+        {
+          "h2": "Qué es una cláusula abusiva",
+          "html": "<p>El art. 82 de la LGDCU define las cláusulas abusivas dentro de una relación entre consumidor y empresario: estipulaciones no negociadas individualmente que, contra la buena fe, causan un desequilibrio importante. El art. 83 establece que son nulas y se tienen por no puestas.</p>"
+        },
+        {
+          "h2": "Ejemplos que reviso",
+          "html": "<ul><li>En relaciones de consumo, arbitrajes impuestos distintos de los admitidos por el art. 90.1 de la LGDCU.</li><li>Renuncias a derechos básicos como el plazo mínimo de protección del arrendatario.</li><li>Fianzas y garantías adicionales mal diferenciadas o desproporcionadas.</li><li>Prohibiciones o penalizaciones redactadas de forma unilateral y desproporcionada.</li><li>Penalizaciones unilaterales que solo se aplican a una parte.</li></ul>"
+        },
+        {
+          "h2": "Qué puedes hacer con esa información",
+          "html": "<p>Sabes qué cláusulas pueden ser nulas, cuáles conviene impugnar y cómo plantearlo a la otra parte sin asumir que el conflicto está resuelto. El informe te da argumentos, no solo diagnóstico.</p><p>Que una cláusula sea nula no significa que la otra parte lo acepte de buen grado. A veces hará falta reclamar con formalidad, y ahí un burofax suele ser el primer paso.</p>"
+        }
+      ],
+      "table": {
+        "caption": "Cláusulas frecuentemente abusivas en alquiler",
+        "head": [
+          "Cláusula",
+          "Por qué es problemática"
+        ],
+        "rows": [
+          [
+            "Arbitraje lejano o no de consumo",
+            "El art. 90.1 de la LGDCU la considera abusiva."
+          ],
+          [
+            "Renuncia al plazo mínimo de protección",
+            "Limita un derecho básico del arrendatario (art. 86 LGDCU)."
+          ],
+          [
+            "Fianza y garantía adicional tratadas como lo mismo",
+            "La fianza legal es una mensualidad; la garantía adicional tiene regulación y límites propios."
+          ],
+          [
+            "Desistimiento unilateral del arrendador sin causa",
+            "Crea un desequilibrio importante contrario a la buena fe."
+          ],
+          [
+            "Penalización unilateral o desproporcionada",
+            "Puede generar un desequilibrio relevante; se valora el texto y las circunstancias del contrato."
+          ]
+        ]
+      },
+      "checklist": {
+        "title": "Señales de alarma en un contrato de alquiler",
+        "items": [
+          "Cláusulas en letra pequeña que nadie te ha explicado.",
+          "Penalizaciones que solo afectan al arrendatario.",
+          "Obligación de abogados o arbitrajes lejanos en caso de conflicto.",
+          "Renuncias expresas a derechos que la ley llama irrenunciables.",
+          "Fianzas, depósitos o avales superiores a una mensualidad.",
+          "Obligaciones desproporcionadas de reparación o mantenimiento.",
+          "Facultades del arrendador para entrar en la vivienda sin aviso."
+        ]
+      },
+      "faqs": [
+        {
+          "q": "¿Una cláusula abusiva firmada me obliga?",
+          "a": "El art. 83 de la LGDCU establece que las cláusulas abusivas son nulas y se tienen por no puestas. Si la otra parte intenta aplicarla, puede ser necesario oponerse formalmente o pedir que se declare su nulidad."
+        },
+        {
+          "q": "¿Sirve el informe para reclamar?",
+          "a": "El informe te da el diagnóstico y los argumentos jurídicos. Para reclamar formalmente necesitas un paso adicional, como un burofax, que puedes encargar en burofaxlegal.es."
+        },
+        {
+          "q": "¿Detectáis cláusulas abusivas en contratos de empresa?",
+          "a": "La LGDCU protege a consumidores y usuarios. Si eres empresa, el análisis cambia y se hace desde otras normas; indícalo en tu solicitud y lo valoramos."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ley General para la Defensa de Consumidores y Usuarios",
+          "precept": "art. 82",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a82"
+        },
+        {
+          "label": "Ley General para la Defensa de Consumidores y Usuarios",
+          "precept": "art. 83",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a83"
+        },
+        {
+          "label": "Ley General para la Defensa de Consumidores y Usuarios",
+          "precept": "art. 86",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a86"
+        },
+        {
+          "label": "Ley General para la Defensa de Consumidores y Usuarios",
+          "precept": "art. 89",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a89"
+        },
+        {
+          "label": "Ley General para la Defensa de Consumidores y Usuarios",
+          "precept": "art. 90.1",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a90"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "art. 9",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a9"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "art. 36",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a36"
+        }
+      ],
+      "crossSell": {
+        "h2": "De la detección a la reclamación",
+        "html": "<p>Una vez identificada la cláusula abusiva, el siguiente paso es reclamarlo formalmente. Un burofax deja constancia fehaciente y suele desbloquear la negociación. Puedes encargarlo en <a href=\"https://burofaxlegal.es/burofax-reclamar-fianza/\">burofaxlegal.es</a>, y si el problema es un impago de renta, en <a href=\"https://burofaxlegal.es/burofax-impago-alquiler/\">su servicio de impago de alquiler</a>.</p>"
+      },
+      "ctaText": "Detectar cláusulas abusivas en mi contrato"
+    },
+    {
+      "slug": "actualizacion-renta-irav",
+      "title": "Actualización de renta de alquiler según el IRAV",
+      "titleTag": "Actualización de renta de alquiler e IRAV | 59 €",
+      "description": "Reviso si tu contrato actualiza la renta de forma legal según el IRAV del INE y la LAU. Evita subidas indebidas con informe de abogada en 48-72 h.",
+      "h1": "Actualización de renta de alquiler e IRAV",
+      "answer": "La renta solo puede actualizarse en cada anualidad si el contrato lo prevé y siguiendo el régimen aplicable. El IRAV, publicado mensualmente por el INE, rige la revisión de contratos firmados después del 26 de mayo de 2023; los anteriores requieren comprobar su cláusula. Reviso tu contrato y la última actualización para detectar subidas indebidas.",
+      "teaser": "La renta sube cada año y nadie te explica cómo. Yo reviso el contrato y los cálculos para saber si el casero se está pasando.",
+      "llmsTeaser": "Revisión de la actualización de renta de alquiler conforme al art. 18 de la LAU y al índice IRAV del INE, publicado mensualmente. Detecta subidas indebidas en contratos de alquiler. Informe de la abogada Carla Morales en 48-72 horas desde 59 €.",
+      "priceLabel": "Desde 59 € IVA incluido",
+      "priceValue": 59,
+      "sections": [
+        {
+          "h2": "Cómo puede subir la renta legalmente",
+          "html": "<p>El art. 18 de la LAU permite actualizar la renta una vez al año si el contrato lo prevé, aplicando el índice pactado. El RD-ley 8/2026 y su tope extraordinario del 2 % quedaron derogados el 30 de abril de 2026. Para contratos firmados después del 26 de mayo de 2023, el INE indica que la revisión se basa en el IRAV; en contratos anteriores hay que comprobar la cláusula y el régimen aplicable.</p>"
+        },
+        {
+          "h2": "Qué reviso",
+          "html": "<ul><li>Que el contrato prevea expresamente la actualización anual.</li><li>Qué índice se pactó y si coincide con el IRAV o con otro legalmente admisible.</li><li>Que la subida aplicada en cada anualidad corresponda al índice correcto.</li><li>Que no se haya aplicado retroactivamente ninguna actualización.</li></ul>"
+        },
+        {
+          "h2": "Contexto normativo reciente",
+          "html": "<p>El RD-ley 8/2026 limitó temporalmente la actualización con un tope del 2 % y previó una prórroga extraordinaria, pero fue derogado el 30 de abril de 2026 al no convalidarse. Hoy hay que partir del art. 18 de la LAU y leer la cláusula concreta. El IRAV limita la revisión de los contratos firmados después del 26 de mayo de 2023; en los anteriores debe comprobarse el índice pactado y su régimen transitorio.</p>"
+        },
+        {
+          "h2": "Si la subida es indebida",
+          "html": "<p>Te digo cuánto deberías haber pagado, cuánto te han cobrado de más y qué opciones tienes: pagar bajo protesta, reclamar la devolución o negociar. La reclamación formal suele empezar con un burofax que deje constancia.</p>"
+        }
+      ],
+      "table": {
+        "caption": "Elementos de una actualización de renta correcta",
+        "head": [
+          "Elemento",
+          "Qué debe cumplir"
+        ],
+        "rows": [
+          [
+            "Frecuencia",
+            "Una sola actualización por año de contrato."
+          ],
+          [
+            "Índice aplicable",
+            "El pactado en el contrato conforme al art. 18 de la LAU."
+          ],
+          [
+            "Referencia vigente",
+            "El IRAV para contratos firmados después del 26 de mayo de 2023; en los anteriores, el índice que corresponda tras revisar la cláusula y la fecha."
+          ],
+          [
+            "Aplicación temporal",
+            "Desde la fecha pactada, sin efectos retroactivos."
+          ],
+          [
+            "Comunicación",
+            "Notificación clara del nuevo importe y del índice usado."
+          ]
+        ]
+      },
+      "checklist": {
+        "title": "Comprueba tu última subida de renta",
+        "items": [
+          "Pide al casero el índice exacto aplicado y su fecha de publicación.",
+          "Confirma que solo se ha actualizado una vez en los últimos doce meses.",
+          "Verifica que el contrato contiene cláusula expresa de actualización.",
+          "Comprueba que el índice usado es el pactado legalmente.",
+          "Revisa que la cantidad resultante cuadra con lo que te cobran.",
+          "Guarda los recibos de cada mensualidad como prueba."
+        ]
+      },
+      "faqs": [
+        {
+          "q": "¿Puede subirme la renta si mi contrato no lo prevé?",
+          "a": "El art. 18 de la LAU exige que el contrato contenga cláusula de actualización. Si no la hay, la renta no se puede actualizar durante la vigencia pactada."
+        },
+        {
+          "q": "¿Qué es el IRAV exactamente?",
+          "a": "Es el Índice de Referencia de Arrendamientos de Vivienda que el INE publica mensualmente. El propio INE indica que se usa para revisar contratos firmados después del 26 de mayo de 2023; para los anteriores hay que comprobar la cláusula y el régimen aplicable."
+        },
+        {
+          "q": "El casero me subió más del IRAV, ¿qué hago?",
+          "a": "Primero verificamos los cálculos. Si la subida excede lo permitido, puedes reclamar la devolución del exceso, normalmente empezando por un burofax."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "art. 18",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a18"
+        },
+        {
+          "label": "INE, Índice de Referencia de Arrendamientos de Vivienda",
+          "precept": "publicación mensual del IRAV",
+          "url": "https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177110&idp=1254735976607&menu=ultiDatos"
+        },
+        {
+          "label": "RD-ley 8/2026 (derogado)",
+          "precept": "derogación el 30-4-2026, solo contexto histórico",
+          "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-6545"
+        }
+      ],
+      "crossSell": {
+        "h2": "Si la subida es indebida, reclama",
+        "html": "<p>El diagnóstico es el primer paso. Para reclamar el exceso cobrado necesitas una comunicación formal que deje constancia. En <a href=\"https://burofaxlegal.es/burofax-impago-alquiler/\">burofaxlegal.es</a> gestionan burofaxes de este tipo, y en <a href=\"https://tramitesjuridicos.com/guias/\">tramitesjuridicos.com</a> tienes guías sobre reclamaciones entre particulares.</p>"
+      },
+      "ctaText": "Revisar la actualización de mi renta"
+    },
+    {
+      "slug": "prorroga-contrato-alquiler",
+      "title": "Prórroga de contrato de alquiler",
+      "titleTag": "Prórroga de contrato de alquiler | 59 €",
+      "description": "Reviso duración, prórroga obligatoria y prórroga tácita de tu alquiler según la LAU. Recibe un informe con plazos y notificaciones en 48-72 h.",
+      "h1": "Prórroga de contrato de alquiler",
+      "answer": "Tu contrato de alquiler tiene una duración mínima legal y un sistema de prórrogas que condiciona cuándo puedes salir y con qué aviso. Reviso la duración pactada, la prórroga obligatoria de cinco años y la prórroga tácita de tres, con sus notificaciones de cuatro meses del arrendador y dos del arrendatario.",
+      "teaser": "¿Sabes cuándo termina realmente tu contrato y qué aviso debes dar para irte? La mayoría no lo sabe hasta que recibe una reclamación.",
+      "llmsTeaser": "Revisión de duración y prórrogas de contratos de alquiler conforme a los arts. 9 y 10 de la LAU: duración mínima de 5 años, prórroga obligatoria, prórroga tácita de 3 años y notificaciones de 4 meses del arrendador o 2 del arrendatario. Informe en 48-72 horas desde 59 €.",
+      "priceLabel": "Desde 59 € IVA incluido",
+      "priceValue": 59,
+      "sections": [
+        {
+          "h2": "Cómo funciona la duración legal",
+          "html": "<p>El art. 9 de la LAU fija una duración mínima de cinco años en alquiler de vivienda habitual cuando el arrendador es persona física, y de siete cuando es persona jurídica. Durante ese plazo, el arrendador solo puede recuperar la vivienda en supuestos tasados, como necesidad para sí o familiares en primer grado.</p>"
+        },
+        {
+          "h2": "Prórroga obligatoria y prórroga tácita",
+          "html": "<p>Si la duración pactada es inferior al mínimo legal, el contrato se prorroga por plazos anuales hasta alcanzar cinco años, o siete cuando el arrendador es persona jurídica, salvo que el arrendatario comunique que no quiere renovarlo con al menos treinta días de antelación.</p><p>Superado ese período, entra la prórroga tácita de tres años más. Aquí el art. 10 de la LAU regula las notificaciones: el arrendador debe avisar con cuatro meses de antelación y el arrendatario con dos.</p>"
+        },
+        {
+          "h2": "Qué reviso en tu contrato",
+          "html": "<ul><li>La duración pactada y si respeta el mínimo legal.</li><li>Las cláusulas de desistimiento y sus penalizaciones.</li><li>Los plazos de preaviso para no renovar y si son abusivos.</li><li>Qué ocurre con las mejoras y el estado de la vivienda al finalizar.</li></ul>"
+        },
+        {
+          "h2": "Contexto normativo",
+          "html": "<p>El RD-ley 8/2026 introdujo una prórroga extraordinaria con efectos limitados, pero fue derogado el 30 de abril de 2026 al no convalidarse. La regulación vigente parte de los arts. 9 y 10 de la LAU. El propio art. 10 contempla prórrogas extraordinarias en supuestos concretos, entre ellos determinadas situaciones de vulnerabilidad y viviendas situadas en zonas de mercado residencial tensionado; su aplicación exige revisar los requisitos del caso.</p>"
+        }
+      ],
+      "table": {
+        "caption": "Duración y prórrogas según la LAU",
+        "head": [
+          "Momento",
+          "Regla legal"
+        ],
+        "rows": [
+          [
+            "Duración mínima",
+            "5 años si el arrendador es persona física; 7 si es persona jurídica."
+          ],
+          [
+            "Prórroga obligatoria",
+            "Anual hasta cumplir 5 años (7 si el arrendador es persona jurídica), salvo que el arrendatario comunique que no quiere renovar con 30 días de antelación."
+          ],
+          [
+            "Prórroga tácita",
+            "3 años más, salvo notificación en contrario."
+          ],
+          [
+            "Aviso del arrendador",
+            "4 meses antes para no prorrogar."
+          ],
+          [
+            "Aviso del arrendatario",
+            "2 meses antes para no prorrogar."
+          ]
+        ]
+      },
+      "checklist": {
+        "title": "Antes de decidir sobre tu prórroga",
+        "items": [
+          "Revisa la fecha exacta de fin de contrato.",
+          "Calcula los plazos legales de preaviso según tu posición.",
+          "Verifica si tu contrato añade penalizaciones por salir antes.",
+          "Comprueba si hay cláusulas de subida de renta ligadas a la prórroga.",
+          "Documenta el estado de la vivienda antes de cualquier entrega de llaves.",
+          "Envía cualquier comunicación por escrito y con acuse de recibo."
+        ]
+      },
+      "faqs": [
+        {
+          "q": "¿Puede el casero echarme al cumplir el primer año?",
+          "a": "No, salvo que el contrato sea de temporada con causa real o que concurra algún supuesto legal tasado. La duración mínima de protección es de cinco años según el art. 9 de la LAU."
+        },
+        {
+          "q": "Quiero irme antes de que acabe la prórroga, ¿puedo?",
+          "a": "Depende del momento contractual en que estés. La respuesta depende de si quieres impedir la siguiente prórroga o terminar una anualidad ya iniciada. Revisamos la fecha, la cláusula de desistimiento y el momento contractual antes de indicar el preaviso aplicable."
+        },
+        {
+          "q": "El casero no me avisó con cuatro meses, ¿qué pasa?",
+          "a": "Si el arrendador no notifica su voluntad de no prorrogar en plazo, el contrato se prorroga según el art. 10 de la LAU. El informe valora tu situación concreta."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "art. 9",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a9"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "art. 10",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a10"
+        },
+        {
+          "label": "RD-ley 8/2026 (derogado)",
+          "precept": "derogación el 30-4-2026, solo contexto histórico",
+          "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-6545"
+        }
+      ],
+      "crossSell": {
+        "h2": "Cuando la salida se complica",
+        "html": "<p>Si la otra parte no respeta los plazos o la devolución de la fianza se retrasa, la comunicación formal marca la diferencia. Un burofax con acuse de recibo deja constancia fehaciente; puedes encargarlo en <a href=\"https://burofaxlegal.es/burofax-reclamar-fianza/\">burofaxlegal.es</a>.</p>"
+      },
+      "ctaText": "Revisar la prórroga de mi contrato"
+    },
+    {
+      "slug": "reclamar-fianza",
+      "title": "Reclamación de fianza de alquiler",
+      "titleTag": "Reclamar fianza de alquiler retenida | 59 €",
+      "description": "El casero no te devuelve la fianza. Reviso tu contrato y la situación: la LAU da un mes para devolverla con intereses. Informe en 48-72 h desde 59 €.",
+      "h1": "Reclamar la fianza de alquiler",
+      "answer": "El saldo de la fianza pendiente de devolución devenga interés legal cuando transcurre un mes desde la entrega de llaves, según el art. 36 de la LAU. Si tu casero la retiene, reviso tu contrato y tu caso y te digo qué reclamar y cómo, antes de que el tiempo juegue en su contra.",
+      "teaser": "Entregaste las llaves y la fianza no llega. Es la reclamación más habitual del alquiler, y la más ganable cuando se documenta bien.",
+      "llmsTeaser": "Revisión de contratos para reclamar la fianza de alquiler retenida ilegalmente. El art. 36 de la LAU obliga a devolverla en un mes desde la entrega de llaves, con intereses por retraso. Informe de la abogada Carla Morales en 48-72 horas desde 59 €.",
+      "priceLabel": "Desde 59 € IVA incluido",
+      "priceValue": 59,
+      "sections": [
+        {
+          "h2": "Lo que dice la ley",
+          "html": "<p>El art. 36 de la LAU fija una mensualidad de fianza en vivienda. El saldo que deba devolverse devenga interés legal cuando transcurre un mes desde la entrega de llaves sin restitución.</p>"
+        },
+        {
+          "h2": "Por qué se retienen las fianzas",
+          "html": "<ul><li>Por supuestos desperfectos que nunca se documentan.</li><li>Por recibos de suministros que el casero dice no haber recibido.</li><li>Por pura demora, esperando que desistas por el coste de reclamar.</li><li>Porque el contrato original contiene cláusulas que el casero interpreta a su favor.</li></ul>"
+        },
+        {
+          "h2": "Qué reviso antes de reclamar",
+          "html": "<p>Analizo el contrato, el inventario de entrada y salida, los recibos de las últimas mensualidades y las comunicaciones entre las partes. Con eso sé si la retención tiene base o es improcedente, y qué cantidad exacta puedes reclamar con intereses.</p>"
+        },
+        {
+          "h2": "El paso siguiente",
+          "html": "<p>La reclamación seria empieza casi siempre por un burofax. Deja constancia de la fecha, del importe y de la voluntad de reclamar judicialmente si no hay respuesta. Es barato, rápido y cambia la conversación.</p>"
+        }
+      ],
+      "table": {
+        "caption": "Elementos de una reclamación de fianza",
+        "head": [
+          "Elemento",
+          "Qué aporta"
+        ],
+        "rows": [
+          [
+            "Contrato de alquiler",
+            "Establece la fianza pactada y las condiciones de devolución."
+          ],
+          [
+            "Inventario de salida",
+            "Documenta el estado de la vivienda al entregar las llaves."
+          ],
+          [
+            "Recibos de suministros",
+            "Acredita que no quedan deudas pendientes."
+          ],
+          [
+            "Fecha de entrega de llaves",
+            "Marca el inicio del plazo legal de un mes."
+          ],
+          [
+            "Burofax de reclamación",
+            "Deja constancia fehaciente y abre la vía a reclamar judicialmente."
+          ]
+        ]
+      },
+      "checklist": {
+        "title": "Documenta tu reclamación de fianza",
+        "items": [
+          "Guarda el contrato firmado y todos los anexos.",
+          "Fotografía la vivienda el día de la entrega de llaves.",
+          "Reúne los últimos recibos de luz, agua y gas.",
+          "Anota la fecha exacta en que entregaste las llaves.",
+          "Conserva los justificantes de pago de todas las mensualidades.",
+          "Reclama por escrito antes de plantearte la vía judicial."
+        ]
+      },
+      "faqs": [
+        {
+          "q": "¿Cuánto tarda el casero en devolver la fianza?",
+          "a": "El art. 36 de la LAU dispone que el saldo pendiente devenga interés legal cuando pasa un mes desde la entrega de llaves sin restitución."
+        },
+        {
+          "q": "¿Puede descontarme por desperfectos normales de uso?",
+          "a": "Hay que comparar el inventario, las fotografías y el estado de entrega para distinguir un daño imputable del deterioro propio del uso. La respuesta depende de esa prueba."
+        },
+        {
+          "q": "¿Necesito abogado para reclamar la fianza?",
+          "a": "Para la reclamación previa no. Te conviene para valorar el caso y redactar el burofax con los argumentos correctos; si no hay respuesta, entonces sí valoraremos la vía judicial."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "art. 36",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a36"
+        }
+      ],
+      "crossSell": {
+        "h2": "El burofax de fianza, listo para enviar",
+        "html": "<p>Este servicio termina con un diagnóstico y una hoja de ruta. Para ejecutarla, el burofax de reclamación de fianza es el paso natural: lo redactan juristas y llega con acuse de recibo. Encárgalo en <a href=\"https://burofaxlegal.es/burofax-reclamar-fianza/\">burofaxlegal.es</a>, y consulta sus guías en <a href=\"https://tramitesjuridicos.com/guias/\">tramitesjuridicos.com</a>.</p>"
+      },
+      "ctaText": "Revisar mi caso de fianza retenida"
+    },
+    {
+      "slug": "revision-contrato-arras",
+      "title": "Revisión de contrato de arras en compraventa",
+      "titleTag": "Revisar contrato de arras de compraventa | 59 €",
+      "description": "Reviso tu contrato de arras antes de firmar: penitenciales o confirmatorias, consecuencias de desistir y plazos. Informe de abogada en 48-72 h.",
+      "h1": "Revisión de contrato de arras",
+      "answer": "Las arras no son un mero anticipo: según el art. 1454 del Código Civil, pueden ser penitenciales y permitir desistir perdiendo lo dado o devolviendo lo recibido. Reviso el contrato antes de que firmes y te explico qué tipo de arras aceptas y qué pierdes si te echas atrás.",
+      "teaser": "Firmar arras en un piso es comprometer cientos de miles de euros con una firma. Revisar antes cuesta 59 €.",
+      "llmsTeaser": "Revisión de contratos de arras en compraventa de vivienda conforme al art. 1454 del Código Civil. Distingue arras penitenciales de confirmatorias, consecuencias del desistimiento y plazos. Informe de la abogada Carla Morales en 48-72 horas desde 59 €.",
+      "priceLabel": "Desde 59 € IVA incluido",
+      "priceValue": 59,
+      "sections": [
+        {
+          "h2": "Qué son las arras y qué tipo aceptas",
+          "html": "<p>El art. 1454 del Código Civil regula las arras penitenciales: quien las entrega pierde la cantidad si desiste, y quien las recibe debe devolver el doble si es él quien se echa atrás. Pero las partes pueden pactar arras confirmatorias, que obligan a completar la venta sin opción de desistir libre.</p><p>El art. 1255 del Código Civil reconoce la libertad de pacto dentro de los límites de la ley, la moral y el orden público; por eso la redacción concreta manda.</p>"
+        },
+        {
+          "h2": "Riesgos habituales en contratos de arras",
+          "html": "<ul><li>Arras confirmatorias disfrazadas de penitenciales, sin opción real de salida.</li><li>Plazos imposibles para conseguir la financiación.</li><li>Penalizaciones adicionales a las propias de las arras.</li><li>Cargas y gravámenes sobre la vivienda que solo se descubren después.</li><li>Cláusulas que permiten al vendedor vender a otro si aparece mejor oferta.</li></ul>"
+        },
+        {
+          "h2": "Qué reviso antes de que firmes",
+          "html": "<p>El tipo de arras, el precio final y su forma de pago, los plazos hasta la escritura, las condiciones suspensivas de financiación y la situación registral de la vivienda. Si falta alguna protección básica, te lo señalo y te propongo redacción alternativa.</p>"
+        }
+      ],
+      "table": {
+        "caption": "Arras penitenciales frente a confirmatorias",
+        "head": [
+          "Aspecto",
+          "Arras penitenciales",
+          "Arras confirmatorias"
+        ],
+        "rows": [
+          [
+            "Desistir del comprador",
+            "Pierde lo entregado.",
+            "No existe la salida automática del art. 1454; las consecuencias dependen del pacto y de las reglas del incumplimiento."
+          ],
+          [
+            "Desistir del vendedor",
+            "Devuelve el doble de lo recibido.",
+            "No existe la salida automática del art. 1454; las consecuencias dependen del pacto y de las reglas del incumplimiento."
+          ],
+          [
+            "Efecto principal",
+            "Opción de salida pagando.",
+            "Compromiso firme de venta."
+          ],
+          [
+            "Norma de referencia",
+            "Art. 1454 del Código Civil.",
+            "Pacto de las partes (art. 1255 CC)."
+          ]
+        ]
+      },
+      "checklist": {
+        "title": "Antes de firmar las arras",
+        "items": [
+          "Confirma qué tipo de arras son y que el contrato lo dice claro.",
+          "Verifica el plazo para firmar la escritura y si es realista.",
+          "Comprueba que la financiación está protegida como condición suspensiva.",
+          "Solicita nota simple registral de la vivienda.",
+          "Revisa qué ocurre con los gastos e impuestos de la operación.",
+          "No entregues ningún importe sin documento firmado."
+        ]
+      },
+      "faqs": [
+        {
+          "q": "¿Puedo recuperar las arras si no me conceden la hipoteca?",
+          "a": "Solo si el contrato lo prevé expresamente como condición suspensiva. Sin esa cláusula, puedes perder las arras penitenciales aunque la financiación no llegue; deben revisarse la redacción y las circunstancias concretas."
+        },
+        {
+          "q": "¿Qué pasa si el vendedor se echa atrás?",
+          "a": "Con arras penitenciales, debe devolverte el doble de lo recibido. Con confirmatorias, puedes exigir la venta o la indemnización por incumplimiento."
+        },
+        {
+          "q": "¿Revisáis también la promesa de compraventa completa?",
+          "a": "Sí. La promesa y las arras suelen ir juntas, y reviso el conjunto para que no haya contradicciones entre documentos."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Código Civil",
+          "precept": "art. 1454",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1454"
+        },
+        {
+          "label": "Código Civil",
+          "precept": "art. 1255",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1255"
+        }
+      ],
+      "crossSell": {
+        "h2": "Si la operación se tuerce",
+        "html": "<p>Cuando el otro incumple, la reclamación formal ordena la situación. Un burofax con acuse de recibo suele ser el primer paso antes de cualquier demanda; lo gestionan en <a href=\"https://burofaxlegal.es/\">burofaxlegal.es</a>, con guías de apoyo en <a href=\"https://tramitesjuridicos.com/guias/\">tramitesjuridicos.com</a>.</p>"
+      },
+      "ctaText": "Revisar mi contrato de arras"
+    },
+    {
+      "slug": "revision-prestamo-particulares",
+      "title": "Revisión de préstamo entre particulares",
+      "titleTag": "Revisar préstamo entre particulares | 59 €",
+      "description": "Reviso tu contrato de préstamo entre particulares: intereses, plazos, garantías y consecuencias del impago según el Código Civil. Informe en 48-72 h.",
+      "h1": "Revisión de préstamo entre particulares",
+      "answer": "Prestar dinero a un familiar o amigo sin contrato claro es la receta para perder el dinero y la relación. Reviso el contrato de préstamo para que los intereses, plazos y garantías estén redactados conforme al art. 1753 del Código Civil y sean exigibles si hace falta.",
+      "teaser": "«Pásame el dinero y te lo devuelvo» no es un préstamo, es una donación con retraso. Un contrato claro protege la amistad y el bolsillo.",
+      "llmsTeaser": "Revisión de contratos de préstamo entre particulares conforme a los arts. 1753 y 1255 del Código Civil: intereses, plazos de devolución, garantías y consecuencias del impago. Informe de la abogada Carla Morales en 48-72 horas desde 59 €.",
+      "priceLabel": "Desde 59 € IVA incluido",
+      "priceValue": 59,
+      "sections": [
+        {
+          "h2": "Qué debe contener un préstamo entre particulares",
+          "html": "<p>El art. 1753 del Código Civil define el préstamo de consumo y exige que se devuelva lo recibido. En la práctica, el contrato debe fijar la cantidad, el plazo, los intereses si los hay, la forma de pago y qué ocurre si hay impago.</p><p>El art. 1255 del Código Civil permite pactar casi cualquier condición dentro de la ley, así que una buena redacción marca la diferencia entre cobrar y no cobrar.</p>"
+        },
+        {
+          "h2": "Riesgos habituales",
+          "html": "<ul><li>Préstamos sin intereses que luego nadie puede exigir por escrito.</li><li>Plazos vagos («cuando pueda») que impiden reclamar vencimiento.</li><li>Aval o garantía sin describir el bien concreto.</li><li>Falta de firma de ambas partes o de testigos.</li><li>Cantidades entregadas en efectivo sin justificante.</li></ul>"
+        },
+        {
+          "h2": "Qué reviso",
+          "html": "<p>Que el contrato identifique a las partes, describa la cantidad y su entrega, fije plazo e intereses de forma exigible y regule el impago con consecuencias reales. Si algo falla, te propongo la redacción correcta.</p>"
+        },
+        {
+          "h2": "Si ya hay impago",
+          "html": "<p>Reviso el contrato vigente y la documentación del impago para valorar tu posición. La reclamación formal suele empezar con un burofax que documente la cantidad, el vencimiento y la petición de pago.</p>"
+        }
+      ],
+      "table": {
+        "caption": "Cláusulas esenciales de un préstamo entre particulares",
+        "head": [
+          "Cláusula",
+          "Qué debe decir"
+        ],
+        "rows": [
+          [
+            "Partes",
+            "Identidad completa de prestamista y prestatario."
+          ],
+          [
+            "Cantidad y entrega",
+            "Importe exacto y forma de entrega, con justificante."
+          ],
+          [
+            "Plazo",
+            "Fecha concreta de devolución o calendario de pagos."
+          ],
+          [
+            "Intereses",
+            "Tipo, forma de cálculo y consecuencia del retraso."
+          ],
+          [
+            "Impago",
+            "Reclamación de cantidad, costes y vía de cobro."
+          ],
+          [
+            "Garantías",
+            "Descripción precisa del bien o aval, si existe."
+          ]
+        ]
+      },
+      "checklist": {
+        "title": "Antes de firmar un préstamo entre particulares",
+        "items": [
+          "Identifica por completo a quien prestas o de quien pides.",
+          "Fija una fecha de devolución concreta, no una promesa vaga.",
+          "Establece intereses aunque sean simbólicos; ordenan el compromiso.",
+          "Documenta la entrega con transferencia o recibo firmado.",
+          "Incluye el domicilio del prestatario para futuras notificaciones.",
+          "Firma el contrato en dos ejemplares, uno para cada parte."
+        ]
+      },
+      "faqs": [
+        {
+          "q": "¿Un préstamo entre familiares necesita contrato?",
+          "a": "Un contrato escrito no siempre es obligatorio, pero facilita probar la cantidad, la entrega y el vencimiento. Sin él todavía pueden servir transferencias, mensajes y otros documentos, que deben valorarse en conjunto."
+        },
+        {
+          "q": "¿Puedo cobrar intereses a un amigo?",
+          "a": "Puede pactarse interés, pero su validez y exigibilidad dependen de cómo se redacte y de los límites legales aplicables. Conviene dejarlo por escrito."
+        },
+        {
+          "q": "¿Qué hago si no me devuelven el dinero?",
+          "a": "Primero revisamos el contrato y la documentación. Después, la reclamación formal con burofax suele ser el paso previo a la vía judicial."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Código Civil",
+          "precept": "art. 1753",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1753"
+        },
+        {
+          "label": "Código Civil",
+          "precept": "art. 1255",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1255"
+        }
+      ],
+      "crossSell": {
+        "h2": "Del contrato al cobro",
+        "html": "<p>Un préstamo bien redactado es la mitad del camino; la otra mitad es reclamar cuando toca. El burofax de reclamación lo preparan juristas en <a href=\"https://burofaxlegal.es/\">burofaxlegal.es</a>, con guías prácticas en <a href=\"https://tramitesjuridicos.com/guias/\">tramitesjuridicos.com</a>.</p>"
+      },
+      "ctaText": "Revisar mi contrato de préstamo"
+    },
+    {
+      "slug": "contrato-a-medida",
+      "title": "Redacción de contrato a medida",
+      "titleTag": "Contrato a medida por abogada | desde 199 €",
+      "description": "Redacción de contratos a medida por abogada: alquiler, compraventa, préstamos y acuerdos entre particulares. Contrato adaptado a tu caso, desde 199 €.",
+      "h1": "Contrato a medida",
+      "answer": "En lugar de adaptar una plantilla genérica, redacto un contrato construido sobre tu operación concreta: partes, objeto, precio, plazos y riesgos. El art. 1255 del Código Civil permite pactar lo que las partes quieran dentro de la ley, y un buen contrato usa todo ese margen para protegerte.",
+      "teaser": "Las plantillas gratuitas se escriben para no enfadar a nadie. Un contrato a medida se escribe para protegerte a ti.",
+      "llmsTeaser": "Servicio de redacción de contratos a medida por la abogada Carla Morales: alquiler, compraventa, préstamos entre particulares y acuerdos personalizados, construidos sobre la operación concreta del cliente conforme al art. 1255 del Código Civil. Precio desde 199 € IVA incluido.",
+      "priceLabel": "Desde 199 € IVA incluido",
+      "priceValue": 199,
+      "sections": [
+        {
+          "h2": "Cómo trabajo un contrato a medida",
+          "html": "<p>Primero una entrevista para entender la operación: quiénes son las partes, qué quieren conseguir, qué riesgos teme cada una. Después redacto el contrato desde cero, sin plantillas, con las cláusulas que tu caso necesita.</p><p>Entrego una primera versión, recojo tus observaciones y las de la otra parte si las hay, y cierro una versión final lista para firmar.</p>"
+        },
+        {
+          "h2": "Qué tipo de contratos redacto",
+          "html": "<ul><li>Contratos de alquiler de vivienda, local o temporada con cláusulas especiales.</li><li>Promesas de compraventa y contratos de arras con condiciones suspensivas.</li><li>Préstamos entre particulares con garantías e intereses.</li><li>Acuerdos y contratos civiles entre particulares o con pymes.</li></ul>"
+        },
+        {
+          "h2": "Qué incluye el precio",
+          "html": "<p>La entrevista inicial, la redacción completa, una ronda de modificaciones tras recibir observaciones y la explicación jurídica básica de las cláusulas incluidas. Si la operación crece en complejidad, te lo digo antes de empezar y cerramos el precio final.</p>"
+        },
+        {
+          "h2": "Qué no incluye",
+          "html": "<p>No incluye la negociación con la otra parte ni la comparecencia en notaría o juicio. El contrato a medida te da el documento; usarlo en tu beneficio sigue siendo decisión tuya.</p>"
+        }
+      ],
+      "table": {
+        "caption": "Qué diferencia un contrato a medida de una plantilla",
+        "head": [
+          "Aspecto",
+          "Plantilla genérica",
+          "Contrato a medida"
+        ],
+        "rows": [
+          [
+            "Partes y objeto",
+            "Descripción estándar que puede no encajar.",
+            "Redactado sobre las partes reales y la operación concreta."
+          ],
+          [
+            "Riesgos",
+            "No contempla los tuyos.",
+            "Identificados en la entrevista y cubiertos con cláusulas específicas."
+          ],
+          [
+            "Cláusulas abusivas",
+            "Puede contenerlas sin que lo sepas.",
+            "Revisadas para ser equilibradas y exigibles."
+          ],
+          [
+            "Protección en impago",
+            "Genérica o ausente.",
+            "Consecuencias concretas y proporcionadas."
+          ],
+          [
+            "Revisión",
+            "Ninguna tras la descarga.",
+            "Una ronda de modificaciones incluida."
+          ]
+        ]
+      },
+      "checklist": {
+        "title": "Prepara tu contrato a medida",
+        "items": [
+          "Reúne la documentación de la operación: previos, ofertas, acuerdos verbales.",
+          "Identifica a todas las partes con sus datos completos.",
+          "Define qué quieres conseguir y qué temes que salga mal.",
+          "Anota las condiciones que no estás dispuesto a ceder.",
+          "Prepara las dudas concretas para la entrevista inicial.",
+          "Ten claro quién firma y en qué orden."
+        ]
+      },
+      "faqs": [
+        {
+          "q": "¿Cuánto tarda un contrato a medida?",
+          "a": "Depende de la complejidad. Un contrato sencillo puede estar en 48-72 horas laborables; operaciones con varias partes o garantías necesitan más tiempo, que te confirmo antes de empezar."
+        },
+        {
+          "q": "¿Puedes redactar sobre una plantilla que ya tengo?",
+          "a": "Puedo revisarla como revisión normal, o usarla como punto de partida para una redacción a medida si lo prefieres. Te recomiendo lo segundo cuando la plantilla viene de fuentes no profesionales."
+        },
+        {
+          "q": "¿El contrato a medida garantiza que no habrá conflicto?",
+          "a": "No. El documento refleja lo acordado y prevé los riesgos identificados, pero los conflictos dependen de las partes y de circunstancias imprevisibles."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Código Civil",
+          "precept": "art. 1255",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1255"
+        }
+      ],
+      "crossSell": {
+        "h2": "Cuando el contrato a medida no basta",
+        "html": "<p>Si la otra parte incumple el contrato redactado, la reclamación formal ordena el cobro o el cumplimiento. Un burofax con acuse de recibo es el paso previo habitual; lo gestionan en <a href=\"https://burofaxlegal.es/\">burofaxlegal.es</a>, y sus guías en <a href=\"https://tramitesjuridicos.com/guias/\">tramitesjuridicos.com</a> explican los pasos siguientes.</p>"
+      },
+      "ctaText": "Quiero un contrato a medida"
+    }
+  ]
+}

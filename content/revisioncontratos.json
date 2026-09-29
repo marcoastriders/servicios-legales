@@ -205,7 +205,7 @@
       },
       {
         "h2": "Cómo se paga",
-        "html": "<p>El pago se realiza por adelantado mediante PayPal, Bizum o transferencia. Puedes pagar directamente desde esta página. La revisión comienza cuando tengo el pago, tus datos y el contrato completo y legible.</p>"
+        "html": "<p>El pago se realiza por adelantado mediante Bizum o transferencia. Al enviar tu caso, Carla te facilita los datos de pago. La revisión comienza cuando tengo el pago, tus datos y el contrato completo y legible.</p>"
       },
       {
         "h2": "Cancelaciones y reembolso",
@@ -242,7 +242,7 @@
         "a": "Te lo digo igualmente: un contrato limpio también es un resultado, y te lo dejo por escrito en el informe, con el análisis completo y la constancia de que el documento no esconde riesgos relevantes."
       }
     ],
-    "paymentNote": "Puedes contratar y pagar directamente desde esta página. PayPal se abre en una pestaña nueva; después vuelve a «Cuéntanos tu caso», indica el paquete elegido y responde al correo de confirmación adjuntando el contrato. Para los pagos de 128 €, escribe en la nota de PayPal «EXPRESS» o «CONSULTA». También puedes pagar por Bizum o transferencia."
+    "paymentNote": "Puedes contratar completando «Cuéntanos tu caso» con el servicio elegido. Carla confirma tu encargo y te facilita los datos para pagar por Bizum o transferencia. Después responde al correo de confirmación adjuntando el contrato."
   },
   "pages": {
     "comoFunciona": {
@@ -253,7 +253,7 @@
       "sections": [
         {
           "h2": "Los cuatro pasos",
-          "html": "<ul><li><strong>1. Elige y paga.</strong> Selecciona la Revisión Esencial, Profesional o Firma Blindada y paga directamente por PayPal. También puedes usar Bizum o transferencia.</li><li><strong>2. Envía tus datos.</strong> Completa «Cuéntanos tu caso» e indica el paquete elegido y el nombre o correo usado en PayPal.</li><li><strong>3. Adjunta el contrato.</strong> Recibirás un correo automático; respóndelo con el PDF o las fotos legibles del contrato.</li><li><strong>4. Revisión y entrega.</strong> Leo el documento completo, contrasto las cláusulas con la norma y te entrego lo incluido en tu nivel.</li></ul>"
+          "html": "<ul><li><strong>1. Elige tu revisión.</strong> Selecciona la Revisión Esencial, Profesional o Firma Blindada y completa «Cuéntanos tu caso» con el servicio elegido.</li><li><strong>2. Recibe los datos de pago.</strong> Carla confirma tu encargo y te facilita los datos para pagar por Bizum o transferencia.</li><li><strong>3. Adjunta el contrato.</strong> Recibirás un correo automático; respóndelo con el PDF o las fotos legibles del contrato.</li><li><strong>4. Revisión y entrega.</strong> Leo el documento completo, contrasto las cláusulas con la norma y te entrego lo incluido en tu nivel.</li></ul>"
         },
         {
           "h2": "Qué contiene el informe",
@@ -396,7 +396,7 @@
         },
         {
           "h2": "Pago",
-          "html": "<p>El pago se realiza por adelantado mediante PayPal, Bizum o transferencia usando los importes publicados. No se inicia la revisión hasta recibir también el contrato completo y los datos del caso.</p>"
+          "html": "<p>El pago se realiza por adelantado mediante Bizum o transferencia, con el importe del servicio elegido. No se inicia la revisión hasta recibir también el contrato completo y los datos del caso.</p>"
         },
         {
           "h2": "Plazo de entrega",
@@ -1302,7 +1302,7 @@
     "title": "Cuéntanos tu caso | RevisiónContratos",
     "description": "Contrata tu revisión, envía los datos del caso y adjunta el contrato respondiendo al correo de confirmación.",
     "h1": "Cuéntanos tu caso",
-    "answer": "<p>Si ya has pagado, indica el paquete y el nombre o correo usado en PayPal. Al enviar el formulario recibirás un correo automático: respóndelo adjuntando el contrato en PDF o fotos legibles. Si todavía tienes dudas, también puedes usar este formulario antes de pagar.</p>",
+    "answer": "<p>Cuéntanos el caso y el servicio que te interesa; si ya has pagado, indica el paquete y tu nombre o correo. Al enviar el formulario recibirás un correo automático: respóndelo adjuntando el contrato en PDF o fotos legibles. Si todavía tienes dudas, también puedes usar este formulario antes de decidir.</p>",
     "asuntos": [
       "Revisión de contrato de alquiler",
       "Cláusulas abusivas",
@@ -1314,13 +1314,5 @@
       "Contrato a medida",
       "Otro asunto"
     ]
-  },
-  "paymentLinks": {
-    "essential": "https://www.paypal.me/carlamorales95/79EUR",
-    "essentialExpress": "https://www.paypal.me/carlamorales95/128EUR",
-    "essentialCall": "https://www.paypal.me/carlamorales95/128EUR",
-    "essentialBoth": "https://www.paypal.me/carlamorales95/177EUR",
-    "professional": "https://www.paypal.me/carlamorales95/199EUR",
-    "blindada": "https://www.paypal.me/carlamorales95/399EUR"
   }
 }

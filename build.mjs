@@ -326,7 +326,7 @@ function renderIntake(site) {
     </select></p>
   <p class="campo"><label for="f-pago">Nombre o correo usado para pagar (opcional)</label>
     <input id="f-pago" name="pago" type="text" maxlength="200" autocomplete="email">
-    <span class="campo-ayuda">Sirve para asociar el pago de PayPal, Bizum o transferencia con tu encargo.</span></p>` : '';
+    <span class="campo-ayuda">Sirve para asociar tu encargo si decides pagar por Bizum o transferencia.</span></p>` : '';
   const submitLabel = isRevision ? 'Enviar los datos del contrato' : 'Enviar mi caso a Carla';
   const caseHelp = isRevision
     ? 'Qué contrato es, quién eres en la operación, qué te preocupa y qué quieres conseguir. Después podrás adjuntarlo respondiendo al email.'

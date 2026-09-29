@@ -101,12 +101,7 @@ for (const expected of [['Revisión Esencial', 79], ['Revisión Profesional', 19
   const tier = revisionContent.pricing.tiers.find((t) => t.name.includes(expected[0]));
   if (!tier || tier.priceValue !== expected[1]) fail(`nivel ${expected[0]} no coincide con ${expected[1]} €`);
 }
-const expectedPayments = { essential: 79, essentialExpress: 128, essentialCall: 128, essentialBoth: 177, professional: 199, blindada: 399 };
-for (const [key, amount] of Object.entries(expectedPayments)) {
-  const url = revisionContent.paymentLinks?.[key] || '';
-  if (url !== `https://www.paypal.me/carlamorales95/${amount}EUR`)
-    fail(`enlace PayPal ${key} no coincide exactamente con el destino autorizado de ${amount} €`);
-}
+if ('paymentLinks' in revisionContent) fail('revisioncontratos.es conserva paymentLinks (PayPal eliminado)');
 const alquilerHtml = readFileSync(join(dist, 'revisioncontratos.es', 'revision-contrato-alquiler', 'index.html'), 'utf8');
 if (alquilerHtml.includes('Si contratas la opción de contraoferta'))
   fail('la página de alquiler conserva una contraoferta ambigua sin nivel ni precio');
@@ -146,9 +141,7 @@ for (const [domain, content] of Object.entries(siteContents)) {
 }
 const revisionPricing = readFileSync(join(dist, 'revisioncontratos.es', 'precios', 'index.html'), 'utf8');
 if (!revisionContent.prelaunch) {
-  for (const amount of [79, 128, 177, 199, 399]) {
-    if (!revisionPricing.includes(`/${amount}EUR`)) fail(`precios: falta enlace PayPal visible de ${amount} €`);
-  }
+  if (/paypal\.(me|com)/i.test(revisionPricing)) fail('precios: conserva enlace o mención de PayPal');
   if ((revisionPricing.match(/class="precio-card/g) || []).length !== 3) fail('precios: no hay exactamente tres columnas/tarjetas');
 }
 

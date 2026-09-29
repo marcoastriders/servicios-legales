@@ -33,6 +33,30 @@ a { color: var(--acento); }
 .prelaunch { background: #fff0c7; color: #503b00; border-bottom: 1px solid #e2c875; padding: 0.65rem 0; font-size: 0.94rem; }
 .prelaunch strong { color: #342700; }
 
+/* Confianza: bloque de la abogada */
+.confianza { display: flex; gap: 1.1rem; align-items: flex-start; background: #f4f7fb; border: 1px solid #dde5ee; border-radius: 12px; padding: 1.2rem 1.4rem; margin: 2rem 0; }
+.confianza-foto { border-radius: 50%; width: 120px; height: 120px; object-fit: cover; flex: none; }
+.confianza-nombre { font-weight: 700; font-size: 1.1rem; margin: 0 0 0.3rem; }
+.confianza p { margin: 0 0 0.5rem; }
+.confianza-lista { margin: 0.4rem 0 0.6rem; padding-left: 1.2rem; }
+.confianza-lista li { margin-bottom: 0.25rem; }
+@media (max-width: 560px) { .confianza { flex-direction: column; } .confianza-foto { width: 96px; height: 96px; } }
+
+/* Intake: formulario de caso */
+.intake { background: #f4f7fb; border: 1px solid #dde5ee; border-radius: 12px; padding: 1.4rem; margin: 1.5rem 0; max-width: 44rem; }
+.campo { margin: 0 0 1rem; }
+.campo label { display: block; font-weight: 600; margin-bottom: 0.3rem; }
+.campo input[type="text"], .campo input[type="email"], .campo input[type="tel"], .campo select, .campo textarea {
+  width: 100%; padding: 0.6rem 0.7rem; border: 1px solid #b9c6d4; border-radius: 8px; font: inherit; background: #fff; }
+.campo textarea { resize: vertical; }
+.campo-ayuda { display: block; font-size: 0.88rem; color: var(--tinta-suave, #5b6b7c); margin: 0.15rem 0 0.35rem; }
+.campo-check { display: flex; gap: 0.55rem; align-items: flex-start; }
+.campo-check input { margin-top: 0.3rem; flex: none; }
+.campo-check label { font-weight: 400; margin: 0; }
+.campo-oculto { position: absolute; left: -9999px; top: -9999px; }
+#intake-estado { margin: 0.6rem 0 0; font-size: 1rem; }
+.cta-nota { font-size: 0.9rem; margin: 0.5rem 0 0; }
+
 main { padding: 1.6rem 0 3rem; }
 .migas { font-size: 0.85rem; color: var(--tinta-suave); }
 .kicker { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; color: var(--acento); font-weight: 700; margin-bottom: 0.2rem; }

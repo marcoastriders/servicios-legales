@@ -141,10 +141,26 @@ const blockCta = (site, text = null) => site.prelaunch ? `
 <div class="cta">
   <p class="cta-titulo">${text || esc(site.ctaTitle)}</p>
   <p class="cta-botones">
-    <a class="boton" href="https://wa.me/${shared.whatsappIntl}?text=${encodeURIComponent(site.ctaWhatsapp)}">Escríbenos por WhatsApp</a>
-    <a class="boton boton-sec" href="mailto:${shared.email}?subject=${encodeURIComponent(site.ctaMailSubject)}">${shared.email}</a>
+    <a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a>
+    <a class="boton boton-sec" href="https://wa.me/${shared.whatsappIntl}?text=${encodeURIComponent(site.ctaWhatsapp)}">WhatsApp directo</a>
   </p>
+  <p class="cta-nota">Carla revisa tu caso y te manda presupuesto cerrado por escrito antes de empezar. Sin compromiso.</p>
 </div>`;
+
+const blockTrustCarla = () => `
+<aside class="confianza" aria-label="Quién está detrás del servicio">
+  <img class="confianza-foto" src="https://carlamorales.es/assets/carla-morales.png" alt="Carla Morales, abogada" loading="lazy" width="120" height="120">
+  <div>
+    <p class="confianza-nombre">Carla Morales, abogada</p>
+    <p>Colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa personalmente cada encargo: tu caso lo lee una abogada, no un formulario automático.</p>
+    <ul class="confianza-lista">
+      <li>Presupuesto cerrado por escrito antes de empezar</li>
+      <li>El coste postal de Correos se informa y se paga aparte, sin sorpresas</li>
+      <li>Sin letra pequeña: qué incluye y qué no incluye, por escrito</li>
+    </ul>
+    <p><a href="/quien-revisa/">Conoce a Carla y cómo trabaja</a></p>
+  </div>
+</aside>`;
 
 const blockTable = (caption, head, rows) => `
 <figure class="tabla">
@@ -187,8 +203,9 @@ function renderHome(site) {
   <p class="kicker">${esc(site.kicker)}</p>
   <h1>${site.home.h1}</h1>
   ${blockAnswer(site.home.answer)}
-  <p class="hero-botones"><a class="boton" href="/precios/">Ver precios</a> <a class="boton boton-sec" href="/como-funciona/">Cómo funciona</a></p>
+  <p class="hero-botones"><a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a> <a class="boton boton-sec" href="/precios/">Ver precios</a></p>
 </section>
+${blockTrustCarla()}
 ${sections(site.home.sections)}
 <section>
   <h2>${esc(site.home.servicesTitle)}</h2>
@@ -247,6 +264,7 @@ ${blockTable(s.table.caption, s.table.head, s.table.rows)}
 ${blockChecklist(s.checklist.title, s.checklist.items)}
 ${blockFaq(s.faqs)}
 ${blockSources(s.sources)}
+${blockTrustCarla()}
 <section class="relacionado">
   <h2>${esc(s.crossSell.h2)}</h2>
   <p>${s.crossSell.html}</p>
@@ -268,6 +286,63 @@ ${p.sources ? blockSources(p.sources) : ''}
 ${p.noCta ? '' : blockCta(site)}`;
   return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name, path }] }, {
     title: p.title, description: p.description, path, body,
+  });
+}
+
+function renderIntake(site) {
+  const asuntos = site.intake.asuntos.map((a) => `<option value="${esc(a)}">${esc(a)}</option>`).join('\n        ');
+  const formBody = site.prelaunch ? `
+<section class="cta cta-prelaunch">
+  <h2>Apertura próxima</h2>
+  <p>El canal de encargos se abrirá cuando Carla confirme personalmente tarifas, plazos y alcance del servicio. Si tu asunto no puede esperar, escribe directamente a <a href="mailto:${shared.email}">${shared.email}</a>.</p>
+</section>` : `
+<form id="intake" class="intake" novalidate aria-describedby="intake-estado">
+  <p class="campo"><label for="f-nombre">Tu nombre completo *</label>
+    <input id="f-nombre" name="nombre" type="text" autocomplete="name" required maxlength="120"></p>
+  <p class="campo"><label for="f-email">Tu email *</label>
+    <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200"></p>
+  <p class="campo"><label for="f-telefono">Teléfono (opcional)</label>
+    <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" maxlength="40"></p>
+  <p class="campo"><label for="f-asunto">¿De qué va tu asunto? *</label>
+    <select id="f-asunto" name="asunto" required>
+      <option value="">Selecciona una opción</option>
+      ${asuntos}
+    </select></p>
+  <p class="campo"><label for="f-caso">Cuéntanos tu historia completa *</label>
+    <span class="campo-ayuda" id="f-caso-ayuda">Qué ha pasado, fechas aproximadas, qué documentos tienes y qué quieres conseguir. Cuanto más contexto, mejor presupuesto.</span>
+    <textarea id="f-caso" name="caso" rows="9" required minlength="30" maxlength="8000" aria-describedby="f-caso-ayuda"></textarea></p>
+  <p class="campo campo-oculto" aria-hidden="true"><label>Website <input name="website" type="text" tabindex="-1" autocomplete="off"></label></p>
+  <p class="campo campo-check"><input id="f-privacidad" name="privacidad" type="checkbox" required>
+    <label for="f-privacidad">He leído la <a href="/privacidad/">política de privacidad</a> y acepto que mis datos se usen para responder a mi consulta. *</label></p>
+  <p class="campo"><button class="boton" type="submit" id="intake-btn">Enviar mi caso a Carla</button></p>
+  <p id="intake-estado" role="status" aria-live="polite"></p>
+</form>
+<script>
+(function(){
+  var f=document.getElementById('intake'),estado=document.getElementById('intake-estado'),btn=document.getElementById('intake-btn');
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    if(!f.checkValidity()){estado.textContent='Revisa los campos marcados: faltan datos obligatorios o el texto es muy corto.';f.reportValidity();return;}
+    btn.disabled=true;btn.textContent='Enviando…';estado.textContent='';
+    var data={nombre:f.nombre.value.trim(),email:f.email.value.trim(),telefono:f.telefono.value.trim(),asunto:f.asunto.value,caso:f.caso.value.trim(),web:location.hostname.replace(/^www\\./,''),website:f.website.value,privacidad:f.privacidad.checked};
+    fetch('https://intake.marcospera.com/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok&&j.ok,error:j.error};});})
+      .then(function(res){
+        if(res.ok){f.reset();f.hidden=true;estado.innerHTML='<strong>Caso enviado.</strong> Carla lo revisará personalmente y te responderá con presupuesto cerrado. Te llegará una confirmación a tu email.';}
+        else{btn.disabled=false;btn.textContent='Enviar mi caso a Carla';estado.textContent='No se pudo enviar ('+(res.error||'error')+'). Si persiste, escribe a ${shared.email}.';}
+      })
+      .catch(function(){btn.disabled=false;btn.textContent='Enviar mi caso a Carla';estado.textContent='Sin conexión con el servidor. Inténtalo de nuevo o escribe a ${shared.email}.';});
+  });
+})();
+</script>`;
+  const body = `
+<nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · Cuéntanos tu caso</nav>
+<h1>${site.intake.h1}</h1>
+${blockAnswer(site.intake.answer)}
+${formBody}
+${blockTrustCarla()}`;
+  return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: 'Cuéntanos tu caso', path: '/cuenta-tu-caso/' }] }, {
+    title: site.intake.title, description: site.intake.description, path: '/cuenta-tu-caso/', body,
   });
 }
 
@@ -325,6 +400,7 @@ ${site.prelaunch ? '\n> Estado: sitio en preparación. Tarifas, plazos y alcance
 ## Páginas
 - [Inicio](https://${site.domain}/): qué es el servicio y cómo pedirlo.
 - [Precios](https://${site.domain}/precios/): tarifas cerradas con IVA incluido.
+- [Cuéntanos tu caso](https://${site.domain}/cuenta-tu-caso/): formulario de encargo; presupuesto cerrado por escrito antes de empezar.
 - [Cómo funciona](https://${site.domain}/como-funciona/): pasos del encargo, plazos y qué recibe el cliente.
 - [Quién revisa](https://${site.domain}/quien-revisa/): la abogada que firma el trabajo.
 
@@ -355,6 +431,8 @@ for (const site of sites) {
 
   put('index.html', renderHome(site));
   put('precios/index.html', renderPrecios(site));
+  put('cuenta-tu-caso/index.html', renderIntake(site));
+  urls.push({ path: '/cuenta-tu-caso/', priority: '0.9' });
   put('como-funciona/index.html', renderSimple(site, site.pages.comoFunciona, '/como-funciona/', 'Cómo funciona'));
   put('quien-revisa/index.html', renderSimple(site, site.pages.quienRevisa, '/quien-revisa/', 'Quién revisa'));
   for (const s of site.services) {

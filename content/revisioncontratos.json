@@ -22,6 +22,10 @@
     {
       "path": "/quien-revisa/",
       "label": "Quién revisa"
+    },
+    {
+      "label": "Cuéntanos tu caso",
+      "path": "/cuenta-tu-caso/"
     }
   ],
   "home": {
@@ -1263,5 +1267,22 @@
       "ctaText": "Quiero un contrato a medida"
     }
   ],
-  "prelaunch": true
+  "prelaunch": true,
+  "intake": {
+    "title": "Cuéntanos tu caso | RevisiónContratos",
+    "description": "Envía tu contrato y cuéntanos tu situación: Carla Morales, abogada colegiada, lo revisa personalmente y te manda un presupuesto cerrado por escrito antes de empezar.",
+    "h1": "Cuéntanos tu caso",
+    "answer": "<p>Cuéntanos qué necesitas revisar o resolver: qué contrato es, en qué punto está y qué te preocupa. Carla lo revisa personalmente y te responde con un presupuesto cerrado por escrito. Solo pagas si aceptas el presupuesto.</p>",
+    "asuntos": [
+      "Revisión de contrato de alquiler",
+      "Cláusulas abusivas",
+      "Actualización de renta",
+      "Prórroga de alquiler",
+      "Devolución de fianza",
+      "Arras",
+      "Préstamo entre particulares",
+      "Contrato a medida",
+      "Otro asunto"
+    ]
+  }
 }

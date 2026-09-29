@@ -9,7 +9,7 @@
   "ctaTitle": "¿Tienes un contrato sobre la mesa?",
   "ctaWhatsapp": "Hola, quiero que revisen mi contrato antes de firmar.",
   "ctaMailSubject": "Solicitud de revisión de contrato",
-  "llmsSummary": "revisioncontratos.es es un servicio de revisión de contratos dirigido por la abogada Carla Morales, colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa contratos de alquiler, compraventa, arras y préstamos entre particulares, y redacta contratos a medida. Tres niveles de precio cerrado: Revisión Esencial 79 € (alquiler, informe escrito en 48-72 horas laborables), Revisión Profesional 199 € (contratos complejos, con llamada de 30 minutos y contraoferta redactada) y Firma Blindada 399 € (la abogada negocia directamente con la otra parte y revisa la versión final). Extras: entrega exprés 24 h por 49 € (solo alquiler) y consulta de 30 minutos por 49 €. Garantía: si la revisión no detecta ningún riesgo relevante, se devuelve el importe. No interviene como defensa en juicio.",
+  "llmsSummary": "revisioncontratos.es es un servicio de revisión de contratos dirigido por la abogada Carla Morales, colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa contratos de alquiler, compraventa, arras y préstamos entre particulares, y redacta contratos a medida. Tres niveles de precio cerrado: Revisión Esencial 79 € (alquiler, informe escrito en 48-72 horas laborables), Revisión Profesional 199 € (contratos complejos, con llamada de 30 minutos y contraoferta redactada) y Firma Blindada 399 € (la abogada negocia directamente con la otra parte y revisa la versión final). Extras: entrega exprés 24 h por 49 € (solo alquiler) y consulta de 30 minutos por 49 €. No interviene como defensa en juicio.",
   "nav": [
     {
       "path": "/precios/",
@@ -31,7 +31,7 @@
   "home": {
     "title": "Revisión de contratos por abogada | RevisiónContratos",
     "h1": "Revisa tu contrato antes de firmar",
-    "answer": "Firmar un contrato sin leerlo bien es el error más caro que puedes cometer. Desde 79 € una abogada lo revisa entero y te dice qué riesgos esconde, qué cláusulas conviene cambiar y cómo pedirlo a la otra parte. Tienes el informe en 48-72 horas laborables, o en 24 horas con la entrega exprés. Y si no encuentro ningún riesgo relevante, te devuelvo el importe.",
+    "answer": "Firmar un contrato sin leerlo bien es el error más caro que puedes cometer. Desde 79 € una abogada lo revisa entero y te dice qué riesgos esconde, qué cláusulas conviene cambiar y cómo pedirlo a la otra parte. Tienes el informe en 48-72 horas laborables, o en 24 horas con la entrega exprés.",
     "servicesTitle": "Qué puedo revisar por ti",
     "sections": [
       {
@@ -156,7 +156,7 @@
     "title": "Precios de revisión de contratos | RevisiónContratos",
     "description": "Precios cerrados de revisión de contratos: 79 € la Revisión Esencial de alquiler, 199 € la Revisión Profesional con llamada para contratos complejos y 399 € la Firma Blindada con negociación. IVA incluido.",
     "h1": "Precios de la revisión de contratos",
-    "answer": "Tres niveles de precio cerrado según lo que necesites: la Revisión Esencial para contratos de alquiler (79 €), la Revisión Profesional para arras, compraventas, préstamos y contratos complejos (199 €, con llamada incluida) y la Firma Blindada, en la que además negocio yo directamente con la otra parte (399 €). Todas incluyen IVA. Puedes añadir la entrega exprés en 24 horas o una consulta por 49 € cada una. Pagas por adelantado y, si cancelas antes de que empiece la revisión, te devuelvo el importe completo. Y si el informe no detecta ningún riesgo relevante en tu contrato, también te devuelvo el importe.",
+    "answer": "Tres niveles de precio cerrado según lo que necesites: la Revisión Esencial para contratos de alquiler (79 €), la Revisión Profesional para arras, compraventas, préstamos y contratos complejos (199 €, con llamada incluida) y la Firma Blindada, en la que además negocio yo directamente con la otra parte (399 €). Todas incluyen IVA. Puedes añadir la entrega exprés en 24 horas o una consulta por 49 € cada una. Pagas por adelantado y, si cancelas antes de que empiece la revisión, te devuelvo el importe completo.",
     "tiers": [
       {
         "name": "Revisión Esencial (alquiler)",
@@ -200,10 +200,6 @@
         "html": "<ul><li><strong>Entrega exprés 24 h: +49 €.</strong> Revisión Esencial + exprés: 128 € en total. Solo hay una plaza diaria; si ya estuviera ocupada, puedes elegir el plazo normal o recibir de inmediato la devolución de los 49 € del extra.</li><li><strong>Consulta de 30 minutos: +49 €.</strong> Revisión Esencial + consulta: 128 € en total. La llamada se agenda según disponibilidad.</li><li><strong>Exprés + consulta: 177 € en total.</strong></li></ul><p>Los niveles Profesional y Firma Blindada ya incluyen la llamada; por su complejidad y porque dependen de terceros, no ofrecen entrega en 24 horas.</p>"
       },
       {
-        "h2": "Garantía de hallazgos",
-        "html": "<p>Si reviso tu contrato completo y no encuentro ningún riesgo relevante que mereciera tu atención, te devuelvo el importe íntegro. La revisión la firma una abogada colegiada y responde de ella: no es un análisis automático sin responsable.</p>"
-      },
-      {
         "h2": "¿Necesitas redactar un contrato desde cero?",
         "html": "<p>La redacción de un <a href=\"/contrato-a-medida/\">contrato a medida</a> es un servicio independiente de estos tres niveles de revisión y parte de 199 € IVA incluido. Primero estudio la operación y confirmo por escrito el precio y el plazo antes de que pagues.</p>"
       },
@@ -243,7 +239,7 @@
       },
       {
         "q": "¿Y si la revisión no encuentra nada?",
-        "a": "Te lo digo igualmente — un contrato limpio también es un resultado — y te devuelvo el importe íntegro. Es la garantía de hallazgos: si no hay ningún riesgo relevante que señalarte, no pagas."
+        "a": "Te lo digo igualmente: un contrato limpio también es un resultado, y te lo dejo por escrito en el informe, con el análisis completo y la constancia de que el documento no esconde riesgos relevantes."
       }
     ],
     "paymentNote": "Puedes contratar y pagar directamente desde esta página. PayPal se abre en una pestaña nueva; después vuelve a «Cuéntanos tu caso», indica el paquete elegido y responde al correo de confirmación adjuntando el contrato. Para los pagos de 128 €, escribe en la nota de PayPal «EXPRESS» o «CONSULTA». También puedes pagar por Bizum o transferencia."
@@ -391,7 +387,7 @@
     },
     "condiciones": {
       "title": "Condiciones del servicio | RevisiónContratos",
-      "description": "Condiciones del servicio de revisión de contratos: aceptación, pago por adelantado, plazos según el nivel, cancelación, garantía de hallazgos y límites del encargo.",
+      "description": "Condiciones del servicio de revisión de contratos: aceptación, pago por adelantado, plazos según el nivel, cancelación y límites del encargo.",
       "h1": "Condiciones del servicio",
       "sections": [
         {
@@ -409,10 +405,6 @@
         {
           "h2": "Cancelación y reembolso",
           "html": "<p>Si cancelas antes de que empiece la revisión, se devuelve íntegramente el pago. Si ya comenzó, se informa del trabajo realizado y se aplican las condiciones aceptadas y los derechos legales que correspondan; esta cláusula no limita derechos imperativos del consumidor.</p>"
-        },
-        {
-          "h2": "Garantía de hallazgos",
-          "html": "<p>Si, tras revisar el contrato completo y el contexto facilitado, no identifico ningún riesgo jurídico relevante que merezca tu atención, se devuelve el importe íntegro de la revisión. Esta garantía no significa que pueda asegurarse el resultado de una negociación, una reclamación o un procedimiento judicial.</p>"
         },
         {
           "h2": "Confidencialidad",

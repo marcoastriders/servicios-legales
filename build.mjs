@@ -152,7 +152,7 @@ const blockTrustCarla = () => `
   <img class="confianza-foto" src="https://carlamorales.es/assets/carla-morales.png" alt="Carla Morales, abogada" loading="lazy" width="120" height="120">
   <div>
     <p class="confianza-nombre">Carla Morales, abogada</p>
-    <p>Colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa personalmente cada encargo: tu caso lo lee una abogada, no un formulario automático.</p>
+    <p>Colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa personalmente cada encargo: tu caso lo estudia una abogada de verdad, no una IA.</p>
     <ul class="confianza-lista">
       <li>Presupuesto cerrado por escrito antes de empezar</li>
       <li>El coste postal de Correos se informa y se paga aparte, sin sorpresas</li>

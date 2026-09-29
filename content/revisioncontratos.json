@@ -63,6 +63,10 @@
       {
         "q": "¿Quién revisa mi contrato?",
         "a": "Yo directamente, Carla Morales, abogada civil y mercantil colegiada en Jerez. No se subcontrata a terceros ni a plantillas automáticas."
+      },
+      {
+        "q": "¿Qué diferencia hay de una revisión con inteligencia artificial?",
+        "a": "Una IA puede resumir y ordenar un contrato, pero no sabe qué negociaste tú, qué documentos existen alrededor ni qué norma te resulta aplicable exactamente. Puede leer una cláusula fuera de contexto, pasar por alto excepciones legales o citar legislación desactualizada, y aun así dar una respuesta que suena convincente. Aquí la tecnología sirve de herramienta y quien responde por la revisión es una abogada colegiada."
       }
     ],
     "sources": [
@@ -292,6 +296,10 @@
         {
           "h2": "Cómo trabajo",
           "html": "<p>Cada encargo lo reviso personalmente, sin plantillas automáticas ni subcontratas. Leo el contrato completo, no solo las cláusulas que crees problemáticas, porque los riesgos suelen esconderse en párrafos que nadie mira.</p>"
+        },
+        {
+          "h2": "Por qué una revisión automática no basta",
+          "html": "<p>Herramientas automáticas y modelos de inteligencia artificial revisan contratos en segundos. Útiles para ordenar el texto o localizar algo evidente, no para firmar el resultado con nombre y colegio. El criterio jurídico exige conocer el caso completo: qué negocio hay detrás, qué norma resulta aplicable y qué conviene a cada parte.</p><p>Los riesgos de una revisión puramente automática son concretos. Puede citar normas derogadas o desactualizadas, leer una cláusula fuera del contexto del negocio, pasar por alto excepciones legales de tu tipo de contrato, no detectar contradicciones entre el contrato y sus anexos, o darte una falsa sensación de seguridad sobre un documento que después discutirán.</p><p>En este servicio la tecnología ordena el trabajo y acelera la lectura; la valoración jurídica, las recomendaciones y la responsabilidad son de Carla Morales, abogada colegiada. Cualquier herramienta que use se mantiene bajo su supervisión y su juicio profesional.</p>"
         },
         {
           "h2": "Contacto directo",

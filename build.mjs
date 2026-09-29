@@ -222,20 +222,33 @@ ${blockCta(site)}`;
 }
 
 function renderPrecios(site) {
-  const rows = site.pricing.tiers.map((t) => [
-    `<strong>${esc(t.name)}</strong>`,
-    `${esc(t.price)}`,
-    t.includes.join('<br>'),
-  ]);
+  const payKeys = ['essential', 'professional', 'blindada'];
+  const cards = site.pricing.tiers.map((t, i) => `
+    <article class="precio-card${i === 1 ? ' precio-destacado' : ''}">
+      ${i === 1 ? '<p class="precio-etiqueta">Para contratos complejos</p>' : ''}
+      <h2>${esc(t.name)}</h2>
+      <p class="precio-cifra">${esc(t.price)}</p>
+      <ul>${t.includes.map((item) => `<li>${item}</li>`).join('')}</ul>
+      <p><a class="boton" href="/cuenta-tu-caso/">Elegir este nivel</a></p>
+      ${!site.prelaunch && site.paymentLinks?.[payKeys[i]] ? `<p class="pago-confirmado">¿Carla ya confirmó tu encargo? <a href="${esc(site.paymentLinks[payKeys[i]])}" rel="noopener">Pagar ${esc(t.price)} por PayPal</a></p>` : ''}
+    </article>`).join('\n');
   const offersLd = site.pricing.tiers.map((t) => ({
     '@type': 'Offer', name: t.name, price: t.priceValue, priceCurrency: 'EUR',
     url: `https://${site.domain}/precios/`, seller: { '@id': `https://${site.domain}/#legalservice` },
   }));
+  const paymentOptions = !site.prelaunch && site.paymentLinks ? `
+<section class="pago-opciones">
+  <h2>Pago después de la confirmación</h2>
+  <p>${esc(site.pricing.paymentNote || '')}</p>
+</section>` : '';
   const body = `
 <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · Precios</nav>
 <h1>${site.pricing.h1}</h1>
 ${blockAnswer(site.pricing.answer)}
-${blockTable('Precios cerrados, IVA incluido', ['Servicio', 'Precio', 'Qué incluye'], rows)}
+<section class="precios-grid" aria-label="Precios cerrados, IVA incluido">
+${cards}
+</section>
+${paymentOptions}
 ${sections(site.pricing.sections)}
 ${blockFaq(site.pricing.faqs)}
 ${blockCta(site)}`;

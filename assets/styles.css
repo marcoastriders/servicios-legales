@@ -9,12 +9,13 @@
   --linea: #d8ded9;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   margin: 0; background: var(--fondo); color: var(--tinta);
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-  font-size: 1.05rem; line-height: 1.65;
+  font-size: 1.05rem; line-height: 1.65; overflow-wrap: break-word;
 }
+img, svg { max-width: 100%; height: auto; }
 h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; color: var(--tinta); }
 h1 { font-size: 2rem; margin: 0.4em 0 0.5em; }
 h2 { font-size: 1.45rem; margin-top: 2em; border-bottom: 2px solid var(--acento-suave); padding-bottom: 0.25em; }
@@ -89,6 +90,21 @@ th { background: var(--acento-suave); }
 .tarjeta h3 { margin-top: 0.2rem; }
 .tarjeta-precio { font-weight: 700; color: var(--acento); }
 
+/* Precios: tarjetas legibles sin tablas horizontales en móvil */
+.precios-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; max-width: 66rem; margin: 1.5rem 0 2rem; }
+.precio-card { position: relative; display: flex; flex-direction: column; min-width: 0; background: var(--tarjeta); border: 1px solid var(--linea); border-radius: 14px; padding: 1.25rem; box-shadow: 0 4px 18px rgba(25, 40, 55, 0.06); }
+.precio-card h2 { border: 0; margin: 0.2rem 0 0.35rem; padding: 0; font-size: 1.3rem; }
+.precio-card ul { padding-left: 1.2rem; margin: 0.5rem 0 1rem; flex: 1; }
+.precio-card li { margin: 0.45rem 0; }
+.precio-card .boton { width: 100%; text-align: center; margin-right: 0; }
+.precio-destacado { border: 2px solid var(--acento); }
+.precio-etiqueta { align-self: flex-start; margin: -0.2rem 0 0.5rem; padding: 0.2rem 0.55rem; border-radius: 999px; background: var(--acento); color: #fff; font-size: 0.78rem; font-weight: 700; }
+.precio-cifra { margin: 0.2rem 0 0.5rem; color: var(--acento); font-size: 2rem; line-height: 1.1; font-weight: 800; }
+.pago-confirmado { margin: 0.5rem 0 0; font-size: 0.84rem; color: var(--tinta-suave); }
+.pago-opciones { background: #f4f7fb; border: 1px solid #dde5ee; border-radius: 12px; padding: 0.3rem 1.2rem 1rem; margin: 1.5rem 0; }
+.pago-opciones details { background: #fff; border: 1px solid var(--linea); border-radius: 8px; padding: 0.7rem 1rem; }
+.pago-opciones summary { cursor: pointer; font-weight: 600; }
+
 .cta { background: var(--acento); color: #fff; border-radius: 12px; padding: 1.4rem 1.6rem; margin-top: 2.6rem; }
 .cta-titulo { font-family: Georgia, serif; font-size: 1.3rem; margin-top: 0; }
 .cta .boton { background: #fff; color: var(--acento) !important; }
@@ -106,7 +122,36 @@ th { background: var(--acento-suave); }
 .pie a { color: #fff; }
 .pie-marca { font-family: Georgia, serif; font-size: 1.1rem; color: #fff; margin-bottom: 0.3rem; }
 .pie-copy { opacity: 0.7; }
+@media (max-width: 52rem) {
+  .precios-grid { grid-template-columns: 1fr; }
+  .precio-card { padding: 1.15rem; }
+  .precio-destacado { order: -1; }
+}
 @media (max-width: 40rem) {
-  .pie-in { grid-template-columns: 1fr; }
-  h1 { font-size: 1.6rem; }
+  body { font-size: 1rem; line-height: 1.58; }
+  .wrap { padding-left: 0.9rem; padding-right: 0.9rem; }
+  .cabecera { padding: 0.75rem 0; }
+  .cabecera-in { align-items: flex-start; }
+  .marca { font-size: 1.2rem; }
+  .nav { display: flex; width: 100%; gap: 0.35rem 0.8rem; overflow-x: auto; padding: 0.3rem 0 0.15rem; scrollbar-width: thin; }
+  .nav a { flex: 0 0 auto; margin-left: 0; font-size: 0.9rem; padding: 0.2rem 0; }
+  main { padding-top: 1.2rem; }
+  h1 { font-size: 1.65rem; }
+  h2 { font-size: 1.3rem; }
+  .respuesta-directa { font-size: 1.05rem; padding: 0.8rem 0.9rem; }
+  .hero-botones, .cta-botones { display: grid; grid-template-columns: 1fr; gap: 0.55rem; }
+  .hero-botones .boton, .cta-botones .boton { display: block; width: 100%; margin: 0; text-align: center; }
+  .intake, .cta { padding: 1rem; }
+  .campo input[type="text"], .campo input[type="email"], .campo input[type="tel"], .campo select, .campo textarea { font-size: 16px; }
+  .tarjetas { grid-template-columns: 1fr; }
+  .precio-cifra { font-size: 1.8rem; }
+  .tabla { margin-left: -0.9rem; margin-right: -0.9rem; padding: 0 0.9rem; }
+  table { min-width: 34rem; }
+  .pie-in { grid-template-columns: 1fr; gap: 1rem; }
+}
+@media (max-width: 24rem) {
+  .nav { gap: 0.3rem 0.65rem; }
+  .nav a { font-size: 0.84rem; }
+  h1 { font-size: 1.5rem; }
+  .precio-card { padding: 1rem; }
 }

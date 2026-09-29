@@ -82,7 +82,42 @@ for (const [domain, file] of htmlFiles) {
 ok(`cross-links entre dominios: ${crossLinks}`);
 if (crossLinks < 6) fail('cross-links entre dominios insuficientes (<6)');
 
-// 9. archivos de descubrimiento
+// 9. coherencia comercial y seguridad del prelaunch de RevisiónContratos
+const revisionContent = JSON.parse(readFileSync(join(root, 'content', 'revisioncontratos.json'), 'utf8'));
+const revisionHtml = htmlFiles
+  .filter(([domain]) => domain === 'revisioncontratos.es')
+  .map(([, file]) => readFileSync(file, 'utf8'));
+const revisionAll = revisionHtml.join('\n');
+for (const oldPrice of ['59 €', '119 €']) {
+  if (revisionAll.includes(oldPrice)) fail(`revisioncontratos.es conserva el precio antiguo ${oldPrice}`);
+}
+for (const expected of [['Revisión Esencial', 79], ['Revisión Profesional', 199], ['Firma Blindada', 399]]) {
+  const tier = revisionContent.pricing.tiers.find((t) => t.name.includes(expected[0]));
+  if (!tier || tier.priceValue !== expected[1]) fail(`nivel ${expected[0]} no coincide con ${expected[1]} €`);
+}
+const expectedPayments = { essential: 79, professional: 199, blindada: 399 };
+for (const [key, amount] of Object.entries(expectedPayments)) {
+  const url = revisionContent.paymentLinks?.[key] || '';
+  if (url !== `https://www.paypal.me/carlamorales95/${amount}EUR`)
+    fail(`enlace PayPal ${key} no coincide exactamente con el destino autorizado de ${amount} €`);
+}
+const alquilerHtml = readFileSync(join(dist, 'revisioncontratos.es', 'revision-contrato-alquiler', 'index.html'), 'utf8');
+if (alquilerHtml.includes('Si contratas la opción de contraoferta'))
+  fail('la página de alquiler conserva una contraoferta ambigua sin nivel ni precio');
+if (!alquilerHtml.includes('Revisión Profesional de 199 €'))
+  fail('la página de alquiler no asigna expresamente la contraoferta al nivel Profesional');
+if (revisionContent.prelaunch) {
+  for (const [domain, file] of htmlFiles.filter(([domain]) => domain === 'revisioncontratos.es')) {
+    const html = readFileSync(file, 'utf8');
+    const rel = file.replace(dist, '');
+    if (!html.includes('<meta name="robots" content="noindex,follow">')) fail(`${rel}: prelaunch sin noindex`);
+    if (html.includes('paypal.me') || html.includes('paypal.com/paypalme')) fail(`${rel}: enlace de pago visible durante prelaunch`);
+    if (html.includes('<form')) fail(`${rel}: formulario de encargo visible durante prelaunch`);
+  }
+  ok('revisioncontratos.es prelaunch: noindex, sin pagos ni formularios');
+}
+
+// 10. archivos de descubrimiento
 for (const d of DOMAINS) {
   for (const f of ['sitemap.xml', 'robots.txt', 'llms.txt']) {
     if (!existsSync(join(dist, d, f))) fail(`${d}: falta ${f}`);

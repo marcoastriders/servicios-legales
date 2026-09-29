@@ -193,7 +193,7 @@
     "sections": [
       {
         "h2": "Extras para la Revisión Esencial",
-        "html": "<ul><li><strong>Entrega exprés 24 h: +49 €.</strong> Tu informe en 24 horas laborables. Solo una plaza exprés al día: si está ocupada, te lo confirmo antes de cobrar.</li><li><strong>Consulta de 30 minutos: +49 €.</strong> Una llamada con la abogada para repasar el informe y preparar la negociación. Se agenda según disponibilidad.</li></ul><p>Los niveles Profesional y Firma Blindada ya incluyen la llamada; por su complejidad y porque dependen de terceros, no ofrecen entrega en 24 horas.</p>"
+        "html": "<ul><li><strong>Entrega exprés 24 h: +49 €.</strong> Revisión Esencial + exprés: 128 € en total. Solo hay una plaza diaria; si ya estuviera ocupada, puedes elegir el plazo normal o recibir de inmediato la devolución de los 49 € del extra.</li><li><strong>Consulta de 30 minutos: +49 €.</strong> Revisión Esencial + consulta: 128 € en total. La llamada se agenda según disponibilidad.</li><li><strong>Exprés + consulta: 177 € en total.</strong></li></ul><p>Los niveles Profesional y Firma Blindada ya incluyen la llamada; por su complejidad y porque dependen de terceros, no ofrecen entrega en 24 horas.</p>"
       },
       {
         "h2": "Garantía de hallazgos",
@@ -205,7 +205,7 @@
       },
       {
         "h2": "Cómo se paga",
-        "html": "<p>El pago se realiza por adelantado mediante Bizum, transferencia o PayPal. Empiezo a revisar cuando confirmo el pago y tengo todos los documentos legibles.</p>"
+        "html": "<p>El pago se realiza por adelantado mediante PayPal, Bizum o transferencia. Puedes pagar directamente desde esta página. La revisión comienza cuando tengo el pago, tus datos y el contrato completo y legible.</p>"
       },
       {
         "h2": "Cancelaciones y reembolso",
@@ -219,7 +219,7 @@
     "faqs": [
       {
         "q": "¿Cómo sé qué nivel necesito?",
-        "a": "Si es un contrato de alquiler, la Revisión Esencial (79 €). Si son arras, una compraventa, un préstamo o cualquier contrato complejo, la Revisión Profesional (199 €). Si además quieres que negocie yo con la otra parte, la Firma Blindada (399 €). Si tu alquiler trae complicaciones (subarriendos, usos distintos, conflictos previos), te lo digo antes de cobrar y te propongo el nivel adecuado: nunca pagas de más por error."
+        "a": "Alquiler: Revisión Esencial (79 €). Arras, compraventa, préstamo u otro contrato complejo: Revisión Profesional (199 €). Si quieres que yo negocie directamente con la otra parte: Firma Blindada (399 €). Si dudas, puedes contarme el caso antes de pagar, pero los precios y enlaces de contratación están publicados."
       },
       {
         "q": "¿El contrato a medida forma parte de estos tres niveles?",
@@ -235,25 +235,25 @@
       },
       {
         "q": "¿El precio depende de la longitud del contrato?",
-        "a": "No en condiciones normales. Si el contrato es extraordinariamente extenso o hay varios documentos, te lo advierto antes de cobrar y acordamos el suplemento."
+        "a": "No en condiciones normales. Si el documento es extraordinariamente extenso o incluye varios anexos independientes, te avisaré antes de empezar: podrás aceptar el suplemento o recibir la devolución íntegra."
       },
       {
         "q": "¿Y si la revisión no encuentra nada?",
         "a": "Te lo digo igualmente — un contrato limpio también es un resultado — y te devuelvo el importe íntegro. Es la garantía de hallazgos: si no hay ningún riesgo relevante que señalarte, no pagas."
       }
     ],
-    "paymentNote": "No pagues hasta que Carla confirme por escrito el nivel, el plazo y la disponibilidad. Después podrás pagar por PayPal, Bizum o transferencia. Si añades entrega exprés o consulta, recibirás las instrucciones de pago junto con la confirmación para que el concepto quede asociado correctamente a tu encargo."
+    "paymentNote": "Puedes contratar y pagar directamente desde esta página. PayPal se abre en una pestaña nueva; después vuelve a «Cuéntanos tu caso», indica el paquete elegido y responde al correo de confirmación adjuntando el contrato. Para los pagos de 128 €, escribe en la nota de PayPal «EXPRESS» o «CONSULTA». También puedes pagar por Bizum o transferencia."
   },
   "pages": {
     "comoFunciona": {
       "title": "Cómo funciona la revisión de contratos | RevisiónContratos",
       "description": "Cuatro pasos para revisar tu contrato: envías el documento, confirmamos el nivel, pagas y una abogada te entrega un informe con riesgos y recomendaciones. Los niveles superiores incluyen llamada y negociación.",
       "h1": "Cómo funciona",
-      "answer": "Envías tu contrato en PDF o fotos y me cuentas tu situación. Confirmo por escrito qué nivel corresponde antes de que pagues. Después reviso el documento completo: los alquileres tienen un plazo habitual de 48-72 horas laborables, con opción exprés de 24 horas; los contratos complejos reciben un plazo confirmado según el caso.",
+      "answer": "Eliges el nivel, pagas directamente y me envías los datos del caso. Después respondes al correo de confirmación adjuntando el contrato en PDF o fotos legibles. Los alquileres tienen un plazo habitual de 48-72 horas laborables, con opción exprés de 24 horas; los contratos complejos reciben un plazo según el caso.",
       "sections": [
         {
           "h2": "Los cuatro pasos",
-          "html": "<ul><li><strong>1. Cuéntame tu caso.</strong> Envíame el contrato en PDF, fotos legibles o texto, y explícame quién eres en la operación y qué te preocupa.</li><li><strong>2. Confirmo el nivel y el plazo.</strong> Te digo por escrito si corresponde la Revisión Esencial, la Profesional o la Firma Blindada, y confirmo disponibilidad antes de cobrar.</li><li><strong>3. Pago y revisión.</strong> Pagas por Bizum, transferencia o PayPal. Leo el contrato entero, contrasto las cláusulas con la norma aplicable y valoro también los hechos que me hayas contado.</li><li><strong>4. Entrega y siguientes pasos.</strong> Recibes el informe escrito. Si contrataste la Profesional, agendamos la llamada y recibes la contraoferta; con Firma Blindada, contacto y negocio directamente con la otra parte.</li></ul>"
+          "html": "<ul><li><strong>1. Elige y paga.</strong> Selecciona la Revisión Esencial, Profesional o Firma Blindada y paga directamente por PayPal. También puedes usar Bizum o transferencia.</li><li><strong>2. Envía tus datos.</strong> Completa «Cuéntanos tu caso» e indica el paquete elegido y el nombre o correo usado en PayPal.</li><li><strong>3. Adjunta el contrato.</strong> Recibirás un correo automático; respóndelo con el PDF o las fotos legibles del contrato.</li><li><strong>4. Revisión y entrega.</strong> Leo el documento completo, contrasto las cláusulas con la norma y te entrego lo incluido en tu nivel.</li></ul>"
         },
         {
           "h2": "Qué contiene el informe",
@@ -388,15 +388,15 @@
       "sections": [
         {
           "h2": "Aceptación del encargo",
-          "html": "<p>El encargo se perfecciona cuando tú envías el contrato y la información del caso, y yo confirmo la aceptación junto con la tarifa aplicable. A partir de ahí empieza a contar el plazo de entrega.</p>"
+          "html": "<p>El encargo se perfecciona cuando realizas el pago y facilitas los datos y documentos necesarios. El plazo empieza cuando dispongo del contrato completo y legible. Si el servicio elegido no corresponde al documento o no puedo aceptar el encargo, te ofrezco cambiar de nivel o te devuelvo el importe íntegro.</p>"
         },
         {
           "h2": "Pago",
-          "html": "<p>El pago se realiza por adelantado mediante Bizum, transferencia o PayPal, después de que confirme por escrito el nivel, el plazo y la disponibilidad. No se inicia la revisión sin pago confirmado, salvo acuerdo expreso en contrario.</p>"
+          "html": "<p>El pago se realiza por adelantado mediante PayPal, Bizum o transferencia usando los importes publicados. No se inicia la revisión hasta recibir también el contrato completo y los datos del caso.</p>"
         },
         {
           "h2": "Plazo de entrega",
-          "html": "<p>La Revisión Esencial se entrega habitualmente en 48-72 horas laborables desde la aceptación. La entrega exprés, cuando exista plaza disponible y se confirme antes del pago, se realiza en 24 horas laborables. En la Revisión Profesional y la Firma Blindada comunico el plazo antes de empezar; las llamadas se agendan según disponibilidad y la negociación depende también de los tiempos de respuesta de la otra parte.</p>"
+          "html": "<p>La Revisión Esencial se entrega habitualmente en 48-72 horas laborables desde que recibo el contrato completo. La entrega exprés se realiza en 24 horas laborables si existe plaza; si la plaza diaria ya está ocupada, puedes elegir el plazo normal o recibir la devolución inmediata de los 49 € del extra. En la Profesional y la Firma Blindada, las llamadas se agendan según disponibilidad y la negociación depende también de la otra parte.</p>"
         },
         {
           "h2": "Cancelación y reembolso",
@@ -1297,30 +1297,29 @@
       "ctaText": "Quiero un contrato a medida"
     }
   ],
-  "prelaunch": true,
+  "prelaunch": false,
   "intake": {
     "title": "Cuéntanos tu caso | RevisiónContratos",
-    "description": "Envía tu contrato y cuéntanos tu situación: Carla Morales, abogada colegiada, lo revisa personalmente y te manda un presupuesto cerrado por escrito antes de empezar.",
+    "description": "Contrata tu revisión, envía los datos del caso y adjunta el contrato respondiendo al correo de confirmación.",
     "h1": "Cuéntanos tu caso",
-    "answer": "<p>Cuéntanos qué necesitas revisar o resolver: qué contrato es, en qué punto está y qué te preocupa. Carla lo revisa personalmente y te responde con un presupuesto cerrado por escrito. Solo pagas si aceptas el presupuesto.</p>",
+    "answer": "<p>Si ya has pagado, indica el paquete y el nombre o correo usado en PayPal. Al enviar el formulario recibirás un correo automático: respóndelo adjuntando el contrato en PDF o fotos legibles. Si todavía tienes dudas, también puedes usar este formulario antes de pagar.</p>",
     "asuntos": [
-      "Revisión Esencial de alquiler — 79 €",
-      "Revisión Esencial + entrega exprés 24 h — 128 €",
-      "Revisión Esencial + consulta de 30 min — 128 €",
-      "Revisión Esencial + exprés + consulta — 177 €",
-      "Revisión Profesional — 199 €",
-      "Firma Blindada con negociación — 399 €",
+      "Revisión de contrato de alquiler",
       "Cláusulas abusivas",
       "Actualización de renta",
       "Prórroga de alquiler",
       "Devolución de fianza",
+      "Arras",
+      "Préstamo entre particulares",
       "Contrato a medida",
       "Otro asunto"
     ]
   },
   "paymentLinks": {
-    "paypalBase": "https://www.paypal.me/carlamorales95",
     "essential": "https://www.paypal.me/carlamorales95/79EUR",
+    "essentialExpress": "https://www.paypal.me/carlamorales95/128EUR",
+    "essentialCall": "https://www.paypal.me/carlamorales95/128EUR",
+    "essentialBoth": "https://www.paypal.me/carlamorales95/177EUR",
     "professional": "https://www.paypal.me/carlamorales95/199EUR",
     "blindada": "https://www.paypal.me/carlamorales95/399EUR"
   }

@@ -936,7 +936,7 @@
       "ctaText": "Quiero reclamar mi préstamo"
     }
   ],
-  "prelaunch": true,
+  "prelaunch": false,
   "intake": {
     "title": "Cuéntanos tu caso | BurofaxLegal",
     "description": "Cuéntanos tu caso completo: Carla Morales, abogada colegiada, lo revisa personalmente y te manda un presupuesto cerrado por escrito antes de empezar.",

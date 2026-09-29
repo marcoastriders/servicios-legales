@@ -3,7 +3,7 @@
 Recibe POST JSON del formulario 'cuéntanos tu caso' y lo envía por email a Carla.
 Sin dependencias externas: solo stdlib.
 """
-import json, os, re, smtplib, ssl, time
+import ipaddress, json, os, re, smtplib, ssl, time
 from collections import defaultdict
 from email.message import EmailMessage
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -14,11 +14,15 @@ SMTP_USER = os.environ['SMTP_USER']
 SMTP_PASS = os.environ['SMTP_PASS']
 TO = os.environ.get('INTAKE_TO', 'abogada@carlamorales.es')
 CC = os.environ.get('INTAKE_CC', 'marcoastriders.wf@gmail.com')
-ALLOWED_ORIGINS = {
-    'https://burofaxlegal.es', 'https://www.burofaxlegal.es',
-    'https://revisioncontratos.es', 'https://www.revisioncontratos.es',
-    'http://localhost:8080', 'http://127.0.0.1:8080',
+ORIGIN_SITES = {
+    'https://burofaxlegal.es': 'BurofaxLegal',
+    'https://www.burofaxlegal.es': 'BurofaxLegal',
+    'https://revisioncontratos.es': 'RevisiónContratos',
+    'https://www.revisioncontratos.es': 'RevisiónContratos',
+    'http://localhost:8080': 'RevisiónContratos',
+    'http://127.0.0.1:8080': 'RevisiónContratos',
 }
+ALLOWED_ORIGINS = set(ORIGIN_SITES)
 VALID_ASUNTOS = {
     'Impago de alquiler', 'Devolución de fianza', 'Incumplimiento de contrato',
     'Vecino moroso (comunidad)', 'Deuda entre particulares',
@@ -30,6 +34,33 @@ RATE = defaultdict(list)  # ip -> [timestamps]
 LIMIT, WINDOW = 3, 600
 
 EMAIL_RE = re.compile(r'^[^@\s]{1,64}@[^@\s]{1,255}\.[^@\s]{2,}$')
+
+
+def client_ip(headers, peer_ip):
+    """Acepta cabeceras de cliente solo cuando la conexión llega del proxy interno."""
+    try:
+        peer = ipaddress.ip_address(peer_ip)
+    except ValueError:
+        return peer_ip
+    if not (peer.is_private or peer.is_loopback or peer.is_link_local):
+        return peer_ip
+
+    for header in ('CF-Connecting-IP', 'X-Real-IP'):
+        candidate = headers.get(header, '').strip()
+        try:
+            if candidate and ipaddress.ip_address(candidate).is_global:
+                return candidate
+        except ValueError:
+            pass
+
+    chain = [p.strip() for p in headers.get('X-Forwarded-For', '').split(',') if p.strip()]
+    for candidate in reversed(chain):
+        try:
+            if ipaddress.ip_address(candidate).is_global:
+                return candidate
+        except ValueError:
+            continue
+    return peer_ip
 
 def send_mail(subject, body, reply_to=None, to=None, cc=None):
     msg = EmailMessage()
@@ -48,14 +79,26 @@ def send_mail(subject, body, reply_to=None, to=None, cc=None):
         s.send_message(msg)
 
 def confirm_client(email, nombre, site_name):
-    body = (
-        f"Hola {nombre},\n\n"
-        f"Hemos recibido tu consulta en {site_name}. Carla Morales, abogada colegiada en el Ilustre Colegio de Abogados de Jerez, "
-        "revisará personalmente tu caso y te responderá con un presupuesto cerrado. El plazo habitual de respuesta es el mismo día laborable o el siguiente.\n\n"
-        "Si necesitas añadir algún documento o dato, puedes contestar directamente a este correo.\n\n"
-        f"Un saludo,\nEl equipo de {site_name}\n"
-    )
-    send_mail(f'Tu consulta ha llegado — {site_name}', body, to=email, cc=None)
+    if site_name == 'RevisiónContratos':
+        body = (
+            f"Hola {nombre},\n\n"
+            "Hemos recibido los datos de tu encargo en RevisiónContratos. Si ya has pagado, responde directamente "
+            "a este correo adjuntando el contrato en PDF o fotos legibles. Si todavía no has pagado, puedes elegir y "
+            "contratar cualquiera de los niveles publicados en https://revisioncontratos.es/precios/.\n\n"
+            "Carla Morales revisará personalmente el documento. El plazo empieza cuando se hayan recibido el pago, "
+            "los datos y el contrato completo.\n\n"
+            "Un saludo,\nEl equipo de RevisiónContratos\n"
+        )
+    else:
+        body = (
+            f"Hola {nombre},\n\n"
+            "Hemos recibido tu consulta en BurofaxLegal. Carla Morales, abogada colegiada en el Ilustre Colegio de "
+            "Abogados de Jerez, revisará personalmente tu caso y te indicará el servicio y presupuesto que correspondan. "
+            "El plazo habitual de respuesta es el mismo día laborable o el siguiente.\n\n"
+            "Si necesitas añadir algún documento o dato, puedes contestar directamente a este correo.\n\n"
+            "Un saludo,\nEl equipo de BurofaxLegal\n"
+        )
+    send_mail(f'Tu solicitud ha llegado — {site_name}', body, to=email, cc=None)
 
 class H(BaseHTTPRequestHandler):
     server_version = 'intake/1.0'
@@ -85,7 +128,7 @@ class H(BaseHTTPRequestHandler):
         origin = self.headers.get('Origin', '')
         if origin not in ALLOWED_ORIGINS:
             return self._json(403, {'ok': False, 'error': 'origen no permitido'})
-        ip = self.headers.get('X-Forwarded-For', self.client_address[0]).split(',')[0].strip()
+        ip = client_ip(self.headers, self.client_address[0])
         now = time.time()
         RATE[ip] = [t for t in RATE[ip] if now - t < WINDOW]
         if len(RATE[ip]) >= LIMIT:
@@ -106,7 +149,7 @@ class H(BaseHTTPRequestHandler):
         telefono = str(d.get('telefono', '')).strip()[:40]
         asunto = str(d.get('asunto', '')).strip()
         caso = str(d.get('caso', '')).strip()[:8000]
-        web = str(d.get('web', '')).strip()[:60]
+        web = origin.removeprefix('https://').removeprefix('http://').removeprefix('www.').split(':', 1)[0]
 
         errs = []
         if len(nombre) < 2: errs.append('nombre')
@@ -118,7 +161,7 @@ class H(BaseHTTPRequestHandler):
             return self._json(400, {'ok': False, 'error': 'campos: ' + ', '.join(errs)})
 
         RATE[ip].append(now)
-        site_name = 'BurofaxLegal' if 'burofax' in web else 'RevisiónContratos'
+        site_name = ORIGIN_SITES[origin]
         subject = f'[Nuevo caso {site_name}] {asunto} — {nombre}'
         body = (
             f'Nuevo caso recibido desde {web}\n\n'

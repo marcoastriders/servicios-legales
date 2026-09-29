@@ -104,6 +104,9 @@ th { background: var(--acento-suave); }
 .pago-opciones { background: #f4f7fb; border: 1px solid #dde5ee; border-radius: 12px; padding: 0.3rem 1.2rem 1rem; margin: 1.5rem 0; }
 .pago-opciones details { background: #fff; border: 1px solid var(--linea); border-radius: 8px; padding: 0.7rem 1rem; }
 .pago-opciones summary { cursor: pointer; font-weight: 600; }
+.extras-pago { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.65rem; margin: 1rem 0; }
+.extras-pago .boton { display: flex; align-items: center; justify-content: center; margin: 0; text-align: center; }
+.boton-pago { background: #183b66; }
 
 .cta { background: var(--acento); color: #fff; border-radius: 12px; padding: 1.4rem 1.6rem; margin-top: 2.6rem; }
 .cta-titulo { font-family: Georgia, serif; font-size: 1.3rem; margin-top: 0; }
@@ -144,6 +147,7 @@ th { background: var(--acento-suave); }
   .intake, .cta { padding: 1rem; }
   .campo input[type="text"], .campo input[type="email"], .campo input[type="tel"], .campo select, .campo textarea { font-size: 16px; }
   .tarjetas { grid-template-columns: 1fr; }
+  .extras-pago { grid-template-columns: 1fr; }
   .precio-cifra { font-size: 1.8rem; }
   .tabla { margin-left: -0.9rem; margin-right: -0.9rem; padding: 0 0.9rem; }
   table { min-width: 34rem; }

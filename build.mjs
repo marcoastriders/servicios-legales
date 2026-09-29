@@ -131,7 +131,9 @@ ${body}
 }
 
 // ---------- bloques reutilizables ----------
-const blockAnswer = (t) => `<p class="respuesta-directa">${t}</p>`;
+const blockAnswer = (t) => /^\s*<p[\s>]/i.test(t)
+  ? `<div class="respuesta-directa">${t}</div>`
+  : `<p class="respuesta-directa">${t}</p>`;
 
 const blockCta = (site, text = null) => site.prelaunch ? `
 <div class="cta cta-prelaunch">
@@ -144,17 +146,17 @@ const blockCta = (site, text = null) => site.prelaunch ? `
     <a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a>
     <a class="boton boton-sec" href="https://wa.me/${shared.whatsappIntl}?text=${encodeURIComponent(site.ctaWhatsapp)}">WhatsApp directo</a>
   </p>
-  <p class="cta-nota">Carla revisa tu caso y te manda presupuesto cerrado por escrito antes de empezar. Sin compromiso.</p>
+  <p class="cta-nota">${site.id === 'revisioncontratos' ? 'Precios cerrados y contratación directa en la página de precios. Envía después los datos y el contrato.' : 'Carla revisa tu caso y te indica por escrito qué servicio y tarifa corresponden antes de empezar.'}</p>
 </div>`;
 
 const blockTrustCarla = () => `
 <aside class="confianza" aria-label="Quién está detrás del servicio">
-  <img class="confianza-foto" src="https://carlamorales.es/assets/carla-morales.png" alt="Carla Morales, abogada" loading="lazy" width="120" height="120">
+  <img class="confianza-foto" src="/assets/carla-morales.png" alt="Carla Morales, abogada" loading="lazy" width="120" height="120">
   <div>
     <p class="confianza-nombre">Carla Morales, abogada</p>
     <p>Colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa personalmente cada encargo: tu caso lo estudia una abogada de verdad, no una IA.</p>
     <ul class="confianza-lista">
-      <li>Presupuesto cerrado por escrito antes de empezar</li>
+      <li>Precio y alcance del servicio claros por escrito</li>
       <li>El coste postal de Correos se informa y se paga aparte, sin sorpresas</li>
       <li>Sin letra pequeña: qué incluye y qué no incluye, por escrito</li>
     </ul>
@@ -229,17 +231,23 @@ function renderPrecios(site) {
       <h2>${esc(t.name)}</h2>
       <p class="precio-cifra">${esc(t.price)}</p>
       <ul>${t.includes.map((item) => `<li>${item}</li>`).join('')}</ul>
-      <p><a class="boton" href="/cuenta-tu-caso/">Elegir este nivel</a></p>
-      ${!site.prelaunch && site.paymentLinks?.[payKeys[i]] ? `<p class="pago-confirmado">¿Carla ya confirmó tu encargo? <a href="${esc(site.paymentLinks[payKeys[i]])}" rel="noopener">Pagar ${esc(t.price)} por PayPal</a></p>` : ''}
+      ${site.paymentLinks?.[payKeys[i]] ? `<p><a class="boton boton-pago" href="${esc(site.paymentLinks[payKeys[i]])}" target="_blank" rel="noopener">Contratar y pagar ${esc(t.price)}</a></p>
+      <p class="pago-confirmado"><a href="/cuenta-tu-caso/">Ya he pagado · enviar los datos del contrato</a></p>` : `<p><a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a></p>`}
     </article>`).join('\n');
   const offersLd = site.pricing.tiers.map((t) => ({
     '@type': 'Offer', name: t.name, price: t.priceValue, priceCurrency: 'EUR',
     url: `https://${site.domain}/precios/`, seller: { '@id': `https://${site.domain}/#legalservice` },
   }));
-  const paymentOptions = !site.prelaunch && site.paymentLinks ? `
+  const paymentOptions = site.paymentLinks ? `
 <section class="pago-opciones">
-  <h2>Pago después de la confirmación</h2>
+  <h2>Extras para la Revisión Esencial</h2>
   <p>${esc(site.pricing.paymentNote || '')}</p>
+  <div class="extras-pago">
+    <a class="boton boton-pago" href="${esc(site.paymentLinks.essentialExpress)}" target="_blank" rel="noopener">Esencial + exprés · 128 €</a>
+    <a class="boton boton-pago" href="${esc(site.paymentLinks.essentialCall)}" target="_blank" rel="noopener">Esencial + consulta · 128 €</a>
+    <a class="boton boton-pago" href="${esc(site.paymentLinks.essentialBoth)}" target="_blank" rel="noopener">Exprés + consulta · 177 €</a>
+  </div>
+  <p class="pago-confirmado"><a href="/cuenta-tu-caso/">Después del pago, envía los datos y el contrato</a></p>
 </section>` : '';
   const body = `
 <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · Precios</nav>
@@ -303,7 +311,29 @@ ${p.noCta ? '' : blockCta(site)}`;
 }
 
 function renderIntake(site) {
+  const isRevision = site.id === 'revisioncontratos';
   const asuntos = site.intake.asuntos.map((a) => `<option value="${esc(a)}">${esc(a)}</option>`).join('\n        ');
+  const packageFields = isRevision ? `
+  <p class="campo"><label for="f-paquete">Paquete elegido</label>
+    <select id="f-paquete" name="paquete">
+      <option value="Todavía no he pagado">Todavía no he pagado / tengo dudas</option>
+      <option value="Revisión Esencial — 79 €">Revisión Esencial — 79 €</option>
+      <option value="Esencial + exprés — 128 €">Esencial + exprés — 128 €</option>
+      <option value="Esencial + consulta — 128 €">Esencial + consulta — 128 €</option>
+      <option value="Esencial + exprés + consulta — 177 €">Esencial + exprés + consulta — 177 €</option>
+      <option value="Revisión Profesional — 199 €">Revisión Profesional — 199 €</option>
+      <option value="Firma Blindada — 399 €">Firma Blindada — 399 €</option>
+    </select></p>
+  <p class="campo"><label for="f-pago">Nombre o correo usado para pagar (opcional)</label>
+    <input id="f-pago" name="pago" type="text" maxlength="200" autocomplete="email">
+    <span class="campo-ayuda">Sirve para asociar el pago de PayPal, Bizum o transferencia con tu encargo.</span></p>` : '';
+  const submitLabel = isRevision ? 'Enviar los datos del contrato' : 'Enviar mi caso a Carla';
+  const caseHelp = isRevision
+    ? 'Qué contrato es, quién eres en la operación, qué te preocupa y qué quieres conseguir. Después podrás adjuntarlo respondiendo al email.'
+    : 'Qué ha pasado, fechas aproximadas, qué documentos tienes y qué quieres conseguir. Cuanto más contexto, mejor valoración.';
+  const successMessage = isRevision
+    ? '<strong>Datos enviados.</strong> Revisa tu email y responde al mensaje de confirmación adjuntando el contrato en PDF o fotos legibles.'
+    : '<strong>Caso enviado.</strong> Carla lo revisará personalmente y te responderá con el servicio y presupuesto que correspondan. Te llegará una confirmación a tu email.';
   const formBody = site.prelaunch ? `
 <section class="cta cta-prelaunch">
   <h2>Apertura próxima</h2>
@@ -321,13 +351,14 @@ function renderIntake(site) {
       <option value="">Selecciona una opción</option>
       ${asuntos}
     </select></p>
+  ${packageFields}
   <p class="campo"><label for="f-caso">Cuéntanos tu historia completa *</label>
-    <span class="campo-ayuda" id="f-caso-ayuda">Qué ha pasado, fechas aproximadas, qué documentos tienes y qué quieres conseguir. Cuanto más contexto, mejor presupuesto.</span>
+    <span class="campo-ayuda" id="f-caso-ayuda">${caseHelp}</span>
     <textarea id="f-caso" name="caso" rows="9" required minlength="30" maxlength="8000" aria-describedby="f-caso-ayuda"></textarea></p>
   <p class="campo campo-oculto" aria-hidden="true"><label>Website <input name="website" type="text" tabindex="-1" autocomplete="off"></label></p>
   <p class="campo campo-check"><input id="f-privacidad" name="privacidad" type="checkbox" required>
     <label for="f-privacidad">He leído la <a href="/privacidad/">política de privacidad</a> y acepto que mis datos se usen para responder a mi consulta. *</label></p>
-  <p class="campo"><button class="boton" type="submit" id="intake-btn">Enviar mi caso a Carla</button></p>
+  <p class="campo"><button class="boton" type="submit" id="intake-btn">${submitLabel}</button></p>
   <p id="intake-estado" role="status" aria-live="polite"></p>
 </form>
 <script>
@@ -337,14 +368,18 @@ function renderIntake(site) {
     ev.preventDefault();
     if(!f.checkValidity()){estado.textContent='Revisa los campos marcados: faltan datos obligatorios o el texto es muy corto.';f.reportValidity();return;}
     btn.disabled=true;btn.textContent='Enviando…';estado.textContent='';
-    var data={nombre:f.nombre.value.trim(),email:f.email.value.trim(),telefono:f.telefono.value.trim(),asunto:f.asunto.value,caso:f.caso.value.trim(),web:location.hostname.replace(/^www\\./,''),website:f.website.value,privacidad:f.privacidad.checked};
+    var prefijo='';
+    if(f.paquete){prefijo+='Paquete: '+f.paquete.value+'\\n';}
+    if(f.pago&&f.pago.value.trim()){prefijo+='Identidad de pago: '+f.pago.value.trim()+'\\n';}
+    if(prefijo){prefijo+='\\n';}
+    var data={nombre:f.nombre.value.trim(),email:f.email.value.trim(),telefono:f.telefono.value.trim(),asunto:f.asunto.value,caso:(prefijo+f.caso.value.trim()).slice(0,8000),web:location.hostname.replace(/^www\\./,''),website:f.website.value,privacidad:f.privacidad.checked};
     fetch('https://intake.marcospera.com/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
       .then(function(r){return r.json().then(function(j){return {ok:r.ok&&j.ok,error:j.error};});})
       .then(function(res){
-        if(res.ok){f.reset();f.hidden=true;estado.innerHTML='<strong>Caso enviado.</strong> Carla lo revisará personalmente y te responderá con presupuesto cerrado. Te llegará una confirmación a tu email.';}
-        else{btn.disabled=false;btn.textContent='Enviar mi caso a Carla';estado.textContent='No se pudo enviar ('+(res.error||'error')+'). Si persiste, escribe a ${shared.email}.';}
+        if(res.ok){f.reset();f.hidden=true;estado.innerHTML='${successMessage}';}
+        else{btn.disabled=false;btn.textContent='${submitLabel}';estado.textContent='No se pudo enviar ('+(res.error||'error')+'). Si persiste, escribe a ${shared.email}.';}
       })
-      .catch(function(){btn.disabled=false;btn.textContent='Enviar mi caso a Carla';estado.textContent='Sin conexión con el servidor. Inténtalo de nuevo o escribe a ${shared.email}.';});
+      .catch(function(){btn.disabled=false;btn.textContent='${submitLabel}';estado.textContent='Sin conexión con el servidor. Inténtalo de nuevo o escribe a ${shared.email}.';});
   });
 })();
 </script>`;
@@ -413,7 +448,7 @@ ${site.prelaunch ? '\n> Estado: sitio en preparación. Tarifas, plazos y alcance
 ## Páginas
 - [Inicio](https://${site.domain}/): qué es el servicio y cómo pedirlo.
 - [Precios](https://${site.domain}/precios/): tarifas cerradas con IVA incluido.
-- [Cuéntanos tu caso](https://${site.domain}/cuenta-tu-caso/): formulario de encargo; presupuesto cerrado por escrito antes de empezar.
+- [Cuéntanos tu caso](https://${site.domain}/cuenta-tu-caso/): ${site.id === 'revisioncontratos' ? 'envío de datos y contrato después del pago, o consulta previa si existen dudas' : 'formulario para que Carla valore el caso e indique el servicio y presupuesto que correspondan'}.
 - [Cómo funciona](https://${site.domain}/como-funciona/): pasos del encargo, plazos y qué recibe el cliente.
 - [Quién revisa](https://${site.domain}/quien-revisa/): la abogada que firma el trabajo.
 

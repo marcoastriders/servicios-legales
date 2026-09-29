@@ -88,6 +88,12 @@ const revisionHtml = htmlFiles
   .filter(([domain]) => domain === 'revisioncontratos.es')
   .map(([, file]) => readFileSync(file, 'utf8'));
 const revisionAll = revisionHtml.join('\n');
+if (!existsSync(join(dist, 'assets', 'carla-morales.png'))) fail('falta la foto local de Carla en dist/assets');
+for (const [domain, file] of htmlFiles) {
+  const html = readFileSync(file, 'utf8');
+  if (html.includes('confianza-foto') && !html.includes('src="/assets/carla-morales.png"'))
+    fail(`${file.replace(dist, '')}: el bloque de confianza no usa la foto local de Carla`);
+}
 for (const oldPrice of ['59 €', '119 €']) {
   if (revisionAll.includes(oldPrice)) fail(`revisioncontratos.es conserva el precio antiguo ${oldPrice}`);
 }
@@ -95,7 +101,7 @@ for (const expected of [['Revisión Esencial', 79], ['Revisión Profesional', 19
   const tier = revisionContent.pricing.tiers.find((t) => t.name.includes(expected[0]));
   if (!tier || tier.priceValue !== expected[1]) fail(`nivel ${expected[0]} no coincide con ${expected[1]} €`);
 }
-const expectedPayments = { essential: 79, professional: 199, blindada: 399 };
+const expectedPayments = { essential: 79, essentialExpress: 128, essentialCall: 128, essentialBoth: 177, professional: 199, blindada: 399 };
 for (const [key, amount] of Object.entries(expectedPayments)) {
   const url = revisionContent.paymentLinks?.[key] || '';
   if (url !== `https://www.paypal.me/carlamorales95/${amount}EUR`)
@@ -106,15 +112,44 @@ if (alquilerHtml.includes('Si contratas la opción de contraoferta'))
   fail('la página de alquiler conserva una contraoferta ambigua sin nivel ni precio');
 if (!alquilerHtml.includes('Revisión Profesional de 199 €'))
   fail('la página de alquiler no asigna expresamente la contraoferta al nivel Profesional');
-if (revisionContent.prelaunch) {
-  for (const [domain, file] of htmlFiles.filter(([domain]) => domain === 'revisioncontratos.es')) {
-    const html = readFileSync(file, 'utf8');
-    const rel = file.replace(dist, '');
-    if (!html.includes('<meta name="robots" content="noindex,follow">')) fail(`${rel}: prelaunch sin noindex`);
-    if (html.includes('paypal.me') || html.includes('paypal.com/paypalme')) fail(`${rel}: enlace de pago visible durante prelaunch`);
-    if (html.includes('<form')) fail(`${rel}: formulario de encargo visible durante prelaunch`);
+const siteContents = {
+  'revisioncontratos.es': revisionContent,
+  'burofaxlegal.es': JSON.parse(readFileSync(join(root, 'content', 'burofaxlegal.json'), 'utf8')),
+};
+const nginxConfig = readFileSync(join(root, 'nginx.conf'), 'utf8');
+if (!nginxConfig.includes("connect-src 'self' https://intake.marcospera.com"))
+  fail('nginx CSP no permite conectar con intake.marcospera.com');
+if (!nginxConfig.includes('location ^~ /assets/'))
+  fail('nginx no sirve el directorio compartido /assets/');
+for (const [domain, content] of Object.entries(siteContents)) {
+  const domainFiles = htmlFiles.filter(([d]) => d === domain);
+  if (content.prelaunch) {
+    for (const [, file] of domainFiles) {
+      const html = readFileSync(file, 'utf8');
+      const rel = file.replace(dist, '');
+      if (!html.includes('<meta name="robots" content="noindex,follow">')) fail(`${rel}: prelaunch sin noindex`);
+      if (html.includes('paypal.me') || html.includes('paypal.com/paypalme')) fail(`${rel}: enlace de pago visible durante prelaunch`);
+      if (html.includes('<form')) fail(`${rel}: formulario de encargo visible durante prelaunch`);
+    }
+  } else {
+    for (const [, file] of domainFiles) {
+      const html = readFileSync(file, 'utf8');
+      const rel = file.replace(dist, '');
+      if (!html.includes('<meta name="robots" content="index,follow">')) fail(`${rel}: web abierta sin index,follow`);
+      if (html.includes('Sitio en preparación.') || html.includes('Apertura próxima')) fail(`${rel}: conserva aviso de prelaunch`);
+      if (html.includes('<p class="respuesta-directa"><p>')) fail(`${rel}: párrafo anidado en respuesta directa`);
+    }
+    const intake = readFileSync(join(dist, domain, 'cuenta-tu-caso', 'index.html'), 'utf8');
+    if (!intake.includes('<form id="intake"')) fail(`${domain}: formulario de encargos no visible tras apertura`);
+    ok(`${domain}: abierto, indexable y con formulario operativo`);
   }
-  ok('revisioncontratos.es prelaunch: noindex, sin pagos ni formularios');
+}
+const revisionPricing = readFileSync(join(dist, 'revisioncontratos.es', 'precios', 'index.html'), 'utf8');
+if (!revisionContent.prelaunch) {
+  for (const amount of [79, 128, 177, 199, 399]) {
+    if (!revisionPricing.includes(`/${amount}EUR`)) fail(`precios: falta enlace PayPal visible de ${amount} €`);
+  }
+  if ((revisionPricing.match(/class="precio-card/g) || []).length !== 3) fail('precios: no hay exactamente tres columnas/tarjetas');
 }
 
 // 10. archivos de descubrimiento

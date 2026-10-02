@@ -181,7 +181,7 @@ const blockCta = (site, text = null) => site.prelaunch ? `
 
 const blockTrustCarla = (site) => `
 <aside class="confianza" aria-label="Quién está detrás del servicio">
-  <img class="confianza-foto" src="/assets/carla-morales.png" alt="Carla Morales, abogada" loading="lazy" width="120" height="120">
+  <img class="confianza-foto" src="/assets/carla-morales.png" alt="Carla Morales, abogada" width="120" height="120">
   <div>
     <p class="confianza-nombre">Carla Morales, abogada</p>
     <p>Colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa personalmente cada encargo: tu caso lo estudia una abogada de verdad, no una IA.</p>

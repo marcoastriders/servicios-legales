@@ -15,7 +15,7 @@ for (const f of ['burofaxlegal', 'revisioncontratos']) {
   sites.push(JSON.parse(readFileSync(join(root, `content/${f}.json`), 'utf8')));
 }
 
-const CHECKED = '2026-09-28';
+const CHECKED = '2026-10-02';
 
 function personGraph() {
   return {

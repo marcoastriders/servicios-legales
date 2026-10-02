@@ -74,7 +74,7 @@
       },
       {
         "q": "¿El precio incluye el envío de Correos?",
-        "a": "<p>El precio cerrado incluye la redacción y revisión por abogada. El envío de Correos se paga aparte porque su tarifa depende del servicio y las opciones que elijas. En la web de Correos puedes consultar el <a href=\"https://www.correos.es/es/es/particulares/enviar/burofax\">producto y tarifa vigente del burofax</a>.</p>"
+        "a": "<p>El precio cerrado incluye la redacción y revisión por abogada. El envío de Correos se paga aparte porque su tarifa depende del servicio y las opciones que elijas. En la web de Correos puedes consultar el <a href=\"https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax\">producto y tarifa vigente del burofax</a>.</p>"
       }
     ],
     "sources": [
@@ -101,7 +101,7 @@
       {
         "label": "Correos",
         "precept": "Producto y tarifa vigente del burofax",
-        "url": "https://www.correos.es/es/es/particulares/enviar/burofax"
+        "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax"
       },
       {
         "label": "Código Civil",
@@ -165,7 +165,7 @@
       },
       {
         "h2": "El envío de Correos se paga aparte, explicado",
-        "html": "<p>Correos calcula la tarifa según la extensión del documento y las opciones de prueba de entrega o certificación que elijas. Nosotros no marcamos ese precio ni nos llevamos comisión. Puedes consultar la <a href=\"https://www.correos.es/es/es/particulares/enviar/burofax\">tarifa vigente del burofax en la web de Correos</a> y elegir la opción que encaje con tu urgencia.</p>"
+        "html": "<p>Correos calcula la tarifa según la extensión del documento y las opciones de prueba de entrega o certificación que elijas. Nosotros no marcamos ese precio ni nos llevamos comisión. Puedes consultar la <a href=\"https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax\">tarifa vigente del burofax en la web de Correos</a> y elegir la opción que encaje con tu urgencia.</p>"
       },
       {
         "h2": "Comparativa honesta con hacerlo tú con una plantilla",

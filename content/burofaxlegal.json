@@ -40,7 +40,7 @@
       },
       {
         "h2": "Por qué redactado por abogada y no una plantilla",
-        "html": "<p>Una plantilla gratuita te da párrafos genéricos. No te dice si tu caso encaja en esa plantilla ni qué plazo legal te conviene citar. Una redacción de abogada parte de tus hechos concretos: qué contrato existe, qué se incumplió, desde cuándo y qué pides exactamente.</p><p>Esa precisión evita dos errores habituales. Pedir de menos (solo la renta y no los intereses) o pedir de forma ambigua (sin plazo claro, con cómputos que el juez podría tachar de inválidos). La revisión previa al envío es nuestro estándar, no un extra.</p>"
+        "html": "<p>Las plantillas gratuitas están bien para arrancar, pero no conocen tu caso: no te dicen si tu contrato encaja en ella ni qué plazo legal conviene citar. Por eso partimos siempre de tus hechos —qué contrato hay, qué se incumplió, desde cuándo y qué pides exactamente— y redactamos a partir de ahí.</p><p>En la práctica, esa atención evita los dos errores más frecuentes: quedarse solo en la renta y olvidar los intereses, o fijar un plazo ambiguo con cómputos que el juez podría tachar de inválidos. Antes de que lo envíes, una abogada revisa el texto, los plazos y las cantidades.</p>"
       },
       {
         "h2": "Para quién es este servicio",
@@ -48,7 +48,7 @@
       },
       {
         "h2": "Qué no prometemos (límites honestos)",
-        "html": "<p>No prometemos que el destinatario pague. Un burofax ejerce presión y crea prueba; no ejecuta la deuda por sí solo. Si el otro no responde, el siguiente paso es una reclamación judicial y ahí el servicio ya no cubre la defensa en juicio.</p><p>Tampoco prometemos plazos postales: Correos fija cuándo se entrega según el servicio que contrates. Nuestro compromiso sí es concreto: una abogada revisa el texto, los plazos que señalas y las cantidades antes de enviarlo.</p>"
+        "html": "<p>Vamos a ser claros con lo que un burofax no hace: no consigue que el destinatario pague. Sirve para dejar constancia de lo que dices y de la fecha en que lo dices —eso ya presiona y crea prueba—, pero no ejecuta la deuda por sí solo. Si no hay respuesta, el asunto sigue por la vía judicial, y ahí el servicio termina: la defensa en juicio es un encargo aparte.</p><p>Tampoco controlamos los plazos postales: esos los fija Correos según el servicio que contrates. En lo nuestro, una abogada revisa el texto, los plazos que señalas y las cantidades antes de que el burofax salga de aquí.</p>"
       },
       {
         "h2": "Despacho y zona de actuación",
@@ -415,7 +415,7 @@
         ]
       },
       "checklist": {
-        "title": "Documentación para preparar el encargo",
+        "title": "Documentación que debes aportar",
         "items": [
           "Contrato y sus modificaciones",
           "Datos del arrendador y del arrendatario",
@@ -487,7 +487,7 @@
       ],
       "crossSell": {
         "h2": "Antes de requerir, revisa tu contrato",
-        "html": "<p>Si el contrato tiene cláusulas defectuosas (fianza mal calculada, plazos de desistimiento dudosos, actualización de renta incorrecta), el requerimiento puede resquebrajarse. En <a href=\"https://revisioncontratos.es/revision-contrato-alquiler/\">Revisión de Contratos</a> revisamos tu contrato de alquiler antes de que salte el conflicto.</p><p>El encadenamiento habitual: revisión del contrato → burofax de requerimiento → si no responde, juicio verbal de desahucio. Consulta también la guía sobre <a href=\"https://tramitesjuridicos.com/guias/\">trámites jurídicos</a> para entender qué viene después del burofax.</p>"
+        "html": "<p>Si tu contrato de alquiler tiene cláusulas defectuosas —fianza mal calculada, desistimientos dudosos o una actualización de renta que no se ajusta a lo pactado—, el requerimiento puede resquebrajarse más adelante. Antes de enviar nada lo revisamos en <a href=\"https://revisioncontratos.es/revision-contrato-alquiler/\">Revisión de Contratos</a> y te señalamos qué conviene corregir.</p><p>Y si después el inquilino no responde, el asunto sigue por la vía judicial, en muchos casos un juicio verbal de desahucio. Te contamos cómo continúa el proceso en <a href=\"https://tramitesjuridicos.com/guias/\">las guías de Trámites Jurídicos</a>.</p>"
       },
       "ctaText": "Quiero requerir el pago del alquiler"
     },
@@ -605,7 +605,7 @@
       ],
       "crossSell": {
         "h2": "Revisa el contrato antes de reclamar la fianza",
-        "html": "<p>Si tu contrato tiene cláusulas abusivas sobre la fianza o gastos de gestión inmobiliaria cargados al inquilino, conviene revisarlo antes de requerir. En <a href=\"https://revisioncontratos.es/reclamar-fianza/\">Revisión de Contratos</a> analizamos esas cláusulas.</p><p>El encadenamiento habitual: revisión del contrato → burofax de requerimiento de fianza → si no paga, juicio verbal por la cantidad. Las guías de <a href=\"https://tramitesjuridicos.com/guias/\">Trámites Jurídicos</a> explican cómo continúa el proceso.</p>"
+        "html": "<p>¿Tu contrato de alquiler carga los gastos de gestión sobre el inquilino o regula la fianza de forma discutible? Antes de reclamar conviene leerlo bien: en <a href=\"https://revisioncontratos.es/reclamar-fianza/\">Revisión de Contratos</a> analizamos esas cláusulas para que el requerimiento pida todo lo que corresponde.</p><p>Después, si el casero no devuelve la fianza, el burofax es el primer paso; si sigue sin pagar, el asunto acaba en un juicio verbal por la cantidad. El recorrido completo está explicado en <a href=\"https://tramitesjuridicos.com/guias/\">las guías de Trámites Jurídicos</a>.</p>"
       },
       "ctaText": "Quiero reclamar mi fianza"
     },
@@ -727,7 +727,7 @@
       ],
       "crossSell": {
         "h2": "Revisa el contrato antes de requerir su cumplimiento",
-        "html": "<p>Un requerimiento sólido parte de un contrato sólido. En <a href=\"https://revisioncontratos.es/\">Revisión de Contratos</a> analizamos las cláusulas antes de que firmes o antes de exigir su cumplimiento, para saber exactamente qué puedes reclamar.</p><p>El encadenamiento recomendado: revisión contractual → burofax de requerimiento → si no responde, demanda de cumplimiento o resolución. Las guías de <a href=\"https://tramitesjuridicos.com/guias/\">Trámites Jurídicos</a> detallan cada trámite posterior.</p>"
+        "html": "<p>Antes de exigir el cumplimiento conviene saber qué dice exactamente tu contrato, cláusula por cláusula y con sus excepciones. En <a href=\"https://revisioncontratos.es/\">Revisión de Contratos</a> hacemos ese análisis para que sepas qué puedes reclamar y con qué base.</p><p>En cuanto a lo que viene después: primero se requiere por burofax y, si la otra parte no responde, se plantea la demanda de cumplimiento o resolución. Cada trámite está detallado en <a href=\"https://tramitesjuridicos.com/guias/\">las guías de Trámites Jurídicos</a>.</p>"
       },
       "ctaText": "Quiero requerir el cumplimiento del contrato"
     },
@@ -850,7 +850,7 @@
       ],
       "crossSell": {
         "h2": "Revisa los estatutos antes de reclamar",
-        "html": "<p>Los estatutos de tu comunidad pueden añadir recargos o intereses a los morosos. En <a href=\"https://revisioncontratos.es/\">Revisión de Contratos</a> analizamos estatutos y acuerdos para que el requerimiento incluya todo lo exigible.</p><p>El encadenamiento: revisión de estatutos y acuerdos → burofax de requerimiento → si no paga, proceso monitorio. Las guías de <a href=\"https://tramitesjuridicos.com/guias/\">Trámites Jurídicos</a> explican cómo funciona la vía monitoria paso a paso.</p>"
+        "html": "<p>Los estatutos de tu comunidad pueden añadir recargos o intereses de demora a los morosos. En <a href=\"https://revisioncontratos.es/\">Revisión de Contratos</a> revisamos esos estatutos y los acuerdos de junta para que el requerimiento incluya todo lo exigible.</p><p>Y si después de enviar el burofax el vecino no pasa por caja, lo normal es ir al proceso monitorio: cómo funciona, paso a paso, en <a href=\"https://tramitesjuridicos.com/guias/\">las guías de Trámites Jurídicos</a>.</p>"
       },
       "ctaText": "Quiero reclamar las cuotas al vecino"
     },
@@ -969,7 +969,7 @@
       ],
       "crossSell": {
         "h2": "Si el préstamo tiene contrato, revísalo antes",
-        "html": "<p>Si tu préstamo tiene contrato privado o pagaré, conviene revisarlo antes de requerir para saber qué intereses y vencimientos puedes exigir. En <a href=\"https://revisioncontratos.es/\">Revisión de Contratos</a> analizamos ese documento.</p><p>El encadenamiento habitual: revisión del contrato o pagaré → burofax de requerimiento → si no responde, juicio verbal por la cantidad. Las guías de <a href=\"https://tramitesjuridicos.com/guias/\">Trámites Jurídicos</a> explican cada paso posterior.</p>"
+        "html": "<p>Si el préstamo entre particulares tiene contrato privado o pagaré, revísalo antes de reclamar: así sabrás qué intereses y vencimientos puedes exigir. En <a href=\"https://revisioncontratos.es/\">Revisión de Contratos</a> analizamos el documento.</p><p>Del burofax, si no hay respuesta, el camino habitual termina en un juicio verbal por la cantidad. Los pasos intermedios los tienes en <a href=\"https://tramitesjuridicos.com/guias/\">las guías de Trámites Jurídicos</a>.</p>"
       },
       "ctaText": "Quiero reclamar mi préstamo"
     }

@@ -35,6 +35,7 @@ a { color: var(--acento); }
 .prelaunch strong { color: #342700; }
 .analytics-consent { position: fixed; z-index: 20; inset: auto 1rem 1rem; max-width: 42rem; margin-inline: auto; padding: 1rem 1.1rem; background: #fff; color: #183131; border: 1px solid #9ab7b7; border-radius: 0.5rem; box-shadow: 0 0.5rem 2rem #12333333; }
 .analytics-consent p { margin: 0 0 0.65rem; }
+.analytics-consent .analytics-actions { margin-bottom: 0; }
 .analytics-consent button { margin-right: 0.5rem; padding: 0.55rem 0.8rem; border: 1px solid #0e4f4f; border-radius: 0.3rem; background: #0e4f4f; color: #fff; cursor: pointer; }
 .analytics-consent button + button { background: #fff; color: #0e4f4f; }
 

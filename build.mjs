@@ -114,8 +114,8 @@ ${site.prelaunch ? `<aside class="prelaunch" role="status"><div class="wrap"><st
 ${body}
 </main>
 ${analyticsId ? `<aside id="analytics-consent" class="analytics-consent" aria-label="Preferencias de cookies" hidden>
-  <p><strong>Cookies de medición.</strong> Usamos Google Analytics para saber qué páginas reciben visitas y mejorar el servicio. Puedes aceptar o rechazar estas cookies. <a href="/cookies/">Más información</a>.</p>
-  <p><button type="button" id="analytics-accept">Aceptar medición</button> <button type="button" id="analytics-reject">Rechazar</button></p>
+  <p><strong>Medición opcional.</strong> Google Analytics solo se activa si aceptas. <a href="/cookies/">Ver detalles</a>.</p>
+  <p class="analytics-actions"><button type="button" id="analytics-accept">Aceptar</button> <button type="button" id="analytics-reject">Rechazar</button></p>
 </aside>
 <script>
 (function(){

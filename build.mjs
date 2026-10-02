@@ -150,7 +150,7 @@ ${analyticsId ? `<aside id="analytics-consent" class="analytics-consent" aria-la
         <a href="/aviso-legal/">Aviso legal</a> ·
         <a href="/privacidad/">Privacidad</a> ·
         <a href="/cookies/">Cookies</a> ·
-        <a href="/condiciones-del-servicio/">Condiciones del servicio</a>
+        <a href="/condiciones-del-servicio/">Condiciones del servicio</a>${site.articles?.length ? ' ·\n        <a href="/articulos/">Artículos</a>' : ''}
       </p>
       <p class="pie-copy">© ${year} ${esc(site.name)}</p>
     </div>
@@ -401,6 +401,51 @@ ${p.noCta ? '' : blockCta(site)}`;
   });
 }
 
+function renderArticulo(site, a) {
+  const path = `/articulos/${a.slug}/`;
+  const blogLd = {
+    '@type': 'BlogPosting',
+    headline: a.title,
+    description: a.description,
+    datePublished: a.publishedAt,
+    dateModified: a.reviewedAt,
+    author: { '@type': 'Organization', name: site.name, url: `https://${site.domain}/` },
+    publisher: { '@id': `https://${site.domain}/#legalservice` },
+    mainEntityOfPage: `https://${site.domain}${path}`,
+    inLanguage: 'es',
+  };
+  const body = `
+<nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · <a href="/articulos/">Artículos</a> · ${esc(a.title)}</nav>
+<h1>${esc(a.h1)}</h1>
+${blockAnswer(a.answer)}
+${a.reviewStatus === 'reviewed' && a.reviewedAt ? `<p class="comprobado">Revisión jurídica de Carla Morales · ${esc(a.reviewedAt)}.</p>` : ''}
+${sections(a.sections)}
+${blockSources(a.sources)}
+${blockTrustCarla(site)}
+${blockCta(site)}`;
+  return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: 'Artículos', path: '/articulos/' }, { name: a.title, path }] }, {
+    title: `${a.title} | ${site.name}`, description: a.description, path, body,
+    extraLd: [blogLd], bodyClass: 'page-article',
+  });
+}
+
+function renderArticulosIndex(site) {
+  const intro = '<p>Guías prácticas sobre el burofax: qué es, cuándo hace falta, cómo enviarlo y qué constancias pedir. Cada artículo cita sus fuentes oficiales de Correos y del BOE.</p>';
+  const body = `
+<nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · Artículos</nav>
+<h1>Artículos sobre burofax</h1>
+${blockAnswer(intro)}
+<ul class="tarjetas">
+  ${site.articles.map((a) => `<li class="tarjeta"><h3><a href="/articulos/${a.slug}/">${esc(a.title)}</a></h3><p>${esc(a.description)}</p></li>`).join('\n')}
+</ul>
+${blockCta(site)}`;
+  return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: 'Artículos', path: '/articulos/' }] }, {
+    title: `Artículos sobre burofax | ${site.name}`,
+    description: 'Guías prácticas sobre burofax con fuentes oficiales: qué es, cuándo hace falta, cómo enviarlo y qué constancias conservar.',
+    path: '/articulos/', body, bodyClass: 'page-simple',
+  });
+}
+
 function renderIntake(site) {
   const isRevision = site.id === 'revisioncontratos';
   const asuntos = site.intake.asuntos.map((a) => `<option value="${esc(a)}">${esc(a)}</option>`).join('\n        ');
@@ -548,7 +593,7 @@ ${site.prelaunch ? '\n> Estado: sitio en preparación. Tarifas, plazos y alcance
 
 ## Servicios
 ${lines}
-
+${site.articles?.length ? `\n## Artículos\n${site.articles.map((a) => `- [${a.title}](https://${site.domain}/articulos/${a.slug}/): ${a.description}`).join('\n')}\n` : ''}
 ## Contacto
 - Email: ${shared.email}
 - WhatsApp: ${shared.phoneDisplay}
@@ -586,6 +631,14 @@ for (const site of sites) {
     const slugs = { avisoLegal: 'aviso-legal', privacidad: 'privacidad', cookies: 'cookies', condiciones: 'condiciones-del-servicio' };
     put(`${slugs[lp]}/index.html`, renderSimple(site, site.pages[lp], `/${slugs[lp]}/`, names[lp]));
     urls.push({ path: `/${slugs[lp]}/`, priority: '0.2' });
+  }
+  if (Array.isArray(site.articles) && site.articles.length) {
+    put('articulos/index.html', renderArticulosIndex(site));
+    urls.push({ path: '/articulos/', priority: '0.7' });
+    for (const a of site.articles) {
+      put(`articulos/${a.slug}/index.html`, renderArticulo(site, a));
+      urls.push({ path: `/articulos/${a.slug}/`, priority: '0.6' });
+    }
   }
   put('404.html', render404(site));
   put('sitemap.xml', sitemap(site, urls));

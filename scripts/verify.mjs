@@ -155,6 +155,30 @@ if (!revisionContent.prelaunch) {
   if ((revisionPricing.match(/class="precio-card/g) || []).length !== 3) fail('precios: no hay exactamente tres columnas/tarjetas');
 }
 
+// 10. artículos del blog: presencia, sitemap y estado de revisión
+{
+  const burofaxContent = siteContents['burofaxlegal.es'];
+  const articles = Array.isArray(burofaxContent.articles) ? burofaxContent.articles : [];
+  const sm = readFileSync(join(dist, 'burofaxlegal.es', 'sitemap.xml'), 'utf8');
+  ok(`burofaxlegal.es artículos en JSON: ${articles.length}`);
+  if (articles.length === 0) fail('burofaxlegal.es: articles vacío o ausente (docs 38-41 no aplicados)');
+  for (const a of articles) {
+    const rel = `/burofaxlegal.es/articulos/${a.slug}/index.html`;
+    const file = join(dist, 'burofaxlegal.es', 'articulos', a.slug, 'index.html');
+    if (!existsSync(file)) fail(`artículo sin generar: ${rel}`);
+    else {
+      const html = readFileSync(file, 'utf8');
+      if (!html.includes('respuesta-directa')) fail(`${rel}: sin bloque de respuesta directa`);
+      if (!html.includes('"BlogPosting"')) fail(`${rel}: sin schema BlogPosting`);
+      if (/\b(19|20)\d{2}\b/.test(a.slug)) fail(`${rel}: año en slug`);
+      if (!sm.includes(`/articulos/${a.slug}/`)) fail(`sitemap sin artículo: ${a.slug}`);
+      if (a.reviewStatus !== 'reviewed') fail(`${rel}: reviewStatus=${a.reviewStatus} (artículo sin revisar publicado)`);
+      if (!a.reviewedAt) fail(`${rel}: sin reviewedAt`);
+    }
+  }
+  if (!sm.includes('/articulos/')) fail('sitemap sin el índice /articulos/');
+}
+
 // 10. archivos de descubrimiento
 for (const d of DOMAINS) {
   for (const f of ['sitemap.xml', 'robots.txt', 'llms.txt']) {

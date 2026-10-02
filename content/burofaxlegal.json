@@ -366,7 +366,7 @@
       "titleTag": "Burofax por impago de alquiler | BurofaxLegal",
       "description": "Requiere fehacientemente al inquilino el pago de rentas adeudadas y documenta la reclamación. El efecto sobre la enervación depende del requerimiento, las fechas y los demás requisitos legales.",
       "h1": "Burofax de <strong>requerimiento de pago de rentas</strong> al inquilino",
-      "answer": "<p>Si tu inquilino adeuda rentas, redactamos un requerimiento adaptado a tu contrato y al detalle de los impagos. El servicio está dirigido a arrendadores de vivienda y comprende la revisión por una abogada y las indicaciones para realizar un envío fehaciente. El impago permite al arrendador instar la resolución del contrato conforme al artículo 27.2.a) de la Ley de Arrendamientos Urbanos (LAU). El burofax reclama la deuda y deja constancia de la comunicación; la recuperación judicial de la vivienda exige el procedimiento correspondiente.</p>",
+      "answer": "<p>Si tu inquilino adeuda rentas, redactamos un requerimiento adaptado a tu contrato y al detalle de los impagos. El servicio está dirigido a arrendadores de vivienda y comprende la revisión por una abogada y las indicaciones para realizar un envío fehaciente.</p><p>El impago permite al arrendador instar la resolución del contrato conforme al artículo 27.2.a) de la Ley de Arrendamientos Urbanos (LAU). El burofax reclama la deuda y deja constancia de la comunicación; la recuperación judicial de la vivienda exige el procedimiento correspondiente.</p>",
       "teaser": "Requiere al inquilino el pago de rentas y prepara, si se cumplen todos los requisitos legales, la oposición a una posterior enervación.",
       "llmsTeaser": "Servicio de redacción de burofax para requerir el pago de alquileres adeudados, evitando la enervación del desahucio mediante requerimiento previo de 30 días (LEC art. 22.4).",
       "priceLabel": "Desde 79 € IVA incluido",
@@ -374,15 +374,15 @@
       "sections": [
         {
           "h2": "Qué incluye el servicio",
-          "html": "<p>Incluye el estudio del contrato y de la documentación que aportes, el cálculo de las rentas pendientes y la revisión de otros conceptos que puedan reclamarse. La abogada redacta el requerimiento, concreta la cantidad exigida, indica cómo pagar y fija un plazo adecuado al caso.</p><p>También incluye la explicación del texto y las indicaciones para contratar un burofax con certificación del contenido y prueba de entrega, como el acuse de recibo o la certificación de entrega. Debes conservar el escrito y los justificantes del envío. La presentación de una demanda, la tramitación del desahucio y la negociación posterior con el inquilino requieren un encargo separado. El precio de Correos corresponde al envío y a los servicios adicionales contratados.</p>"
+          "html": "<p>Incluye el estudio del contrato y de la documentación que aportes, el cálculo de las rentas pendientes y la revisión de otros conceptos que puedan reclamarse. La abogada redacta el requerimiento, concreta la cantidad exigida, indica cómo pagar y fija un plazo adecuado al caso.</p><p>También incluye la explicación del texto y las indicaciones para contratar un burofax con certificación del contenido y prueba de entrega, como el acuse de recibo o la certificación de entrega. Debes conservar el escrito y los justificantes del envío.</p><p>La presentación de una demanda, la tramitación del desahucio y la negociación posterior con el inquilino requieren un encargo separado. El precio de Correos corresponde al envío y a los servicios adicionales contratados.</p>"
         },
         {
           "h2": "Efectos del requerimiento sobre la enervación",
-          "html": "<p>La enervación permite, cuando procede, finalizar el desahucio mediante el pago íntegro de lo reclamado y de lo adeudado hasta ese momento, dentro del plazo del requerimiento judicial. El artículo 22.4 LEC la excluye si existe un requerimiento fehaciente con al menos 30 días de antelación a la demanda y la deuda no se ha pagado al presentarla. También limita su repetición, con la excepción legal por causas imputables al arrendador.</p><p>El envío, por sí solo, no garantiza ese efecto. La abogada debe revisar el contenido, la comunicación al destinatario y las fechas antes de valorar una demanda.</p>"
+          "html": "<p>La enervación permite, cuando procede, finalizar el desahucio mediante el pago íntegro de lo reclamado y de lo adeudado hasta ese momento. El artículo 22.4 LEC la excluye si existe un requerimiento fehaciente con al menos 30 días de antelación a la demanda y la deuda no se ha pagado al presentarla. También limita su repetición, con la excepción legal por causas imputables al arrendador.</p><p>El envío, por sí solo, no garantiza ese efecto. La abogada debe revisar el contenido, la comunicación al destinatario y las fechas antes de valorar una demanda.</p>"
         },
         {
           "h2": "Requerimiento de pago y negociación previa",
-          "html": "<p>Con carácter general, una demanda civil de desahucio por impago exige intentar previamente un medio adecuado de solución de controversias (MASC). Una simple exigencia de pago no acredita por sí sola una negociación. Debe existir una auténtica invitación a negociar o propuesta, sobre el mismo objeto del futuro litigio, y documentarse el intento conforme a los artículos 2, 5 y 10 de la Ley Orgánica 1/2025.</p><p>La negociación y su documentación están sujetas a la confidencialidad del artículo 9, con las excepciones legales. Recomendamos documentar separadamente el requerimiento de pago y la actuación MASC. Si necesitas esta última, debe concretarse en el encargo. El artículo 264.4.º LEC exige aportar la acreditación del intento cuando sea obligatorio, o la declaración responsable prevista para el desconocimiento del domicilio o medio de requerimiento.</p>"
+          "html": "<p>Con carácter general, una demanda civil de desahucio por impago exige intentar previamente un medio adecuado de solución de controversias (MASC). Una simple exigencia de pago no acredita por sí sola una negociación. Debe existir una auténtica invitación a negociar o propuesta, sobre el mismo objeto del futuro litigio, y documentarse el intento conforme a los artículos 2, 5 y 10 de la Ley Orgánica 1/2025.</p><p>La negociación y su documentación están sujetas a la confidencialidad del artículo 9, con las excepciones legales. Recomendamos documentar separadamente el requerimiento de pago y la actuación MASC. Si necesitas esta última, debe concretarse en el encargo.</p><p>El artículo 264.4.º LEC exige aportar la acreditación del intento cuando sea obligatorio, o la declaración responsable prevista para el desconocimiento del domicilio o medio de requerimiento.</p>"
         },
         {
           "h2": "Documentación para preparar el encargo",
@@ -446,11 +446,11 @@
         },
         {
           "q": "¿Puedo reclamar gastos e intereses?",
-          "a": "<p>Solo deben incorporarse conceptos exigibles y acreditados. El contrato y la normativa aplicable determinan qué gastos corresponden al arrendatario. Los intereses por mora se revisan conforme a los artículos 1100 y 1108 del Código Civil.</p>"
+          "a": "<p>Solo deben incorporarse conceptos exigibles y acreditados. El contrato y la normativa aplicable determinan qué gastos corresponden al arrendatario; una cláusula no basta si infringe una norma imperativa. Los intereses por mora se revisan conforme a los artículos 1100 y 1108 del Código Civil: pueden proceder los válidamente pactados o, en su defecto, el interés legal.</p>"
         },
         {
           "q": "¿Y si el inquilino ya recibió un requerimiento judicial?",
-          "a": "<p>El artículo 438.5 LEC regula el requerimiento judicial de diez días para desalojar, pagar, enervar cuando proceda o formular oposición. Un nuevo burofax no convierte esa comunicación en un requerimiento previo a una demanda ya presentada.</p>"
+          "a": "<p>El artículo 438.5 LEC regula el requerimiento judicial de diez días para desalojar, pagar, enervar cuando proceda o formular oposición. Un nuevo burofax no convierte esa comunicación en un requerimiento previo a una demanda ya presentada. Deben revisarse las actuaciones judiciales.</p>"
         }
       ],
       "sources": [
@@ -466,7 +466,7 @@
         },
         {
           "label": "Ley Orgánica 1/2025, de 2 de enero",
-          "precept": "Arts. 2, 5, 7.3, 9 y 10: negociación previa, confidencialidad y acreditación",
+          "precept": "Arts. 2, 5, 7.3, 9 y 10: negociación previa, confidencialidad y acreditación. El régimen MASC entró en vigor el 3 de abril de 2025. Esta ley no modificó el artículo 22.4 LEC.",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76#a5"
         },
         {
@@ -497,8 +497,8 @@
       "titleTag": "Burofax para reclamar la fianza | BurofaxLegal",
       "description": "Exige fehacientemente al casero la devolución de tu fianza. La LAU art. 36 le da un mes desde la entrega de llaves; después, intereses legales.",
       "h1": "Burofax para <strong>reclamar la devolución de la fianza</strong>",
-      "answer": "<p>Este servicio redacta un requerimiento fehaciente para reclamar al arrendador el saldo de la fianza que deba devolverse al finalizar el alquiler. Ese saldo devenga interés legal una vez transcurrido un mes desde la entrega de las llaves sin restitución (art. 36.4 de la Ley de Arrendamientos Urbanos, LAU). El burofax con certificación de contenido y prueba de entrega permite acreditar qué se reclamó y su recepción. La entrega de llaves y la cantidad debida deben apoyarse en la documentación correspondiente.</p>",
-      "teaser": "Reclama tu fianza con plazo legal de un mes e intereses si el casero se retrasa.",
+      "answer": "<p>Este servicio redacta un requerimiento fehaciente para reclamar al arrendador el saldo de la fianza que deba devolverse al finalizar el alquiler. Ese saldo devenga interés legal una vez transcurrido un mes desde la entrega de las llaves sin restitución (art. 36.4 de la Ley de Arrendamientos Urbanos, LAU).</p><p>El burofax con certificación de contenido y prueba de entrega permite acreditar qué se reclamó y su recepción. La entrega de llaves y la cantidad debida deben apoyarse en la documentación correspondiente.</p>",
+      "teaser": "Reclama el saldo de tu fianza y los intereses legales que correspondan.",
       "llmsTeaser": "Servicio de burofax para reclamar la devolución de la fianza de alquiler conforme al LAU art. 36: un mes de plazo desde la entrega de llaves e intereses legales después.",
       "priceLabel": "Desde 79 € IVA incluido",
       "priceValue": 79,
@@ -517,7 +517,7 @@
         },
         {
           "h2": "Negociación previa y siguientes pasos",
-          "html": "<p>Si es necesario demandar, la reclamación civil de la fianza exige, con carácter general, intentar antes una negociación. Un simple requerimiento de pago no acredita por sí solo ese requisito: debe documentarse una invitación o propuesta sobre el mismo objeto y su recepción, conforme a los arts. 5 y 10 de la Ley Orgánica 1/2025.</p><p>La negociación está sujeta a la confidencialidad del art. 9. El art. 264.4.º LEC regula su acreditación al presentar la demanda. La representación en juicio es un encargo separado.</p>"
+          "html": "<p>Si es necesario demandar, la reclamación civil de la fianza exige, con carácter general, intentar antes una negociación. Un simple requerimiento de pago no acredita por sí solo ese requisito: debe documentarse una invitación o propuesta de negociación sobre el mismo objeto y su recepción, conforme a los arts. 5 y 10 de la Ley Orgánica 1/2025. La negociación está sujeta a la confidencialidad del art. 9. El art. 264.4.º de la Ley de Enjuiciamiento Civil regula su acreditación al presentar la demanda.</p>"
         }
       ],
       "table": {
@@ -529,27 +529,28 @@
         "rows": [
           [
             "Entregaste las llaves hace menos de un mes",
-            "Reclamamos la devolución y recogemos la fecha de entrega documentada"
+            "Requerimos la devolución del saldo y recogemos la fecha de entrega de llaves según la documentación aportada"
           ],
           [
             "Entregaste las llaves hace más de un mes",
-            "Reclamamos también el interés legal sobre el saldo pendiente"
+            "Reclamamos también el interés legal sobre el saldo pendiente, conforme al art. 36.4 LAU"
           ],
           [
             "El casero alega daños sin justificar",
-            "Pedimos un desglose documentado de las deducciones"
+            "Pedimos un desglose documentado de las deducciones y fijamos un plazo de respuesta"
           ],
           [
             "El casero no contesta",
-            "Te orientamos sobre la negociación y el procedimiento que corresponda"
+            "Te orientamos sobre el procedimiento judicial que corresponda y la negociación previa exigible"
           ]
         ]
       },
       "checklist": {
-        "title": "Documentos y datos que necesitamos",
+        "title": "Qué debe contener el encargo",
         "items": [
           "Contrato de alquiler",
           "Justificante de pago de la fianza",
+          "Datos del arrendador",
           "Fecha y prueba de entrega de llaves",
           "Comunicaciones sobre la devolución",
           "Facturas o justificantes de suministros",
@@ -568,37 +569,37 @@
         },
         {
           "q": "¿Puedo retener la última mensualidad con la fianza?",
-          "a": "<p>No debes sustituir unilateralmente el pago de la renta por la fianza. Salvo acuerdo expreso, paga la renta conforme al contrato y reclama después el saldo de la fianza (art. 17 LAU).</p>"
+          "a": "<p>No debes sustituir unilateralmente el pago de la renta por la fianza. Salvo acuerdo expreso con el arrendador, paga la renta conforme al contrato y reclama después el saldo de la fianza (art. 17 LAU).</p>"
         },
         {
           "q": "¿Qué pasa si el casero dice que hay daños?",
-          "a": "<p>El burofax pide un desglose motivado con pruebas. Las deducciones deben corresponder a obligaciones exigibles a tu cargo, como daños imputables, rentas pendientes o suministros que debas pagar. El deterioro por el tiempo o causa inevitable se rige por el art. 1561 del Código Civil.</p>"
+          "a": "<p>El burofax pide un desglose motivado con pruebas. Las deducciones deben corresponder a obligaciones exigibles a tu cargo, como daños imputables, rentas pendientes o suministros que debas pagar. No procede cobrarte el deterioro por el transcurso del tiempo o por causa inevitable (art. 1561 del Código Civil). Revisamos la documentación y reclamamos el saldo que corresponda.</p>"
         }
       ],
       "sources": [
         {
-          "label": "Ley 29/1994, de Arrendamientos Urbanos",
-          "precept": "Art. 36.4: interés legal del saldo de fianza pendiente; art. 17.2: pago de la renta",
+          "label": "Ley 29/1994, de 24 de noviembre, de Arrendamientos Urbanos",
+          "precept": "Art. 36.4: intereses del saldo de la fianza pendiente de devolución; art. 17.2: pago de la renta, salvo pacto en contrario.",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a36"
         },
         {
           "label": "Código Civil",
-          "precept": "Art. 1561: devolución de la finca y deterioro por el tiempo o causa inevitable",
+          "precept": "Art. 1561: devolución de la finca y deterioro por el tiempo o causa inevitable.",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1561"
         },
         {
           "label": "Ley Orgánica 1/2025, de 2 de enero",
-          "precept": "Arts. 5, 9 y 10: negociación previa, confidencialidad y acreditación",
+          "precept": "Arts. 5, 9 y 10: negociación previa, confidencialidad y acreditación.",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76#a5"
         },
         {
-          "label": "Ley 1/2000, de Enjuiciamiento Civil",
-          "precept": "Art. 264.4.º: acreditación de la negociación previa cuando sea exigible",
-          "url": "https://www.boe.es/eli/es/l/2000/01/07/1/con#a264"
+          "label": "Ley 1/2000, de 7 de enero, de Enjuiciamiento Civil",
+          "precept": "Art. 264.4.º: documento acreditativo de la negociación previa cuando sea exigible.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2000-323#a264"
         },
         {
           "label": "Correos",
-          "precept": "Burofax: certificación de contenido y prueba de entrega",
+          "precept": "Burofax: certificación de contenido y prueba de entrega.",
           "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax"
         }
       ],
@@ -614,8 +615,8 @@
       "titleTag": "Burofax por incumplimiento de contrato | BurofaxLegal",
       "description": "Requiere al otro firmante el cumplimiento de lo pactado o su resolución con indemnización, conforme a los arts. 1101 y 1124 del Código Civil.",
       "h1": "Burofax de <strong>requerimiento por incumplimiento de contrato</strong>",
-      "answer": "<p>Este servicio redacta un requerimiento fehaciente dirigido a la otra parte de un contrato que no cumple lo pactado. El art. 1101 del Código Civil permite reclamar los daños y perjuicios causados por un incumplimiento que genere responsabilidad. En obligaciones recíprocas, el art. 1124 permite optar entre cumplimiento y resolución, con los daños e intereses que procedan. La resolución exige un incumplimiento suficientemente grave y que quien la ejercite no sea, a su vez, incumplidor. El burofax concreta la reclamación y el plazo, pero no acredita por sí solo que el incumplimiento exista ni que la resolución sea procedente.</p>",
-      "teaser": "Exige el cumplimiento o la resolución del contrato con indemnización, con base en el Código Civil.",
+      "answer": "<p>Este servicio redacta un requerimiento fehaciente dirigido a la otra parte de un contrato que no cumple lo pactado.</p><p>El art. 1101 del Código Civil permite reclamar los daños y perjuicios causados por un incumplimiento que genere responsabilidad. En obligaciones recíprocas, el art. 1124 permite al perjudicado optar entre cumplimiento y resolución, con los daños e intereses que procedan. La resolución exige un incumplimiento suficientemente grave y que quien la ejercite no sea, a su vez, incumplidor (STS 1101/2024, de 16 de septiembre, fundamento sexto).</p><p>El burofax concreta la reclamación y el plazo aplicable. Con certificación de contenido y prueba de entrega, permite documentar lo comunicado y su recepción. No acredita por sí solo que el incumplimiento alegado exista ni que la resolución sea procedente.</p>",
+      "teaser": "Reclama el cumplimiento o, cuando proceda, la resolución del contrato y la indemnización correspondiente.",
       "llmsTeaser": "Servicio de burofax de requerimiento general por incumplimiento contractual conforme a los arts. 1101 (indemnización) y 1124 (resolución) del Código Civil.",
       "priceLabel": "Desde 79 € IVA incluido",
       "priceValue": 79,
@@ -634,7 +635,7 @@
         },
         {
           "h2": "Negociación previa y siguientes pasos",
-          "html": "<p>Si se prevé demandar en vía civil, debe comprobarse la negociación previa exigible y su acreditación. Con carácter general, los arts. 5 y 10 de la Ley Orgánica 1/2025 exigen intentar y documentar una negociación sobre el mismo objeto del litigio. El mero envío de un burofax no garantiza cumplir ese requisito.</p><p>El art. 264.4.º LEC regula la documentación que debe acompañar a la demanda cuando ese intento sea exigible. La negociación posterior y la demanda requieren un encargo separado.</p>"
+          "html": "<p>Si se prevé demandar en vía civil, debe comprobarse la negociación previa exigible y su acreditación. Con carácter general, los arts. 5 y 10 de la Ley Orgánica 1/2025 exigen intentar y documentar una negociación sobre el mismo objeto del litigio. El mero envío de un burofax no garantiza cumplir ese requisito: deben revisarse su contenido y las reglas aplicables al caso. El art. 264.4.º de la Ley de Enjuiciamiento Civil regula la documentación que debe acompañar a la demanda cuando ese intento sea exigible.</p>"
         }
       ],
       "table": {
@@ -645,25 +646,25 @@
         ],
         "rows": [
           [
-            "Análisis del contrato y de las cláusulas incumplidas",
-            "Revisión contractual previa profunda"
+            "Análisis del contrato y de las cláusulas incumplidas para redactar el requerimiento",
+            "La revisión contractual profunda es un servicio aparte"
           ],
           [
-            "Requerimiento con plazo concreto",
-            "Resolución del contrato por nosotros"
+            "Requerimiento con plazo concreto y advertencia de resolución cuando proceda",
+            "El vencimiento del plazo no convierte por sí solo la resolución en una opción jurídicamente válida"
           ],
           [
-            "Fundamentación adaptada al contrato",
-            "Negociación comercial posterior, salvo nivel superior"
+            "Fundamentación jurídica adaptada al contrato",
+            "La negociación comercial posterior se contempla en el nivel Burofax + estrategia"
           ],
           [
             "Revisión por abogada antes de tu aprobación",
-            "Demanda judicial y representación procesal"
+            "La demanda judicial y la representación procesal requieren un encargo separado"
           ]
         ]
       },
       "checklist": {
-        "title": "Documentos y datos que necesitamos",
+        "title": "Qué debe contener el encargo",
         "items": [
           "Contrato y anexos",
           "Datos de las partes",
@@ -677,7 +678,7 @@
       "faqs": [
         {
           "q": "¿Puedo resolver el contrato directamente sin requerir antes?",
-          "a": "<p>Depende del contrato, del incumplimiento y de las normas aplicables. Deben revisarse las cláusulas de resolución y sus requisitos, dentro de los límites del art. 1255 del Código Civil. Requerir previamente documenta la reclamación, pero no garantiza la legitimidad de una resolución posterior.</p>"
+          "a": "<p>Depende del contrato, del incumplimiento y de las normas aplicables. Deben revisarse las cláusulas de resolución y sus requisitos, dentro de los límites del art. 1255 del Código Civil. Requerir previamente permite documentar la reclamación, pero no garantiza la legitimidad de una resolución posterior.</p>"
         },
         {
           "q": "¿Qué plazo debo dar para que cumpla?",
@@ -685,37 +686,42 @@
         },
         {
           "q": "¿Puedo reclamar otros daños además del incumplimiento?",
-          "a": "<p>Puedes reclamar los daños y perjuicios causados por el incumplimiento cuando procedan. Hay que acreditar su existencia, relación causal y cuantía; la indemnización no es automática (art. 1101 del Código Civil).</p>"
+          "a": "<p>Puedes reclamar los daños y perjuicios causados por el incumplimiento cuando procedan. Hay que acreditar su existencia, relación causal y cuantía; la indemnización no es automática (art. 1101 del Código Civil). El burofax los incluye cuando la documentación aporta una base suficiente.</p>"
         },
         {
           "q": "¿Sirve para contratos entre empresas?",
-          "a": "<p>Sí, ajustando el requerimiento a las normas del contrato. En contratos mercantiles, el art. 50 del Código de Comercio remite a las reglas generales del Derecho común en lo no regulado por normas especiales.</p>"
+          "a": "<p>Sí, ajustando el requerimiento a las normas del contrato. En los contratos mercantiles, las reglas generales del Derecho común se aplican en lo no regulado por el Código de Comercio o las leyes especiales (art. 50 del Código de Comercio). Si el contrato es complejo, puedes valorar el nivel Burofax + estrategia.</p>"
         }
       ],
       "sources": [
         {
           "label": "Código Civil",
-          "precept": "Arts. 1101, 1124 y 1255: responsabilidad, resolución y límites de los pactos",
-          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1101"
+          "precept": "Arts. 1101, 1124 y 1255: responsabilidad por incumplimiento, resolución de obligaciones recíprocas y límites de los pactos.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1124"
+        },
+        {
+          "label": "Tribunal Supremo, Sala de lo Civil",
+          "precept": "STS 1101/2024, de 16 de septiembre, fundamento sexto. ECLI:ES:TS:2024:4392. Requisitos de la resolución por incumplimiento.",
+          "url": "https://ortega-condomines.com/wp-content/uploads/2024/10/TS-Sala-de-lo-Civil-Seccion-1a-Sentencia-num.-1101-2024-de-16-septiembre.pdf"
         },
         {
           "label": "Código de Comercio",
-          "precept": "Art. 50: aplicación del Derecho común a los contratos mercantiles",
+          "precept": "Art. 50: aplicación de las reglas generales del Derecho común a los contratos mercantiles.",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1885-6627#art50"
         },
         {
           "label": "Ley Orgánica 1/2025, de 2 de enero",
-          "precept": "Arts. 5 y 10: negociación previa y acreditación",
+          "precept": "Arts. 5 y 10: negociación previa y acreditación.",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76#a5"
         },
         {
-          "label": "Ley 1/2000, de Enjuiciamiento Civil",
-          "precept": "Art. 264.4.º: acreditación de la negociación previa cuando sea exigible",
-          "url": "https://www.boe.es/eli/es/l/2000/01/07/1/con#a264"
+          "label": "Ley 1/2000, de 7 de enero, de Enjuiciamiento Civil",
+          "precept": "Art. 264.4.º: acreditación de la negociación previa cuando sea exigible.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2000-323#a264"
         },
         {
           "label": "Correos",
-          "precept": "Burofax: certificación de contenido y prueba de entrega",
+          "precept": "Burofax: certificación de contenido y prueba de entrega.",
           "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax"
         }
       ],
@@ -731,8 +737,8 @@
       "titleTag": "Burofax cuotas comunidad propietarios | BurofaxLegal",
       "description": "Reclama fehacientemente las cuotas comunitarias impagadas a un vecino moroso, conforme a la LPH art. 21: acuerdo de junta, certificación del secretario y vía monitoria.",
       "h1": "Burofax de <strong>requerimiento de cuotas a un vecino moroso</strong>",
-      "answer": "<p>Este servicio redacta un requerimiento fehaciente para reclamar a un propietario las cuotas comunitarias vencidas y exigibles que adeuda. Para comunidades regidas por la Ley de Propiedad Horizontal, el art. 21 regula la reclamación mediante el monitorio especial, que requiere el certificado del acuerdo de liquidación y la acreditación de su notificación al deudor. El burofax documenta la comunicación, pero no sustituye la certificación comunitaria ni garantiza por sí solo cumplir la negociación previa exigible.</p>",
-      "teaser": "Reclama cuotas comunitarias impagadas con el respaldo de la LPH art. 21.",
+      "answer": "<p>Este servicio redacta un requerimiento fehaciente para reclamar a un propietario las cuotas comunitarias vencidas y exigibles que adeuda. Para comunidades regidas por la Ley de Propiedad Horizontal (LPH), su art. 21 regula la reclamación mediante el monitorio especial, que requiere el certificado del acuerdo de liquidación y la acreditación de su notificación al deudor.</p><p>El burofax con certificación de contenido y prueba de entrega permite documentar la comunicación. No sustituye la certificación comunitaria ni garantiza por sí solo cumplir la negociación previa exigible antes de acudir al juzgado.</p>",
+      "teaser": "Reclama cuotas comunitarias impagadas con el respaldo del art. 21 LPH.",
       "llmsTeaser": "Servicio de burofax para comunidades de propietarios que reclaman cuotas impagadas a un vecino, conforme a la LPH art. 21 con acuerdo de junta y certificación del secretario.",
       "priceLabel": "Desde 79 € IVA incluido",
       "priceValue": 79,
@@ -751,7 +757,7 @@
         },
         {
           "h2": "Negociación previa y siguientes pasos",
-          "html": "<p>Antes de iniciar el monitorio debe comprobarse el intento de negociación previa exigible con carácter general por el art. 5 de la Ley Orgánica 1/2025 y su acreditación conforme al art. 10. Notificar la liquidación no equivale automáticamente a cumplir ese requisito.</p><p>El art. 264.4.º LEC regula la documentación acreditativa cuando la negociación sea exigible. La presentación de la petición monitoria y la representación en juicio requieren un encargo distinto.</p>"
+          "html": "<p>Antes de iniciar el monitorio debe comprobarse, además, el intento de negociación previa exigible con carácter general por el art. 5 de la Ley Orgánica 1/2025 y su acreditación conforme al art. 10. Notificar la liquidación no equivale automáticamente a cumplir ese requisito. El art. 264.4.º de la Ley de Enjuiciamiento Civil regula la documentación acreditativa cuando la negociación sea exigible.</p>"
         }
       ],
       "table": {
@@ -762,27 +768,27 @@
         ],
         "rows": [
           [
-            "Revisión del acuerdo y su certificación",
-            "Convocatoria de junta"
+            "Revisión del acuerdo de junta y su certificación",
+            "La convocatoria de la junta corresponde a la comunidad"
           ],
           [
-            "Redacción del requerimiento con desglose",
-            "Emisión de la certificación del secretario"
+            "Redacción del requerimiento con desglose de cuotas",
+            "La certificación debe emitirla quien ejerza las funciones de secretario, conforme al art. 21.3 LPH"
           ],
           [
-            "Revisión de la documentación para la vía monitoria",
-            "Presentación de la petición monitoria"
+            "Fundamentación en el art. 21 LPH y revisión de la documentación para una eventual vía monitoria",
+            "La presentación de la petición judicial requiere un encargo distinto"
           ],
           [
             "Revisión por abogada antes de tu aprobación",
-            "Representación de la comunidad en juicio"
+            "La representación de la comunidad en el juicio requiere un encargo distinto"
           ]
         ]
       },
       "checklist": {
-        "title": "Documentos y datos que necesitamos",
+        "title": "Qué debe contener el encargo",
         "items": [
-          "Datos de la comunidad y su representante",
+          "Datos de la comunidad y de su representante",
           "Identificación del propietario y del inmueble",
           "Domicilio para notificaciones",
           "Desglose de cuotas y vencimientos",
@@ -795,50 +801,50 @@
       "faqs": [
         {
           "q": "¿Puedo reclamar sin acuerdo de junta previo?",
-          "a": "<p>Puedes requerir extrajudicialmente el pago de cuotas vencidas y exigibles. Para el monitorio especial del art. 21.3 LPH necesitas el certificado del acuerdo de liquidación y acreditar su notificación al deudor. Lo emite quien haga las funciones de secretario, con el visto bueno del presidente, salvo la excepción legal aplicable.</p>"
+          "a": "<p>Puedes requerir extrajudicialmente el pago de cuotas vencidas y exigibles. Para el monitorio especial del art. 21.3 LPH necesitas el certificado del acuerdo de liquidación, con importe y desglose, y acreditar su notificación al deudor. Lo emite quien haga las funciones de secretario, con el visto bueno del presidente. Este último no se exige si el secretario-administrador tiene la cualificación profesional necesaria y legalmente reconocida y no va a intervenir profesionalmente en la reclamación judicial.</p>"
         },
         {
           "q": "¿Puedo reclamar solo las cuotas del año pasado?",
-          "a": "<p>Sí, si están pendientes y son exigibles. Para determinar si pueden reclamarse también cuotas anteriores, revisamos sus vencimientos, la prescripción aplicable y las posibles interrupciones. En el régimen del Código Civil, los arts. 1969 y 1973 regulan el inicio del cómputo y la interrupción.</p>"
+          "a": "<p>Sí, si están pendientes y son exigibles. Para determinar si pueden reclamarse también cuotas anteriores, revisamos sus vencimientos, la prescripción aplicable y las posibles interrupciones. En el régimen del Código Civil, los arts. 1969 y 1973 regulan el inicio del cómputo y la interrupción de la prescripción.</p>"
         },
         {
           "q": "¿El vecino puede negarse a pagar por obras o problemas?",
-          "a": "<p>Las discrepancias no justifican por sí solas dejar de pagar cuotas exigibles. La impugnación de un acuerdo no suspende su ejecución, salvo suspensión cautelar judicial (art. 18.4 LPH).</p>"
+          "a": "<p>Las discrepancias no justifican por sí solas dejar de pagar cuotas exigibles. La impugnación de un acuerdo no suspende su ejecución, salvo que el juez acuerde la suspensión cautelar (art. 18.4 LPH). La oposición concreta debe revisarse junto al acuerdo y la documentación de la cuota.</p>"
         },
         {
           "q": "¿Quién firma el burofax, la comunidad o el presidente?",
-          "a": "<p>Se envía en nombre de la comunidad. Puede firmarlo el presidente, que ostenta su representación legal (art. 13.3 LPH), o un administrador u otro profesional con autorización suficiente.</p>"
+          "a": "<p>Se envía en nombre de la comunidad. Puede firmarlo el presidente, que ostenta su representación legal en juicio y fuera de él (art. 13.3 LPH), o un administrador u otro profesional que cuente con autorización suficiente. Comprobamos la acreditación de quien actúe por la comunidad.</p>"
         }
       ],
       "sources": [
         {
-          "label": "Ley 49/1960, de Propiedad Horizontal",
-          "precept": "Art. 21.3: certificado de liquidación, visto bueno, excepción y notificación al deudor",
+          "label": "Ley 49/1960, de 21 de julio, sobre propiedad horizontal",
+          "precept": "Art. 21.3: certificado de liquidación, visto bueno y su excepción, y notificación al deudor.",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906#aveintiuno"
         },
         {
           "label": "Ley de Propiedad Horizontal",
-          "precept": "Arts. 9.1.h), 13.3 y 18.4: notificaciones, representación y efectos de la impugnación",
-          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906#anoveno"
+          "precept": "Arts. 9.1.h), 13.3 y 18.4: notificaciones, representación de la comunidad y efectos de la impugnación.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906#aveintiuno"
         },
         {
           "label": "Código Civil",
-          "precept": "Arts. 1969 y 1973: cómputo e interrupción de la prescripción",
-          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1969"
+          "precept": "Arts. 1969 y 1973: cómputo e interrupción de la prescripción.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1973"
         },
         {
           "label": "Ley Orgánica 1/2025, de 2 de enero",
-          "precept": "Arts. 5 y 10: negociación previa y acreditación",
+          "precept": "Arts. 5 y 10: negociación previa y acreditación.",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76#a5"
         },
         {
-          "label": "Ley 1/2000, de Enjuiciamiento Civil",
-          "precept": "Art. 264.4.º: acreditación de la negociación previa cuando sea exigible",
-          "url": "https://www.boe.es/eli/es/l/2000/01/07/1/con#a264"
+          "label": "Ley 1/2000, de 7 de enero, de Enjuiciamiento Civil",
+          "precept": "Art. 264.4.º: acreditación de la negociación previa cuando sea exigible.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2000-323#a264"
         },
         {
           "label": "Correos",
-          "precept": "Burofax: certificación de contenido y prueba de entrega",
+          "precept": "Burofax: certificación de contenido y prueba de entrega.",
           "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax"
         }
       ],
@@ -854,8 +860,8 @@
       "titleTag": "Burofax deuda entre particulares | BurofaxLegal",
       "description": "Reclama fehacientemente préstamos entre particulares y otras deudas privadas. Base en el mutuo del CC art. 1753 y en la responsabilidad por incumplimiento de los arts. 1101 y 1124.",
       "h1": "Burofax de <strong>requerimiento de deuda entre particulares</strong>",
-      "answer": "<p>Este servicio redacta un requerimiento fehaciente para reclamar préstamos entre familiares, amigos o conocidos y otras deudas privadas documentadas. El art. 1753 del Código Civil obliga a devolver el equivalente del dinero recibido en préstamo. El art. 1101 permite reclamar los daños y perjuicios que procedan por el incumplimiento, siempre que se acrediten los presupuestos de esa responsabilidad. El contrato, los justificantes y el vencimiento determinan qué puede exigirse. El burofax documenta lo comunicado y su recepción, pero no demuestra por sí solo la existencia de la deuda.</p>",
-      "teaser": "Reclama préstamos entre particulares con la formalidad que un juez tomará en serio.",
+      "answer": "<p>Este servicio redacta un requerimiento fehaciente para reclamar préstamos entre familiares, amigos o conocidos y otras deudas privadas documentadas.</p><p>El art. 1753 del Código Civil obliga a devolver el equivalente del dinero recibido en préstamo. El art. 1101 permite reclamar los daños y perjuicios que procedan por el incumplimiento, siempre que se acrediten los presupuestos de esa responsabilidad.</p><p>El contrato, los justificantes y el vencimiento determinan qué puede exigirse. El burofax concreta la reclamación y, con certificación de contenido y prueba de entrega, documenta lo comunicado y su recepción. No demuestra por sí solo la existencia de la deuda.</p>",
+      "teaser": "Reclama las cantidades vencidas y exigibles con un requerimiento documentado.",
       "llmsTeaser": "Servicio de burofax para reclamar deudas entre particulares y préstamos privados conforme al mutuo del CC art. 1753 y a los arts. 1101 y 1124 del Código Civil.",
       "priceLabel": "Desde 79 € IVA incluido",
       "priceValue": 79,
@@ -870,7 +876,7 @@
         },
         {
           "h2": "Prescripción y negociación previa",
-          "html": "<p>Cuando rige el Código Civil, las acciones personales sin plazo especial prescriben, con carácter general, a los cinco años desde que puede exigirse el cumplimiento (arts. 1964.2 y 1969). La reclamación extrajudicial y el reconocimiento de deuda pueden interrumpir la prescripción (art. 1973).</p><p>Antes de demandar en vía civil, debe comprobarse la negociación previa exigible. Los arts. 5 y 10 de la Ley Orgánica 1/2025 exigen, con carácter general, intentar y documentar una negociación sobre el mismo objeto. Un mero requerimiento de pago no garantiza cumplir ese requisito.</p>"
+          "html": "<p>Cuando rige el Código Civil, las acciones personales sin plazo especial prescriben, con carácter general, a los cinco años desde que puede exigirse el cumplimiento (arts. 1964.2 y 1969). La reclamación extrajudicial y el reconocimiento de deuda pueden interrumpir la prescripción (art. 1973).</p><p>Antes de demandar en vía civil, debe comprobarse la negociación previa exigible. Los arts. 5 y 10 de la Ley Orgánica 1/2025 exigen, con carácter general, intentar y documentar una negociación sobre el mismo objeto del litigio. Un mero requerimiento de pago no garantiza cumplir ese requisito. El art. 264.4.º de la Ley de Enjuiciamiento Civil regula su acreditación con la demanda.</p>"
         },
         {
           "h2": "Si el deudor no paga",
@@ -886,24 +892,24 @@
         "rows": [
           [
             "Préstamo con contrato privado firmado",
-            "Devolución conforme a lo pactado; intereses remuneratorios solo si se pactaron"
+            "Se reclama la devolución conforme a lo pactado. Los intereses remuneratorios requieren pacto expreso (arts. 1753 y 1755 del Código Civil)"
           ],
           [
             "Préstamo acreditado mediante transferencia",
-            "La transferencia se valora junto a mensajes y demás pruebas"
+            "Debe comprobarse que el dinero se entregó con obligación de devolverlo. La transferencia se valora junto con los mensajes y las demás pruebas disponibles"
           ],
           [
-            "Deudor que paga parcialmente",
-            "El requerimiento detalla pagos recibidos y saldo exigible"
+            "Deudor que paga parcialmente y deja de responder",
+            "El requerimiento detalla los pagos recibidos y el saldo pendiente exigible, e indica el plazo para atender la reclamación"
           ],
           [
             "Préstamo entre familiares sin intereses",
-            "Se reclama el capital exigible; la demora se revisa por separado"
+            "Se reclama el capital exigible. Los posibles intereses de demora se revisan por separado, conforme al vencimiento y a las reglas sobre mora (arts. 1100 y 1108 del Código Civil)"
           ]
         ]
       },
       "checklist": {
-        "title": "Documentos y datos que necesitamos",
+        "title": "Qué debe contener el encargo",
         "items": [
           "Datos de las partes",
           "Contrato, si existe",
@@ -912,51 +918,52 @@
           "Condiciones y fechas de devolución",
           "Pagos parciales",
           "Comunicaciones previas",
-          "Datos completos y domicilio del deudor"
+          "Datos completos y domicilio del deudor",
+          "Si no se pactó una fecha de devolución, debe revisarse cuándo resulta exigible la deuda"
         ]
       },
       "faqs": [
         {
           "q": "¿Puedo reclamar un préstamo entre hermanos sin contrato escrito?",
-          "a": "<p>La falta de documento escrito no impide por sí sola que exista un préstamo válido (art. 1278 del Código Civil). Hay que acreditar la entrega y la obligación de devolver el dinero. Las transferencias y los mensajes pueden ser pruebas relevantes, pero su suficiencia depende del conjunto de la documentación.</p>"
+          "a": "<p>La falta de documento escrito no impide por sí sola que exista un préstamo válido (art. 1278 del Código Civil). Hay que acreditar la entrega y la obligación de devolver el dinero. Las transferencias y los mensajes pueden ser pruebas relevantes, pero su suficiencia depende del contenido y del conjunto de la documentación.</p>"
         },
         {
           "q": "¿Puedo pedir intereses si no se pactaron?",
-          "a": "<p>No pueden exigirse intereses remuneratorios sin pacto expreso (art. 1755). Sí pueden proceder intereses de demora cuando el deudor incurre en mora: el art. 1108 establece el interés convenido y, si no existe pacto, el interés legal. Deben comprobarse la exigibilidad y el inicio de la mora conforme al art. 1100.</p>"
+          "a": "<p>No pueden exigirse intereses remuneratorios sin pacto expreso (art. 1755). Sí pueden proceder intereses de demora cuando el deudor incurre en mora: el art. 1108 establece el interés convenido y, si no existe pacto, el interés legal. Deben comprobarse la exigibilidad de la deuda y el inicio de la mora conforme al art. 1100.</p>"
         },
         {
           "q": "¿Qué pasa si el deudor dice que era un regalo?",
-          "a": "<p>La transferencia, por sí sola, no acredita necesariamente un préstamo. Se revisan los mensajes, acuerdos, pagos parciales y demás circunstancias que puedan demostrar la obligación de devolución.</p>"
+          "a": "<p>La transferencia, por sí sola, no acredita necesariamente un préstamo. Se revisan los mensajes, los acuerdos, los pagos parciales y las demás circunstancias que puedan demostrar la obligación de devolución. El requerimiento describe únicamente los hechos respaldados por la documentación disponible.</p>"
         },
         {
           "q": "¿Cuánto tiempo tengo para reclamar antes de que prescriba?",
-          "a": "<p>Cuando rige el Código Civil, las acciones personales sin plazo especial prescriben, con carácter general, a los cinco años desde que puede exigirse el cumplimiento (arts. 1964.2 y 1969). La reclamación extrajudicial y el reconocimiento de deuda pueden interrumpir la prescripción (art. 1973).</p>"
+          "a": "<p>Cuando rige el Código Civil, las acciones personales sin plazo especial prescriben, con carácter general, a los cinco años desde que puede exigirse el cumplimiento (arts. 1964.2 y 1969). La reclamación extrajudicial del acreedor y el reconocimiento de deuda pueden interrumpir la prescripción (art. 1973). Deben revisarse las fechas, las interrupciones y la normativa aplicable, especialmente en préstamos antiguos.</p>"
         }
       ],
       "sources": [
         {
           "label": "Código Civil",
-          "precept": "Arts. 1278, 1753 y 1755: forma del contrato, préstamo e intereses pactados",
-          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1278"
+          "precept": "Arts. 1278, 1753 y 1755: forma del contrato, devolución del préstamo e intereses pactados.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1753"
         },
         {
           "label": "Código Civil",
-          "precept": "Arts. 1100, 1101 y 1108: mora, responsabilidad e intereses; arts. 1964.2, 1969 y 1973: prescripción",
+          "precept": "Arts. 1100, 1101 y 1108: mora, responsabilidad por incumplimiento e intereses de demora; arts. 1964.2, 1969 y 1973: prescripción e interrupción.",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1100"
         },
         {
           "label": "Ley Orgánica 1/2025, de 2 de enero",
-          "precept": "Arts. 5 y 10: negociación previa y acreditación",
+          "precept": "Arts. 5 y 10: negociación previa y acreditación.",
           "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76#a5"
         },
         {
-          "label": "Ley 1/2000, de Enjuiciamiento Civil",
-          "precept": "Art. 264.4.º: documentación de la negociación previa",
-          "url": "https://www.boe.es/eli/es/l/2000/01/07/1/con#a264"
+          "label": "Ley 1/2000, de 7 de enero, de Enjuiciamiento Civil",
+          "precept": "Art. 264.4.º: documentación de la negociación previa.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2000-323#a264"
         },
         {
           "label": "Correos",
-          "precept": "Burofax: certificación de contenido y prueba de entrega",
+          "precept": "Burofax: certificación de contenido y prueba de entrega.",
           "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax"
         }
       ],
@@ -981,5 +988,270 @@
       "Deuda entre particulares",
       "Otro asunto"
     ]
-  }
+  },
+  "articles": [
+    {
+      "slug": "que-es-un-burofax",
+      "title": "Qué es un burofax y para qué sirve",
+      "description": "Qué es un burofax, qué acredita cada justificante de Correos, para qué sirve y cuándo basta con otro tipo de comunicación.",
+      "answer": "<p>Un burofax es un servicio de comunicación que permite enviar un documento y obtener constancia de su envío, contenido y entrega según las opciones contratadas. Resulta útil cuando puede ser necesario demostrar qué se comunicó a otra persona y cuándo.</p><p>Correos ofrece el servicio Burofax Premium en oficinas y en línea. Para documentar una reclamación, conviene comprobar qué certificaciones se contratan y qué justificantes se obtendrán. El nombre del servicio no sustituye esa comprobación.</p>",
+      "h1": "Qué es un burofax y para qué sirve",
+      "sections": [
+        {
+          "h2": "Qué acredita cada justificante",
+          "html": "<p>El justificante de admisión identifica el envío y su presentación. La certificación de contenido acredita el texto remitido. El acuse de recibo o la prueba de entrega electrónica permiten documentar la entrega; el acuse recoge quién recibió el envío y su fecha y hora. Son constancias de hechos distintos.</p><p>Por ejemplo, si reclamas una deuda, interesa conservar tanto el texto con el importe y el concepto como la acreditación de su entrega. El contrato y los justificantes de la deuda deben guardarse también: certificar una reclamación no demuestra por sí solo que lo reclamado sea debido.</p>"
+        },
+        {
+          "h2": "Para qué puede servir",
+          "html": "<p>Puede utilizarse para reclamar pagos, pedir la devolución de una fianza, comunicar un incumplimiento contractual, formular un preaviso o contestar una reclamación privada. En cada caso hay que revisar el contrato y las normas aplicables: no existe un único texto ni un plazo válido para todos los asuntos.</p><p>También puede ayudar a documentar una invitación a negociar antes de una demanda civil. Cuando la negociación previa sea exigible, deben cumplirse sus requisitos y acreditarse el intento; un simple requerimiento unilateral no garantiza hacerlo (arts. 5 y 10 de la Ley Orgánica 1/2025).</p>"
+        },
+        {
+          "h2": "Qué lo diferencia de un correo electrónico",
+          "html": "<p>El correo electrónico y los mensajes pueden aportarse como prueba. La Ley de Enjuiciamiento Civil admite documentos y medios que permiten conservar o reproducir palabras y datos, y regula la impugnación de los documentos electrónicos (arts. 299 y 326). Por tanto, no deben descartarse por carecer de certificación postal.</p><p>El burofax con los servicios adecuados facilita obtener una certificación del texto y una constancia de entrega emitidas por el operador. Eso puede ser útil si se prevé una discusión sobre lo comunicado, pero no convierte la prueba en infalible ni decide por sí solo el resultado de un juicio.</p>"
+        },
+        {
+          "h2": "Qué debe contener la comunicación",
+          "html": "<p>Identifica a las partes y la relación a la que se refiere el escrito. Expón los hechos relevantes en orden, indica qué solicitas y concreta las cantidades o documentos necesarios. Si señalas un plazo, aclara desde cuándo se cuenta y comprueba que se ajusta al caso.</p><p>Evita afirmaciones que no puedas respaldar. Antes de enviarlo, revisa nombres, dirección, fechas, importes y anexos. Una certificación conservará el texto enviado, incluidos los errores que no se hayan corregido.</p>"
+        },
+        {
+          "h2": "Qué ocurre si no se entrega o no hay respuesta",
+          "html": "<p>Conserva la información sobre el resultado del envío. Un intento fallido, una dirección incorrecta o un rechazo deben valorarse según las circunstancias y el efecto jurídico que se pretenda obtener. No conviene dar por cumplido cualquier requisito solo porque se haya admitido el burofax.</p><p>El silencio tampoco significa necesariamente que la otra parte acepte lo reclamado. Si no se alcanza una solución, el envío servirá como parte de la documentación para valorar los siguientes pasos.</p>"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Correos",
+          "precept": "Burofax Premium: servicios adicionales y modalidades de envío.",
+          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax"
+        },
+        {
+          "label": "Correos",
+          "precept": "Comparación entre carta certificada y burofax: entrega y certificación de contenido.",
+          "url": "https://www.correos.es/es/es/actualidad/2026/carta-certificada-o-burofax-como-elegir-el-servicio-adecuado"
+        },
+        {
+          "label": "Ley 1/2000, de Enjuiciamiento Civil",
+          "precept": "Arts. 299 y 326: medios de prueba y documentos electrónicos.",
+          "url": "https://www.boe.es/eli/es/l/2000/01/07/1/con#a299"
+        },
+        {
+          "label": "Ley Orgánica 1/2025",
+          "precept": "Arts. 5 y 10: negociación previa y acreditación.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76#a5"
+        }
+      ],
+      "reviewStatus": "reviewed",
+      "reviewedAt": "2026-10-02",
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "casos-en-los-que-necesitas-burofax",
+      "title": "Diez casos en los que necesitas un burofax",
+      "description": "Diez situaciones habituales en las que conviene un burofax: alquiler, fianza, comunidad, contrato, préstamo, baja de servicio y más.",
+      "answer": "<p>Un burofax puede ser útil cuando importa acreditar una comunicación. No es obligatorio en todos los supuestos siguientes ni es el único medio posible. Su utilidad depende del asunto, de la redacción y de que se obtengan las constancias necesarias de contenido y entrega.</p>",
+      "h1": "Diez casos en los que necesitas un burofax",
+      "sections": [
+        {
+          "h2": "1. Tu inquilino no paga el alquiler",
+          "html": "<p>Detalla las mensualidades, los importes y los pagos recibidos. El art. 22.4 de la Ley de Enjuiciamiento Civil excluye la enervación si hubo requerimiento fehaciente de pago al menos treinta días antes de presentar la demanda y el impago persiste al presentarla. El requerimiento debe prepararse atendiendo a esos requisitos.</p>"
+        },
+        {
+          "h2": "2. El casero no te devuelve la fianza",
+          "html": "<p>Indica la fecha de entrega de llaves, la fianza abonada y el saldo reclamado. El art. 36.4 de la Ley de Arrendamientos Urbanos establece el interés legal sobre el saldo que deba restituirse cuando transcurre un mes desde la entrega de llaves sin devolución. Ese cómputo no empieza por enviar el burofax.</p>"
+        },
+        {
+          "h2": "3. Un propietario de tu comunidad debe cuotas",
+          "html": "<p>El escrito debe identificar la deuda y su desglose. Para el monitorio de comunidad, el art. 21.3 de la Ley de Propiedad Horizontal exige el certificado del acuerdo de liquidación y la acreditación de su notificación. El burofax puede documentar esa comunicación, pero no sustituye el acuerdo ni el certificado.</p>"
+        },
+        {
+          "h2": "4. Quieres reclamar un incumplimiento contractual",
+          "html": "<p>Describe qué obligación se incumplió y qué solicitas. El art. 1124 del Código Civil permite, en obligaciones recíprocas y cuando proceda, exigir cumplimiento o resolución. Dar un plazo en el burofax no hace válida automáticamente una resolución: hay que revisar el contrato, el incumplimiento y los requisitos aplicables.</p>"
+        },
+        {
+          "h2": "5. Te deben dinero de un préstamo entre particulares",
+          "html": "<p>Relaciona el préstamo, su vencimiento y el saldo pendiente, con apoyo en el contrato, las transferencias y los mensajes. El art. 1753 del Código Civil regula la devolución del dinero prestado. Una reclamación extrajudicial puede interrumpir la prescripción conforme al art. 1973, pero el burofax no crea ni acredita por sí solo el vencimiento.</p>"
+        },
+        {
+          "h2": "6. Quieres negociar antes de demandar",
+          "html": "<p>Los arts. 5 y 10 de la Ley Orgánica 1/2025 regulan la negociación previa y su acreditación. El burofax puede documentar una invitación concreta sobre el objeto del conflicto, su recepción y el acceso al contenido. Deben respetarse las reglas de confidencialidad del art. 9; enviar cualquier reclamación no basta automáticamente.</p>"
+        },
+        {
+          "h2": "7. Quieres darte de baja de un servicio",
+          "html": "<p>Identifica el contrato, expresa tu voluntad de terminarlo e indica la fecha solicitada. En servicios continuados con consumidores, el art. 62 de la normativa de consumo regula la finalización y prohíbe obstáculos desproporcionados. El burofax puede ayudar a documentar una baja discutida; revisa también los cauces y condiciones aplicables.</p>"
+        },
+        {
+          "h2": "8. Necesitas reclamar a una aseguradora",
+          "html": "<p>Incluye la póliza, el siniestro o expediente, la petición y sus justificantes. La comunicación del siniestro tiene sus propias reglas: el art. 16 de la Ley de Contrato de Seguro establece, con carácter general, siete días desde que se conoce, salvo plazo más amplio en la póliza. Una reclamación posterior no sustituye esa comunicación.</p>"
+        },
+        {
+          "h2": "9. Quieres comunicar un preaviso",
+          "html": "<p>Comprueba qué plazo exige el contrato o la ley y conserva la constancia de recepción. Por ejemplo, el art. 11 de la Ley de Arrendamientos Urbanos permite al arrendatario de vivienda desistir tras seis meses con un preaviso mínimo de treinta días, sin perjuicio de la indemnización que pueda haberse pactado conforme a ese artículo.</p>"
+        },
+        {
+          "h2": "10. Necesitas contestar una reclamación formal",
+          "html": "<p>Ante una reclamación privada, una respuesta documentada permite dejar constancia de tu posición y de los hechos que la respaldan. Si recibes una notificación judicial o administrativa, utiliza los cauces y plazos del procedimiento correspondiente: el burofax privado no sustituye la presentación formal de escritos.</p><p>En estos casos conviene revisar la documentación antes de enviar el texto. La intervención profesional puede ayudar a concretar la petición y los requisitos del asunto; no garantiza un resultado favorable.</p>"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ley de Enjuiciamiento Civil",
+          "precept": "Arts. 22.4, 135 y 264.4.º: enervación, escritos procesales y negociación previa.",
+          "url": "https://www.boe.es/eli/es/l/2000/01/07/1/con#a22"
+        },
+        {
+          "label": "Ley 29/1994, de Arrendamientos Urbanos",
+          "precept": "Arts. 11 y 36.4: desistimiento y devolución de fianza.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a36"
+        },
+        {
+          "label": "Ley 49/1960, sobre propiedad horizontal",
+          "precept": "Art. 21.3: liquidación y notificación de la deuda.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906#aveintiuno"
+        },
+        {
+          "label": "Código Civil",
+          "precept": "Arts. 1124, 1753 y 1973: incumplimiento, préstamo y prescripción.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1124"
+        },
+        {
+          "label": "Ley Orgánica 1/2025",
+          "precept": "Arts. 5, 9 y 10: negociación, confidencialidad y acreditación.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76#a5"
+        },
+        {
+          "label": "Texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios",
+          "precept": "Art. 62: finalización de contratos.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a62"
+        },
+        {
+          "label": "Ley 50/1980, de Contrato de Seguro",
+          "precept": "Art. 16: comunicación del siniestro.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501#adieciseis"
+        },
+        {
+          "label": "Ley 39/2015",
+          "precept": "Art. 16: registros para la presentación de escritos administrativos.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-10565#a16"
+        },
+        {
+          "label": "Correos",
+          "precept": "Burofax Premium: certificación de contenido y prueba de entrega.",
+          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax"
+        }
+      ],
+      "reviewStatus": "reviewed",
+      "reviewedAt": "2026-10-02",
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "burofax-o-carta-certificada",
+      "title": "Burofax o carta certificada: la diferencia",
+      "description": "Qué diferencia un burofax de una carta certificada, cuándo basta cada uno y qué constancias debes conservar.",
+      "answer": "<p>La diferencia principal está en qué necesitas acreditar. La carta certificada permite registrar el envío y documentar su entrega. El burofax con certificación de contenido permite, además, certificar el texto remitido. Para elegir, piensa si una posible discusión afectará solo a la recepción o también a las palabras exactas de tu comunicación.</p>",
+      "h1": "Burofax o carta certificada: la diferencia",
+      "sections": [
+        {
+          "h2": "Qué acredita una carta certificada",
+          "html": "<p>Correos identifica y registra la carta certificada y la entrega bajo firma. Permite solicitar aviso de recibo o prueba de entrega electrónica para obtener constancia de la entrega. Estos justificantes se refieren al envío recibido, no a una certificación del texto que iba dentro.</p><p>Puede ser adecuada para remitir documentación cuando importa acreditar que se entregó. Sin embargo, conservar una copia de la carta no equivale a que Correos haya certificado el contenido de ese sobre.</p>"
+        },
+        {
+          "h2": "Qué añade el burofax",
+          "html": "<p>Con certificación de contenido, Correos certifica el documento enviado. Si contratas también la acreditación de entrega, puedes documentar tanto el texto como su recepción. Conviene comprobar los servicios seleccionados: no deben confundirse la admisión, el contenido y la entrega.</p><p>Esto resulta útil en comunicaciones donde el texto tiene efectos concretos: una reclamación con desglose, un preaviso, una solicitud de devolución o una invitación a negociar. La certificación facilita probar la comunicación; sus efectos jurídicos dependen de lo que se haya dicho y de los requisitos del caso.</p>"
+        },
+        {
+          "h2": "Cómo elegir según lo que necesitas probar",
+          "html": "<p>Si solo necesitas una constancia de envío y entrega, valora una carta certificada con el justificante adecuado. Si necesitas conservar una prueba certificada del texto exacto, valora un burofax con certificación de contenido y acreditación de entrega.</p><p>Por ejemplo, al reclamar varias mensualidades de alquiler puede ser relevante probar los periodos y las cantidades exigidas. Si solo remites una copia de un documento ya conocido por ambas partes, la necesidad de certificar su contenido debe valorarse según la finalidad del envío.</p>"
+        },
+        {
+          "h2": "La carta certificada también puede formar parte de la prueba",
+          "html": "<p>Que no certifique el contenido no significa que resulte imposible acreditarlo por otras vías. La carta puede valorarse junto con copias, comunicaciones, reconocimientos y otras pruebas pertinentes. La Ley de Enjuiciamiento Civil admite distintos medios de prueba y regula la fuerza probatoria de los documentos privados (arts. 299 y 326).</p><p>Tampoco debe afirmarse que el burofax sea siempre la prueba que decide un juicio. Una reclamación certificada no acredita por sí sola que exista la deuda o que el remitente tenga razón.</p>"
+        },
+        {
+          "h2": "Precio, plazo y justificantes",
+          "html": "<p>Compara el importe final del servicio que necesitas, incluidos sus adicionales. Las tarifas y condiciones deben consultarse para el envío concreto; una comparación entre precios de partida no refleja necesariamente el coste con todas las constancias contratadas.</p><p>Antes de pagar, comprueba destinatario, dirección, documentos y servicios. Después, guarda el texto remitido, el resguardo y la acreditación de entrega. Si esta falla, conserva también la incidencia para valorar los siguientes pasos.</p>"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Correos",
+          "precept": "Carta certificada: registro, entrega bajo firma y servicios adicionales.",
+          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/carta/carta-certificada"
+        },
+        {
+          "label": "Correos",
+          "precept": "Carta certificada o burofax: diferencia en la certificación del contenido.",
+          "url": "https://www.correos.es/es/es/actualidad/2026/carta-certificada-o-burofax-como-elegir-el-servicio-adecuado"
+        },
+        {
+          "label": "Correos",
+          "precept": "Burofax Premium: certificación de contenido, prueba de entrega y tarifas.",
+          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax"
+        },
+        {
+          "label": "Ley de Enjuiciamiento Civil",
+          "precept": "Arts. 299 y 326: medios de prueba y documentos privados.",
+          "url": "https://www.boe.es/eli/es/l/2000/01/07/1/con#a299"
+        }
+      ],
+      "reviewStatus": "reviewed",
+      "reviewedAt": "2026-10-02",
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "como-enviar-un-burofax",
+      "title": "Cómo enviar un burofax paso a paso, y qué constancias pedir",
+      "description": "Cómo enviar un burofax paso a paso: redacción, datos del destinatario, constancias que pedir y conservar, y plazos de Correos.",
+      "answer": "<p>Para enviar un burofax conviene preparar el escrito, comprobar los datos del destinatario y contratar las constancias que necesitas. Esta guía se refiere al servicio de Correos, que puede tramitarse en oficina o en línea. En ambos canales debes revisar el documento y los servicios incluidos.</p>",
+      "h1": "Cómo enviar un burofax paso a paso, y qué constancias pedir",
+      "sections": [
+        {
+          "h2": "Paso 1. Define qué quieres comunicar",
+          "html": "<p>Decide si solicitas un pago, una devolución, el cumplimiento de una obligación, una baja o una respuesta. Reúne los documentos que permiten describir los hechos y calcula las cantidades antes de redactar. Si buscas un efecto jurídico concreto, comprueba los requisitos y plazos aplicables.</p>"
+        },
+        {
+          "h2": "Paso 2. Comprueba remitente y destinatario",
+          "html": "<p>Revisa nombres, dirección completa, código postal y datos que permitan identificar a las partes. Si escribes a una empresa, comprueba a qué entidad y domicilio corresponde la relación. Una dirección equivocada puede impedir la entrega, aunque el texto sea correcto.</p>"
+        },
+        {
+          "h2": "Paso 3. Redacta y revisa el documento",
+          "html": "<p>Identifica la relación, expón los hechos en orden y formula una petición concreta. Si reclamas dinero, desglosa conceptos, periodos y pagos recibidos. Indica cómo puede atenderse la solicitud y, si procede, el plazo. Evita acusaciones sin respaldo y comprueba fechas, importes y anexos.</p><p>Para enviarlo en línea, Correos pide subir el documento en PDF y utilizar fuentes válidas o incrustadas. Revisa que el archivo final se lea bien y contenga todas las páginas que deseas comunicar.</p>"
+        },
+        {
+          "h2": "Paso 4. Elige oficina o tramitación en línea",
+          "html": "<p>En oficina, solicita el servicio y comprueba los datos y adicionales antes de formalizarlo. En línea, accede a Mi Oficina, regístrate si es necesario, carga el PDF e incorpora al destinatario. A continuación, revisa los servicios y completa la contratación siguiendo las indicaciones del sistema.</p>"
+        },
+        {
+          "h2": "Paso 5. Solicita las constancias necesarias",
+          "html": "<p>La certificación de contenido acredita el texto remitido. El acuse de recibo o la prueba de entrega electrónica permiten documentar la entrega. Comprueba que has seleccionado las opciones que corresponden a lo que necesitas acreditar; la constancia de admisión tiene una función distinta.</p><p>Correos permite solicitar la certificación de contenido hasta cinco años después de la admisión. Es preferible organizar la documentación desde el envío. La ampliación de custodia a 120 meses es un servicio adicional y debe comprobarse si se necesita.</p>"
+        },
+        {
+          "h2": "Paso 6. Revisa la confirmación antes de pagar",
+          "html": "<p>En la tramitación en línea, comprueba la vista del documento que Correos muestra antes de aceptarlo: debe coincidir con lo que quieres enviar. Revisa también destinatario, formato y servicios. Las condiciones de Mi Oficina vinculan la aceptación con la conformidad sobre esos datos y el contenido.</p><p>Una vez completado el pago y la admisión, conserva el justificante correspondiente. No confundas haber preparado el documento con haber completado el envío.</p>"
+        },
+        {
+          "h2": "Paso 7. Comprueba el resultado y guarda el expediente",
+          "html": "<p>Consulta el seguimiento y conserva el texto, el justificante de admisión, la certificación de contenido y la prueba de entrega. Si no se entrega, guarda la información sobre la incidencia. Una ausencia, un rechazo o una dirección incorrecta deben valorarse según las circunstancias y el efecto que se pretendía obtener.</p>"
+        },
+        {
+          "h2": "Cuánto tarda en llegar",
+          "html": "<p>Correos publica entrega en el mismo día para determinados destinos y condiciones de admisión, y en la mañana del siguiente día hábil para el resto de los envíos incluidos en esas condiciones. Excluye sábados, domingos y festivos, y no garantiza la entrega en el mismo día durante julio, agosto y septiembre.</p><p>Comprueba las condiciones del envío concreto y actúa con margen si existe un plazo legal o contractual. La fecha de admisión y la de entrega son distintas; cuál resulta relevante depende de la comunicación que estés realizando.</p>"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Correos",
+          "precept": "Burofax Premium: PDF, modalidades, servicios, custodia y condiciones de entrega.",
+          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax"
+        },
+        {
+          "label": "Correos",
+          "precept": "Condiciones generales de Mi Oficina para burofax. Apartados I.2 e I.2.1: documento, revisión, aceptación y admisión.",
+          "url": "https://epostal.correos.es/OV2PREENVWEB/jsp/gestionclientes/_rlvid.jsp.faces?_rap=altaModifClientes.obtenerClausulaVigente&_rvip=%2Fjsp%2Fgestionclientes%2FcondicionesServicio.jsp&codProducto=16"
+        }
+      ],
+      "reviewStatus": "reviewed",
+      "reviewedAt": "2026-10-02",
+      "publishedAt": "2026-10-02"
+    }
+  ]
 }

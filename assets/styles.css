@@ -163,3 +163,176 @@ th { background: var(--acento-suave); }
   h1 { font-size: 1.5rem; }
   .precio-card { padding: 1rem; }
 }
+
+/* RevisiónContratos: identidad editorial jurídica */
+body.site-revisioncontratos {
+  --fondo: #f7f4ee;
+  --tarjeta: #fffdfa;
+  --tinta: #202d2b;
+  --tinta-suave: #53615b;
+  --acento: #183f37;
+  --acento-suave: #edf1ea;
+  --linea: #d5d9d1;
+  --rc-brass: #8b7448;
+  --rc-focus: #165fcc;
+  --rc-display: Georgia, "Times New Roman", serif;
+  --rc-body: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --rc-shell: 76rem;
+  --rc-reading: 44rem;
+  --rc-gutter: clamp(1.25rem, 4vw, 3rem);
+  --rc-section: clamp(3rem, 6vw, 5.5rem);
+  --rc-radius: 2px;
+  font-family: var(--rc-body);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  background: var(--fondo);
+  color: var(--tinta);
+}
+.site-revisioncontratos .wrap { max-width: var(--rc-shell); padding-inline: var(--rc-gutter); }
+.site-revisioncontratos main { padding: clamp(2rem, 5vw, 4rem) 0 var(--rc-section); }
+.site-revisioncontratos h1,
+.site-revisioncontratos h2,
+.site-revisioncontratos h3 { font-family: var(--rc-display); font-weight: 400; letter-spacing: -0.018em; }
+.site-revisioncontratos h1 { max-width: 17ch; font-size: clamp(2.35rem, 4.8vw, 4.4rem); line-height: 1.06; margin: 0.35em 0 0.45em; }
+.site-revisioncontratos h2 { font-size: clamp(1.65rem, 2.7vw, 2.45rem); line-height: 1.18; border: 0; padding: 0; margin: 2.2em 0 0.65em; }
+.site-revisioncontratos h3 { font-size: 1.28rem; }
+.site-revisioncontratos a:focus-visible,
+.site-revisioncontratos button:focus-visible,
+.site-revisioncontratos input:focus-visible,
+.site-revisioncontratos select:focus-visible,
+.site-revisioncontratos textarea:focus-visible,
+.site-revisioncontratos summary:focus-visible { outline: 3px solid var(--rc-focus); outline-offset: 3px; }
+.site-revisioncontratos .cabecera { padding: 1.1rem 0; background: rgba(247,244,238,.97); color: var(--tinta); border-bottom: 1px solid var(--linea); }
+.site-revisioncontratos .cabecera-in { max-width: var(--rc-shell); gap: 1.5rem; }
+.site-revisioncontratos .marca { color: var(--tinta); font-size: 1.55rem; font-weight: 400; letter-spacing: -.025em; }
+.site-revisioncontratos .marca-sub { color: var(--tinta-suave); opacity: 1; letter-spacing: .05em; text-transform: uppercase; font-size: .63rem; }
+.site-revisioncontratos .nav { display: flex; align-items: center; gap: .35rem 1.25rem; }
+.site-revisioncontratos .nav a { color: var(--tinta); margin: 0; padding: .65rem 0; font-size: .92rem; opacity: 1; text-underline-offset: .25em; }
+.site-revisioncontratos .nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--rc-brass); text-decoration-thickness: 2px; }
+.site-revisioncontratos .nav a:last-child { min-height: 44px; display: inline-flex; align-items: center; padding: .55rem .9rem; color: #fff; background: var(--acento); text-decoration: none; }
+.site-revisioncontratos .kicker { font-size: .74rem; letter-spacing: .15em; color: var(--rc-brass); }
+.site-revisioncontratos .boton { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; padding: .72rem 1.15rem; border-radius: var(--rc-radius); font-weight: 650; border: 1px solid var(--acento); transition: background .15s ease, color .15s ease, transform .15s ease; }
+.site-revisioncontratos .boton:hover { transform: translateY(-1px); background: #0e3029; }
+.site-revisioncontratos .boton-sec { background: transparent; color: var(--acento) !important; border: 1px solid var(--acento); }
+.site-revisioncontratos .boton-sec:hover { color: #fff !important; }
+.site-revisioncontratos .cta .boton { background: #fff; color: var(--acento) !important; }
+.site-revisioncontratos .cta .boton:hover { background: #f2f0ea; color: var(--acento) !important; }
+.site-revisioncontratos .cta .boton-sec { background: transparent; color: #fff !important; border-color: #fff; }
+.site-revisioncontratos .cta .boton-sec:hover { background: #fff; color: var(--acento) !important; }
+.site-revisioncontratos .respuesta-directa { max-width: 58rem; padding: 0; border: 0; border-radius: 0; background: transparent; color: var(--tinta-suave); font-size: clamp(1.08rem, 1.7vw, 1.28rem); line-height: 1.65; }
+.site-revisioncontratos .respuesta-directa p { margin: 0; }
+.site-revisioncontratos .migas { margin-bottom: 1.35rem; letter-spacing: .02em; }
+.site-revisioncontratos .migas a { color: var(--tinta-suave); }
+
+.site-revisioncontratos .rc-hero { display: grid; grid-template-columns: minmax(0,1.45fr) minmax(18rem,1fr); gap: clamp(2.5rem, 6vw, 5rem); align-items: center; padding: clamp(1rem,3vw,2.5rem) 0 var(--rc-section); }
+.site-revisioncontratos .rc-hero-copy .respuesta-directa { max-width: 42rem; }
+.site-revisioncontratos .rc-hero-aside { border-top: 2px solid var(--rc-brass); padding-top: 1.5rem; }
+.site-revisioncontratos .rc-hero-aside .confianza { margin: 0; flex-direction: column; }
+.site-revisioncontratos .rc-hero-aside .confianza-foto { width: 128px; height: 128px; }
+.site-revisioncontratos .confianza { gap: 1.25rem; padding: 0; border: 0; border-radius: 0; background: transparent; }
+.site-revisioncontratos .confianza-foto { width: 148px; height: 148px; border: 1px solid var(--linea); }
+.site-revisioncontratos .confianza-nombre { font-family: var(--rc-display); font-size: 1.35rem; font-weight: 400; }
+.site-revisioncontratos .confianza-lista { padding-left: 1.05rem; font-size: .94rem; color: var(--tinta-suave); }
+.site-revisioncontratos .rc-decide { display: grid; grid-template-columns: minmax(0,.85fr) minmax(22rem,1.15fr); gap: clamp(2.5rem,6vw,5rem); padding: var(--rc-section) 0; border-block: 1px solid var(--linea); }
+.site-revisioncontratos .rc-decide h2,
+.site-revisioncontratos .rc-service-index h2 { margin-top: .25rem; }
+.site-revisioncontratos .rc-fee-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--tinta); }
+.site-revisioncontratos .rc-fee-list li { border-bottom: 1px solid var(--linea); }
+.site-revisioncontratos .rc-fee-list a { display: flex; justify-content: space-between; gap: 2rem; padding: 1.15rem .2rem; color: var(--tinta); text-decoration: none; }
+.site-revisioncontratos .rc-fee-list a:hover span { text-decoration: underline; text-underline-offset: .22em; }
+.site-revisioncontratos .rc-fee-list strong { font-family: var(--rc-display); font-size: 1.45rem; font-weight: 400; white-space: nowrap; }
+.site-revisioncontratos .rc-service-index { padding: var(--rc-section) 0; }
+.site-revisioncontratos .tarjetas { display: block; max-width: none; margin: 1.75rem 0 0; border-top: 1px solid var(--tinta); }
+.site-revisioncontratos .tarjeta { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 2rem; align-items: start; padding: 1.35rem .15rem; border: 0; border-bottom: 1px solid var(--linea); border-radius: 0; background: transparent; }
+.site-revisioncontratos .tarjeta h3 { margin: 0 0 .25rem; }
+.site-revisioncontratos .tarjeta p { margin: .25rem 0; color: var(--tinta-suave); }
+.site-revisioncontratos .tarjeta-precio { color: var(--acento) !important; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.site-revisioncontratos .rc-learn { display: grid; grid-template-columns: 14rem minmax(0,var(--rc-reading)); justify-content: space-between; gap: clamp(2.5rem,7vw,7rem); padding: var(--rc-section) 0; border-top: 1px solid var(--linea); }
+.site-revisioncontratos .rc-learn-label { color: var(--tinta-suave); }
+.site-revisioncontratos .rc-prose section:first-child h2 { margin-top: 0; }
+.site-revisioncontratos .rc-prose section + section { padding-top: 1rem; }
+
+.site-revisioncontratos.page-pricing main > h1,
+.site-revisioncontratos.page-pricing main > .respuesta-directa,
+.site-revisioncontratos.page-pricing main > .migas,
+.site-revisioncontratos.page-simple main > h1,
+.site-revisioncontratos.page-simple main > .respuesta-directa,
+.site-revisioncontratos.page-simple main > .migas,
+.site-revisioncontratos.page-simple main > section,
+.site-revisioncontratos.page-intake main > h1,
+.site-revisioncontratos.page-intake main > .respuesta-directa,
+.site-revisioncontratos.page-intake main > .migas { max-width: var(--rc-reading); }
+.site-revisioncontratos .precios-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0; max-width: none; margin: 3rem 0; border-block: 1px solid var(--tinta); }
+.site-revisioncontratos .precio-card { padding: 2rem; border: 0; border-right: 1px solid var(--linea); border-radius: 0; box-shadow: none; background: transparent; }
+.site-revisioncontratos .precio-card:last-child { border-right: 0; }
+.site-revisioncontratos .precio-destacado { order: initial; border-top: 3px solid var(--rc-brass); }
+.site-revisioncontratos .precio-etiqueta { padding: 0; border-radius: 0; background: transparent; color: var(--rc-brass); text-transform: uppercase; letter-spacing: .1em; font-size: .7rem; }
+.site-revisioncontratos .precio-cifra { font-family: var(--rc-display); color: var(--tinta); font-size: clamp(2.5rem,4vw,3.5rem); font-weight: 400; font-variant-numeric: tabular-nums; }
+.site-revisioncontratos .precio-card h2 { font-size: 1.55rem; }
+.site-revisioncontratos .precio-card li { padding-bottom: .35rem; }
+.site-revisioncontratos .pago-opciones { padding: 1.5rem 0; border: 0; border-block: 1px solid var(--linea); border-radius: 0; background: transparent; }
+
+.site-revisioncontratos .rc-service-head { max-width: 56rem; padding-bottom: clamp(2rem,5vw,4rem); }
+.site-revisioncontratos .rc-service-body { display: grid; grid-template-columns: minmax(0,var(--rc-reading)) minmax(15rem,20rem); justify-content: space-between; gap: clamp(2.5rem,6vw,5rem); align-items: start; }
+.site-revisioncontratos .rc-service-aside { border-top: 2px solid var(--rc-brass); padding-top: 1.2rem; }
+.site-revisioncontratos .rc-service-aside .precio-linea { font-family: var(--rc-display); color: var(--tinta); font-size: 1.75rem; font-weight: 400; }
+.site-revisioncontratos .rc-service-aside .boton { width: 100%; }
+.site-revisioncontratos .tabla { scrollbar-width: thin; }
+.site-revisioncontratos table { background: transparent; }
+.site-revisioncontratos th { background: var(--acento-suave); }
+.site-revisioncontratos th,
+.site-revisioncontratos td { border-color: var(--linea); }
+.site-revisioncontratos .checklist { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--linea); }
+.site-revisioncontratos .faq { margin-top: var(--rc-section); }
+.site-revisioncontratos .faq details { padding: 1rem 0; border: 0; border-bottom: 1px solid var(--linea); border-radius: 0; background: transparent; }
+.site-revisioncontratos .faq details:first-of-type { border-top: 1px solid var(--linea); }
+.site-revisioncontratos .fuentes { margin-top: var(--rc-section); padding-top: 1rem; border-top: 1px solid var(--linea); }
+.site-revisioncontratos .relacionado { padding: 1.4rem 0; border-block: 1px solid var(--linea); border-radius: 0; background: transparent; }
+.site-revisioncontratos .cta { border-radius: var(--rc-radius); padding: clamp(1.5rem,4vw,2.5rem); background: var(--acento); }
+.site-revisioncontratos .intake { max-width: 50rem; padding: clamp(1.25rem,4vw,2.25rem); border-color: var(--linea); border-radius: var(--rc-radius); background: var(--tarjeta); }
+.site-revisioncontratos .campo input[type="text"],
+.site-revisioncontratos .campo input[type="email"],
+.site-revisioncontratos .campo input[type="tel"],
+.site-revisioncontratos .campo select,
+.site-revisioncontratos .campo textarea { min-height: 46px; border-radius: var(--rc-radius); border-color: #9da9a3; }
+.site-revisioncontratos .form-success { padding: 1rem 0; font-size: 1.08rem; border-block: 1px solid var(--linea); }
+.site-revisioncontratos .analytics-consent { inset: auto 1rem 1rem auto; width: min(27rem,calc(100vw - 2rem)); padding: 1rem; border-radius: var(--rc-radius); box-shadow: 0 1rem 3rem rgba(32,45,43,.18); }
+.site-revisioncontratos .pie { background: #202d2b; color: #dfe5df; border-top: 3px solid var(--rc-brass); }
+.site-revisioncontratos .pie-in { max-width: var(--rc-shell); }
+
+@media (max-width: 56rem) {
+  .site-revisioncontratos .rc-hero,
+  .site-revisioncontratos .rc-decide,
+  .site-revisioncontratos .rc-learn,
+  .site-revisioncontratos .rc-service-body { grid-template-columns: 1fr; }
+  .site-revisioncontratos .rc-learn { gap: 1rem; }
+  .site-revisioncontratos .rc-learn-label { max-width: 34rem; }
+  .site-revisioncontratos .rc-service-aside { max-width: 28rem; }
+}
+@media (max-width: 48rem) {
+  .site-revisioncontratos .cabecera-in { align-items: flex-start; }
+  .site-revisioncontratos .nav { width: 100%; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .3rem .8rem; }
+  .site-revisioncontratos .nav a { min-height: 44px; display: flex; align-items: center; padding: .45rem 0; }
+  .site-revisioncontratos .nav a:last-child { justify-content: center; padding-inline: .65rem; }
+  .site-revisioncontratos .precios-grid { grid-template-columns: 1fr; }
+  .site-revisioncontratos .precio-card { border-right: 0; border-bottom: 1px solid var(--linea); }
+  .site-revisioncontratos .precio-card:last-child { border-bottom: 0; }
+  .site-revisioncontratos .precio-destacado { order: initial; }
+  .site-revisioncontratos .tarjeta { grid-template-columns: 1fr; gap: .25rem; }
+  .site-revisioncontratos .tarjeta-precio { margin-top: .3rem; }
+}
+@media (max-width: 30rem) {
+  .site-revisioncontratos { font-size: 1rem; }
+  .site-revisioncontratos h1 { font-size: clamp(2.25rem,11vw,3rem); }
+  .site-revisioncontratos .rc-hero { gap: 2rem; }
+  .site-revisioncontratos .confianza { flex-direction: column; }
+  .site-revisioncontratos .confianza-foto { width: 112px; height: 112px; }
+  .site-revisioncontratos .hero-botones,
+  .site-revisioncontratos .cta-botones { display: grid; grid-template-columns: 1fr; }
+  .site-revisioncontratos .hero-botones .boton,
+  .site-revisioncontratos .cta-botones .boton { width: 100%; margin: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  .site-revisioncontratos * { scroll-behavior: auto !important; transition: none !important; }
+}

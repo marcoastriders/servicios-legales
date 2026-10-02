@@ -99,13 +99,13 @@ ${analyticsId ? `
 </script>` : ''}
 ${ld}
 </head>
-<body class="${bodyClass}">
+<body class="${bodyClass}${bodyClass ? ' ' : ''}site-${site.id}">
 <a class="skip" href="#contenido">Saltar al contenido</a>
 <header class="cabecera">
   <div class="wrap cabecera-in">
     <a class="marca" href="/">${esc(site.name)}<span class="marca-sub">por Carla Morales · Abogada</span></a>
     <nav class="nav" aria-label="Principal">
-      ${site.nav.map((n) => `<a href="${n.path}">${esc(n.label)}</a>`).join('\n      ')}
+      ${site.nav.map((n) => `<a href="${n.path}"${n.path === path ? ' aria-current="page"' : ''}>${esc(n.label)}</a>`).join('\n      ')}
     </nav>
   </div>
 </header>
@@ -176,10 +176,10 @@ const blockCta = (site, text = null) => site.prelaunch ? `
     <a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a>
     <a class="boton boton-sec" href="https://wa.me/${shared.whatsappIntl}?text=${encodeURIComponent(site.ctaWhatsapp)}">WhatsApp directo</a>
   </p>
-  <p class="cta-nota">${site.id === 'revisioncontratos' ? 'Precios cerrados y contratación directa en la página de precios. Envía después los datos y el contrato.' : 'Carla revisa tu caso y te indica por escrito qué servicio y tarifa corresponden antes de empezar.'}</p>
+  <p class="cta-nota">${site.id === 'revisioncontratos' ? 'Elige un nivel y cuéntanos tu caso. Carla confirma el alcance, el plazo y la forma de pago antes de empezar.' : 'Carla revisa tu caso y te indica por escrito qué servicio y tarifa corresponden antes de empezar.'}</p>
 </div>`;
 
-const blockTrustCarla = () => `
+const blockTrustCarla = (site) => `
 <aside class="confianza" aria-label="Quién está detrás del servicio">
   <img class="confianza-foto" src="/assets/carla-morales.png" alt="Carla Morales, abogada" loading="lazy" width="120" height="120">
   <div>
@@ -187,8 +187,9 @@ const blockTrustCarla = () => `
     <p>Colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa personalmente cada encargo: tu caso lo estudia una abogada de verdad, no una IA.</p>
     <ul class="confianza-lista">
       <li>Precio y alcance del servicio claros por escrito</li>
-      <li>El coste postal de Correos se informa y se paga aparte, sin sorpresas</li>
-      <li>Sin letra pequeña: qué incluye y qué no incluye, por escrito</li>
+      ${site.id === 'revisioncontratos'
+        ? '<li>Informe jurídico escrito con riesgos y cambios recomendados</li><li>Documentación tratada bajo secreto profesional</li>'
+        : '<li>El coste postal de Correos se informa y se paga aparte, sin sorpresas</li><li>Sin letra pequeña: qué incluye y qué no incluye, por escrito</li>'}
     </ul>
     <p><a href="/quien-revisa/">Conoce a Carla y cómo trabaja</a></p>
   </div>
@@ -230,14 +231,47 @@ function renderHome(site) {
     '@type': 'Service', name: s.title, url: `https://${site.domain}/${s.slug}/`,
     provider: { '@id': `https://${site.domain}/#legalservice` },
   }));
-  const body = `
+  const body = site.id === 'revisioncontratos' ? `
+<section class="hero rc-hero">
+  <div class="rc-hero-copy">
+    <p class="kicker">${esc(site.kicker)}</p>
+    <h1>${site.home.h1}</h1>
+    ${blockAnswer(site.home.answer)}
+    <p class="hero-botones"><a class="boton" href="/precios/">Ver precios y elegir revisión</a> <a class="boton boton-sec" href="/cuenta-tu-caso/">Cuéntanos tu caso</a></p>
+  </div>
+  <div class="rc-hero-aside">${blockTrustCarla(site)}</div>
+</section>
+<section class="rc-decide" aria-labelledby="rc-decide-title">
+  <div>
+    <p class="kicker">Honorarios claros</p>
+    <h2 id="rc-decide-title">Elige cuánto apoyo necesitas</h2>
+    <p>Los tres niveles tienen precio cerrado e IVA incluido. Carla confirma el encargo antes del pago por Bizum o transferencia.</p>
+  </div>
+  <ol class="rc-fee-list">
+    ${site.pricing.tiers.map((t) => `<li><a href="/precios/"><span>${esc(t.name)}</span><strong>${esc(t.price)}</strong></a></li>`).join('\n    ')}
+  </ol>
+</section>
+<section class="rc-service-index">
+  <p class="kicker">Contratos que revisamos</p>
+  <h2>${esc(site.home.servicesTitle)}</h2>
+  <ul class="tarjetas">
+    ${site.services.map((s) => `<li class="tarjeta"><div><h3><a href="/${s.slug}/">${esc(s.title)}</a></h3><p>${esc(s.teaser)}</p></div><p class="tarjeta-precio">${esc(s.priceLabel)}</p></li>`).join('\n')}
+  </ul>
+</section>
+<section class="rc-learn" aria-label="Información antes de firmar">
+  <div class="rc-learn-label"><p class="kicker">Antes de firmar</p><p>Qué revisamos, cómo trabajamos y cuáles son los límites del servicio.</p></div>
+  <div class="rc-prose">${sections(site.home.sections)}</div>
+</section>
+${blockFaq(site.home.faqs)}
+${blockSources(site.home.sources)}
+${blockCta(site)}` : `
 <section class="hero">
   <p class="kicker">${esc(site.kicker)}</p>
   <h1>${site.home.h1}</h1>
   ${blockAnswer(site.home.answer)}
   <p class="hero-botones"><a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a> <a class="boton boton-sec" href="/precios/">Ver precios</a></p>
 </section>
-${blockTrustCarla()}
+${blockTrustCarla(site)}
 ${sections(site.home.sections)}
 <section>
   <h2>${esc(site.home.servicesTitle)}</h2>
@@ -291,7 +325,7 @@ ${sections(site.pricing.sections)}
 ${blockFaq(site.pricing.faqs)}
 ${blockCta(site)}`;
   return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: 'Precios', path: '/precios/' }] }, {
-    title: site.pricing.title, description: site.pricing.description, path: '/precios/', body, extraLd: offersLd,
+    title: site.pricing.title, description: site.pricing.description, path: '/precios/', body, extraLd: offersLd, bodyClass: 'page-pricing',
   });
 }
 
@@ -305,7 +339,34 @@ function renderService(site, s) {
     areaServed: { '@type': 'Country', name: 'España' },
     offers: { '@type': 'Offer', price: s.priceValue, priceCurrency: 'EUR', url: `https://${site.domain}/precios/` },
   }, faqGraph(s.faqs)];
-  const body = `
+  const body = site.id === 'revisioncontratos' ? `
+<div class="rc-service-head">
+  <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · ${esc(s.title)}</nav>
+  <h1>${s.h1}</h1>
+  ${blockAnswer(s.answer)}
+</div>
+<div class="rc-service-body">
+  <div class="rc-prose">
+    ${sections(s.sections)}
+    ${blockTable(s.table.caption, s.table.head, s.table.rows)}
+    ${blockChecklist(s.checklist.title, s.checklist.items)}
+    ${blockFaq(s.faqs)}
+    ${blockSources(s.sources)}
+  </div>
+  <aside class="rc-service-aside" aria-label="Precio y contratación">
+    <p class="kicker">Revisión profesional</p>
+    <p class="precio-linea">${esc(s.priceLabel)}</p>
+    <p><a href="/precios/">Comparar los tres niveles</a></p>
+    <p><a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a></p>
+    <p class="cta-nota">Carla confirma por escrito el nivel, el alcance y el plazo antes del pago.</p>
+  </aside>
+</div>
+${blockTrustCarla(site)}
+<section class="relacionado">
+  <h2>${esc(s.crossSell.h2)}</h2>
+  <p>${s.crossSell.html}</p>
+</section>
+${blockCta(site, s.ctaText || null)}` : `
 <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · ${esc(s.title)}</nav>
 <h1>${s.h1}</h1>
 ${blockAnswer(s.answer)}
@@ -315,14 +376,14 @@ ${blockTable(s.table.caption, s.table.head, s.table.rows)}
 ${blockChecklist(s.checklist.title, s.checklist.items)}
 ${blockFaq(s.faqs)}
 ${blockSources(s.sources)}
-${blockTrustCarla()}
+${blockTrustCarla(site)}
 <section class="relacionado">
   <h2>${esc(s.crossSell.h2)}</h2>
   <p>${s.crossSell.html}</p>
 </section>
 ${blockCta(site, s.ctaText || null)}`;
   return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: s.title, path: `/${s.slug}/` }] }, {
-    title: s.titleTag, description: s.description, path: `/${s.slug}/`, body, extraLd: serviceLd,
+    title: s.titleTag, description: s.description, path: `/${s.slug}/`, body, extraLd: serviceLd, bodyClass: 'page-service',
   });
 }
 
@@ -336,7 +397,7 @@ ${p.faqs ? blockFaq(p.faqs) : ''}
 ${p.sources ? blockSources(p.sources) : ''}
 ${p.noCta ? '' : blockCta(site)}`;
   return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name, path }] }, {
-    title: p.title, description: p.description, path, body,
+    title: p.title, description: p.description, path, body, bodyClass: 'page-simple',
   });
 }
 
@@ -346,17 +407,14 @@ function renderIntake(site) {
   const packageFields = isRevision ? `
   <p class="campo"><label for="f-paquete">Paquete elegido</label>
     <select id="f-paquete" name="paquete">
-      <option value="Todavía no he pagado">Todavía no he pagado / tengo dudas</option>
+      <option value="Todavía no he confirmado el encargo">Todavía no he confirmado el encargo / tengo dudas</option>
       <option value="Revisión Esencial — 79 €">Revisión Esencial — 79 €</option>
       <option value="Esencial + exprés — 128 €">Esencial + exprés — 128 €</option>
       <option value="Esencial + consulta — 128 €">Esencial + consulta — 128 €</option>
       <option value="Esencial + exprés + consulta — 177 €">Esencial + exprés + consulta — 177 €</option>
       <option value="Revisión Profesional — 199 €">Revisión Profesional — 199 €</option>
       <option value="Firma Blindada — 399 €">Firma Blindada — 399 €</option>
-    </select></p>
-  <p class="campo"><label for="f-pago">Nombre o correo usado para pagar (opcional)</label>
-    <input id="f-pago" name="pago" type="text" maxlength="200" autocomplete="email">
-    <span class="campo-ayuda">Sirve para asociar tu encargo si decides pagar por Bizum o transferencia.</span></p>` : '';
+    </select></p>` : '';
   const submitLabel = isRevision ? 'Enviar los datos del contrato' : 'Enviar mi caso a Carla';
   const caseHelp = isRevision
     ? 'Qué contrato es, quién eres en la operación, qué te preocupa y qué quieres conseguir. Después podrás adjuntarlo respondiendo al email.'
@@ -406,7 +464,13 @@ function renderIntake(site) {
     fetch('https://intake.marcospera.com/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
       .then(function(r){return r.json().then(function(j){return {ok:r.ok&&j.ok,error:j.error};});})
       .then(function(res){
-        if(res.ok){f.reset();f.hidden=true;estado.innerHTML='${successMessage}';}
+        if(res.ok){
+          f.reset();
+          Array.from(f.children).forEach(function(el){if(el!==estado)el.hidden=true;});
+          estado.innerHTML='${successMessage}';
+          estado.setAttribute('tabindex','-1');
+          estado.focus();
+        }
         else{btn.disabled=false;btn.textContent='${submitLabel}';estado.textContent='No se pudo enviar ('+(res.error||'error')+'). Si persiste, escribe a ${shared.email}.';}
       })
       .catch(function(){btn.disabled=false;btn.textContent='${submitLabel}';estado.textContent='Sin conexión con el servidor. Inténtalo de nuevo o escribe a ${shared.email}.';});
@@ -418,9 +482,9 @@ function renderIntake(site) {
 <h1>${site.intake.h1}</h1>
 ${blockAnswer(site.intake.answer)}
 ${formBody}
-${blockTrustCarla()}`;
+${blockTrustCarla(site)}`;
   return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: 'Cuéntanos tu caso', path: '/cuenta-tu-caso/' }] }, {
-    title: site.intake.title, description: site.intake.description, path: '/cuenta-tu-caso/', body,
+    title: site.intake.title, description: site.intake.description, path: '/cuenta-tu-caso/', body, bodyClass: 'page-intake',
   });
 }
 
@@ -478,7 +542,7 @@ ${site.prelaunch ? '\n> Estado: sitio en preparación. Tarifas, plazos y alcance
 ## Páginas
 - [Inicio](https://${site.domain}/): qué es el servicio y cómo pedirlo.
 - [Precios](https://${site.domain}/precios/): tarifas cerradas con IVA incluido.
-- [Cuéntanos tu caso](https://${site.domain}/cuenta-tu-caso/): ${site.id === 'revisioncontratos' ? 'envío de datos y contrato después del pago, o consulta previa si existen dudas' : 'formulario para que Carla valore el caso e indique el servicio y presupuesto que correspondan'}.
+- [Cuéntanos tu caso](https://${site.domain}/cuenta-tu-caso/): ${site.id === 'revisioncontratos' ? 'envío de datos para que Carla confirme el nivel, el alcance, el plazo y la forma de pago' : 'formulario para que Carla valore el caso e indique el servicio y presupuesto que correspondan'}.
 - [Cómo funciona](https://${site.domain}/como-funciona/): pasos del encargo, plazos y qué recibe el cliente.
 - [Quién revisa](https://${site.domain}/quien-revisa/): la abogada que firma el trabajo.
 

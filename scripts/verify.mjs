@@ -139,6 +139,16 @@ for (const [domain, content] of Object.entries(siteContents)) {
     ok(`${domain}: abierto, indexable y con formulario operativo`);
   }
 }
+const revisionHome = readFileSync(join(dist, 'revisioncontratos.es', 'index.html'), 'utf8');
+const burofaxHome = readFileSync(join(dist, 'burofaxlegal.es', 'index.html'), 'utf8');
+if (!revisionHome.includes('site-revisioncontratos') || !revisionHome.includes('rc-hero') || !revisionHome.includes('rc-fee-list'))
+  fail('revisioncontratos.es: falta la composición editorial del rediseño');
+if (burofaxHome.includes('rc-hero') || burofaxHome.includes('rc-fee-list'))
+  fail('burofaxlegal.es: recibió por error el rediseño de RevisiónContratos');
+if (!revisionHome.includes('G-3T09PQEZP4') || revisionHome.includes('G-0VJ895YMEX'))
+  fail('revisioncontratos.es: identificador GA4 incorrecto o mezclado');
+if (!burofaxHome.includes('G-0VJ895YMEX') || burofaxHome.includes('G-3T09PQEZP4'))
+  fail('burofaxlegal.es: identificador GA4 incorrecto o mezclado');
 const revisionPricing = readFileSync(join(dist, 'revisioncontratos.es', 'precios', 'index.html'), 'utf8');
 if (!revisionContent.prelaunch) {
   if (/paypal\.(me|com)/i.test(revisionPricing)) fail('precios: conserva enlace o mención de PayPal');

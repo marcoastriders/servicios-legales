@@ -33,6 +33,10 @@ a { color: var(--acento); }
 .nav a:hover { opacity: 1; text-decoration: underline; }
 .prelaunch { background: #fff0c7; color: #503b00; border-bottom: 1px solid #e2c875; padding: 0.65rem 0; font-size: 0.94rem; }
 .prelaunch strong { color: #342700; }
+.analytics-consent { position: fixed; z-index: 20; inset: auto 1rem 1rem; max-width: 42rem; margin-inline: auto; padding: 1rem 1.1rem; background: #fff; color: #183131; border: 1px solid #9ab7b7; border-radius: 0.5rem; box-shadow: 0 0.5rem 2rem #12333333; }
+.analytics-consent p { margin: 0 0 0.65rem; }
+.analytics-consent button { margin-right: 0.5rem; padding: 0.55rem 0.8rem; border: 1px solid #0e4f4f; border-radius: 0.3rem; background: #0e4f4f; color: #fff; cursor: pointer; }
+.analytics-consent button + button { background: #fff; color: #0e4f4f; }
 
 /* Confianza: bloque de la abogada */
 .confianza { display: flex; gap: 1.1rem; align-items: flex-start; background: #f4f7fb; border: 1px solid #dde5ee; border-radius: 12px; padding: 1.2rem 1.4rem; margin: 2rem 0; }

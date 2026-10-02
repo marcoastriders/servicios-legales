@@ -68,6 +68,7 @@ function layout(site, page, { title, description, path, body, extraLd = [], body
   const url = `https://${site.domain}${path}`;
   const crumbs = breadcrumbs(site, page.crumbs);
   const ld = jsonLdGraph(site, page, [crumbs, ...extraLd]);
+  const analyticsId = site.id === 'burofaxlegal' ? 'G-SJSRYSEMBS' : site.id === 'revisioncontratos' ? 'G-3PR45J1VBS' : null;
   const year = new Date().getFullYear();
   return `<!DOCTYPE html>
 <html lang="es">
@@ -86,6 +87,15 @@ ${site.prelaunch ? '<meta name="robots" content="noindex,follow">' : '<meta name
 <meta property="og:url" content="${url}">
 <meta name="theme-color" content="${site.accent}">
 <link rel="stylesheet" href="/assets/styles.css">
+${analyticsId ? `
+<script async src="https://www.googletagmanager.com/gtag/js?id=${analyticsId}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', wait_for_update: 500});
+  gtag('js', new Date());
+  gtag('config', '${analyticsId}', {anonymize_ip: true});
+</script>` : ''}
 ${ld}
 </head>
 <body class="${bodyClass}">
@@ -102,6 +112,25 @@ ${site.prelaunch ? `<aside class="prelaunch" role="status"><div class="wrap"><st
 <main id="contenido" class="wrap">
 ${body}
 </main>
+${analyticsId ? `<aside id="analytics-consent" class="analytics-consent" aria-label="Preferencias de cookies" hidden>
+  <p><strong>Cookies de medición.</strong> Usamos Google Analytics para saber qué páginas reciben visitas y mejorar el servicio. Puedes aceptar o rechazar estas cookies. <a href="/cookies/">Más información</a>.</p>
+  <p><button type="button" id="analytics-accept">Aceptar medición</button> <button type="button" id="analytics-reject">Rechazar</button></p>
+</aside>
+<script>
+(function(){
+  var key='ga_consent_${site.id}', banner=document.getElementById('analytics-consent');
+  if(!banner) return;
+  var choice=localStorage.getItem(key);
+  if(!choice) banner.hidden=false;
+  function update(value){
+    localStorage.setItem(key,value);
+    if(window.gtag) window.gtag('consent','update',{analytics_storage:value==='accepted'?'granted':'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+    banner.hidden=true;
+  }
+  document.getElementById('analytics-accept').addEventListener('click',function(){update('accepted');});
+  document.getElementById('analytics-reject').addEventListener('click',function(){update('rejected');});
+})();
+</script>` : ''}
 <footer class="pie">
   <div class="wrap pie-in">
     <div>

@@ -367,20 +367,20 @@
     },
     "cookies": {
       "title": "Política de cookies | RevisiónContratos",
-      "description": "Política de cookies de revisioncontratos.es: este sitio no utiliza cookies de seguimiento ni herramientas de analítica en este momento.",
+      "description": "Política de cookies de revisioncontratos.es: uso de Google Analytics con consentimiento y cookies técnicas necesarias.",
       "h1": "Política de cookies",
       "sections": [
         {
-          "h2": "Sin cookies de seguimiento",
-          "html": "<p>Este sitio no instala cookies de analítica, publicidad ni perfilado de ningún tipo. No usamos Google Analytics, píxeles de redes sociales ni herramientas comparables.</p>"
+          "h2": "Cookies de medición con consentimiento",
+          "html": "<p>Este sitio utiliza Google Analytics 4 para medir visitas y mejorar el servicio. La medición se activa solo si aceptas las cookies de analítica en el aviso de preferencias. Si las rechazas, mantenemos la medición desactivada.</p><p>El identificador de medición utilizado es G-3PR45J1VBS. Google puede tratar datos técnicos de navegación conforme a sus propias condiciones y política de privacidad.</p>"
         },
         {
           "h2": "Qué es una cookie",
           "html": "<p>Una cookie es un pequeño archivo que un sitio guarda en tu navegador para recordar información. Las cookies de terceros permiten a otras empresas seguir tu navegación fuera del sitio que visitas.</p>"
         },
         {
-          "h2": "Cambios futuros",
-          "html": "<p>Si en el futuro incorporáramos alguna herramienta que use cookies, actualizaríamos esta política y te pediríamos consentimiento cuando la ley lo exija.</p>"
+          "h2": "Cómo cambiar tu decisión",
+          "html": "<p>Puedes rechazar la medición cuando aparece el aviso inicial. Si ya aceptaste, puedes borrar los datos del sitio en tu navegador para que vuelva a aparecer el aviso de preferencias.</p>"
         }
       ],
       "noCta": true

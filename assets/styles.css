@@ -275,6 +275,8 @@ body.site-revisioncontratos {
 
 .site-revisioncontratos .rc-service-head { max-width: 56rem; padding-bottom: clamp(2rem,5vw,4rem); }
 .site-revisioncontratos .rc-service-body { display: grid; grid-template-columns: minmax(0,var(--rc-reading)) minmax(15rem,20rem); justify-content: space-between; gap: clamp(2.5rem,6vw,5rem); align-items: start; }
+.site-revisioncontratos .rc-prose { min-width: 0; }
+.site-revisioncontratos .rc-prose > * { max-width: 100%; }
 .site-revisioncontratos .rc-service-aside { border-top: 2px solid var(--rc-brass); padding-top: 1.2rem; }
 .site-revisioncontratos .rc-service-aside .precio-linea { font-family: var(--rc-display); color: var(--tinta); font-size: 1.75rem; font-weight: 400; }
 .site-revisioncontratos .rc-service-aside .boton { width: 100%; }
@@ -321,6 +323,7 @@ body.site-revisioncontratos {
   .site-revisioncontratos .precio-destacado { order: initial; }
   .site-revisioncontratos .tarjeta { grid-template-columns: 1fr; gap: .25rem; }
   .site-revisioncontratos .tarjeta-precio { margin-top: .3rem; }
+  .site-revisioncontratos .tabla { width: 100%; max-width: 100%; margin-left: 0; margin-right: 0; padding-inline: 0; }
 }
 @media (max-width: 30rem) {
   .site-revisioncontratos { font-size: 1rem; }

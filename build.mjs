@@ -86,6 +86,7 @@ ${site.prelaunch ? '<meta name="robots" content="noindex,follow">' : '<meta name
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${url}">
 <meta name="theme-color" content="${site.accent}">
+${site.id === 'revisioncontratos' ? '<meta name="msvalidate.01" content="1160220F5D3BD4A1C4D653274D6DBE01">' : ''}
 <link rel="stylesheet" href="/assets/styles.css">
 ${analyticsId ? `
 <script async src="https://www.googletagmanager.com/gtag/js?id=${analyticsId}"></script>

@@ -68,7 +68,7 @@ function layout(site, page, { title, description, path, body, extraLd = [], body
   const url = `https://${site.domain}${path}`;
   const crumbs = breadcrumbs(site, page.crumbs);
   const ld = jsonLdGraph(site, page, [crumbs, ...extraLd]);
-  const analyticsId = site.id === 'burofaxlegal' ? 'G-SJSRYSEMBS' : site.id === 'revisioncontratos' ? 'G-3PR45J1VBS' : null;
+  const analyticsId = site.id === 'burofaxlegal' ? 'G-0VJ895YMEX' : site.id === 'revisioncontratos' ? 'G-3T09PQEZP4' : null;
   const year = new Date().getFullYear();
   return `<!DOCTYPE html>
 <html lang="es">

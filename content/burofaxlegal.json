@@ -312,21 +312,21 @@
     },
     "cookies": {
       "title": "Política de cookies de burofaxlegal.es",
-      "description": "Esta web no utiliza cookies de seguimiento ni de analítica. Te explicamos qué cookies técnicas pueden activarse y cómo gestionarlas.",
+      "description": "Política de cookies de burofaxlegal.es: uso de Google Analytics con consentimiento y cookies técnicas necesarias.",
       "h1": "Política de cookies",
       "noCta": true,
       "sections": [
         {
-          "h2": "Qué cookies usamos ahora mismo",
-          "html": "<p>En este momento el sitio <strong>no utiliza cookies de seguimiento, analítica ni publicidad</strong>. No instalamos cookies de terceros para perfilarte ni compartimos datos de navegación.</p>"
+          "h2": "Cookies de medición con consentimiento",
+          "html": "<p>Este sitio utiliza Google Analytics 4 para medir visitas y mejorar el servicio. La medición se activa solo si aceptas las cookies de analítica en el aviso de preferencias. Si las rechazas, mantenemos la medición desactivada.</p><p>El identificador de medición utilizado es G-0VJ895YMEX. Google puede tratar datos técnicos de navegación conforme a sus propias condiciones y política de privacidad.</p>"
         },
         {
-          "h2": "Cookies técnicas de sesión",
-          "html": "<p>Si en algún momento se incorporan funciones que lo requieran (como un formulario con sesión de usuario), podrían activarse cookies técnicas estrictamente necesarias para el funcionamiento. En ese caso actualizaremos esta política y te informaremos antes de que se instalen.</p>"
+          "h2": "Qué es una cookie",
+          "html": "<p>Una cookie es un pequeño archivo que un sitio guarda en tu navegador para recordar información. Las cookies de terceros permiten a otras empresas tratar datos de navegación conforme a sus propias condiciones.</p>"
         },
         {
-          "h2": "Cómo gestionar las cookies en tu navegador",
-          "html": "<p>Puedes configurar tu navegador para rechazar o eliminar cookies en cualquier momento. La configuración varía según el navegador: busca la sección «Privacidad» o «Cookies» en su menú de ajustes. Rechazar cookies técnicas puede afectar al funcionamiento de algunas funciones del sitio.</p>"
+          "h2": "Cómo cambiar tu decisión",
+          "html": "<p>Puedes rechazar la medición cuando aparece el aviso inicial. Si ya aceptaste, puedes borrar los datos del sitio en tu navegador para que vuelva a aparecer el aviso de preferencias.</p>"
         }
       ]
     },

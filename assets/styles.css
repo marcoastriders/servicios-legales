@@ -542,6 +542,7 @@ body.site-burofaxlegal {
 .site-burofaxlegal .pie-marca { font-family: var(--bf-display); font-size: 1.35rem; font-weight: 700; letter-spacing: -.015em; color: var(--bf-parch); }
 
 .site-burofaxlegal .analytics-consent { inset: auto 0 0 0; width: 100%; max-width: none; margin: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1.5rem; background: var(--tarjeta); color: var(--tinta); border: 0; border-top: 3px solid var(--bf-copper); border-radius: 0; box-shadow: 0 -0.75rem 2rem rgba(20,35,46,.18); padding: .9rem var(--bf-gutter); }
+.site-burofaxlegal .analytics-consent[hidden] { display: none; }
 .site-burofaxlegal .analytics-consent p { margin: 0; max-width: 44rem; }
 .site-burofaxlegal .analytics-consent .analytics-actions { margin: 0; white-space: nowrap; }
 .site-burofaxlegal .analytics-consent button { background: var(--bf-copper-text); border-color: var(--bf-copper-text); border-radius: var(--bf-radius); }

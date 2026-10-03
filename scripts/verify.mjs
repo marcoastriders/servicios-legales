@@ -174,6 +174,9 @@ if (revisionHome.includes('bf-hero') || revisionHome.includes('bf-proceso') || r
     }
   }
   ok('styles.css: sección BurofaxLegal entera bajo .site-burofaxlegal');
+  if (!/\.site-burofaxlegal\s+\.analytics-consent\[hidden\]\s*\{\s*display:\s*none;\s*\}/.test(cssRaw))
+    fail('styles.css: el banner de cookies visible ignora el atributo hidden');
+  else ok('styles.css: el banner de cookies respeta [hidden]');
 }
 if (!revisionHome.includes('G-3T09PQEZP4') || revisionHome.includes('G-0VJ895YMEX'))
   fail('revisioncontratos.es: identificador GA4 incorrecto o mezclado');

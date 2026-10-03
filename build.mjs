@@ -428,6 +428,7 @@ function renderSimple(site, p, path, name) {
 <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · ${esc(name)}</nav>
 <h1>${p.h1}</h1>
 ${p.answer ? blockAnswer(p.answer) : ''}
+${path === '/quien-revisa/' ? blockTrustCarla(site) : ''}
 ${sections(p.sections)}
 ${p.faqs ? blockFaq(p.faqs) : ''}
 ${p.sources ? blockSources(p.sources) : ''}

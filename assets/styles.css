@@ -42,6 +42,8 @@ a { color: var(--acento); }
 /* Confianza: bloque de la abogada */
 .confianza { display: flex; gap: 1.1rem; align-items: flex-start; background: #f4f7fb; border: 1px solid #dde5ee; border-radius: 12px; padding: 1.2rem 1.4rem; margin: 2rem 0; }
 .confianza-foto { border-radius: 50%; width: 120px; height: 120px; object-fit: cover; flex: none; }
+.quien-revisa-foto { margin: 1.5rem 0 2rem; }
+.quien-revisa-foto img { display: block; }
 .confianza-nombre { font-weight: 700; font-size: 1.1rem; margin: 0 0 0.3rem; }
 .confianza p { margin: 0 0 0.5rem; }
 .confianza-lista { margin: 0.4rem 0 0.6rem; padding-left: 1.2rem; }

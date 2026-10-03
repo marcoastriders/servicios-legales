@@ -51,7 +51,7 @@ for (const [domain, file] of htmlFiles) {
 
   // 3. años de calendario en <title> y H1
   const title = html.match(/<title>([^<]+)<\/title>/)?.[1] || '';
-  const h1 = html.match(/<h1>([^<]+)<\/h1>/)?.[1] || '';
+  const h1 = (html.match(/<h1>([\s\S]*?)<\/h1>/)?.[1] || '').replace(/<[^>]+>/g, '');
   if (/\b(19|20)\d{2}\b/.test(title)) fail(`${rel}: año en <title> (${title})`);
   if (/\b(19|20)\d{2}\b/.test(h1)) fail(`${rel}: año en H1 (${h1})`);
 
@@ -145,6 +145,36 @@ if (!revisionHome.includes('site-revisioncontratos') || !revisionHome.includes('
   fail('revisioncontratos.es: falta la composición editorial del rediseño');
 if (burofaxHome.includes('rc-hero') || burofaxHome.includes('rc-fee-list'))
   fail('burofaxlegal.es: recibió por error el rediseño de RevisiónContratos');
+if (!burofaxHome.includes('site-burofaxlegal') || !burofaxHome.includes('bf-hero') || !burofaxHome.includes('bf-proceso') || !burofaxHome.includes('bf-indice') || !burofaxHome.includes('bf-sello') || !burofaxHome.includes('bf-aprende'))
+  fail('burofaxlegal.es: falta la composición del rediseño (bf-hero/bf-proceso/bf-indice/bf-sello/bf-aprende)');
+if (revisionHome.includes('bf-hero') || revisionHome.includes('bf-proceso') || revisionHome.includes('bf-indice'))
+  fail('revisioncontratos.es: recibió por error el rediseño de BurofaxLegal');
+{
+  // aislamiento CSS: ningún selector que toque clases bf- puede quedar sin scoping al sitio
+  const cssRaw = readFileSync(join(root, 'assets', 'styles.css'), 'utf8');
+  const css = cssRaw.replace(/\/\*[\s\S]*?\*\//g, '');
+  for (const m of css.matchAll(/([^{}]+)\{/g)) {
+    for (const part of m[1].split(',')) {
+      if (part.includes('bf-') && !part.includes('site-burofaxlegal'))
+        fail(`styles.css: selector bf- sin aislar → «${part.trim()}»`);
+    }
+  }
+  ok('styles.css: selectores bf- todos bajo .site-burofaxlegal');
+  // toda la sección de rediseño de BurofaxLegal debe estar scpeada (cubre selectores sin bf-)
+  const marker = cssRaw.indexOf('BurofaxLegal · identidad jurídica moderna');
+  const end = cssRaw.indexOf('@media (prefers-reduced-motion', marker);
+  if (marker === -1) fail('styles.css: falta el marcador de la sección BurofaxLegal');
+  const section = cssRaw.slice(cssRaw.indexOf('*/', marker) + 2, end === -1 ? undefined : end).replace(/\/\*[\s\S]*?\*\//g, '');
+  for (const m of section.matchAll(/([^{}]+)\{/g)) {
+    for (const part of m[1].split(',')) {
+      const sel = part.trim();
+      if (!sel || sel.startsWith('@')) continue;
+      if (!sel.includes('site-burofaxlegal'))
+        fail(`styles.css: selector de la sección BurofaxLegal sin aislar → «${sel}»`);
+    }
+  }
+  ok('styles.css: sección BurofaxLegal entera bajo .site-burofaxlegal');
+}
 if (!revisionHome.includes('G-3T09PQEZP4') || revisionHome.includes('G-0VJ895YMEX'))
   fail('revisioncontratos.es: identificador GA4 incorrecto o mezclado');
 if (!burofaxHome.includes('G-0VJ895YMEX') || burofaxHome.includes('G-3T09PQEZP4'))

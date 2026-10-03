@@ -264,6 +264,42 @@ function renderHome(site) {
 </section>
 ${blockFaq(site.home.faqs)}
 ${blockSources(site.home.sources)}
+${blockCta(site)}` : site.id === 'burofaxlegal' ? `
+<section class="bf-hero">
+  <div class="bf-hero-copy">
+    <p class="kicker">${esc(site.kicker)}</p>
+    <h1>${site.home.h1}</h1>
+    ${blockAnswer(site.home.answer)}
+    <p class="hero-botones"><a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a> <a class="boton boton-sec" href="/precios/">Ver precios</a></p>
+    <ul class="bf-sello">
+      <li>Redactado sobre tus hechos</li>
+      <li>Revisado por abogada colegiada</li>
+      <li>Precio cerrado con IVA incluido</li>
+    </ul>
+  </div>
+  <div class="bf-hero-aside">${blockTrustCarla(site)}</div>
+</section>
+<section class="bf-proceso" aria-label="Cómo funciona el servicio">
+  <ol class="bf-proceso-lista">
+    <li><span class="bf-num" aria-hidden="true">01</span><h2>Cuéntanos tu caso con documentos</h2><p>Qué contrato existe, qué se incumplió, desde cuándo y qué quieres conseguir.</p></li>
+    <li><span class="bf-num" aria-hidden="true">02</span><h2>Redacción y revisión por abogada</h2><p>Redactamos sobre tus hechos concretos y la abogada revisa plazos y cantidades antes de enviártelo.</p></li>
+    <li><span class="bf-num" aria-hidden="true">03</span><h2>Tu aprobación y el envío por Correos</h2><p>Solo cuando apruebas el texto final pasas al envío, que contratas directamente con Correos.</p></li>
+  </ol>
+  <p class="bf-proceso-link"><a href="/como-funciona/">Cómo funciona el servicio, paso a paso</a></p>
+</section>
+<section class="bf-aprende" aria-label="Antes de decidir">
+  <div class="bf-aprende-label"><p class="kicker">Antes de decidir</p><p>Qué acredita un burofax, por qué lo redacta una abogada y qué no prometemos.</p></div>
+  <div class="bf-prosa">${sections(site.home.sections)}</div>
+</section>
+<section class="bf-indice">
+  <p class="kicker">Servicios</p>
+  <h2>${esc(site.home.servicesTitle)}</h2>
+  <ol class="bf-indice-lista">
+    ${site.services.map((s, i) => `<li class="bf-indice-item"><a href="/${s.slug}/"><span class="bf-indice-num">${String(i + 1).padStart(2, '0')}</span><span class="bf-indice-cuerpo"><strong>${esc(s.title)}</strong><span>${esc(s.teaser)}</span></span><span class="bf-indice-precio">${esc(s.priceLabel)}</span></a></li>`).join('\n    ')}
+  </ol>
+</section>
+${blockFaq(site.home.faqs)}
+${blockSources(site.home.sources)}
 ${blockCta(site)}` : `
 <section class="hero">
   <p class="kicker">${esc(site.kicker)}</p>

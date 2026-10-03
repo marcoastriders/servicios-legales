@@ -195,6 +195,8 @@ const blockTrustCarla = (site) => `
   </div>
 </aside>`;
 
+const blockPortrait = () => '<figure class="quien-revisa-portrait"><img src="/assets/carla-morales.png" alt="Carla Morales, abogada" width="400" height="400"></figure>';
+
 const blockTable = (caption, head, rows) => `
 <figure class="tabla">
   <table>
@@ -427,8 +429,7 @@ function renderSimple(site, p, path, name) {
   const body = `
 <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · ${esc(name)}</nav>
 <h1>${p.h1}</h1>
-${p.answer ? blockAnswer(p.answer) : ''}
-${path === '/quien-revisa/' ? '<figure class="quien-revisa-foto"><img class="confianza-foto" src="/assets/carla-morales.png" alt="Carla Morales, abogada" width="120" height="120"></figure>' : ''}
+${path === '/quien-revisa/' ? `<section class="quien-revisa-intro"><div class="quien-revisa-copy">${p.answer ? blockAnswer(p.answer) : ''}</div>${blockPortrait()}</section>` : (p.answer ? blockAnswer(p.answer) : '')}
 ${sections(p.sections)}
 ${p.faqs ? blockFaq(p.faqs) : ''}
 ${p.sources ? blockSources(p.sources) : ''}

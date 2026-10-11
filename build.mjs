@@ -164,6 +164,7 @@ ${site.id === 'revisioncontratos' ? `  document.addEventListener('click',functio
       <p>Servicio jurídico online de <strong>Carla Morales</strong>, abogada colegiada en el Ilustre Colegio de Abogados de Jerez. Revisión profesional de cada encargo.</p>
       <p class="pie-enlaces-entidad">
         <a href="https://carlamorales.es/" rel="me">carlamorales.es</a> ·
+        <a href="${shared.linkedin}" rel="me noopener">LinkedIn de Carla</a> ·
         <a href="https://tramitesjuridicos.com/" rel="me">Guías en Trámites Jurídicos</a> ·
         <a href="https://jerezlegal.es/" rel="me">Despacho en Jerez</a>
       </p>

@@ -235,7 +235,22 @@ for (const oldPrice of ['79 €', '149 €', '249 €']) {
   if (bfIntake.includes('name="paquete"')) fail('intake burofaxlegal: no debe tener el campo de paquete');
 }
 
-// 10. artículos del blog: presencia, sitemap y estado de revisión
+// 10. pie de pagina: enlaces de identidad y legales en TODAS las paginas de ambos dominios
+{
+  const sharedJson = JSON.parse(readFileSync(join(root, 'content', 'shared.json'), 'utf8'));
+  const footerWanted = [sharedJson.linkedin, 'https://carlamorales.es/', '/aviso-legal/', '/privacidad/', '/cookies/', '/condiciones-del-servicio/'];
+  for (const siteDir of ['burofaxlegal.es', 'revisioncontratos.es']) {
+    for (const page of ['index.html', 'cuenta-tu-caso/index.html', 'privacidad/index.html']) {
+      const html = readFileSync(join(dist, siteDir, page), 'utf8');
+      const footer = html.slice(html.indexOf('<footer'));
+      if (!footer || footer.length < 50) fail(`${siteDir}/${page}: sin footer`);
+      for (const want of footerWanted) if (!footer.includes(`href="${want}"`)) fail(`${siteDir}/${page}: el footer no enlaza ${want}`);
+      if (footer.includes('undefined')) fail(`${siteDir}/${page}: footer con undefined`);
+    }
+  }
+}
+
+// 11. artículos del blog: presencia, sitemap y estado de revisión
 {
   const burofaxContent = siteContents['burofaxlegal.es'];
   const articles = Array.isArray(burofaxContent.articles) ? burofaxContent.articles : [];

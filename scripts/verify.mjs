@@ -188,6 +188,21 @@ if (!revisionContent.prelaunch) {
   if ((revisionPricing.match(/class="precio-card/g) || []).length !== 3) fail('precios: no hay exactamente tres columnas/tarjetas');
 }
 
+// puerta de honorarios variables de BurofaxLegal (presupuesto cerrado, sin tarifas cerradas)
+const burofaxContent = siteContents['burofaxlegal.es'];
+const burofaxPricing = readFileSync(join(dist, 'burofaxlegal.es', 'precios', 'index.html'), 'utf8');
+const burofaxAll = htmlFiles.filter(([d]) => d === 'burofaxlegal.es').map(([, f]) => readFileSync(f, 'utf8')).join('\n');
+if (Array.isArray(burofaxContent.pricing.tiers) && burofaxContent.pricing.tiers.length)
+  fail('burofaxlegal.es: conserva pricing.tiers (honorarios variables, sin tarifas cerradas)');
+if (!burofaxContent.pricing.quoteFrom) fail('burofaxlegal.es: falta pricing.quoteFrom (ancla «desde 99 €»)');
+if (burofaxContent.pricing.quoteFrom !== 'desde 99 €') fail(`burofaxlegal.es: quoteFrom inesperado «${burofaxContent.pricing.quoteFrom}»`);
+if (!burofaxPricing.includes('precio-cerrado')) fail('burofaxlegal.es/precios: falta el bloque de presupuesto cerrado');
+if (!burofaxPricing.includes(burofaxContent.pricing.quoteFrom)) fail('burofaxlegal.es/precios: falta el ancla de precio «desde»');
+if (burofaxPricing.includes('precio-card')) fail('burofaxlegal.es/precios: conserva tarjetas de tarifa cerrada');
+for (const oldPrice of ['79 €', '149 €', '249 €']) {
+  if (burofaxAll.includes(oldPrice)) fail(`burofaxlegal.es conserva el precio cerrado ${oldPrice}`);
+}
+
 // 10. artículos del blog: presencia, sitemap y estado de revisión
 {
   const burofaxContent = siteContents['burofaxlegal.es'];

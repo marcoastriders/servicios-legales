@@ -284,8 +284,8 @@ ${blockCta(site)}` : site.id === 'burofaxlegal' ? `
 <section class="bf-proceso" aria-label="Cómo funciona el servicio">
   <ol class="bf-proceso-lista">
     <li><span class="bf-num" aria-hidden="true">01</span><h2>Cuéntanos tu caso con documentos</h2><p>Qué contrato existe, qué se incumplió, desde cuándo y qué quieres conseguir.</p></li>
-    <li><span class="bf-num" aria-hidden="true">02</span><h2>Redacción y revisión por abogada</h2><p>Redactamos sobre tus hechos concretos y la abogada revisa plazos y cantidades antes de enviártelo.</p></li>
-    <li><span class="bf-num" aria-hidden="true">03</span><h2>Tu aprobación y el envío por Correos</h2><p>Solo cuando apruebas el texto final pasas al envío, que contratas directamente con Correos.</p></li>
+    <li><span class="bf-num" aria-hidden="true">02</span><h2>Presupuesto cerrado antes de empezar</h2><p>Te remitimos por escrito el importe exacto y las instrucciones de pago. Solo comenzamos cuando aceptas el presupuesto y recibimos el pago.</p></li>
+    <li><span class="bf-num" aria-hidden="true">03</span><h2>Redacción, revisión por abogada y tu aprobación</h2><p>Redactamos sobre tus hechos concretos y la abogada revisa plazos y cantidades antes de enviártelo. Solo cuando apruebas el texto final pasas al envío, que contratas directamente con Correos.</p></li>
   </ol>
   <p class="bf-proceso-link"><a href="/como-funciona/">Cómo funciona el servicio, paso a paso</a></p>
 </section>
@@ -327,7 +327,8 @@ ${blockCta(site)}`;
 
 function renderPrecios(site) {
   const payKeys = ['essential', 'professional', 'blindada'];
-  const cards = site.pricing.tiers.map((t, i) => `
+  const hasTiers = Array.isArray(site.pricing.tiers) && site.pricing.tiers.length > 0;
+  const cards = hasTiers ? site.pricing.tiers.map((t, i) => `
     <article class="precio-card${i === 1 ? ' precio-destacado' : ''}">
       ${i === 1 ? '<p class="precio-etiqueta">Para contratos complejos</p>' : ''}
       <h2>${esc(t.name)}</h2>
@@ -335,11 +336,11 @@ function renderPrecios(site) {
       <ul>${t.includes.map((item) => `<li>${item}</li>`).join('')}</ul>
       ${site.paymentLinks?.[payKeys[i]] ? `<p><a class="boton boton-pago" href="${esc(site.paymentLinks[payKeys[i]])}" target="_blank" rel="noopener">Contratar y pagar ${esc(t.price)}</a></p>
       <p class="pago-confirmado"><a href="/cuenta-tu-caso/">Ya he pagado · enviar los datos del contrato</a></p>` : `<p><a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a></p>`}
-    </article>`).join('\n');
-  const offersLd = site.pricing.tiers.map((t) => ({
+    </article>`).join('\n') : '';
+  const offersLd = hasTiers ? site.pricing.tiers.map((t) => ({
     '@type': 'Offer', name: t.name, price: t.priceValue, priceCurrency: 'EUR',
     url: `https://${site.domain}/precios/`, seller: { '@id': `https://${site.domain}/#legalservice` },
-  }));
+  })) : [];
   const paymentOptions = site.paymentLinks ? `
 <section class="pago-opciones">
   <h2>Extras para la Revisión Esencial</h2>
@@ -351,16 +352,23 @@ function renderPrecios(site) {
   </div>
   <p class="pago-confirmado"><a href="/cuenta-tu-caso/">Después del pago, envía los datos y el contrato</a></p>
 </section>` : '';
+  const pricesBlock = hasTiers
+    ? `<section class="precios-grid" aria-label="Precios cerrados, IVA incluido">
+${cards}
+</section>`
+    : `<section class="precio-cerrado" aria-label="Honorarios del servicio">
+  <p class="precio-cifra">${esc(site.pricing.quoteFrom)}</p>
+  <p class="precio-detalle">${esc(site.pricing.quoteNote)}</p>
+  <p><a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso y recibe tu presupuesto cerrado</a></p>
+</section>`;
   const body = `
 <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · Precios</nav>
 <h1>${site.pricing.h1}</h1>
 ${blockAnswer(site.pricing.answer)}
-<section class="precios-grid" aria-label="Precios cerrados, IVA incluido">
-${cards}
-</section>
+${pricesBlock}
 ${paymentOptions}
-${sections(site.pricing.sections)}
-${blockFaq(site.pricing.faqs)}
+${(site.pricing.sections || []).length ? sections(site.pricing.sections) : ''}
+${(site.pricing.faqs || []).length ? blockFaq(site.pricing.faqs) : ''}
 ${blockCta(site)}`;
   return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: 'Precios', path: '/precios/' }] }, {
     title: site.pricing.title, description: site.pricing.description, path: '/precios/', body, extraLd: offersLd, bodyClass: 'page-pricing',

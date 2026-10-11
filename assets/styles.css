@@ -115,6 +115,9 @@ th { background: var(--acento-suave); }
 .precio-destacado { border: 2px solid var(--acento); }
 .precio-etiqueta { align-self: flex-start; margin: -0.2rem 0 0.5rem; padding: 0.2rem 0.55rem; border-radius: 999px; background: var(--acento); color: #fff; font-size: 0.78rem; font-weight: 700; }
 .precio-cifra { margin: 0.2rem 0 0.5rem; color: var(--acento); font-size: 2rem; line-height: 1.1; font-weight: 800; }
+.precio-cerrado { margin: 1.5rem 0; padding: 2rem 1.5rem; text-align: center; background: var(--tarjeta); border: 1px solid var(--linea); border-radius: 14px; box-shadow: 0 4px 18px rgba(25, 40, 55, 0.06); }
+.precio-cerrado .precio-cifra { font-size: 2.4rem; }
+.precio-cerrado .precio-detalle { max-width: 34rem; margin: 0.4rem auto 1.3rem; color: var(--tinta-suave); font-size: 0.95rem; }
 .pago-confirmado { margin: 0.5rem 0 0; font-size: 0.84rem; color: var(--tinta-suave); }
 .pago-opciones { background: #f4f7fb; border: 1px solid #dde5ee; border-radius: 12px; padding: 0.3rem 1.2rem 1rem; margin: 1.5rem 0; }
 .pago-opciones details { background: #fff; border: 1px solid var(--linea); border-radius: 8px; padding: 0.7rem 1rem; }

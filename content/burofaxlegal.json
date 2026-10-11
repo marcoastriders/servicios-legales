@@ -9,7 +9,7 @@
   "ctaTitle": "Cuéntanos tu caso y recibe tu burofax revisado",
   "ctaWhatsapp": "Hola, necesito un burofax. Os cuento mi caso.",
   "ctaMailSubject": "Solicito burofax revisado por abogada",
-  "llmsSummary": "BurofaxLegal es un servicio jurídico online español que redacta y revisa burofaxes con abogada colegiada antes de enviarlos por Correos. Sirve para requerir pagos de alquiler, exigir fianzas, reclamar incumplimientos contractuales, cuotas de comunidad y deudas entre particulares. Precio cerrado desde 79 € IVA incluido.",
+  "llmsSummary": "BurofaxLegal es un servicio jurídico online español que redacta y revisa burofaxes con abogada colegiada antes de enviarlos por Correos. Sirve para requerir pagos de alquiler, exigir fianzas, reclamar incumplimientos contractuales, cuotas de comunidad y deudas entre particulares. Presupuesto cerrado por escrito desde 99 € IVA incluido, según la complejidad del caso.",
   "nav": [
     {
       "path": "/precios/",
@@ -116,95 +116,25 @@
     ]
   },
   "pricing": {
-    "title": "Precios de burofax con revisión de abogada | BurofaxLegal",
-    "description": "Tarifas propuestas para la redacción jurídica: 79 €, 149 € y 249 €, IVA incluido. La tarifa postal de Correos se informa y paga aparte.",
-    "h1": "Tarifas propuestas del servicio jurídico",
-    "answer": "<p>Tres opciones con tarifa jurídica cerrada e IVA incluido; el coste postal de Correos se informa y paga aparte. El nivel revisado (79 €) cubre redacción y corrección por abogada. El nivel con estrategia (149 €) añade análisis de escenarios y documento de respaldo probatorio. El precontencioso completo (249 €) incluye negociación posterior y preparación de la vía judicial si no hay respuesta.</p>",
-    "tiers": [
-      {
-        "name": "Burofax revisado",
-        "price": "79 €",
-        "priceValue": 79,
-        "includes": [
-          "Redacción del burofax sobre tus hechos concretos",
-          "Revisión y firma interna de abogada antes del envío",
-          "Revisión de los plazos y cantidades a partir de los documentos e información que aportas",
-          "Una ronda de cambios tras tu lectura",
-          "Orientación sobre el servicio de Correos que te conviene"
-        ]
-      },
-      {
-        "name": "Burofax + estrategia",
-        "price": "149 €",
-        "priceValue": 149,
-        "includes": [
-          "Todo lo del nivel Burofax revisado",
-          "Análisis de escenarios: qué pasa si paga, si no paga o si contesta",
-          "Documento de respaldo con la estrategia probatoria",
-          "Recomendación sobre el siguiente paso si no hay respuesta",
-          "Objetivo prioritario de 24 horas laborables, sujeto a documentación completa y confirmación al aceptar el encargo"
-        ]
-      },
-      {
-        "name": "Precontencioso completo",
-        "price": "249 €",
-        "priceValue": 249,
-        "includes": [
-          "Todo lo del nivel Burofax + estrategia",
-          "Gestión de una contraoferta o negociación posterior al envío",
-          "Preparación documental de la vía judicial si no responde",
-          "Propuesta de encargo de demanda con presupuesto separado",
-          "Llamada de estrategia con la abogada de 30 minutos"
-        ]
-      }
-    ],
-    "sections": [
-      {
-        "h2": "Por qué precio cerrado y no horas de abogado",
-        "html": "<p>El encargo es acotado: redactar un requerimiento fehaciente con los hechos que nos traes. Sabemos cuánto trabajo implica, así que podemos cerrar el precio. Si al leer tu caso vemos que necesitas otra cosa (una demanda, una revisión contractual previa), te lo decimos antes de cobrar y te pasamos presupuesto aparte.</p>"
-      },
-      {
-        "h2": "El envío de Correos se paga aparte, explicado",
-        "html": "<p>Correos calcula la tarifa según la extensión del documento y las opciones de prueba de entrega o certificación que elijas. Nosotros no marcamos ese precio ni nos llevamos comisión. Puedes consultar la <a href=\"https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax\">tarifa vigente del burofax en la web de Correos</a> y elegir la opción que encaje con tu urgencia.</p>"
-      },
-      {
-        "h2": "Comparativa honesta con hacerlo tú con una plantilla",
-        "html": "<p>Una plantilla gratis cuesta cero euros y puede funcionar si tu caso es simple y sabes citar la norma correcta. El riesgo está en los detalles: plazos mal calculados, cantidades incompletas o peticiones ambiguas que el otro puede ignorar sin consecuencias.</p><p>Nuestro valor no es el papel, es la revisión. Por 79 € tienes un texto revisado jurídicamente y preparado para conservar su contenido, fecha y justificantes si el requerimiento se discute después. Si tu caso es trivial y te sientes seguro con la plantilla, hazlo tú. Te lo diremos si es así.</p>"
-      },
-      {
-        "h2": "Qué pasa si tu caso no encaja en un burofax",
-        "html": "<p>Algunos conflictos no se resuelven con un requerimiento: si el plazo para reclamar ha caducado, si el destinatario es insolvente conocido o si necesitas medidas cautelares urgentes. En ese caso te lo decimos antes de aceptar el pago y te orientamos sobre la vía correcta, sin coste por la valoración inicial.</p>"
-      }
-    ],
-    "faqs": [
-      {
-        "q": "¿Cómo se paga y cuándo?",
-        "a": "<p>Pago por adelantado al aceptar el encargo, por transferencia o Bizum. No empezamos la redacción hasta recibir el pago, y no enviamos nada a Correos hasta que tú apruebes el texto final.</p>"
-      },
-      {
-        "q": "¿Emitís factura?",
-        "a": "<p>Sí, emitimos factura con IVA desglosado a tu nombre o al de tu empresa. Indícanos los datos fiscales al contratar y la recibirás por correo electrónico junto a la entrega del burofax.</p>"
-      },
-      {
-        "q": "¿Puedo cancelar después de pagar?",
-        "a": "<p>Sí. Si cancelas antes de que empiece la redacción, se devuelve íntegramente el pago. Si el trabajo ya comenzó, se informa del trabajo realizado y se aplican las condiciones aceptadas y los derechos legales que correspondan. El envío postal nunca se realiza sin tu aprobación del texto.</p>"
-      },
-      {
-        "q": "¿Cuánto tardáis en entregar el burofax redactado?",
-        "a": "<p>Entre 24 y 48 horas laborables desde que recibimos toda la documentación. En los niveles superiores se ofrece un objetivo prioritario de 24 horas, que se confirma al aceptar el encargo según la documentación y carga de trabajo. El plazo postal posterior lo marca Correos.</p>"
-      }
-    ]
+    "title": "Honorarios del servicio de burofax con abogada | BurofaxLegal",
+    "description": "Presupuesto cerrado por escrito desde 99 € IVA incluido, según la complejidad del caso. Redacción de burofax revisada por abogada colegiada; la tarifa postal de Correos se paga aparte.",
+    "h1": "Honorarios del servicio jurídico",
+    "answer": "<p>Honorarios a partir de 99 € (IVA incluido), según la complejidad del caso. Tras estudiar la documentación, te facilitamos un presupuesto cerrado por escrito, sin compromiso. El envío postal de Correos se abona aparte.</p>",
+    "sections": [],
+    "faqs": [],
+    "quoteFrom": "desde 99 €",
+    "quoteNote": "IVA incluido · Según la complejidad del caso"
   },
   "pages": {
     "comoFunciona": {
       "title": "Cómo funciona el servicio de burofax | BurofaxLegal",
       "description": "Tres pasos: cuéntanos tu caso, recibe el burofax redactado y revisado por abogada, aprueba el texto y envíalo por Correos. Así de simple y con prueba fehaciente.",
       "h1": "Cómo funciona, paso a paso",
-      "answer": "<p>El proceso tiene tres pasos. Primero nos cuentas tu caso y nos envías los documentos. Segundo, redactamos el burofax y una abogada lo revisa. Tercero, tú apruebas el texto y lo envías por Correos con la acreditación de contenido y entrega. Todo online, con precio cerrado desde 79 €.</p>",
+      "answer": "<p>El proceso tiene tres pasos. Primero nos cuentas tu caso y nos envías los documentos. Segundo, redactamos el burofax y una abogada lo revisa. Tercero, tú apruebas el texto y lo envías por Correos con la acreditación de contenido y entrega. Todo online: presupuesto cerrado desde 99 € IVA incluido según la complejidad del caso, y pago tras aceptar el presupuesto.</p>",
       "sections": [
         {
           "h2": "Paso 1: Cuéntanos tu caso con documentos",
-          "html": "<p>Escríbenos por WhatsApp o correo y cuéntanos qué pasó: qué contrato existe, qué se incumplió, desde cuándo y qué quieres conseguir. Te pediremos el contrato, recibos, mensajes previos y cualquier prueba que tengas.</p><p>Con esa información valoramos si un burofax es la herramienta adecuada. Si no lo es, te lo decimos aquí, antes de cobrar.</p>"
+          "html": "<p>Escríbenos por WhatsApp o correo y cuéntanos qué pasó: qué contrato existe, qué se incumplió, desde cuándo y qué quieres conseguir. Te pediremos el contrato, recibos, mensajes previos y cualquier prueba que tengas.</p><p>Con esa información valoramos si un burofax es la herramienta adecuada. Si no lo es, te lo decimos aquí, antes de cobrar. Si encaja, te remitimos el presupuesto cerrado por escrito; si lo aceptas, recibes las instrucciones de pago y empezamos a redactar.</p>"
         },
         {
           "h2": "Paso 2: Redacción y revisión por abogada",
@@ -222,7 +152,7 @@
       "faqs": [
         {
           "q": "¿Necesito reunirme con la abogada en persona?",
-          "a": "<p>No. Todo el proceso es online: documentos por correo o WhatsApp, borrador por escrito y dudas por mensajería. Si prefieres hablar, podemos agendar una llamada en los niveles superiores.</p>"
+          "a": "<p>No. Todo el proceso es online: documentos por correo o WhatsApp, borrador por escrito y dudas por mensajería. Si prefieres hablar, podemos agendar una llamada si tu encargo lo requiere; se pacta por escrito en el presupuesto.</p>"
         },
         {
           "q": "¿Qué pasa si el destinatario rechaza el burofax?",
@@ -230,7 +160,7 @@
         },
         {
           "q": "¿Puedo pedir cambios en el borrador?",
-          "a": "<p>Sí, incluimos una ronda de cambios en el nivel Burofax revisado y las que necesites en niveles superiores, siempre dentro de lo razonable y antes de tu aprobación final.</p>"
+          "a": "<p>Sí, incluimos una ronda de cambios tras tu lectura, siempre antes de tu aprobación final; si el encargo lo requiere, se amplía por escrito en el presupuesto.</p>"
         },
         {
           "q": "¿Qué documentos necesito para empezar?",
@@ -332,17 +262,17 @@
     },
     "condiciones": {
       "title": "Condiciones del servicio de burofaxlegal.es",
-      "description": "Condiciones de contratación: encargo, pago por adelantado, plazos de entrega, cancelación con reembolso completo antes del envío y límites de responsabilidad.",
+      "description": "Condiciones de contratación: presupuesto cerrado por escrito, pago online por adelantado, plazos de entrega, cancelación con reembolso completo antes de empezar la redacción y límites de responsabilidad.",
       "h1": "Condiciones del servicio",
       "noCta": true,
       "sections": [
         {
           "h2": "El encargo y su objeto",
-          "html": "<p>El encargo se formaliza cuando tú aceptas el presupuesto y nos facilitas la documentación. El objeto básico es redactar y revisar un requerimiento sobre los hechos aportados. El nivel Precontencioso completo añade una actuación negociadora posterior y preparación documental; ningún nivel incluye presentar la demanda, representar en juicio ni tramitar procedimientos administrativos salvo presupuesto separado.</p>"
+          "html": "<p>El encargo se formaliza cuando tú aceptas el presupuesto cerrado que te remitimos por escrito y nos facilitas la documentación. El objeto básico es redactar y revisar un requerimiento sobre los hechos aportados. Si se pacta, el encargo puede ampliarse con una actuación negociadora posterior y preparación documental; ningún encargo incluye presentar la demanda, representar en juicio ni tramitar procedimientos administrativos salvo presupuesto separado.</p>"
         },
         {
           "h2": "Pago y plazos",
-          "html": "<p>El precio se paga por adelantado mediante transferencia o Bizum. La redacción y revisión se entregan en 24-48 horas laborables desde la recepción completa de la documentación. El plazo de entrega postal depende exclusivamente del servicio de Correos que contrates y no forma parte de este encargo.</p>"
+          "html": "<p>El importe se cierra por escrito antes de empezar y se paga por adelantado y por el medio acordado en el presupuesto. La redacción y revisión se entregan en 24-48 horas laborables desde la recepción del pago y de la documentación completa. El plazo de entrega postal depende exclusivamente del servicio de Correos que contrates y no forma parte de este encargo.</p>"
         },
         {
           "h2": "Cancelación y reembolso",
@@ -369,8 +299,8 @@
       "answer": "<p>Si tu inquilino adeuda rentas, redactamos un requerimiento adaptado a tu contrato y al detalle de los impagos. El servicio está dirigido a arrendadores de vivienda y comprende la revisión por una abogada y las indicaciones para realizar un envío fehaciente.</p><p>El impago permite al arrendador instar la resolución del contrato conforme al artículo 27.2.a) de la Ley de Arrendamientos Urbanos (LAU). El burofax reclama la deuda y deja constancia de la comunicación; la recuperación judicial de la vivienda exige el procedimiento correspondiente.</p>",
       "teaser": "Requiere al inquilino el pago de rentas y prepara, si se cumplen todos los requisitos legales, la oposición a una posterior enervación.",
       "llmsTeaser": "Servicio de redacción de burofax para requerir el pago de alquileres adeudados, evitando la enervación del desahucio mediante requerimiento previo de 30 días (LEC art. 22.4).",
-      "priceLabel": "Desde 79 € IVA incluido",
-      "priceValue": 79,
+      "priceLabel": "Desde 99 € IVA incluido",
+      "priceValue": 99,
       "sections": [
         {
           "h2": "Qué incluye el servicio",
@@ -500,8 +430,8 @@
       "answer": "<p>Este servicio redacta un requerimiento fehaciente para reclamar al arrendador el saldo de la fianza que deba devolverse al finalizar el alquiler. Ese saldo devenga interés legal una vez transcurrido un mes desde la entrega de las llaves sin restitución (art. 36.4 de la Ley de Arrendamientos Urbanos, LAU).</p><p>El burofax con certificación de contenido y prueba de entrega permite acreditar qué se reclamó y su recepción. La entrega de llaves y la cantidad debida deben apoyarse en la documentación correspondiente.</p>",
       "teaser": "Reclama el saldo de tu fianza y los intereses legales que correspondan.",
       "llmsTeaser": "Servicio de burofax para reclamar la devolución de la fianza de alquiler conforme al LAU art. 36: un mes de plazo desde la entrega de llaves e intereses legales después.",
-      "priceLabel": "Desde 79 € IVA incluido",
-      "priceValue": 79,
+      "priceLabel": "Desde 99 € IVA incluido",
+      "priceValue": 99,
       "sections": [
         {
           "h2": "Qué dice la ley sobre tu fianza",
@@ -618,8 +548,8 @@
       "answer": "<p>Este servicio redacta un requerimiento fehaciente dirigido a la otra parte de un contrato que no cumple lo pactado.</p><p>El art. 1101 del Código Civil permite reclamar los daños y perjuicios causados por un incumplimiento que genere responsabilidad. En obligaciones recíprocas, el art. 1124 permite al perjudicado optar entre cumplimiento y resolución, con los daños e intereses que procedan. La resolución exige un incumplimiento suficientemente grave y que quien la ejercite no sea, a su vez, incumplidor (STS 1101/2024, de 16 de septiembre, fundamento sexto).</p><p>El burofax concreta la reclamación y el plazo aplicable. Con certificación de contenido y prueba de entrega, permite documentar lo comunicado y su recepción. No acredita por sí solo que el incumplimiento alegado exista ni que la resolución sea procedente.</p>",
       "teaser": "Reclama el cumplimiento o, cuando proceda, la resolución del contrato y la indemnización correspondiente.",
       "llmsTeaser": "Servicio de burofax de requerimiento general por incumplimiento contractual conforme a los arts. 1101 (indemnización) y 1124 (resolución) del Código Civil.",
-      "priceLabel": "Desde 79 € IVA incluido",
-      "priceValue": 79,
+      "priceLabel": "Desde 99 € IVA incluido",
+      "priceValue": 99,
       "sections": [
         {
           "h2": "Qué puedes reclamar",
@@ -655,7 +585,7 @@
           ],
           [
             "Fundamentación jurídica adaptada al contrato",
-            "La negociación comercial posterior se contempla en el nivel Burofax + estrategia"
+            "La negociación comercial posterior se puede ampliar como encargo adicional, con presupuesto aparte"
           ],
           [
             "Revisión por abogada antes de tu aprobación",
@@ -690,7 +620,7 @@
         },
         {
           "q": "¿Sirve para contratos entre empresas?",
-          "a": "<p>Sí, ajustando el requerimiento a las normas del contrato. En los contratos mercantiles, las reglas generales del Derecho común se aplican en lo no regulado por el Código de Comercio o las leyes especiales (art. 50 del Código de Comercio). Si el contrato es complejo, puedes valorar el nivel Burofax + estrategia.</p>"
+          "a": "<p>Sí, ajustando el requerimiento a las normas del contrato. En los contratos mercantiles, las reglas generales del Derecho común se aplican en lo no regulado por el Código de Comercio o las leyes especiales (art. 50 del Código de Comercio). Si el contrato es complejo, el presupuesto puede incluir un análisis de estrategia con presupuesto aparte.</p>"
         }
       ],
       "sources": [
@@ -740,8 +670,8 @@
       "answer": "<p>Este servicio redacta un requerimiento fehaciente para reclamar a un propietario las cuotas comunitarias vencidas y exigibles que adeuda. Para comunidades regidas por la Ley de Propiedad Horizontal (LPH), su art. 21 regula la reclamación mediante el monitorio especial, que requiere el certificado del acuerdo de liquidación y la acreditación de su notificación al deudor.</p><p>El burofax con certificación de contenido y prueba de entrega permite documentar la comunicación. No sustituye la certificación comunitaria ni garantiza por sí solo cumplir la negociación previa exigible antes de acudir al juzgado.</p>",
       "teaser": "Reclama cuotas comunitarias impagadas con el respaldo del art. 21 LPH.",
       "llmsTeaser": "Servicio de burofax para comunidades de propietarios que reclaman cuotas impagadas a un vecino, conforme a la LPH art. 21 con acuerdo de junta y certificación del secretario.",
-      "priceLabel": "Desde 79 € IVA incluido",
-      "priceValue": 79,
+      "priceLabel": "Desde 99 € IVA incluido",
+      "priceValue": 99,
       "sections": [
         {
           "h2": "Qué exige la LPH antes de reclamar judicialmente",
@@ -863,8 +793,8 @@
       "answer": "<p>Este servicio redacta un requerimiento fehaciente para reclamar préstamos entre familiares, amigos o conocidos y otras deudas privadas documentadas.</p><p>El art. 1753 del Código Civil obliga a devolver el equivalente del dinero recibido en préstamo. El art. 1101 permite reclamar los daños y perjuicios que procedan por el incumplimiento, siempre que se acrediten los presupuestos de esa responsabilidad.</p><p>El contrato, los justificantes y el vencimiento determinan qué puede exigirse. El burofax concreta la reclamación y, con certificación de contenido y prueba de entrega, documenta lo comunicado y su recepción. No demuestra por sí solo la existencia de la deuda.</p>",
       "teaser": "Reclama las cantidades vencidas y exigibles con un requerimiento documentado.",
       "llmsTeaser": "Servicio de burofax para reclamar deudas entre particulares y préstamos privados conforme al mutuo del CC art. 1753 y a los arts. 1101 y 1124 del Código Civil.",
-      "priceLabel": "Desde 79 € IVA incluido",
-      "priceValue": 79,
+      "priceLabel": "Desde 99 € IVA incluido",
+      "priceValue": 99,
       "sections": [
         {
           "h2": "Qué debes acreditar",
@@ -977,9 +907,9 @@
   "prelaunch": false,
   "intake": {
     "title": "Cuéntanos tu caso | BurofaxLegal",
-    "description": "Cuéntanos tu caso completo: Carla Morales, abogada colegiada, lo revisa personalmente y te manda un presupuesto cerrado por escrito antes de empezar.",
+    "description": "Cuéntanos tu caso completo: Carla Morales, abogada colegiada, lo revisa personalmente y te remite un presupuesto cerrado por escrito; si lo aceptas, recibes las instrucciones de pago de forma segura.",
     "h1": "Cuéntanos tu caso",
-    "answer": "<p>Cuéntanos qué ha pasado con todos los detalles: fechas, personas implicadas, documentos que tienes y qué quieres conseguir. Carla lo revisa personalmente y te responde con un presupuesto cerrado por escrito. Solo pagas si aceptas el presupuesto.</p>",
+    "answer": "<p>Cuéntanos qué ha pasado con todos los detalles: fechas, personas implicadas, documentos que tienes y qué quieres conseguir. Carla lo revisa personalmente y te responde con un presupuesto cerrado por escrito. Solo pagas si lo aceptas, y recibes las instrucciones de pago.</p>",
     "asuntos": [
       "Impago de alquiler",
       "Devolución de fianza",

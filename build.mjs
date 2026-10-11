@@ -538,34 +538,12 @@ function renderIntake(site) {
   const successMessage = isRevision
     ? '<strong>Datos enviados.</strong> Revisa tu email y responde al mensaje de confirmación adjuntando el contrato en PDF o fotos legibles.'
     : '<strong>Caso enviado.</strong> Carla lo revisará personalmente y te responderá con el servicio y presupuesto que correspondan. Te llegará una confirmación a tu email.';
-  const formBody = site.prelaunch ? `
-<section class="cta cta-prelaunch">
-  <h2>Apertura próxima</h2>
-  <p>El canal de encargos se abrirá cuando Carla confirme personalmente tarifas, plazos y alcance del servicio. Si tu asunto no puede esperar, escribe directamente a <a href="mailto:${shared.email}">${shared.email}</a>.</p>
-</section>` : `
-<form id="intake" class="intake" novalidate aria-describedby="intake-estado">
-  <p class="campo"><label for="f-nombre">Tu nombre completo *</label>
-    <input id="f-nombre" name="nombre" type="text" autocomplete="name" required maxlength="120"></p>
-  <p class="campo"><label for="f-email">Tu email *</label>
-    <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200"></p>
-  <p class="campo"><label for="f-telefono">Teléfono (opcional)</label>
-    <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" maxlength="40"></p>
-  <p class="campo"><label for="f-asunto">¿De qué va tu asunto? *</label>
-    <select id="f-asunto" name="asunto" required>
-      <option value="">Selecciona una opción</option>
-      ${asuntos}
-    </select></p>
-  ${packageFields}
-  <p class="campo"><label for="f-caso">${site.id === 'burofaxlegal' ? 'Cuéntame tu historia completa' : 'Cuéntanos tu historia completa'} *</label>
-    <span class="campo-ayuda" id="f-caso-ayuda">${caseHelp}</span>
-    <textarea id="f-caso" name="caso" rows="9" required minlength="30" maxlength="8000" aria-describedby="f-caso-ayuda"></textarea></p>
-  <p class="campo campo-oculto" aria-hidden="true"><label>Website <input name="website" type="text" tabindex="-1" autocomplete="off"></label></p>
-  <p class="campo campo-check"><input id="f-privacidad" name="privacidad" type="checkbox" required>
-    <label for="f-privacidad">He leído la <a href="/privacidad/">política de privacidad</a> y acepto que mis datos se usen para responder a mi consulta. *</label></p>
-  <p class="campo"><button class="boton" type="submit" id="intake-btn">${submitLabel}</button></p>
-  <p id="intake-estado" role="status" aria-live="polite"></p>
-</form>
-<script>
+  const phoneField = isRevision
+    ? `<p class="campo"><label for="f-telefono">Teléfono (opcional)</label>
+    <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" maxlength="40"></p>`
+    : `<p class="campo"><label for="f-telefono">Tu teléfono *</label>
+    <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" required maxlength="40"></p>`;
+  const submitJsRevision = `
 (function(){
   var f=document.getElementById('intake'),estado=document.getElementById('intake-estado'),btn=document.getElementById('intake-btn');
   f.addEventListener('submit',function(ev){
@@ -593,7 +571,84 @@ function renderIntake(site) {
       .catch(function(){btn.disabled=false;btn.textContent='${submitLabel}';estado.textContent='Sin conexión con el servidor. Inténtalo de nuevo o escribe a ${shared.email}.';});
   });
 })();
-</script>`;
+`;
+  const submitJsBurofax = `
+(function(){
+  var f=document.getElementById('intake'),estado=document.getElementById('intake-estado'),btn=document.getElementById('intake-btn');
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    if(!f.checkValidity()){estado.textContent='Revisa los campos marcados: faltan datos obligatorios o el texto es muy corto.';f.reportValidity();return;}
+    var files=f.adjuntos?f.adjuntos.files:[],total=0,i;
+    if(files.length>5){estado.textContent='Máximo 5 archivos. Quita algunos o envía el resto por email.';return;}
+    for(i=0;i<files.length;i++){
+      if(files[i].size>5*1024*1024){estado.textContent='Cada archivo debe pesar menos de 5 MB: '+files[i].name;btn.disabled=false;return;}
+      total+=files[i].size;
+    }
+    if(total>10*1024*1024){estado.textContent='Los archivos suman más de 10 MB. Envía menos o escribe a Carla.';return;}
+    btn.disabled=true;btn.textContent='Enviando…';estado.textContent='';
+    var headers={'Content-Type':'application/json'},payload;
+    if(files.length){
+      var fd=new FormData();
+      fd.append('nombre',f.nombre.value.trim());
+      fd.append('email',f.email.value.trim());
+      fd.append('telefono',f.telefono.value.trim());
+      fd.append('asunto',f.asunto.value);
+      fd.append('caso',f.caso.value.trim().slice(0,8000));
+      fd.append('web',location.hostname.replace(/^www\\./,''));
+      fd.append('website',f.website.value);
+      fd.append('privacidad',f.privacidad.checked?'1':'');
+      for(i=0;i<files.length;i++){fd.append('adjuntos',files[i],files[i].name);}
+      headers={};payload=fd;
+    }else{
+      payload=JSON.stringify({nombre:f.nombre.value.trim(),email:f.email.value.trim(),telefono:f.telefono.value.trim(),asunto:f.asunto.value,caso:f.caso.value.trim().slice(0,8000),web:location.hostname.replace(/^www\\./,''),website:f.website.value,privacidad:f.privacidad.checked});
+    }
+    fetch('https://intake.marcospera.com/',{method:'POST',headers:headers,body:payload})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok&&j.ok,error:j.error};});})
+      .then(function(res){
+        if(res.ok){
+          if(window.trackLegalEvent) window.trackLegalEvent('generate_lead');
+          f.reset();
+          Array.from(f.children).forEach(function(el){if(el!==estado)el.hidden=true;});
+          estado.innerHTML='${successMessage}';
+          estado.setAttribute('tabindex','-1');
+          estado.focus();
+        }
+        else{btn.disabled=false;btn.textContent='${submitLabel}';estado.textContent='No se pudo enviar ('+(res.error||'error')+'). Si persiste, escribe a ${shared.email}.';}
+      })
+      .catch(function(){btn.disabled=false;btn.textContent='${submitLabel}';estado.textContent='Sin conexión con el servidor. Inténtalo de nuevo o escribe a ${shared.email}.';});
+  });
+})();
+`;
+  const formBody = site.prelaunch ? `
+<section class="cta cta-prelaunch">
+  <h2>Apertura próxima</h2>
+  <p>El canal de encargos se abrirá cuando Carla confirme personalmente tarifas, plazos y alcance del servicio. Si tu asunto no puede esperar, escribe directamente a <a href="mailto:${shared.email}">${shared.email}</a>.</p>
+</section>` : `
+<form id="intake" class="intake" novalidate aria-describedby="intake-estado">
+  <p class="campo"><label for="f-nombre">Tu nombre completo *</label>
+    <input id="f-nombre" name="nombre" type="text" autocomplete="name" required maxlength="120"></p>
+  <p class="campo"><label for="f-email">Tu email *</label>
+    <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200"></p>
+  ${phoneField}
+  <p class="campo"><label for="f-asunto">¿De qué va tu asunto? *</label>
+    <select id="f-asunto" name="asunto" required>
+      <option value="">Selecciona una opción</option>
+      ${asuntos}
+    </select></p>
+  ${packageFields}
+  <p class="campo"><label for="f-caso">${site.id === 'burofaxlegal' ? 'Cuéntame tu historia completa' : 'Cuéntanos tu historia completa'} *</label>
+    <span class="campo-ayuda" id="f-caso-ayuda">${caseHelp}</span>
+    <textarea id="f-caso" name="caso" rows="9" required minlength="30" maxlength="8000" aria-describedby="f-caso-ayuda"></textarea></p>${isRevision ? '' : `
+  <p class="campo"><label for="f-docs">Documentos que ayuden a valorar tu caso (opcional)</label>
+    <span class="campo-ayuda" id="f-docs-ayuda">PDF, JPG o PNG. Hasta 5 archivos y 10 MB en total. Solo los utiliza Carla para preparar tu presupuesto.</span>
+    <input id="f-docs" name="adjuntos" type="file" multiple accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" aria-describedby="f-docs-ayuda"></p>`}
+  <p class="campo campo-oculto" aria-hidden="true"><label>Website <input name="website" type="text" tabindex="-1" autocomplete="off"></label></p>
+  <p class="campo campo-check"><input id="f-privacidad" name="privacidad" type="checkbox" required>
+    <label for="f-privacidad">He leído la <a href="/privacidad/">política de privacidad</a> y acepto que mis datos se usen para responder a mi consulta. *</label></p>
+  <p class="campo"><button class="boton" type="submit" id="intake-btn">${submitLabel}</button></p>
+  <p id="intake-estado" role="status" aria-live="polite"></p>
+</form>
+<script>${isRevision ? submitJsRevision : submitJsBurofax}</script>`;
   const body = `
 <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · ${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : 'Cuéntanos tu caso'}</nav>
 <h1>${site.intake.h1}</h1>

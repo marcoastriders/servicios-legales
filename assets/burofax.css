@@ -105,7 +105,7 @@ body.site-burofaxlegal {
 .site-burofaxlegal .cta > p { max-width:var(--bf-reading); margin-inline:auto; }
 .site-burofaxlegal th { font-family:var(--bf-body); text-transform:none; letter-spacing:0; }
 .site-burofaxlegal table { font-variant-numeric:tabular-nums; }
-.site-burofaxlegal .precio-cerrado { text-align:left; padding:2.5rem 0; border:0; border-block:1px solid var(--tinta); border-radius:0; background:transparent; box-shadow:none; max-width:58rem; margin-block:3rem; }
+.site-burofaxlegal .precio-cerrado { text-align:left; padding:2.5rem max(0px, calc((100% - var(--bf-reading)) / 2)); border:0; border-block:1px solid var(--tinta); border-radius:0; background:transparent; box-shadow:none; max-width:58rem; margin-block:3rem; }
 .site-burofaxlegal .precio-cerrado .precio-cifra { font-size:clamp(2.6rem,5vw,4rem); line-height:1.15; font-weight:400; max-width:21ch; }
 .site-burofaxlegal .precio-cerrado .precio-detalle { margin:1.2rem 0 1.8rem; max-width:65ch; font-size:1rem; }
 .site-burofaxlegal .quien-revisa-intro { max-width:none !important; display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); align-items:center; gap:4rem; margin-bottom:5rem; }

@@ -22,27 +22,6 @@
       "font": "\"BF Bodoni\", Georgia, serif"
     },
     {
-      "route": "/precios/",
-      "status": 200,
-      "h1": "Honorarios del servicio jurídico",
-      "h1Count": 1,
-      "width": 390,
-      "scroll": 390,
-      "client": 390,
-      "h1Rect": {
-        "x": 20,
-        "y": 454.0625,
-        "width": 350,
-        "height": 97.65625,
-        "top": 454.0625,
-        "right": 370,
-        "bottom": 551.71875,
-        "left": 20
-      },
-      "overflow": false,
-      "font": "\"BF Bodoni\", Georgia, serif"
-    },
-    {
       "route": "/como-funciona/",
       "status": 200,
       "h1": "Cómo funciona, paso a paso",
@@ -422,9 +401,9 @@
       "font": "\"BF Bodoni\", Georgia, serif"
     },
     {
-      "route": "/precios/",
+      "route": "/articulos/",
       "width": 390,
-      "h1": "Honorarios del servicio jurídico",
+      "h1": "Artículos sobre burofax",
       "h1Count": 1,
       "scroll": 390,
       "client": 390,
@@ -522,9 +501,9 @@
       "font": "\"BF Bodoni\", Georgia, serif"
     },
     {
-      "route": "/precios/",
+      "route": "/articulos/",
       "width": 768,
-      "h1": "Honorarios del servicio jurídico",
+      "h1": "Artículos sobre burofax",
       "h1Count": 1,
       "scroll": 768,
       "client": 768,
@@ -622,9 +601,9 @@
       "font": "\"BF Bodoni\", Georgia, serif"
     },
     {
-      "route": "/precios/",
+      "route": "/articulos/",
       "width": 1440,
-      "h1": "Honorarios del servicio jurídico",
+      "h1": "Artículos sobre burofax",
       "h1Count": 1,
       "scroll": 1440,
       "client": 1440,
@@ -782,16 +761,16 @@
     },
     {
       "route": "/",
-      "text": "Ver precios",
+      "text": "Cómo funciona",
       "fg": "rgb(244, 240, 230)",
       "bg": "rgb(24, 60, 53)",
       "rect": {
         "x": 1057.78125,
         "y": 552.140625,
-        "width": 132.171875,
+        "width": 161.78125,
         "height": 60.53125,
         "top": 552.140625,
-        "right": 1189.953125,
+        "right": 1219.5625,
         "bottom": 612.671875,
         "left": 1057.78125
       },
@@ -832,69 +811,52 @@
       "ratio": 10.626164557896967
     },
     {
-      "route": "/precios/",
-      "text": "Honorarios a partir de 99 € (IVA incluido), según la complejidad del c",
+      "route": "/articulos/",
+      "text": "Guías prácticas sobre el burofax: qué es, cuándo hace falta, cómo envi",
       "fg": "rgb(73, 96, 89)",
       "bg": "rgb(244, 240, 230)",
       "rect": {
         "x": 360,
         "y": 428.5,
         "width": 720,
-        "height": 96.609375,
+        "height": 64.40625,
         "top": 428.5,
         "right": 1080,
-        "bottom": 525.109375,
+        "bottom": 492.90625,
         "left": 360
       },
       "ratio": 5.951338241216647
     },
     {
-      "route": "/precios/",
-      "text": "Cuéntame tu caso y recibe tu presupuesto cerrado",
-      "fg": "rgb(255, 255, 255)",
-      "bg": "rgb(40, 89, 76)",
-      "rect": {
-        "x": 256,
-        "y": 766.875,
-        "width": 443.890625,
-        "height": 60.53125,
-        "top": 766.875,
-        "right": 699.890625,
-        "bottom": 827.40625,
-        "left": 256
-      },
-      "ratio": 8.004466665140875
-    },
-    {
-      "route": "/precios/",
+      "route": "/articulos/",
       "text": "Cuéntame tu caso",
       "fg": "rgb(24, 60, 53)",
       "bg": "rgb(244, 240, 230)",
       "rect": {
         "x": 360,
-        "y": 1246.40625,
+        "y": 1432.84375,
         "width": 186.015625,
         "height": 60.53125,
-        "top": 1246.40625,
+        "top": 1432.84375,
         "right": 546.015625,
-        "bottom": 1306.9375,
+        "bottom": 1493.375,
         "left": 360
       },
       "ratio": 10.626164557896967
     },
     {
-      "route": "/precios/",
+      "route": "/articulos/",
       "text": "WhatsApp directo",
       "fg": "rgb(244, 240, 230)",
       "bg": "rgb(24, 60, 53)",
       "rect": {
         "x": 558.015625,
-        "y": 1246.40625,
+        "y": 1432.84375,
         "width": 186.03125,
         "height": 60.53125,
-        "top": 1246.40625,
+        "top": 1432.84375,
         "right": 744.046875,
-        "bottom": 1306.9375,
+        "bottom": 1493.375,
         "left": 558.015625
       },
       "ratio": 10.626164557896967
@@ -952,15 +914,14 @@
     }
   ],
   "errors": [],
+  "redirect": {
+    "status": 301,
+    "location": "http://burofaxlegal.es/cuenta-tu-caso/"
+  },
   "layout": [
     {
       "route": "/",
       "kids": 8,
-      "ctaP": 3
-    },
-    {
-      "route": "/precios/",
-      "kids": 5,
       "ctaP": 3
     },
     {
@@ -1084,9 +1045,9 @@
       "font": "\"BF Bodoni\", Georgia, serif"
     },
     {
-      "route": "/precios/",
+      "route": "/articulos/",
       "scale": 2,
-      "h1": "Honorarios del servicio jurídico",
+      "h1": "Artículos sobre burofax",
       "h1Count": 1,
       "width": 1440,
       "scroll": 720,
@@ -1193,5 +1154,5 @@
     "files": 22,
     "byteIdentical": true
   },
-  "routeCount": 19
+  "routeCount": 18
 }

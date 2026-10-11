@@ -12,7 +12,8 @@ const home=read('dist/burofaxlegal.es/index.html'),sibling=read('dist/revisionco
 assert(home.includes('class="bf-opening"')&&home.includes('class="bf-accountability"'));
 assert(home.includes('/assets/burofax.css'));assert(!sibling.includes('/assets/burofax.css'));assert(!sibling.includes('bf-accountability'));
 const nav=home.match(/<nav class="nav"[\s\S]*?<\/nav>/)[0];assert(!nav.includes('/precios/'));
-for(const f of ['index','cuenta-tu-caso/index','precios/index']){const html=read(`dist/burofaxlegal.es/${f}.html`);assert(!html.includes('Cuéntanos'),'stale plural CTA '+f);assert(html.includes('Cuéntame'),'singular CTA missing '+f);}
+for(const f of ['index','cuenta-tu-caso/index']){const html=read(`dist/burofaxlegal.es/${f}.html`);assert(!html.includes('Cuéntanos'),'stale plural CTA '+f);assert(html.includes('Cuéntame'),'singular CTA missing '+f);}
+assert.throws(()=>read('dist/burofaxlegal.es/precios/index.html'),'burofaxlegal.es/precios debe estar retirada');assert(!home.includes('href="/precios/"'),'enlaces internos a /precios/ en portada');
 for(const f of ['index','cuenta-tu-caso/index','precios/index'])assert(read(`dist/revisioncontratos.es/${f}.html`).includes('Cuéntanos tu caso'),'sibling CTA label must not change');
 assert(home.includes('Te%20cuento%20mi%20caso')&&!home.includes('Os%20cuento'),'WhatsApp default must address Carla in the singular');
 assert(read('assets/burofax.css').includes('main > h1'),'reading column centring rule missing');

@@ -1,6 +1,6 @@
 // Generador estático multi-sitio: burofaxlegal.es + revisioncontratos.es
 // Uso: node build.mjs  →  dist/<dominio>/...
-import { readFileSync, writeFileSync, mkdirSync, cpSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, cpSync, existsSync, rmSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -297,7 +297,7 @@ ${blockCta(site)}` : site.id === 'burofaxlegal' ? `
   <div class="bf-opening">
     ${blockAnswer(site.home.answer)}
     <div class="bf-action">
-      <p class="hero-botones"><a class="boton" href="/cuenta-tu-caso/">Cuéntame tu caso</a> <a class="boton boton-sec" href="/precios/">Ver precios</a></p>
+      <p class="hero-botones"><a class="boton" href="/cuenta-tu-caso/">Cuéntame tu caso</a> <a class="boton boton-sec" href="/como-funciona/">Cómo funciona</a></p>
       <ul class="bf-sello">
         <li>Redactado sobre tus hechos</li>
         <li>Revisado por abogada colegiada</li>
@@ -441,7 +441,7 @@ ${blockCta(site, s.ctaText || null)}` : `
 <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · ${esc(s.title)}</nav>
 <h1>${s.h1}</h1>
 ${blockAnswer(s.answer)}
-<p class="precio-linea">${esc(s.priceLabel)} — <a href="/precios/">ver qué incluye cada nivel</a></p>
+<p class="precio-linea">${esc(s.priceLabel)} — <a href="/cuenta-tu-caso/">recibe tu presupuesto cerrado</a></p>
 ${sections(s.sections)}
 ${blockTable(s.table.caption, s.table.head, s.table.rows)}
 ${blockChecklist(s.checklist.title, s.checklist.items)}
@@ -611,7 +611,7 @@ function render404(site) {
 <p>La dirección que buscas no existe o se ha movido. Esto es lo más útil desde aquí:</p>
 <ul>
   <li><a href="/">Volver al inicio de ${esc(site.name)}</a></li>
-  <li><a href="/precios/">Precios del servicio</a></li>
+  ${site.id === 'burofaxlegal' ? '<li><a href="/cuenta-tu-caso/">Cuéntame tu caso</a></li>' : '<li><a href="/precios/">Precios del servicio</a></li>'}
   <li><a href="https://tramitesjuridicos.com/guias/">Guías jurídicas en Trámites Jurídicos</a></li>
 </ul>`;
   return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }] }, {
@@ -658,7 +658,7 @@ ${site.prelaunch ? '\n> Estado: sitio en preparación. Tarifas, plazos y alcance
 
 ## Páginas
 - [Inicio](https://${site.domain}/): qué es el servicio y cómo pedirlo.
-- [Precios](https://${site.domain}/precios/): tarifas cerradas con IVA incluido.
+${site.id === 'burofaxlegal' ? `- [Cuéntame tu caso](https://${site.domain}/cuenta-tu-caso/): presupuesto cerrado por escrito antes de empezar.` : `- [Precios](https://${site.domain}/precios/): tarifas cerradas con IVA incluido.`}
 - [${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : 'Cuéntanos tu caso'}](https://${site.domain}/cuenta-tu-caso/): ${site.id === 'revisioncontratos' ? 'envío de datos para que Carla confirme el nivel, el alcance, el plazo y la forma de pago' : 'formulario para que Carla valore el caso e indique el servicio y presupuesto que correspondan'}.
 - [Cómo funciona](https://${site.domain}/como-funciona/): pasos del encargo, plazos y qué recibe el cliente.
 - [Quién revisa](https://${site.domain}/quien-revisa/): la abogada que firma el trabajo.
@@ -680,16 +680,18 @@ Propiedades de la misma entidad: https://tramitesjuridicos.com/ (guías jurídic
 
 // ---------- build ----------
 const INDEXNOW_KEY = 'sl7f2k9m4x8q1w3e6r5t8y2u4i6o0p3a';
+rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
 cpSync(join(root, 'assets'), join(out, 'assets'), { recursive: true });
 
 for (const site of sites) {
   const dir = join(out, site.domain);
-  const urls = [{ path: '/', priority: '1.0' }, { path: '/precios/', priority: '0.9' }, { path: '/como-funciona/', priority: '0.7' }, { path: '/quien-revisa/', priority: '0.6' }];
+  const hasPricingPage = Array.isArray(site.pricing.tiers) && site.pricing.tiers.length > 0;
+  const urls = [{ path: '/', priority: '1.0' }, ...(hasPricingPage ? [{ path: '/precios/', priority: '0.9' }] : []), { path: '/como-funciona/', priority: '0.7' }, { path: '/quien-revisa/', priority: '0.6' }];
   const put = (rel, content) => { const f = join(dir, rel); mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, content); };
 
   put('index.html', renderHome(site));
-  put('precios/index.html', renderPrecios(site));
+  if (hasPricingPage) put('precios/index.html', renderPrecios(site));
   put('cuenta-tu-caso/index.html', renderIntake(site));
   urls.push({ path: '/cuenta-tu-caso/', priority: '0.9' });
   put('como-funciona/index.html', renderSimple(site, site.pages.comoFunciona, '/como-funciona/', 'Cómo funciona'));

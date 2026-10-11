@@ -12,7 +12,17 @@ for host in ['burofaxlegal.es','revisioncontratos.es']:
  assert 'https://intake.marcospera.com' in headers['Content-Security-Policy']
  status,_,form=get('/cuenta-tu-caso/');assert b'id="intake"' in form
  status,_,portrait=get('/assets/carla-morales.png');assert portrait.startswith(b'\x89PNG\r\n\x1a\n')
- _,_,prices=get('/precios/');count=len(re.findall(b'<article class="precio-card',prices));assert count==(0 if host=='burofaxlegal.es' else 3)
+if host=='burofaxlegal.es':
+ class NoRedirect(urllib.request.HTTPRedirectHandler):
+  def redirect_request(self,*a,**k): return None
+ try:
+  urllib.request.build_opener(NoRedirect).open(urllib.request.Request(os.environ.get('BF_QA_URL','http://127.0.0.1:18123')+'/precios/',headers={'Host':host}))
+  raise AssertionError('/precios/ no redirige en burofaxlegal.es')
+ except urllib.error.HTTPError as error:
+  assert error.code==301 and error.headers.get('Location','').rstrip('/').endswith('/cuenta-tu-caso'),(error.code,error.headers)
+ count=0
+else:
+ _,_,prices=get('/precios/');count=len(re.findall(b'<article class="precio-card',prices));assert count==3
  css='burofax.css' if host=='burofaxlegal.es' else 'styles.css'
  assert get('/assets/'+css)[0]==200
  for font in ['bf-bodoni.ttf','bf-public-sans.ttf','bf-public-sans-semibold.ttf']:assert get('/assets/fonts/'+font)[0]==200

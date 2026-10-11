@@ -12,10 +12,6 @@
   "llmsSummary": "BurofaxLegal es un servicio jurídico online español que redacta y revisa burofaxes con abogada colegiada antes de enviarlos por Correos. Sirve para requerir pagos de alquiler, exigir fianzas, reclamar incumplimientos contractuales, cuotas de comunidad y deudas entre particulares. Presupuesto cerrado por escrito desde 99 € IVA incluido, según la complejidad del caso.",
   "nav": [
     {
-      "path": "/precios/",
-      "label": "Precios"
-    },
-    {
       "path": "/como-funciona/",
       "label": "Cómo funciona"
     },

@@ -96,6 +96,30 @@ ${analyticsId ? `
   gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', wait_for_update: 500});
   gtag('js', new Date());
   gtag('config', '${analyticsId}', {anonymize_ip: true});
+  // Custom conversions never forward user input or contact destinations.
+  window.trackLegalEvent=function(event,params){
+    try{
+      if(localStorage.getItem('ga_consent_${site.id}')!=='accepted'||typeof window.gtag!=='function') return;
+      params=params===undefined?{}:params;
+      if(!params||typeof params!=='object'||Array.isArray(params)) return;
+      var keys=Reflect.ownKeys(params),safe={};
+      if(event==='generate_lead'){
+        if(keys.length) return;
+      }else if(event==='contact_click'){
+        if(keys.length!==1||keys[0]!=='contact_method'||(params.contact_method!=='whatsapp'&&params.contact_method!=='email')) return;
+        safe.contact_method=params.contact_method;
+      }else return;
+      window.gtag('event',event,safe);
+    }catch(e){/* Analytics must never interrupt a contact or intake. */}
+  };
+  document.addEventListener('click',function(ev){
+    var link=ev.target&&ev.target.closest?ev.target.closest('a[href]'):null;
+    if(!link) return;
+    var href=link.getAttribute('href')||'',method=null;
+    if(href.toLowerCase().indexOf('mailto:')===0) method='email';
+    else if(href.indexOf('https://wa.me/')===0) method='whatsapp';
+    if(method) window.trackLegalEvent('contact_click',{contact_method:method});
+  });
 </script>` : ''}
 ${ld}
 </head>
@@ -122,7 +146,8 @@ ${analyticsId ? `<aside id="analytics-consent" class="analytics-consent" aria-la
   var key='ga_consent_${site.id}', banner=document.getElementById('analytics-consent');
   if(!banner) return;
   var choice=localStorage.getItem(key);
-  if(!choice) banner.hidden=false;
+  if(choice==='accepted'||choice==='rejected') update(choice);
+  else banner.hidden=false;
   function update(value){
     localStorage.setItem(key,value);
     if(window.gtag) window.gtag('consent','update',{analytics_storage:value==='accepted'?'granted':'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
@@ -556,6 +581,7 @@ function renderIntake(site) {
       .then(function(r){return r.json().then(function(j){return {ok:r.ok&&j.ok,error:j.error};});})
       .then(function(res){
         if(res.ok){
+          if(window.trackLegalEvent) window.trackLegalEvent('generate_lead');
           f.reset();
           Array.from(f.children).forEach(function(el){if(el!==estado)el.hidden=true;});
           estado.innerHTML='${successMessage}';

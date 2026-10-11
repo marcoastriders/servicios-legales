@@ -522,12 +522,12 @@ function renderIntake(site) {
   <p class="campo"><label for="f-paquete">Paquete elegido</label>
     <select id="f-paquete" name="paquete">
       <option value="Todavía no he confirmado el encargo">Todavía no he confirmado el encargo / tengo dudas</option>
-      <option value="Revisión Esencial — 79 €">Revisión Esencial — 79 €</option>
-      <option value="Esencial + exprés — 128 €">Esencial + exprés — 128 €</option>
-      <option value="Esencial + consulta — 128 €">Esencial + consulta — 128 €</option>
-      <option value="Esencial + exprés + consulta — 177 €">Esencial + exprés + consulta — 177 €</option>
-      <option value="Revisión Profesional — 199 €">Revisión Profesional — 199 €</option>
-      <option value="Firma Blindada — 399 €">Firma Blindada — 399 €</option>
+      <option value="Revisión Esencial — 129 €">Revisión Esencial — 129 €</option>
+      <option value="Esencial + exprés — 178 €">Esencial + exprés — 178 €</option>
+      <option value="Esencial + consulta — 178 €">Esencial + consulta — 178 €</option>
+      <option value="Esencial + exprés + consulta — 227 €">Esencial + exprés + consulta — 227 €</option>
+      <option value="Revisión Profesional — 250 €">Revisión Profesional — 250 €</option>
+      <option value="Firma Blindada — 449 €">Firma Blindada — 449 €</option>
     </select></p>` : '';
   const submitLabel = isRevision ? (site.ui.submitLabel || 'Enviar los datos del contrato') : 'Enviar mi caso a Carla';
   const caseHelp = isRevision

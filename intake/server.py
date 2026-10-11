@@ -139,7 +139,7 @@ def stripe_sig_ok(body: bytes, header: str) -> bool:
 
 
 # Prices and Payment Link IDs are server-owned, never inferred from return URLs.
-PRICES = {'essential': 7900, 'professional': 19900, 'blindada': 39900, 'essentialExpress': 12800, 'essentialCall': 12800, 'essentialBoth': 17700}
+PRICES = {'essential': 12900, 'professional': 25000, 'blindada': 44900, 'essentialExpress': 17800, 'essentialCall': 17800, 'essentialBoth': 22700}
 PAYMENT_LINKS = {'essential': 'plink_1UPSZlJ9L8bkYbaiqdZSrWm8', 'professional': 'plink_1UPSZmJ9L8bkYbaitiHog6bS', 'blindada': 'plink_1UPSZnJ9L8bkYbaih0FdQHmf', 'essentialExpress': 'plink_1UPSZoJ9L8bkYbaizcaoWGbJ', 'essentialCall': 'plink_1UPSZpJ9L8bkYbaiT92jkfg9', 'essentialBoth': 'plink_1UPSZpJ9L8bkYbaiEDsRO9jT'}
 PAYMENT_DB = os.environ.get('PAYMENT_DB', '/data/payments.sqlite3')
 

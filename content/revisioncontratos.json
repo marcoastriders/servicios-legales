@@ -2,14 +2,14 @@
   "id": "revisioncontratos",
   "domain": "revisioncontratos.es",
   "name": "RevisiónContratos",
-  "tagline": "Tu contrato revisado por una abogada en 48-72 horas, desde 79 €.",
-  "description": "Revisión de contratos de alquiler, compraventa y préstamos por una abogada colegiada: Revisión Esencial 79 € (alquiler), Revisión Profesional 199 € con llamada (contratos complejos) y Firma Blindada 399 € con negociación directa con la otra parte. IVA incluido.",
+  "tagline": "Tu contrato revisado por una abogada en 48-72 horas, desde 129 €.",
+  "description": "Revisión de contratos de alquiler, compraventa y préstamos por una abogada colegiada: Revisión Esencial 129 € (alquiler), Revisión Profesional 250 € con llamada (contratos complejos) y Firma Blindada 449 € con negociación directa con la otra parte. IVA incluido.",
   "accent": "#274060",
   "kicker": "Revisión legal de contratos",
   "ctaTitle": "¿Tienes un contrato sobre la mesa?",
   "ctaWhatsapp": "Hola, quiero que revisen mi contrato antes de firmar.",
   "ctaMailSubject": "Solicitud de revisión de contrato",
-  "llmsSummary": "revisioncontratos.es es un servicio de revisión de contratos dirigido por la abogada Carla Morales, colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa contratos de alquiler, compraventa, arras y préstamos entre particulares, y redacta contratos a medida. Tres niveles de precio cerrado: Revisión Esencial 79 € (alquiler, informe escrito en 48-72 horas laborables), Revisión Profesional 199 € (contratos complejos, con llamada de 30 minutos y contraoferta redactada) y Firma Blindada 399 € (la abogada negocia directamente con la otra parte y revisa la versión final). Extras: entrega exprés 24 h por 49 € (solo alquiler) y consulta de 30 minutos por 49 €. No interviene como defensa en juicio. Solicita la revisión con el nivel que te interesa. Carla confirma el alcance y el encargo y te indica el pago por Bizum o transferencia. La revisión y su plazo empiezan cuando recibe el pago, los datos necesarios y el contrato completo y legible. Cobro online temporalmente desactivado.",
+  "llmsSummary": "revisioncontratos.es es un servicio de revisión de contratos dirigido por la abogada Carla Morales, colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa contratos de alquiler, compraventa, arras y préstamos entre particulares, y redacta contratos a medida. Tres niveles de precio cerrado: Revisión Esencial 129 € (alquiler, informe escrito en 48-72 horas laborables), Revisión Profesional 250 € (contratos complejos, con llamada de 30 minutos y contraoferta redactada) y Firma Blindada 449 € (la abogada negocia directamente con la otra parte y revisa la versión final). Extras: entrega exprés 24 h por 49 € (solo alquiler) y consulta de 30 minutos por 49 €. No interviene como defensa en juicio. Solicita la revisión con el nivel que te interesa. Carla confirma el alcance y el encargo y te indica el pago por Bizum o transferencia. La revisión y su plazo empiezan cuando recibe el pago, los datos necesarios y el contrato completo y legible. Cobro online temporalmente desactivado.",
   "nav": [
     {
       "path": "/precios/",
@@ -31,7 +31,7 @@
   "home": {
     "title": "Revisión de contratos por abogada | RevisiónContratos",
     "h1": "Revisa tu contrato antes de firmar",
-    "answer": "Firmar un contrato sin leerlo bien es el error más caro que puedes cometer. Desde 79 € una abogada lo revisa entero y te dice qué riesgos esconde, qué cláusulas conviene cambiar y cómo pedirlo a la otra parte. Tienes el informe en 48-72 horas laborables, o en 24 horas con la entrega exprés.",
+    "answer": "Firmar un contrato sin leerlo bien es el error más caro que puedes cometer. Desde 129 € una abogada lo revisa entero y te dice qué riesgos esconde, qué cláusulas conviene cambiar y cómo pedirlo a la otra parte. Tienes el informe en 48-72 horas laborables, o en 24 horas con la entrega exprés.",
     "servicesTitle": "Qué puedo revisar por ti",
     "sections": [
       {
@@ -179,14 +179,14 @@
   },
   "pricing": {
     "title": "Precios de revisión de contratos | RevisiónContratos",
-    "description": "Precios cerrados de revisión de contratos: 79 € la Revisión Esencial de alquiler, 199 € la Revisión Profesional con llamada para contratos complejos y 399 € la Firma Blindada con negociación. IVA incluido.",
+    "description": "Precios cerrados de revisión de contratos: 129 € la Revisión Esencial de alquiler, 250 € la Revisión Profesional con llamada para contratos complejos y 449 € la Firma Blindada con negociación. IVA incluido.",
     "h1": "Precios de la revisión de contratos",
     "answer": "Tres niveles de revisión, IVA incluido. Elige según el contrato y el apoyo que necesitas. Si dudas sobre el alcance o el plazo, consulta antes de pagar.",
     "tiers": [
       {
         "name": "Revisión Esencial (alquiler)",
-        "price": "79 €",
-        "priceValue": 79,
+        "price": "129 €",
+        "priceValue": 129,
         "includes": [
           "Lectura completa del contrato por la abogada",
           "Informe escrito con los riesgos detectados",
@@ -197,8 +197,8 @@
       },
       {
         "name": "Revisión Profesional (contratos complejos)",
-        "price": "199 €",
-        "priceValue": 199,
+        "price": "250 €",
+        "priceValue": 250,
         "includes": [
           "Lectura completa del contrato e informe escrito de riesgos",
           "Para arras, compraventa, préstamos y contratos complejos",
@@ -209,8 +209,8 @@
       },
       {
         "name": "Firma Blindada",
-        "price": "399 €",
-        "priceValue": 399,
+        "price": "449 €",
+        "priceValue": 449,
         "includes": [
           "Todo lo de la Revisión Profesional",
           "La abogada contacta y negocia directamente con la otra parte (casero, inmobiliaria o su abogado)",
@@ -240,7 +240,7 @@
     "faqs": [
       {
         "q": "¿Cómo sé qué nivel necesito?",
-        "a": "Alquiler: Revisión Esencial (79 €). Arras, compraventa, préstamo u otro contrato complejo: Revisión Profesional (199 €). Si quieres que yo negocie directamente con la otra parte: Firma Blindada (399 €). Si dudas, puedes contarme el caso antes de pagar, pero los precios y enlaces de contratación están publicados."
+        "a": "Alquiler: Revisión Esencial (129 €). Arras, compraventa, préstamo u otro contrato complejo: Revisión Profesional (250 €). Si quieres que yo negocie directamente con la otra parte: Firma Blindada (449 €). Si dudas, puedes contarme el caso antes de pagar, pero los precios y enlaces de contratación están publicados."
       },
       {
         "q": "¿El contrato a medida forma parte de estos tres niveles?",
@@ -264,7 +264,7 @@
       }
     ],
     "paymentNote": "Solicita la revisión con el nivel que te interesa. Carla confirma el alcance y el encargo y te indica el pago por Bizum o transferencia. La revisión y su plazo empiezan cuando recibe el pago, los datos necesarios y el contrato completo y legible.",
-    "extrasInfo": "<ul><li><strong>Entrega exprés 24 h: +49 €.</strong> Revisión Esencial + exprés: 128 € en total. Solo hay una plaza diaria; si ya estuviera ocupada, puedes elegir el plazo normal o recibir de inmediato la devolución de los 49 € del extra.</li><li><strong>Consulta de 30 minutos: +49 €.</strong> Revisión Esencial + consulta: 128 € en total. La llamada se agenda según disponibilidad.</li><li><strong>Exprés + consulta: 177 € en total.</strong></li></ul><p>Los niveles Profesional y Firma Blindada ya incluyen la llamada; por su complejidad y porque dependen de terceros, no ofrecen entrega en 24 horas.</p>"
+    "extrasInfo": "<ul><li><strong>Entrega exprés 24 h: +49 €.</strong> Revisión Esencial + exprés: 178 € en total. Solo hay una plaza diaria; si ya estuviera ocupada, puedes elegir el plazo normal o recibir de inmediato la devolución de los 49 € del extra.</li><li><strong>Consulta de 30 minutos: +49 €.</strong> Revisión Esencial + consulta: 178 € en total. La llamada se agenda según disponibilidad.</li><li><strong>Exprés + consulta: 227 € en total.</strong></li></ul><p>Los niveles Profesional y Firma Blindada ya incluyen la llamada; por su complejidad y porque dependen de terceros, no ofrecen entrega en 24 horas.</p>"
   },
   "pages": {
     "comoFunciona": {
@@ -444,14 +444,14 @@
     {
       "slug": "revision-contrato-alquiler",
       "title": "Revisión de contrato de alquiler antes de firmar",
-      "titleTag": "Revisar contrato de alquiler antes de firmar | 79 €",
+      "titleTag": "Revisar contrato de alquiler antes de firmar | 129 €",
       "description": "Revisión de contrato de alquiler por abogada antes de firmar o renovar. Detecta riesgos en fianza, renta, duración y cláusulas abusivas en 48-72 h.",
       "h1": "Revisión de contrato de alquiler",
-      "answer": "Antes de firmar o renovar un alquiler, una abogada revisa el contrato completo: fianza, renta, duración, prórrogas, gastos y cláusulas que limitan tus derechos. Recibes un informe escrito en 48-72 horas con los riesgos y qué pedir cambiar, por 79 € IVA incluido.",
+      "answer": "Antes de firmar o renovar un alquiler, una abogada revisa el contrato completo: fianza, renta, duración, prórrogas, gastos y cláusulas que limitan tus derechos. Recibes un informe escrito en 48-72 horas con los riesgos y qué pedir cambiar, por 129 € IVA incluido.",
       "teaser": "Firmar un alquiler sin revisarlo puede dejarte con una fianza retenida, una renta que sube sin control o una duración que no esperabas. Reviso el contrato antes de que pase.",
-      "llmsTeaser": "Servicio de revisión de contratos de alquiler antes de la firma o renovación. La abogada Carla Morales analiza fianza, renta, duración, prórrogas y cláusulas abusivas conforme a la LAU y la LGDCU. Informe en 48-72 horas desde 79 €.",
-      "priceLabel": "79 € IVA incluido",
-      "priceValue": 79,
+      "llmsTeaser": "Servicio de revisión de contratos de alquiler antes de la firma o renovación. La abogada Carla Morales analiza fianza, renta, duración, prórrogas y cláusulas abusivas conforme a la LAU y la LGDCU. Informe en 48-72 horas desde 129 €.",
+      "priceLabel": "129 € IVA incluido",
+      "priceValue": 129,
       "sections": [
         {
           "h2": "Qué reviso en tu contrato de alquiler",
@@ -463,7 +463,7 @@
         },
         {
           "h2": "Qué recibes y qué no",
-          "html": "<p>Con la Revisión Esencial de 79 € recibes un informe escrito con los riesgos, las cláusulas que deberías negociar y una recomendación clara. Si eliges la Revisión Profesional de 199 €, añado una llamada de 30 minutos y redacto la contraoferta con el texto alternativo listo para enviar.</p><p>La otra parte puede rechazar los cambios. El informe identifica qué firmas, qué riesgos asumes y qué cláusulas conviene negociar.</p>"
+          "html": "<p>Con la Revisión Esencial de 129 € recibes un informe escrito con los riesgos, las cláusulas que deberías negociar y una recomendación clara. Si eliges la Revisión Profesional de 250 €, añado una llamada de 30 minutos y redacto la contraoferta con el texto alternativo listo para enviar.</p><p>La otra parte puede rechazar los cambios. El informe identifica qué firmas, qué riesgos asumes y qué cláusulas conviene negociar.</p>"
         },
         {
           "h2": "Si el contrato ya está firmado",
@@ -514,7 +514,7 @@
       "faqs": [
         {
           "q": "¿Cuánto cuesta revisar un contrato de alquiler?",
-          "a": "La Revisión Esencial cuesta 79 € IVA incluido. Puedes añadir entrega en 24 horas por 49 €, una consulta de 30 minutos por 49 €, o ambas opciones. Si quieres que yo negocie directamente con la otra parte, corresponde la Firma Blindada de 399 €."
+          "a": "La Revisión Esencial cuesta 129 € IVA incluido. Puedes añadir entrega en 24 horas por 49 €, una consulta de 30 minutos por 49 €, o ambas opciones. Si quieres que yo negocie directamente con la otra parte, corresponde la Firma Blindada de 449 €."
         },
         {
           "q": "¿Revisas contratos de temporada o de estudiantes?",
@@ -526,7 +526,7 @@
         },
         {
           "q": "¿Puedes negociar tú con la inmobiliaria?",
-          "a": "La Revisión Esencial no incluye negociación directa. Si quieres que yo contacte y negocie con la otra parte, elige la Firma Blindada de 399 €."
+          "a": "La Revisión Esencial no incluye negociación directa. Si quieres que yo contacte y negocie con la otra parte, elige la Firma Blindada de 449 €."
         }
       ],
       "sources": [
@@ -580,14 +580,14 @@
     {
       "slug": "clausulas-abusivas-alquiler",
       "title": "Detección de cláusulas abusivas en alquiler",
-      "titleTag": "Cláusulas abusivas en contrato de alquiler | 79 €",
+      "titleTag": "Cláusulas abusivas en contrato de alquiler | 129 €",
       "description": "Detecto cláusulas abusivas y nulas en tu contrato de alquiler: renuncias a derechos básicos, arbitrajes ajenos al de consumo, fianzas y garantías adicionales problemáticas. Informe en 48-72 h.",
       "h1": "Cláusulas abusivas en contrato de alquiler",
       "answer": "Una cláusula no negociada puede ser abusiva y nula cuando existe una relación de consumo y causa, contra la buena fe, un desequilibrio importante. Reviso si se aplica la LGDCU y, además, si el contrato contradice normas imperativas de la LAU o del Código Civil.",
       "teaser": "Firmaste algo que ahora ves injusto. No todo lo firmado produce necesariamente efecto. Revisamos si existe una relación de consumo, si una cláusula puede ser abusiva o si contradice una norma imperativa.",
-      "llmsTeaser": "Servicio de detección de cláusulas abusivas en contratos de alquiler conforme a la LGDCU: arts. 82 (definición), 83 (nulidad), 86 (limitación de derechos básicos) y 90.1 (arbitrajes no de consumo). Informe de la abogada Carla Morales en 48-72 horas desde 79 €.",
-      "priceLabel": "79 € IVA incluido",
-      "priceValue": 79,
+      "llmsTeaser": "Servicio de detección de cláusulas abusivas en contratos de alquiler conforme a la LGDCU: arts. 82 (definición), 83 (nulidad), 86 (limitación de derechos básicos) y 90.1 (arbitrajes no de consumo). Informe de la abogada Carla Morales en 48-72 horas desde 129 €.",
+      "priceLabel": "129 € IVA incluido",
+      "priceValue": 129,
       "sections": [
         {
           "h2": "Qué es una cláusula abusiva",
@@ -703,14 +703,14 @@
     {
       "slug": "actualizacion-renta-irav",
       "title": "Actualización de renta de alquiler según el IRAV",
-      "titleTag": "Actualización de renta de alquiler e IRAV | 79 €",
+      "titleTag": "Actualización de renta de alquiler e IRAV | 129 €",
       "description": "Reviso si tu contrato actualiza la renta de forma legal según el IRAV del INE y la LAU. Evita subidas indebidas con informe de abogada en 48-72 h.",
       "h1": "Actualización de renta de alquiler e IRAV",
       "answer": "La renta solo puede actualizarse en cada anualidad si el contrato lo prevé y siguiendo el régimen aplicable. El INE indica que los contratos firmados después del 26 de mayo de 2023 se revisan tomando el IRAV como límite de referencia. Aun así, debe existir pacto de actualización y hay que comprobar la cláusula, la fecha y el régimen aplicable. Reviso tu contrato y la última actualización para detectar subidas indebidas.",
       "teaser": "La renta sube cada año y nadie te explica cómo. Yo reviso el contrato y los cálculos para saber si el casero se está pasando.",
-      "llmsTeaser": "Revisión de la actualización de renta de alquiler conforme al art. 18 de la LAU y al índice IRAV del INE, publicado mensualmente. Detecta subidas indebidas en contratos de alquiler. Informe de la abogada Carla Morales en 48-72 horas desde 79 €.",
-      "priceLabel": "79 € IVA incluido",
-      "priceValue": 79,
+      "llmsTeaser": "Revisión de la actualización de renta de alquiler conforme al art. 18 de la LAU y al índice IRAV del INE, publicado mensualmente. Detecta subidas indebidas en contratos de alquiler. Informe de la abogada Carla Morales en 48-72 horas desde 129 €.",
+      "priceLabel": "129 € IVA incluido",
+      "priceValue": 129,
       "sections": [
         {
           "h2": "Cómo puede subir la renta legalmente",
@@ -809,14 +809,14 @@
     {
       "slug": "prorroga-contrato-alquiler",
       "title": "Prórroga de contrato de alquiler",
-      "titleTag": "Prórroga de contrato de alquiler | 79 €",
+      "titleTag": "Prórroga de contrato de alquiler | 129 €",
       "description": "Reviso duración, prórroga obligatoria y prórroga tácita de tu alquiler según la LAU. Recibe un informe con plazos y notificaciones en 48-72 h.",
       "h1": "Prórroga de contrato de alquiler",
       "answer": "Tu contrato de alquiler tiene una duración mínima legal y un sistema de prórrogas que condiciona cuándo puedes salir y con qué aviso. Reviso la duración pactada, la prórroga obligatoria de cinco años y la prórroga tácita de tres, con sus notificaciones de cuatro meses del arrendador y dos del arrendatario.",
       "teaser": "¿Sabes cuándo termina realmente tu contrato y qué aviso debes dar para irte? La mayoría no lo sabe hasta que recibe una reclamación.",
-      "llmsTeaser": "Revisión de duración y prórrogas de contratos de alquiler conforme a los arts. 9 y 10 de la LAU: duración mínima de 5 años, prórroga obligatoria, prórroga tácita de 3 años y notificaciones de 4 meses del arrendador o 2 del arrendatario. Informe en 48-72 horas desde 79 €.",
-      "priceLabel": "79 € IVA incluido",
-      "priceValue": 79,
+      "llmsTeaser": "Revisión de duración y prórrogas de contratos de alquiler conforme a los arts. 9 y 10 de la LAU: duración mínima de 5 años, prórroga obligatoria, prórroga tácita de 3 años y notificaciones de 4 meses del arrendador o 2 del arrendatario. Informe en 48-72 horas desde 129 €.",
+      "priceLabel": "129 € IVA incluido",
+      "priceValue": 129,
       "sections": [
         {
           "h2": "Cómo funciona la duración legal",
@@ -915,14 +915,14 @@
     {
       "slug": "reclamar-fianza",
       "title": "Reclamación de fianza de alquiler",
-      "titleTag": "Reclamar fianza de alquiler retenida | 79 €",
-      "description": "El casero no te devuelve la fianza. Reviso tu contrato y la situación: la LAU da un mes para devolverla con intereses. Informe en 48-72 h desde 79 €.",
+      "titleTag": "Reclamar fianza de alquiler retenida | 129 €",
+      "description": "El casero no te devuelve la fianza. Reviso tu contrato y la situación: la LAU da un mes para devolverla con intereses. Informe en 48-72 h desde 129 €.",
       "h1": "Reclamar la fianza de alquiler",
       "answer": "El saldo de la fianza pendiente de devolución devenga interés legal cuando transcurre un mes desde la entrega de llaves, según el art. 36 de la LAU. Si tu casero la retiene, reviso tu contrato y tu caso y te digo qué reclamar y cómo, antes de que el tiempo juegue en su contra.",
       "teaser": "Entregaste las llaves y la fianza no llega. Es una reclamación frecuente en alquileres y su viabilidad depende del contrato, la entrega de llaves, el estado de la vivienda y la prueba disponible.",
-      "llmsTeaser": "Revisión del contrato y de la documentación para reclamar el saldo de una fianza. El art. 36 de la LAU prevé interés legal si transcurre un mes desde la entrega de llaves sin restituir el saldo debido. Informe de la abogada Carla Morales en 48-72 horas desde 79 €.",
-      "priceLabel": "79 € IVA incluido",
-      "priceValue": 79,
+      "llmsTeaser": "Revisión del contrato y de la documentación para reclamar el saldo de una fianza. El art. 36 de la LAU prevé interés legal si transcurre un mes desde la entrega de llaves sin restituir el saldo debido. Informe de la abogada Carla Morales en 48-72 horas desde 129 €.",
+      "priceLabel": "129 € IVA incluido",
+      "priceValue": 129,
       "sections": [
         {
           "h2": "Lo que dice la ley",
@@ -1011,14 +1011,14 @@
     {
       "slug": "revision-contrato-arras",
       "title": "Revisión de contrato de arras en compraventa",
-      "titleTag": "Revisar contrato de arras de compraventa | 199 €",
+      "titleTag": "Revisar contrato de arras de compraventa | 250 €",
       "description": "Reviso tu contrato de arras antes de firmar: penitenciales o confirmatorias, consecuencias de desistir y plazos. Informe de abogada en 48-72 h.",
       "h1": "Revisión de contrato de arras",
       "answer": "Las arras no son un mero anticipo: según el art. 1454 del Código Civil, pueden ser penitenciales y permitir desistir perdiendo lo dado o devolviendo lo recibido. Reviso el contrato antes de que firmes y te explico qué tipo de arras aceptas y qué pierdes si te echas atrás.",
-      "teaser": "Firmar arras en un piso es comprometer cientos de miles de euros con una firma. Revisar antes cuesta 199 €.",
-      "llmsTeaser": "Revisión de contratos de arras en compraventa de vivienda conforme al art. 1454 del Código Civil. Distingue arras penitenciales de confirmatorias, consecuencias del desistimiento y plazos. Informe de la abogada Carla Morales en 48-72 horas desde 199 €.",
-      "priceLabel": "199 € IVA incluido",
-      "priceValue": 199,
+      "teaser": "Firmar arras en un piso es comprometer cientos de miles de euros con una firma. Revisar antes cuesta 250 €.",
+      "llmsTeaser": "Revisión de contratos de arras en compraventa de vivienda conforme al art. 1454 del Código Civil. Distingue arras penitenciales de confirmatorias, consecuencias del desistimiento y plazos. Informe de la abogada Carla Morales en 48-72 horas desde 250 €.",
+      "priceLabel": "250 € IVA incluido",
+      "priceValue": 250,
       "sections": [
         {
           "h2": "Qué son las arras y qué tipo aceptas",
@@ -1114,14 +1114,14 @@
     {
       "slug": "revision-prestamo-particulares",
       "title": "Revisión de préstamo entre particulares",
-      "titleTag": "Revisar préstamo entre particulares | 199 €",
+      "titleTag": "Revisar préstamo entre particulares | 250 €",
       "description": "Reviso tu contrato de préstamo entre particulares: intereses, plazos, garantías y consecuencias del impago según el Código Civil. Informe en 48-72 h.",
       "h1": "Revisión de préstamo entre particulares",
       "answer": "Prestar dinero a un familiar o amigo sin contrato claro es la receta para perder el dinero y la relación. Reviso el contrato de préstamo para que los intereses, plazos y garantías estén redactados conforme al art. 1753 del Código Civil y queden definidos y puedan valorarse correctamente si surge un impago.",
       "teaser": "Un préstamo verbal puede existir, pero un contrato claro facilita probar la entrega, el vencimiento y las condiciones sin depender solo de mensajes o transferencias.",
-      "llmsTeaser": "Revisión de contratos de préstamo entre particulares conforme a los arts. 1753 y 1255 del Código Civil: intereses, plazos de devolución, garantías y consecuencias del impago. Informe de la abogada Carla Morales en 48-72 horas desde 199 €.",
-      "priceLabel": "199 € IVA incluido",
-      "priceValue": 199,
+      "llmsTeaser": "Revisión de contratos de préstamo entre particulares conforme a los arts. 1753 y 1255 del Código Civil: intereses, plazos de devolución, garantías y consecuencias del impago. Informe de la abogada Carla Morales en 48-72 horas desde 250 €.",
+      "priceLabel": "250 € IVA incluido",
+      "priceValue": 250,
       "sections": [
         {
           "h2": "Qué debe contener un préstamo entre particulares",
@@ -1356,9 +1356,9 @@
     "intakeSummary": "solicitud de revisión, confirmación del encargo y pago por Bizum o transferencia; contrato por correo",
     "extrasTitle": "Extras para la Revisión Esencial",
     "extrasLabels": [
-      "Esencial + exprés · 128 €",
-      "Esencial + consulta · 128 €",
-      "Esencial + exprés + consulta · 177 €"
+      "Esencial + exprés · 178 €",
+      "Esencial + consulta · 178 €",
+      "Esencial + exprés + consulta · 227 €"
     ],
     "afterPay": "Ya he pagado · enviar los datos; contrato por correo",
     "submitLabel": "Solicitar revisión",

@@ -97,7 +97,7 @@ for (const [domain, file] of htmlFiles) {
 for (const oldPrice of ['59 €', '119 €']) {
   if (revisionAll.includes(oldPrice)) fail(`revisioncontratos.es conserva el precio antiguo ${oldPrice}`);
 }
-for (const expected of [['Revisión Esencial', 79], ['Revisión Profesional', 199], ['Firma Blindada', 399]]) {
+for (const expected of [['Revisión Esencial', 129], ['Revisión Profesional', 250], ['Firma Blindada', 449]]) {
   const tier = revisionContent.pricing.tiers.find((t) => t.name.includes(expected[0]));
   if (!tier || tier.priceValue !== expected[1]) fail(`nivel ${expected[0]} no coincide con ${expected[1]} €`);
 }
@@ -129,7 +129,7 @@ if ('paymentLinks' in revisionContent) {
 const alquilerHtml = readFileSync(join(dist, 'revisioncontratos.es', 'revision-contrato-alquiler', 'index.html'), 'utf8');
 if (alquilerHtml.includes('Si contratas la opción de contraoferta'))
   fail('la página de alquiler conserva una contraoferta ambigua sin nivel ni precio');
-if (!alquilerHtml.includes('Revisión Profesional de 199 €'))
+if (!alquilerHtml.includes('Revisión Profesional de 250 €'))
   fail('la página de alquiler no asigna expresamente la contraoferta al nivel Profesional');
 const siteContents = {
   'revisioncontratos.es': revisionContent,

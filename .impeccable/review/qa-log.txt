@@ -1,0 +1,52 @@
+{
+  "routes": 19,
+  "geometry": 15,
+  "consent": [
+    {
+      "choice": "accept",
+      "persistence": true,
+      "ctaOverlap": false,
+      "storage": "accepted"
+    },
+    {
+      "choice": "reject",
+      "persistence": true,
+      "ctaOverlap": false,
+      "storage": "rejected"
+    }
+  ],
+  "forms": [
+    {
+      "scenario": "success",
+      "loadingDisabled": true,
+      "text": "Caso enviado. Carla lo revisará personalmente y te responderá con el servicio y presupuesto que correspondan. Te llegará una confirmación a tu email.",
+      "role": "status",
+      "live": "polite",
+      "display": "block",
+      "focused": true
+    },
+    {
+      "scenario": "error",
+      "loadingDisabled": true,
+      "text": "No se pudo enviar (prueba controlada). Si persiste, escribe a abogada@carlamorales.es.",
+      "role": "status",
+      "live": "polite",
+      "display": "block",
+      "focused": false
+    },
+    {
+      "scenario": "network",
+      "loadingDisabled": true,
+      "text": "Sin conexión con el servidor. Inténtalo de nuevo o escribe a abogada@carlamorales.es.",
+      "role": "status",
+      "live": "polite",
+      "display": "block",
+      "focused": false
+    }
+  ],
+  "sibling": {
+    "files": 22,
+    "byteIdentical": true
+  },
+  "errors": []
+}

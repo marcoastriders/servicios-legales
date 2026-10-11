@@ -1,0 +1,29 @@
+{
+  "screenshots": [
+    "baseline-1440.png",
+    "baseline-390.png",
+    "burofax-impago-alquiler-1440.png",
+    "burofax-impago-alquiler-390.png",
+    "burofax-impago-alquiler-768.png",
+    "cuenta-tu-caso-1440.png",
+    "cuenta-tu-caso-390.png",
+    "cuenta-tu-caso-768.png",
+    "desktop.png",
+    "mobile.png",
+    "precios-1440.png",
+    "precios-390.png",
+    "precios-768.png",
+    "quien-revisa-1440.png",
+    "quien-revisa-390.png",
+    "quien-revisa-768.png",
+    "tablet.png"
+  ],
+  "required": [
+    "desktop.png",
+    "mobile.png",
+    "tablet.png"
+  ],
+  "artifactRoot": "/home/hermes/.hermes/cache/scratch/bf-design-worktree",
+  "baseline": "3f5a0cb2ffdff4ef59e2c1204fad11c48c55f3c6",
+  "reviewDisposition": "pending-parent-fresh-review"
+}

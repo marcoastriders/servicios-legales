@@ -1,0 +1,1 @@
+BUROFAX DESIGN GATE PASSED · content intact · nav intact · scoped CSS · portrait pixels unchanged · 22 sibling files byte-identical

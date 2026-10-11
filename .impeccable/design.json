@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-11T17:16:47.856484+00:00",
+  "title": "Design System: BurofaxLegal",
+  "extensions": {
+    "motion": [
+      {
+        "name": "interaction",
+        "value": "background .2s ease-out,color .2s ease-out",
+        "purpose": "Estados de botones; sin entradas que oculten contenido. Un único gesto propio en el CTA de portada: regla de tinta con clip-path .42s cubic-bezier(.16,1,.3,1), hover/focus-visible y reduced-motion sin transición."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "single-reading",
+        "value": "960px"
+      },
+      {
+        "name": "stacked-directory",
+        "value": "768px"
+      },
+      {
+        "name": "single-accountability",
+        "value": "480px"
+      }
+    ],
+    "shadows": []
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "description": "Primary Button del sistema construido",
+      "html": "<button class=\"ds-primary\">Cuéntanos tu caso</button>",
+      "css": ".ds-primary{font-family:sans-serif;border-radius:0;min-height:48px;padding:.9rem 1.25rem;border:1px solid #28594c;background:#28594c;color:#f4f0e6}.ds-primary:hover{background:#102e28}.ds-primary:focus-visible{outline:3px solid #986a13;outline-offset:4px}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Inverse Button",
+      "kind": "button",
+      "description": "Inverse Button del sistema construido",
+      "html": "<div class=\"ds-dark\"><button class=\"ds-inverse\">Cuéntanos tu caso</button></div>",
+      "css": ".ds-dark{padding:20px;background:#183c35}.ds-inverse{font-family:sans-serif;border-radius:0;min-height:48px;padding:.9rem 1.25rem;border:1px solid #28594c;background:#f4f0e6;color:#183c35;border-color:#f4f0e6}.ds-inverse:hover{background:#ddceaa}.ds-inverse:focus-visible{outline:3px solid #ddceaa;outline-offset:4px}",
+      "refersTo": "button-inverse"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "description": "Secondary Button del sistema construido",
+      "html": "<button class=\"ds-secondary\">Ver precios</button>",
+      "css": ".ds-secondary{font-family:sans-serif;border-radius:0;min-height:48px;padding:.9rem 1.25rem;border:1px solid #28594c;background:transparent;color:#183c35;border-color:#183c35}.ds-secondary:hover{background:#183c35;color:#f4f0e6}.ds-secondary:focus-visible{outline:3px solid #986a13;outline-offset:4px}"
+    },
+    {
+      "name": "Case Input",
+      "kind": "input",
+      "description": "Case Input del sistema construido",
+      "html": "<label class=\"ds-label\" for=\"ds-name\">Tu nombre completo</label><input class=\"ds-input\" id=\"ds-name\" autocomplete=\"name\">",
+      "css": ".ds-label{display:block;font:600 16px sans-serif;margin-bottom:5px;color:#183c35}.ds-input{font:16px sans-serif;padding:.8rem;border:1px solid #738278;border-radius:0;background:#fcfaf4;color:#183c35;caret-color:#28594c}.ds-input:focus-visible{outline:3px solid #986a13;outline-offset:4px}",
+      "refersTo": "input"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Navigation del sistema construido",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Ejemplo\"><a href=\"#\">Cómo funciona</a><a href=\"#\">Quién revisa</a><a href=\"#\">Cuéntanos tu caso</a></nav>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:20px;font:14px sans-serif}.ds-nav a{padding:12px 0;color:#183c35;text-decoration:none}.ds-nav a:last-child{border:1px solid #183c35;padding:12px}.ds-nav a:hover{text-decoration:underline;text-underline-offset:4px}.ds-nav a:focus-visible{outline:3px solid #986a13;outline-offset:4px}"
+    },
+    {
+      "name": "FAQ Disclosure",
+      "kind": "custom",
+      "description": "FAQ Disclosure del sistema construido",
+      "html": "<details class=\"ds-faq\"><summary>¿Y si el destinatario no recoge el burofax?</summary><p>Consulta la explicación aprobada del servicio y sus límites.</p></details>",
+      "css": ".ds-faq{font:16px/1.75 sans-serif;color:#183c35;padding:1rem 0;border-block:1px solid #bbbca9}.ds-faq summary{font-weight:600;cursor:pointer}.ds-faq[open]{background:#e5e9dd;padding-inline:1rem}.ds-faq summary:focus-visible{outline:3px solid #986a13;outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Registro de responsabilidad",
+    "overview": "Una presencia profesional abierta, no un catálogo de promesas. La tinta verde sostiene regiones completas; el papel cálido permite leer documentación larga. La autora real tiene presencia propia, fuera de una tarjeta comercial.",
+    "keyCharacteristics": [
+      "Declaración tipográfica ancha.",
+      "Superficies abiertas y reglas finas.",
+      "Responsabilidad profesional visible.",
+      "Controles rectos y contraste explícito."
+    ],
+    "rules": [
+      {
+        "name": "The Region Rule",
+        "body": "El color estructura regiones completas, no una colección de badges.",
+        "section": "colors"
+      },
+      {
+        "name": "The Reading Rule",
+        "body": "Prosa y respuestas se limitan a 65ch; no usar mono ornamental ni mayúsculas como sustituto de jerarquía.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do aislar toda regla visual bajo .site-burofaxlegal y cargar fuentes exclusivamente en ese dominio.",
+      "Do conservar contenido jurídico, tarifas quote-first, schema e IDs de formulario.",
+      "Do contrastar CTA con valores calculados del navegador."
+    ],
+    "donts": [
+      "Don’t introducir nuevas promesas, pruebas sociales o precios cerrados por defecto.",
+      "Don’t modificar el diseño ni texto de revisioncontratos.es.",
+      "Don’t reconstruir el hero dividido con tarjeta de confianza.",
+      "Don’t emplear gradientes, glass, icon-card grids ni clichés jurídicos."
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Burofax redactado por abogada | BurofaxLegal",
+  "h1": "Tu burofax, redactado y revisado por abogada antes de enviarlo",
+  "hero": {
+    "x": 20,
+    "y": 248.203125,
+    "width": 350,
+    "height": 1476.875,
+    "top": 248.203125,
+    "right": 370,
+    "bottom": 1725.078125,
+    "left": 20
+  },
+  "styles": "Georgia, \"Times New Roman\", serif"
+}

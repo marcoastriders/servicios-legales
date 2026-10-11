@@ -1,0 +1,140 @@
+/* BurofaxLegal only. Shared sheet and sibling output stay unchanged. */
+@font-face { font-family: 'BF Bodoni'; src: url('/assets/fonts/bf-bodoni.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'BF Public'; src: url('/assets/fonts/bf-public-sans.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'BF Public'; src: url('/assets/fonts/bf-public-sans-semibold.ttf') format('truetype'); font-weight: 600 800; font-display: swap; }
+body.site-burofaxlegal {
+ --fondo:#f4f0e6; --tarjeta:#fcfaf4; --tinta:#183c35; --tinta-suave:#496059; --acento:#28594c; --acento-suave:#e5e9dd; --linea:#bbbca9;
+ --bf-ink:#183c35; --bf-ink-2:#102e28; --bf-parch:#f4f0e6; --bf-parch-dim:#e0e3d6; --bf-copper:#b7a478; --bf-copper-text:#66552f; --bf-copper-light:#ddceaa;
+ --bf-display:'BF Bodoni',Georgia,serif; --bf-body:'BF Public',sans-serif; --bf-mono:'BF Public',sans-serif;
+ --bf-shell:82rem; --bf-reading:45rem; --bf-gutter:clamp(1.25rem,5vw,4rem); --bf-section:clamp(3.5rem,8vw,7rem); --bf-radius:0;
+ font-family:var(--bf-body); font-size:1.0625rem; line-height:1.75; scrollbar-color:var(--acento) var(--fondo);
+}
+.site-burofaxlegal ::selection { background:var(--bf-ink); color:var(--bf-parch); }
+.site-burofaxlegal input, .site-burofaxlegal textarea { caret-color:var(--acento); accent-color:var(--acento); }
+.site-burofaxlegal a { text-underline-offset:.25em; text-decoration-thickness:1px; }
+.site-burofaxlegal h1, .site-burofaxlegal h2, .site-burofaxlegal h3 { font-weight:400; letter-spacing:-.025em; text-wrap:balance; }
+.site-burofaxlegal h1 { font-size:clamp(2.8rem,5.4vw,5.2rem); max-width:22ch; line-height:1.09; margin:.5em 0 .45em; }
+.site-burofaxlegal h2 { font-size:clamp(1.85rem,3vw,2.7rem); margin:2em 0 .6em; }
+.site-burofaxlegal h3 { font-size:1.6rem; }
+.site-burofaxlegal h1 strong, .site-burofaxlegal h2 strong { color:inherit; font-weight:400; }
+.site-burofaxlegal .cabecera { background:var(--fondo); padding:1.1rem 0; border-bottom:1px solid var(--linea); }
+.site-burofaxlegal .marca { font-size:2rem; font-weight:400; }
+.site-burofaxlegal .marca-sub { font-family:var(--bf-body); font-size:.7rem; text-transform:none; letter-spacing:0; }
+.site-burofaxlegal .nav a { font-weight:400; font-size:.9rem; }
+.site-burofaxlegal .nav a:last-child { background:transparent; border:1px solid var(--tinta); color:var(--tinta); border-radius:0; }
+.site-burofaxlegal .nav a:last-child:hover { background:var(--tinta); color:var(--fondo); }
+.site-burofaxlegal .nav a:last-child[aria-current] { text-decoration-color:var(--tinta); }
+.site-burofaxlegal main { padding-top:3rem; }
+.site-burofaxlegal.home main { padding-top:0; }
+.site-burofaxlegal .migas { font-family:var(--bf-body); letter-spacing:0; font-size:.82rem; margin-bottom:2rem; }
+.site-burofaxlegal .respuesta-directa { border:0; padding:0; font-family:var(--bf-body); font-size:1.15rem; max-width:65ch; line-height:1.75; }
+.site-burofaxlegal .bf-hero { display:block; padding:clamp(2.5rem,5vw,4.5rem) 0; margin:0; background:var(--bf-ink); }
+.site-burofaxlegal .bf-hero h1 { max-width:23ch; font-size:clamp(3rem,6.2vw,5.75rem); line-height:1.06; margin:0 0 .55em; }
+.site-burofaxlegal .bf-hero h1 strong { color:var(--bf-parch); font-weight:400; }
+.site-burofaxlegal .bf-opening { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(0,1fr); gap:clamp(2rem,6vw,5rem); padding-top:2rem; border-top:1px solid #a0ad94; }
+.site-burofaxlegal .bf-opening .respuesta-directa { margin:0; max-width:64ch; color:var(--bf-parch-dim); }
+.site-burofaxlegal .bf-action .hero-botones { margin:0; display:flex; flex-wrap:wrap; gap:.65rem; }
+/* One authored gesture: the primary action draws its ink rule on intent. */
+.site-burofaxlegal .bf-action .boton:first-child { position:relative; }
+.site-burofaxlegal .bf-action .boton:first-child::after { content:''; position:absolute; height:1px; bottom:.45rem; left:1.25rem; right:1.25rem; background:currentColor; clip-path:inset(0 70% 0 0); transition:clip-path .42s cubic-bezier(.16,1,.3,1); }
+.site-burofaxlegal .bf-action .boton:first-child:hover::after, .site-burofaxlegal .bf-action .boton:first-child:focus-visible::after { clip-path:inset(0 0 0 0); }
+.site-burofaxlegal .boton { font-family:var(--bf-body); font-weight:600; padding:.9rem 1.25rem; min-height:48px; border:1px solid var(--acento); background:var(--acento); border-radius:0; margin:0; transition:background .2s ease-out,color .2s ease-out; }
+.site-burofaxlegal .boton:hover { transform:none; background:var(--bf-ink-2); }
+.site-burofaxlegal .boton-sec { color:var(--tinta) !important; background:transparent; border-color:var(--tinta); }
+.site-burofaxlegal .boton-sec:hover { background:var(--tinta); color:var(--fondo) !important; }
+.site-burofaxlegal .bf-hero .boton, .site-burofaxlegal .cta .boton { background:var(--bf-parch); color:var(--bf-ink) !important; border-color:var(--bf-parch); }
+.site-burofaxlegal .bf-hero .boton:hover, .site-burofaxlegal .cta .boton:hover { background:var(--bf-copper-light); color:var(--bf-ink-2) !important; }
+.site-burofaxlegal .bf-hero .boton-sec, .site-burofaxlegal .cta .boton-sec { background:transparent; color:var(--bf-parch) !important; border-color:var(--bf-parch); }
+.site-burofaxlegal .bf-hero .boton-sec:hover, .site-burofaxlegal .cta .boton-sec:hover { background:var(--bf-parch); color:var(--bf-ink) !important; }
+.site-burofaxlegal .bf-sello { border:0; padding:0; margin:1.3rem 0 0; display:block; font-family:var(--bf-body); font-size:.8rem; text-transform:none; letter-spacing:0; line-height:1.8; }
+.site-burofaxlegal .bf-sello li + li { border:0; padding:0; }
+.site-burofaxlegal .confianza { background:transparent; border:0; border-block:1px solid var(--linea); border-radius:0; padding:2rem 0; gap:2rem; }
+.site-burofaxlegal .confianza-foto { width:160px; height:190px; border:0; box-shadow:none; border-radius:0; object-position:center; }
+.site-burofaxlegal .confianza-nombre { font-size:2rem; font-weight:400; }
+.site-burofaxlegal .confianza p { max-width:65ch; }
+.site-burofaxlegal .bf-accountability .confianza { display:grid; grid-template-columns:230px minmax(0,1fr); align-items:center; padding:3.5rem 0; margin:0 0 3rem; border-top:0; }
+.site-burofaxlegal .bf-accountability .confianza-foto { width:230px; height:270px; }
+.site-burofaxlegal .bf-accountability .confianza > div { max-width:48rem; }
+.site-burofaxlegal .confianza-lista { font-size:.93rem; padding-left:1.2rem; }
+.site-burofaxlegal .bf-proceso-lista { margin:0 0 1.5rem; border-top:0; }
+.site-burofaxlegal .bf-proceso-lista li { border-left:0; padding:1rem 2rem 2rem 0; }
+.site-burofaxlegal .bf-proceso-lista li + li { border-left:1px solid var(--linea); padding-left:2rem; }
+.site-burofaxlegal .bf-num { font-family:var(--bf-display); font-size:3.5rem; font-weight:400; color:var(--tinta); margin-bottom:1.4rem; }
+.site-burofaxlegal .bf-proceso-lista h2 { font-size:1.6rem; margin-bottom:.6rem; }
+.site-burofaxlegal .bf-aprende { grid-template-columns:minmax(0,1fr) minmax(0,2fr); gap:5rem; }
+.site-burofaxlegal .bf-aprende-label { font-family:var(--bf-display); font-size:1.9rem; line-height:1.35; color:var(--tinta); }
+.site-burofaxlegal .bf-aprende-label p:last-child { max-width:18ch; margin-top:0; }
+.site-burofaxlegal .bf-prosa { min-width:0; }
+.site-burofaxlegal .bf-prosa p { max-width:65ch; }
+.site-burofaxlegal .bf-indice { padding-block:var(--bf-section); background:var(--acento-suave); box-shadow:0 0 0 100vmax var(--acento-suave); clip-path:inset(0 -100vmax); }
+.site-burofaxlegal .bf-indice-item a { grid-template-columns:minmax(0,1fr) auto; gap:2rem; padding:1.8rem 0; }
+.site-burofaxlegal .bf-indice-cuerpo strong { font-size:1.9rem; font-weight:400; }
+.site-burofaxlegal .bf-indice-cuerpo span { max-width:65ch; }
+.site-burofaxlegal .bf-indice-precio { font-family:var(--bf-body); font-size:.9rem; letter-spacing:0; }
+.site-burofaxlegal .faq { max-width:58rem; }
+.site-burofaxlegal .faq summary { font-family:var(--bf-body); font-weight:600; font-size:1.04rem; padding:.35rem 0; }
+.site-burofaxlegal .faq details[open] { background:var(--acento-suave); padding-inline:1rem; }
+.site-burofaxlegal .faq details p { max-width:65ch; }
+.site-burofaxlegal .fuentes { padding-top:2rem; }
+.site-burofaxlegal .checklist, .site-burofaxlegal .relacionado { border-left:0; border-radius:0; background:var(--acento-suave); padding:1.5rem 2rem; }
+.site-burofaxlegal .precio-linea { border-left:0; padding:0; font-family:var(--bf-body); font-size:1.1rem; }
+.site-burofaxlegal .tabla { max-width:100%; margin-inline:0; padding-inline:0; scrollbar-color:var(--acento) var(--fondo); }
+.site-burofaxlegal th { font-family:var(--bf-body); text-transform:none; letter-spacing:0; }
+.site-burofaxlegal table { font-variant-numeric:tabular-nums; }
+.site-burofaxlegal .precio-cerrado { text-align:left; padding:2.5rem 0; border:0; border-block:1px solid var(--tinta); border-radius:0; background:transparent; box-shadow:none; max-width:58rem; margin-block:3rem; }
+.site-burofaxlegal .precio-cerrado .precio-cifra { font-size:clamp(2.6rem,5vw,4rem); line-height:1.15; font-weight:400; max-width:21ch; }
+.site-burofaxlegal .precio-cerrado .precio-detalle { margin:1.2rem 0 1.8rem; max-width:65ch; font-size:1rem; }
+.site-burofaxlegal .quien-revisa-intro { max-width:none !important; display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); align-items:center; gap:4rem; margin-bottom:5rem; }
+.site-burofaxlegal .quien-revisa-portrait { margin:0; width:100%; max-width:26rem; justify-self:end; }
+.site-burofaxlegal .quien-revisa-portrait img { width:100%; display:block; aspect-ratio:1; object-fit:cover; }
+.site-burofaxlegal .intake { background:var(--tarjeta); border:1px solid var(--linea); border-top:1px solid var(--tinta); max-width:58rem; padding:clamp(1.25rem,4vw,3rem); }
+.site-burofaxlegal .campo label { font-family:var(--bf-body); font-size:1rem; font-weight:600; }
+.site-burofaxlegal .campo input[type='text'], .site-burofaxlegal .campo input[type='email'], .site-burofaxlegal .campo input[type='tel'], .site-burofaxlegal .campo select, .site-burofaxlegal .campo textarea { border-radius:0; border-color:#738278; padding:.8rem; background:var(--tarjeta); }
+.site-burofaxlegal .campo-check input { width:20px; height:20px; accent-color:var(--acento); }
+.site-burofaxlegal .intake [hidden] { display:none; }
+.site-burofaxlegal .boton:disabled { opacity:.65; cursor:wait; }
+.site-burofaxlegal #intake-estado:not(:empty) { padding:1rem; background:var(--acento-suave); color:var(--tinta); }
+.site-burofaxlegal .cta { max-width:none; border-radius:0; padding:clamp(2rem,5vw,4rem); }
+.site-burofaxlegal .cta-titulo { font-weight:400; font-size:clamp(2rem,3.5vw,3rem); max-width:29ch; }
+.site-burofaxlegal .cta-botones { display:flex; flex-wrap:wrap; gap:.75rem; }
+.site-burofaxlegal .cta-nota { max-width:65ch; }
+.site-burofaxlegal .pie { border-top:0; padding:4rem 0; }
+.site-burofaxlegal .pie-marca { font-weight:400; font-size:2rem; }
+.site-burofaxlegal .pie-copy { opacity:1; }
+.site-burofaxlegal .analytics-consent { position:static; width:100%; box-shadow:none; border:0; border-bottom:1px solid var(--linea); background:var(--acento-suave); padding:.7rem max(var(--bf-gutter),calc((100% - 74rem)/2)); font-size:.83rem; }
+.site-burofaxlegal .analytics-consent[hidden] { display:none; }
+.site-burofaxlegal .analytics-consent button { background:var(--tinta); color:var(--fondo); border-color:var(--tinta); border-radius:0; min-height:44px; font:inherit; }
+.site-burofaxlegal .analytics-consent button + button { background:transparent; color:var(--tinta); }
+.site-burofaxlegal a:focus-visible, .site-burofaxlegal button:focus-visible, .site-burofaxlegal input:focus-visible, .site-burofaxlegal select:focus-visible, .site-burofaxlegal textarea:focus-visible, .site-burofaxlegal summary:focus-visible { outline:3px solid #986a13; outline-offset:4px; }
+.site-burofaxlegal .bf-hero a:focus-visible, .site-burofaxlegal .cta a:focus-visible, .site-burofaxlegal .pie a:focus-visible { outline-color:var(--bf-copper-light); }
+@media (max-width:60rem) {
+ .site-burofaxlegal .bf-opening { grid-template-columns:1fr; gap:1.5rem; }
+ .site-burofaxlegal .bf-proceso-lista { grid-template-columns:1fr; }
+ .site-burofaxlegal .bf-proceso-lista li, .site-burofaxlegal .bf-proceso-lista li + li { border-left:0; padding:1.5rem 0; }
+ .site-burofaxlegal .bf-aprende { grid-template-columns:1fr; gap:2rem; }
+ .site-burofaxlegal .bf-aprende-label p:last-child { max-width:30ch; }
+ .site-burofaxlegal .quien-revisa-intro { gap:2rem; }
+}
+@media (max-width:48rem) {
+ .site-burofaxlegal .cabecera-in { gap:1rem; }
+ .site-burofaxlegal .nav { grid-template-columns:repeat(2,minmax(0,1fr)); overflow:visible; }
+ .site-burofaxlegal .nav a:last-child { grid-column:1/-1; }
+ .site-burofaxlegal .bf-hero h1 { font-size:clamp(2.9rem,8.5vw,4rem); max-width:23ch; }
+ .site-burofaxlegal .bf-indice-item a { grid-template-columns:1fr; gap:.65rem; }
+ .site-burofaxlegal .bf-indice-precio { grid-column:1; }
+ .site-burofaxlegal .bf-accountability .confianza { grid-template-columns:160px minmax(0,1fr); gap:1.5rem; }
+ .site-burofaxlegal .bf-accountability .confianza-foto { width:160px; height:200px; }
+ .site-burofaxlegal .quien-revisa-intro { grid-template-columns:1fr; }
+ .site-burofaxlegal .quien-revisa-portrait { justify-self:start; max-width:24rem; }
+ .site-burofaxlegal .cta-botones { display:grid; grid-template-columns:1fr; }
+}
+@media (max-width:30rem) {
+ .site-burofaxlegal h1 { font-size:2.8rem; }
+ .site-burofaxlegal .bf-accountability .confianza { grid-template-columns:1fr; gap:1.5rem; padding-block:2.5rem; }
+ .site-burofaxlegal .bf-accountability .confianza-foto { width:200px; height:230px; }
+ .site-burofaxlegal .bf-action .hero-botones { display:grid; grid-template-columns:1fr; }
+ .site-burofaxlegal .bf-indice-cuerpo strong { font-size:1.65rem; }
+ .site-burofaxlegal .confianza-foto { width:160px; height:190px; }
+ .site-burofaxlegal .analytics-consent { font-size:.8rem; }
+}
+@media (prefers-reduced-motion:reduce) { .site-burofaxlegal *, .site-burofaxlegal *::before, .site-burofaxlegal *::after { transition:none !important; animation:none !important; } }

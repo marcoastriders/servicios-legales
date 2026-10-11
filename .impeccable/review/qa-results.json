@@ -1,0 +1,1094 @@
+{
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "h1": "Tu burofax, redactado y revisado por abogada antes de enviarlo",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 391.09375,
+        "width": 350,
+        "height": 245.9375,
+        "top": 391.09375,
+        "right": 370,
+        "bottom": 637.03125,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/precios/",
+      "status": 200,
+      "h1": "Honorarios del servicio jurídico",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 97.65625,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 551.71875,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/como-funciona/",
+      "status": 200,
+      "h1": "Cómo funciona, paso a paso",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 97.65625,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 551.71875,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/quien-revisa/",
+      "status": 200,
+      "h1": "Tu burofax lo revisa una abogada de verdad",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 195.3125,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 649.375,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/cuenta-tu-caso/",
+      "status": 200,
+      "h1": "Cuéntanos tu caso",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 97.65625,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 551.71875,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/burofax-impago-alquiler/",
+      "status": 200,
+      "h1": "Burofax de requerimiento de pago de rentas al inquilino",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 195.3125,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 649.375,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/burofax-reclamar-fianza/",
+      "status": 200,
+      "h1": "Burofax para reclamar la devolución de la fianza",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 195.3125,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 649.375,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/burofax-incumplimiento-contrato/",
+      "status": 200,
+      "h1": "Burofax de requerimiento por incumplimiento de contrato",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 477.03125,
+        "width": 350,
+        "height": 244.140625,
+        "top": 477.03125,
+        "right": 370,
+        "bottom": 721.171875,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/burofax-comunidad-propietarios/",
+      "status": 200,
+      "h1": "Burofax de requerimiento de cuotas a un vecino moroso",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 477.03125,
+        "width": 350,
+        "height": 195.3125,
+        "top": 477.03125,
+        "right": 370,
+        "bottom": 672.34375,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/burofax-deudas-particulares/",
+      "status": 200,
+      "h1": "Burofax de requerimiento de deuda entre particulares",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 195.3125,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 649.375,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/aviso-legal/",
+      "status": 200,
+      "h1": "Aviso legal",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 48.828125,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 502.890625,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/privacidad/",
+      "status": 200,
+      "h1": "Política de privacidad",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 97.65625,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 551.71875,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/cookies/",
+      "status": 200,
+      "h1": "Política de cookies",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 97.65625,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 551.71875,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/condiciones-del-servicio/",
+      "status": 200,
+      "h1": "Condiciones del servicio",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 97.65625,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 551.71875,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/articulos/",
+      "status": 200,
+      "h1": "Artículos sobre burofax",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 97.65625,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 551.71875,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/articulos/que-es-un-burofax/",
+      "status": 200,
+      "h1": "Qué es un burofax y para qué sirve",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 146.484375,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 600.546875,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/articulos/casos-en-los-que-necesitas-burofax/",
+      "status": 200,
+      "h1": "Diez casos en los que necesitas un burofax",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 477.03125,
+        "width": 350,
+        "height": 146.484375,
+        "top": 477.03125,
+        "right": 370,
+        "bottom": 623.515625,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/articulos/burofax-o-carta-certificada/",
+      "status": 200,
+      "h1": "Burofax o carta certificada: la diferencia",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 146.484375,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 600.546875,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/articulos/como-enviar-un-burofax/",
+      "status": 200,
+      "h1": "Cómo enviar un burofax paso a paso, y qué constancias pedir",
+      "h1Count": 1,
+      "width": 390,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 477.03125,
+        "width": 350,
+        "height": 195.3125,
+        "top": 477.03125,
+        "right": 370,
+        "bottom": 672.34375,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    }
+  ],
+  "geometry": [
+    {
+      "route": "/",
+      "width": 390,
+      "h1": "Tu burofax, redactado y revisado por abogada antes de enviarlo",
+      "h1Count": 1,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 391.09375,
+        "width": 350,
+        "height": 245.9375,
+        "top": 391.09375,
+        "right": 370,
+        "bottom": 637.03125,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/precios/",
+      "width": 390,
+      "h1": "Honorarios del servicio jurídico",
+      "h1Count": 1,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 97.65625,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 551.71875,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/cuenta-tu-caso/",
+      "width": 390,
+      "h1": "Cuéntanos tu caso",
+      "h1Count": 1,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 97.65625,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 551.71875,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/burofax-impago-alquiler/",
+      "width": 390,
+      "h1": "Burofax de requerimiento de pago de rentas al inquilino",
+      "h1Count": 1,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 195.3125,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 649.375,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/quien-revisa/",
+      "width": 390,
+      "h1": "Tu burofax lo revisa una abogada de verdad",
+      "h1Count": 1,
+      "scroll": 390,
+      "client": 390,
+      "h1Rect": {
+        "x": 20,
+        "y": 454.0625,
+        "width": 350,
+        "height": 195.3125,
+        "top": 454.0625,
+        "right": 370,
+        "bottom": 649.375,
+        "left": 20
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "h1": "Tu burofax, redactado y revisado por abogada antes de enviarlo",
+      "h1Count": 1,
+      "scroll": 768,
+      "client": 768,
+      "h1Rect": {
+        "x": 38.390625,
+        "y": 331.9375,
+        "width": 691.21875,
+        "height": 203.484375,
+        "top": 331.9375,
+        "right": 729.609375,
+        "bottom": 535.421875,
+        "left": 38.390625
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/precios/",
+      "width": 768,
+      "h1": "Honorarios del servicio jurídico",
+      "h1Count": 1,
+      "scroll": 768,
+      "client": 768,
+      "h1Rect": {
+        "x": 38.390625,
+        "y": 394.90625,
+        "width": 691.21875,
+        "height": 48.828125,
+        "top": 394.90625,
+        "right": 729.609375,
+        "bottom": 443.734375,
+        "left": 38.390625
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/cuenta-tu-caso/",
+      "width": 768,
+      "h1": "Cuéntanos tu caso",
+      "h1Count": 1,
+      "scroll": 768,
+      "client": 768,
+      "h1Rect": {
+        "x": 38.390625,
+        "y": 394.90625,
+        "width": 691.21875,
+        "height": 48.828125,
+        "top": 394.90625,
+        "right": 729.609375,
+        "bottom": 443.734375,
+        "left": 38.390625
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/burofax-impago-alquiler/",
+      "width": 768,
+      "h1": "Burofax de requerimiento de pago de rentas al inquilino",
+      "h1Count": 1,
+      "scroll": 768,
+      "client": 768,
+      "h1Rect": {
+        "x": 38.390625,
+        "y": 394.90625,
+        "width": 691.21875,
+        "height": 97.65625,
+        "top": 394.90625,
+        "right": 729.609375,
+        "bottom": 492.5625,
+        "left": 38.390625
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/quien-revisa/",
+      "width": 768,
+      "h1": "Tu burofax lo revisa una abogada de verdad",
+      "h1Count": 1,
+      "scroll": 768,
+      "client": 768,
+      "h1Rect": {
+        "x": 38.390625,
+        "y": 394.90625,
+        "width": 691.21875,
+        "height": 97.65625,
+        "top": 394.90625,
+        "right": 729.609375,
+        "bottom": 492.5625,
+        "left": 38.390625
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "h1": "Tu burofax, redactado y revisado por abogada antes de enviarlo",
+      "h1Count": 1,
+      "scroll": 1440,
+      "client": 1440,
+      "h1Rect": {
+        "x": 128,
+        "y": 253.546875,
+        "width": 1184,
+        "height": 283.875,
+        "top": 253.546875,
+        "right": 1312,
+        "bottom": 537.421875,
+        "left": 128
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/precios/",
+      "width": 1440,
+      "h1": "Honorarios del servicio jurídico",
+      "h1Count": 1,
+      "scroll": 1440,
+      "client": 1440,
+      "h1Rect": {
+        "x": 128,
+        "y": 291.390625,
+        "width": 720,
+        "height": 169.5,
+        "top": 291.390625,
+        "right": 848,
+        "bottom": 460.890625,
+        "left": 128
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/cuenta-tu-caso/",
+      "width": 1440,
+      "h1": "Cuéntanos tu caso",
+      "h1Count": 1,
+      "scroll": 1440,
+      "client": 1440,
+      "h1Rect": {
+        "x": 128,
+        "y": 291.390625,
+        "width": 720,
+        "height": 84.75,
+        "top": 291.390625,
+        "right": 848,
+        "bottom": 376.140625,
+        "left": 128
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/burofax-impago-alquiler/",
+      "width": 1440,
+      "h1": "Burofax de requerimiento de pago de rentas al inquilino",
+      "h1Count": 1,
+      "scroll": 1440,
+      "client": 1440,
+      "h1Rect": {
+        "x": 128,
+        "y": 291.390625,
+        "width": 720,
+        "height": 339,
+        "top": 291.390625,
+        "right": 848,
+        "bottom": 630.390625,
+        "left": 128
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/quien-revisa/",
+      "width": 1440,
+      "h1": "Tu burofax lo revisa una abogada de verdad",
+      "h1Count": 1,
+      "scroll": 1440,
+      "client": 1440,
+      "h1Rect": {
+        "x": 128,
+        "y": 291.390625,
+        "width": 720,
+        "height": 254.25,
+        "top": 291.390625,
+        "right": 848,
+        "bottom": 545.640625,
+        "left": 128
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    }
+  ],
+  "consent": [
+    {
+      "choice": "accept",
+      "persistence": true,
+      "ctaOverlap": false,
+      "storage": "accepted"
+    },
+    {
+      "choice": "reject",
+      "persistence": true,
+      "ctaOverlap": false,
+      "storage": "rejected"
+    }
+  ],
+  "forms": [
+    {
+      "scenario": "success",
+      "loadingDisabled": true,
+      "text": "Caso enviado. Carla lo revisará personalmente y te responderá con el servicio y presupuesto que correspondan. Te llegará una confirmación a tu email.",
+      "role": "status",
+      "live": "polite",
+      "display": "block",
+      "focused": true
+    },
+    {
+      "scenario": "error",
+      "loadingDisabled": true,
+      "text": "No se pudo enviar (prueba controlada). Si persiste, escribe a abogada@carlamorales.es.",
+      "role": "status",
+      "live": "polite",
+      "display": "block",
+      "focused": false
+    },
+    {
+      "scenario": "network",
+      "loadingDisabled": true,
+      "text": "Sin conexión con el servidor. Inténtalo de nuevo o escribe a abogada@carlamorales.es.",
+      "role": "status",
+      "live": "polite",
+      "display": "block",
+      "focused": false
+    }
+  ],
+  "contrasts": [
+    {
+      "route": "/",
+      "text": "BurofaxLegal redacta tu requerimiento fehaciente y una abogada civil l",
+      "fg": "rgb(224, 227, 214)",
+      "bg": "rgb(24, 60, 53)",
+      "rect": {
+        "x": 128,
+        "y": 552.140625,
+        "width": 653.375,
+        "height": 161.015625,
+        "top": 552.140625,
+        "right": 781.375,
+        "bottom": 713.15625,
+        "left": 128
+      },
+      "ratio": 9.287225329875426
+    },
+    {
+      "route": "/",
+      "text": "Cuéntanos tu caso",
+      "fg": "rgb(24, 60, 53)",
+      "bg": "rgb(244, 240, 230)",
+      "rect": {
+        "x": 861.375,
+        "y": 552.140625,
+        "width": 189.703125,
+        "height": 60.53125,
+        "top": 552.140625,
+        "right": 1051.078125,
+        "bottom": 612.671875,
+        "left": 861.375
+      },
+      "ratio": 10.626164557896967
+    },
+    {
+      "route": "/",
+      "text": "Ver precios",
+      "fg": "rgb(244, 240, 230)",
+      "bg": "rgb(24, 60, 53)",
+      "rect": {
+        "x": 1061.46875,
+        "y": 552.140625,
+        "width": 132.171875,
+        "height": 60.53125,
+        "top": 552.140625,
+        "right": 1193.640625,
+        "bottom": 612.671875,
+        "left": 1061.46875
+      },
+      "ratio": 10.626164557896967
+    },
+    {
+      "route": "/",
+      "text": "Cuéntanos tu caso",
+      "fg": "rgb(24, 60, 53)",
+      "bg": "rgb(244, 240, 230)",
+      "rect": {
+        "x": 192,
+        "y": 6650.40625,
+        "width": 189.703125,
+        "height": 60.53125,
+        "top": 6650.40625,
+        "right": 381.703125,
+        "bottom": 6710.9375,
+        "left": 192
+      },
+      "ratio": 10.626164557896967
+    },
+    {
+      "route": "/",
+      "text": "WhatsApp directo",
+      "fg": "rgb(244, 240, 230)",
+      "bg": "rgb(24, 60, 53)",
+      "rect": {
+        "x": 393.703125,
+        "y": 6650.40625,
+        "width": 186.03125,
+        "height": 60.53125,
+        "top": 6650.40625,
+        "right": 579.734375,
+        "bottom": 6710.9375,
+        "left": 393.703125
+      },
+      "ratio": 10.626164557896967
+    },
+    {
+      "route": "/precios/",
+      "text": "Honorarios a partir de 99 € (IVA incluido), según la complejidad del c",
+      "fg": "rgb(73, 96, 89)",
+      "bg": "rgb(244, 240, 230)",
+      "rect": {
+        "x": 128,
+        "y": 428.5,
+        "width": 720,
+        "height": 96.609375,
+        "top": 428.5,
+        "right": 848,
+        "bottom": 525.109375,
+        "left": 128
+      },
+      "ratio": 5.951338241216647
+    },
+    {
+      "route": "/precios/",
+      "text": "Cuéntanos tu caso y recibe tu presupuesto cerrado",
+      "fg": "rgb(255, 255, 255)",
+      "bg": "rgb(40, 89, 76)",
+      "rect": {
+        "x": 128,
+        "y": 766.875,
+        "width": 447.578125,
+        "height": 60.53125,
+        "top": 766.875,
+        "right": 575.578125,
+        "bottom": 827.40625,
+        "left": 128
+      },
+      "ratio": 8.004466665140875
+    },
+    {
+      "route": "/precios/",
+      "text": "Cuéntanos tu caso",
+      "fg": "rgb(24, 60, 53)",
+      "bg": "rgb(244, 240, 230)",
+      "rect": {
+        "x": 192,
+        "y": 1246.40625,
+        "width": 189.703125,
+        "height": 60.53125,
+        "top": 1246.40625,
+        "right": 381.703125,
+        "bottom": 1306.9375,
+        "left": 192
+      },
+      "ratio": 10.626164557896967
+    },
+    {
+      "route": "/precios/",
+      "text": "WhatsApp directo",
+      "fg": "rgb(244, 240, 230)",
+      "bg": "rgb(24, 60, 53)",
+      "rect": {
+        "x": 393.703125,
+        "y": 1246.40625,
+        "width": 186.03125,
+        "height": 60.53125,
+        "top": 1246.40625,
+        "right": 579.734375,
+        "bottom": 1306.9375,
+        "left": 393.703125
+      },
+      "ratio": 10.626164557896967
+    },
+    {
+      "route": "/cuenta-tu-caso/",
+      "text": "Cuéntanos qué ha pasado con todos los detalles: fechas, personas impli",
+      "fg": "rgb(73, 96, 89)",
+      "bg": "rgb(244, 240, 230)",
+      "rect": {
+        "x": 128,
+        "y": 343.75,
+        "width": 720,
+        "height": 128.8125,
+        "top": 343.75,
+        "right": 848,
+        "bottom": 472.5625,
+        "left": 128
+      },
+      "ratio": 5.951338241216647
+    },
+    {
+      "route": "/cuenta-tu-caso/",
+      "text": "Qué ha pasado, fechas aproximadas, qué documentos tienes y qué quieres",
+      "fg": "rgb(73, 96, 89)",
+      "bg": "rgb(252, 250, 244)",
+      "rect": {
+        "x": 177,
+        "y": 995.171875,
+        "width": 830,
+        "height": 24.625,
+        "top": 995.171875,
+        "right": 1007,
+        "bottom": 1019.796875,
+        "left": 177
+      },
+      "ratio": 6.4887576824257716
+    },
+    {
+      "route": "/cuenta-tu-caso/",
+      "text": "Enviar mi caso a Carla",
+      "fg": "rgb(255, 255, 255)",
+      "bg": "rgb(40, 89, 76)",
+      "rect": {
+        "x": 177,
+        "y": 1390.484375,
+        "width": 178.65625,
+        "height": 48,
+        "top": 1390.484375,
+        "right": 355.65625,
+        "bottom": 1438.484375,
+        "left": 177
+      },
+      "ratio": 8.004466665140875
+    }
+  ],
+  "errors": [],
+  "focus": {
+    "active": "skip",
+    "outline": "rgb(152, 106, 19) solid 3px",
+    "skipVisible": true,
+    "ctaOutline": "rgb(221, 206, 170) solid 3px"
+  },
+  "zoomPages": [
+    {
+      "route": "/",
+      "scale": 2,
+      "h1": "Tu burofax, redactado y revisado por abogada antes de enviarlo",
+      "h1Count": 1,
+      "width": 1440,
+      "scroll": 720,
+      "client": 1440,
+      "h1Rect": {
+        "x": 128,
+        "y": 512.359375,
+        "width": 1184,
+        "height": 946.328125,
+        "top": 512.359375,
+        "right": 1312,
+        "bottom": 1458.6875,
+        "left": 128
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/precios/",
+      "scale": 2,
+      "h1": "Honorarios del servicio jurídico",
+      "h1Count": 1,
+      "width": 1440,
+      "scroll": 720,
+      "client": 1440,
+      "h1Rect": {
+        "x": 128,
+        "y": 588.015625,
+        "width": 1184,
+        "height": 339,
+        "top": 588.015625,
+        "right": 1312,
+        "bottom": 927.015625,
+        "left": 128
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/cuenta-tu-caso/",
+      "scale": 2,
+      "h1": "Cuéntanos tu caso",
+      "h1Count": 1,
+      "width": 1440,
+      "scroll": 720,
+      "client": 1440,
+      "h1Rect": {
+        "x": 128,
+        "y": 588.015625,
+        "width": 1184,
+        "height": 339,
+        "top": 588.015625,
+        "right": 1312,
+        "bottom": 927.015625,
+        "left": 128
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/burofax-impago-alquiler/",
+      "scale": 2,
+      "h1": "Burofax de requerimiento de pago de rentas al inquilino",
+      "h1Count": 1,
+      "width": 1440,
+      "scroll": 720,
+      "client": 1440,
+      "h1Rect": {
+        "x": 128,
+        "y": 588.015625,
+        "width": 1184,
+        "height": 678,
+        "top": 588.015625,
+        "right": 1312,
+        "bottom": 1266.015625,
+        "left": 128
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    },
+    {
+      "route": "/quien-revisa/",
+      "scale": 2,
+      "h1": "Tu burofax lo revisa una abogada de verdad",
+      "h1Count": 1,
+      "width": 1440,
+      "scroll": 720,
+      "client": 1440,
+      "h1Rect": {
+        "x": 128,
+        "y": 588.015625,
+        "width": 1184,
+        "height": 678,
+        "top": 588.015625,
+        "right": 1312,
+        "bottom": 1266.015625,
+        "left": 128
+      },
+      "overflow": false,
+      "font": "\"BF Bodoni\", Georgia, serif"
+    }
+  ],
+  "zoom": {
+    "route": "/",
+    "scale": 2,
+    "h1": "Tu burofax, redactado y revisado por abogada antes de enviarlo",
+    "h1Count": 1,
+    "width": 1440,
+    "scroll": 720,
+    "client": 1440,
+    "h1Rect": {
+      "x": 128,
+      "y": 512.359375,
+      "width": 1184,
+      "height": 946.328125,
+      "top": 512.359375,
+      "right": 1312,
+      "bottom": 1458.6875,
+      "left": 128
+    },
+    "overflow": false,
+    "font": "\"BF Bodoni\", Georgia, serif"
+  },
+  "sibling": {
+    "files": 22,
+    "byteIdentical": true
+  },
+  "routeCount": 19
+}

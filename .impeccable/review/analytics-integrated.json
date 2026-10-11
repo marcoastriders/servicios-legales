@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "choice": "reject",
+      "reloadConsent": true,
+      "leadEvents": 0,
+      "contactEvents": 0,
+      "noPII": true
+    },
+    {
+      "choice": "accept",
+      "reloadConsent": true,
+      "leadEvents": 1,
+      "contactEvents": 2,
+      "noPII": true
+    }
+  ],
+  "motion": {
+    "initial": {
+      "clip": "inset(0px 70% 0px 0px)",
+      "transition": "0.42s",
+      "content": "\"\""
+    },
+    "hovered": {
+      "clip": "inset(0px)",
+      "transition": "0.42s",
+      "content": "\"\""
+    },
+    "reducedMotion": true,
+    "keyboard": true
+  }
+}

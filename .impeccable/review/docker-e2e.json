@@ -1,0 +1,22 @@
+[
+  {
+    "host": "burofaxlegal.es",
+    "home": 200,
+    "intake": 200,
+    "portraitPNG": true,
+    "priceCards": 0,
+    "CSPIntake": true,
+    "assets": true,
+    "robots": "index,follow"
+  },
+  {
+    "host": "revisioncontratos.es",
+    "home": 200,
+    "intake": 200,
+    "portraitPNG": true,
+    "priceCards": 3,
+    "CSPIntake": true,
+    "assets": true,
+    "robots": "index,follow"
+  }
+]

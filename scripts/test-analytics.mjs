@@ -6,7 +6,8 @@ import { setImmediate } from 'node:timers/promises';
 function harness(site, choice, response = {ok:true, body:{ok:true}}) {
   const calls=[], handlers={}, store=new Map(choice ? [[`ga_consent_${site}`,choice]] : []);
   function element() { return {hidden:true, listeners:{}, addEventListener(type,fn){this.listeners[type]=fn;}, setAttribute(k,v){this[k]=v;}, focus(){this.focused=true;}}; }
-  const ids=Object.fromEntries(['analytics-consent','analytics-accept','analytics-reject','intake','intake-btn','intake-estado'].map(id=>[id,element()]));
+  const ids=Object.fromEntries(['contenido','analytics-consent','analytics-accept','analytics-reject','intake','intake-btn','intake-estado'].map(id=>[id,element()]));
+  ids['analytics-consent'].parentNode={insertBefore(node,anchor){assert.equal(node,ids['analytics-consent']);assert.equal(anchor,ids.contenido);this.moved=true;}};
   ids['intake-estado'].hidden=false;
   const f=ids.intake;
   for(const name of ['nombre','email','telefono','asunto','caso','website']) f[name]={value:name==='website'?'':`PRIVATE_${name}@example.invalid`};

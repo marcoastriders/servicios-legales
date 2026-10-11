@@ -87,7 +87,7 @@ ${site.prelaunch ? '<meta name="robots" content="noindex,follow">' : '<meta name
 <meta property="og:url" content="${url}">
 <meta name="theme-color" content="${site.accent}">
 ${site.id === 'revisioncontratos' ? '<meta name="msvalidate.01" content="1160220F5D3BD4A1C4D653274D6DBE01">' : ''}
-<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/styles.css">${site.id === 'burofaxlegal' ? '\n<link rel="stylesheet" href="/assets/burofax.css">' : ''}
 ${analyticsId ? `
 <script async src="https://www.googletagmanager.com/gtag/js?id=${analyticsId}"></script>
 <script>
@@ -144,7 +144,7 @@ ${analyticsId ? `<aside id="analytics-consent" class="analytics-consent" aria-la
 <script>
 (function(){
   var key='ga_consent_${site.id}', banner=document.getElementById('analytics-consent');
-  if(!banner) return;
+  if(!banner) return;${site.id === 'burofaxlegal' ? "\n  banner.parentNode.insertBefore(banner,document.getElementById('contenido'));" : ''}
   var choice=localStorage.getItem(key);
   if(choice==='accepted'||choice==='rejected') update(choice);
   else banner.hidden=false;
@@ -293,19 +293,20 @@ ${blockFaq(site.home.faqs)}
 ${blockSources(site.home.sources)}
 ${blockCta(site)}` : site.id === 'burofaxlegal' ? `
 <section class="bf-hero">
-  <div class="bf-hero-copy">
-    <p class="kicker">${esc(site.kicker)}</p>
-    <h1>${site.home.h1}</h1>
+  <h1>${site.home.h1}</h1>
+  <div class="bf-opening">
     ${blockAnswer(site.home.answer)}
-    <p class="hero-botones"><a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a> <a class="boton boton-sec" href="/precios/">Ver precios</a></p>
-    <ul class="bf-sello">
-      <li>Redactado sobre tus hechos</li>
-      <li>Revisado por abogada colegiada</li>
-      <li>Precio cerrado con IVA incluido</li>
-    </ul>
+    <div class="bf-action">
+      <p class="hero-botones"><a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a> <a class="boton boton-sec" href="/precios/">Ver precios</a></p>
+      <ul class="bf-sello">
+        <li>Redactado sobre tus hechos</li>
+        <li>Revisado por abogada colegiada</li>
+        <li>Precio cerrado con IVA incluido</li>
+      </ul>
+    </div>
   </div>
-  <div class="bf-hero-aside">${blockTrustCarla(site)}</div>
 </section>
+<div class="bf-accountability">${blockTrustCarla(site)}</div>
 <section class="bf-proceso" aria-label="Cómo funciona el servicio">
   <ol class="bf-proceso-lista">
     <li><span class="bf-num" aria-hidden="true">01</span><h2>Cuéntanos tu caso con documentos</h2><p>Qué contrato existe, qué se incumplió, desde cuándo y qué quieres conseguir.</p></li>
@@ -315,14 +316,13 @@ ${blockCta(site)}` : site.id === 'burofaxlegal' ? `
   <p class="bf-proceso-link"><a href="/como-funciona/">Cómo funciona el servicio, paso a paso</a></p>
 </section>
 <section class="bf-aprende" aria-label="Antes de decidir">
-  <div class="bf-aprende-label"><p class="kicker">Antes de decidir</p><p>Qué acredita un burofax, por qué lo redacta una abogada y qué no prometemos.</p></div>
+  <div class="bf-aprende-label"><p>Qué acredita un burofax, por qué lo redacta una abogada y qué no prometemos.</p></div>
   <div class="bf-prosa">${sections(site.home.sections)}</div>
 </section>
 <section class="bf-indice">
-  <p class="kicker">Servicios</p>
   <h2>${esc(site.home.servicesTitle)}</h2>
   <ol class="bf-indice-lista">
-    ${site.services.map((s, i) => `<li class="bf-indice-item"><a href="/${s.slug}/"><span class="bf-indice-num">${String(i + 1).padStart(2, '0')}</span><span class="bf-indice-cuerpo"><strong>${esc(s.title)}</strong><span>${esc(s.teaser)}</span></span><span class="bf-indice-precio">${esc(s.priceLabel)}</span></a></li>`).join('\n    ')}
+    ${site.services.map((s, i) => `<li class="bf-indice-item"><a href="/${s.slug}/"><span class="bf-indice-cuerpo"><strong>${esc(s.title)}</strong><span>${esc(s.teaser)}</span></span><span class="bf-indice-precio">${esc(s.priceLabel)}</span></a></li>`).join('\n    ')}
   </ol>
 </section>
 ${blockFaq(site.home.faqs)}

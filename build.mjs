@@ -526,8 +526,8 @@ function renderIntake(site) {
       <option value="Esencial + exprés — 178 €">Esencial + exprés — 178 €</option>
       <option value="Esencial + consulta — 178 €">Esencial + consulta — 178 €</option>
       <option value="Esencial + exprés + consulta — 227 €">Esencial + exprés + consulta — 227 €</option>
-      <option value="Revisión Profesional — 250 €">Revisión Profesional — 250 €</option>
-      <option value="Firma Blindada — 449 €">Firma Blindada — 449 €</option>
+      <option value="Revisión Profesional — 249 €">Revisión Profesional — 249 €</option>
+      <option value="Firma Blindada — 499 €">Firma Blindada — 499 €</option>
     </select></p>` : '';
   const submitLabel = isRevision ? (site.ui.submitLabel || 'Enviar los datos del contrato') : 'Enviar mi caso a Carla';
   const caseHelp = isRevision
@@ -541,6 +541,9 @@ function renderIntake(site) {
     <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" maxlength="40"></p>`
     : `<p class="campo"><label for="f-telefono">Tu teléfono *</label>
     <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" required maxlength="40"></p>`;
+  const docsField = `<p class="campo"><label for="f-docs">Documentos que ayuden a valorar tu caso (opcional)</label>
+    <span class="campo-ayuda" id="f-docs-ayuda">PDF, JPG o PNG. Hasta 5 archivos y 10 MB en total. ${isRevision ? 'Si ya tienes el contrato a la vista, adjúntalo aquí: viaja con la solicitud y Carla lo lee desde el primer momento.' : 'Solo los utiliza Carla para preparar tu presupuesto.'}</span>
+    <input id="f-docs" name="adjuntos" type="file" multiple accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" aria-describedby="f-docs-ayuda"></p>`;
   const submitJsRevision = `
 (function(){
   var f=document.getElementById('intake'),estado=document.getElementById('intake-estado'),btn=document.getElementById('intake-btn');
@@ -550,13 +553,36 @@ function renderIntake(site) {
   f.addEventListener('submit',function(ev){
     ev.preventDefault();
     if(!f.checkValidity()){estado.textContent='Revisa los campos marcados: faltan datos obligatorios o el texto es muy corto.';f.reportValidity();return;}
+    var files=f.adjuntos?f.adjuntos.files:[],total=0,i;
+    if(files.length>5){estado.textContent='Máximo 5 archivos. Quita algunos o envía el resto por email.';return;}
+    for(i=0;i<files.length;i++){
+      if(files[i].size>5*1024*1024){estado.textContent='Cada archivo debe pesar menos de 5 MB: '+files[i].name;btn.disabled=false;return;}
+      total+=files[i].size;
+    }
+    if(total>10*1024*1024){estado.textContent='Los archivos suman más de 10 MB. Envía menos o escribe a Carla.';return;}
     btn.disabled=true;btn.textContent='Enviando…';estado.textContent='';
     var prefijo='';
     if(f.paquete){prefijo+='Paquete: '+f.paquete.value+'\\n';}
     if(f.pago&&f.pago.value.trim()){prefijo+='Identidad de pago: '+f.pago.value.trim()+'\\n';}
     if(prefijo){prefijo+='\\n';}
-    var data={nombre:f.nombre.value.trim(),email:f.email.value.trim(),telefono:f.telefono.value.trim(),asunto:f.asunto.value,caso:(prefijo+f.caso.value.trim()).slice(0,8000),web:location.hostname.replace(/^www\\./,''),website:f.website.value,privacidad:f.privacidad.checked};
-    fetch('https://intake.marcospera.com/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+    var nombre=f.nombre.value.trim(),email=f.email.value.trim(),telefono=f.telefono.value.trim(),asunto=f.asunto.value,caso=(prefijo+f.caso.value.trim()).slice(0,8000),web=location.hostname.replace(/^www\\./,''),website=f.website.value;
+    var headers={'Content-Type':'application/json'},payload;
+    if(files.length){
+      var fd=new FormData();
+      fd.append('nombre',nombre);
+      fd.append('email',email);
+      fd.append('telefono',telefono);
+      fd.append('asunto',asunto);
+      fd.append('caso',caso);
+      fd.append('web',web);
+      fd.append('website',website);
+      fd.append('privacidad',f.privacidad.checked?'1':'');
+      for(i=0;i<files.length;i++){fd.append('adjuntos',files[i],files[i].name);}
+      headers={};payload=fd;
+    }else{
+      payload=JSON.stringify({nombre:nombre,email:email,telefono:telefono,asunto:asunto,caso:caso,web:web,website:website,privacidad:f.privacidad.checked});
+    }
+    fetch('https://intake.marcospera.com/',{method:'POST',headers:headers,body:payload})
       .then(function(r){return r.json().then(function(j){return {ok:r.ok&&j.ok,error:j.error};});})
       .then(function(res){
         if(res.ok){
@@ -639,10 +665,7 @@ function renderIntake(site) {
   ${packageFields}
   <p class="campo"><label for="f-caso">${site.id === 'burofaxlegal' ? 'Cuéntame tu historia completa' : 'Cuéntanos tu historia completa'} *</label>
     <span class="campo-ayuda" id="f-caso-ayuda">${caseHelp}</span>
-    <textarea id="f-caso" name="caso" rows="9" required minlength="30" maxlength="8000" aria-describedby="f-caso-ayuda"></textarea></p>${isRevision ? '' : `
-  <p class="campo"><label for="f-docs">Documentos que ayuden a valorar tu caso (opcional)</label>
-    <span class="campo-ayuda" id="f-docs-ayuda">PDF, JPG o PNG. Hasta 5 archivos y 10 MB en total. Solo los utiliza Carla para preparar tu presupuesto.</span>
-    <input id="f-docs" name="adjuntos" type="file" multiple accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" aria-describedby="f-docs-ayuda"></p>`}
+    <textarea id="f-caso" name="caso" rows="9" required minlength="30" maxlength="8000" aria-describedby="f-caso-ayuda"></textarea></p>${docsField}
   <p class="campo campo-oculto" aria-hidden="true"><label>Website <input name="website" type="text" tabindex="-1" autocomplete="off"></label></p>
   <p class="campo campo-check"><input id="f-privacidad" name="privacidad" type="checkbox" required>
     <label for="f-privacidad">He leído la <a href="/privacidad/">política de privacidad</a> y acepto que mis datos se usen para responder a mi consulta. *</label></p>

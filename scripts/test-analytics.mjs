@@ -13,7 +13,7 @@ function harness(site, choice, response = {ok:true, body:{ok:true}}) {
   for(const name of ['nombre','email','telefono','asunto','caso','website']) f[name]={value:name==='website'?'':`PRIVATE_${name}@example.invalid`};
   f.privacidad={checked:true}; f.children=[ids['intake-btn'],ids['intake-estado']];
   f.checkValidity=()=>true; f.reportValidity=()=>{}; f.reset=()=>{f.resets=(f.resets||0)+1;};
-  const sandbox={console, location:{hostname:`${site}.es`}, localStorage:{getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v)}, document:{getElementById:id=>ids[id],addEventListener:(type,fn)=>{handlers[type]=fn;}}, fetch:async()=>{if(response.throw)throw Error('offline'); return {ok:response.ok,json:async()=>{if(response.badJson)throw Error('JSON');return response.body;}};}};
+  const sandbox={console, URLSearchParams, location:{search:'',hostname:`${site}.es`}, localStorage:{getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v)}, document:{getElementById:id=>ids[id],addEventListener:(type,fn)=>{const previous=handlers[type]; handlers[type]=previous?ev=>{previous(ev);fn(ev);}:fn;}}, fetch:async()=>{if(response.throw)throw Error('offline'); return {ok:response.ok,json:async()=>{if(response.badJson)throw Error('JSON');return response.body;}};}};
   sandbox.window=sandbox;
   vm.createContext(sandbox);
   const html=readFileSync(new URL(`../dist/${site}.es/cuenta-tu-caso/index.html`,import.meta.url),'utf8');

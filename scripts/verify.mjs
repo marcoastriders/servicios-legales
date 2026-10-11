@@ -103,7 +103,7 @@ for (const expected of [['Revisión Esencial', 79], ['Revisión Profesional', 19
 }
 if ('paymentLinks' in revisionContent) {
   const pl = revisionContent.paymentLinks;
-  for (const k of ['essential', 'professional', 'blindada']) {
+  for (const k of ['essential', 'professional', 'blindada', 'essentialExpress', 'essentialCall', 'essentialBoth']) {
     if (!/^https:\/\/buy\.stripe\.com\//.test(pl[k] || '')) fail(`paymentLinks.${k} no es un enlace de pago de Stripe`);
   }
 } else {
@@ -112,7 +112,18 @@ if ('paymentLinks' in revisionContent) {
 {
   const preciosHtml = readFileSync(join(dist, 'revisioncontratos.es', 'precios', 'index.html'), 'utf8');
   const n = (preciosHtml.match(/boton-pago/g) || []).length;
-  if (n < 3) fail(`precios: solo ${n} botones de pago (esperados al menos 3)`);
+  if (!revisionContent.paymentPaused && n < 6) fail(`precios: solo ${n} botones de pago (esperados al menos 6)`);
+  if (!revisionContent.paymentPaused) {
+    for (const url of Object.values(revisionContent.paymentLinks)) if (!preciosHtml.includes(`href="${url}"`)) fail('precios: enlace online configurado no renderizado');
+  }
+  if (revisionContent.paymentPaused) {
+    for (const [, file] of htmlFiles.filter(([domain]) => domain === 'revisioncontratos.es')) {
+      const html = readFileSync(file, 'utf8');
+      if (/buy\.stripe\.com|Contratar y pagar|contrat(?:a|ar) online|pag(?:a|as|ar|ue|ues|o) online|Pago online con tarjeta/i.test(html)) fail(`${file}: cobro online renderizado durante pausa`);
+    }
+    if (n || !preciosHtml.includes('pago por Bizum o transferencia')) fail('precios: fallback manual ausente o botones de pago en pausa');
+    for (const key of ['essential','professional','blindada']) if (!preciosHtml.includes(`/cuenta-tu-caso/?paquete=${key}`)) fail(`precios: falta solicitud ${key}`);
+  }
   if (/paypal\.(me|com)/i.test(preciosHtml)) fail('precios: conserva mención de PayPal');
 }
 const alquilerHtml = readFileSync(join(dist, 'revisioncontratos.es', 'revision-contrato-alquiler', 'index.html'), 'utf8');

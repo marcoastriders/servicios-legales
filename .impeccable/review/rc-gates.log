@@ -1,0 +1,53 @@
+Páginas HTML: 37
+  ok: cross-links entre dominios: 14
+  ok: revisioncontratos.es: abierto, indexable y con formulario operativo
+  ok: burofaxlegal.es: abierto, indexable y con formulario operativo
+  ok: styles.css: selectores bf- todos bajo .site-burofaxlegal
+  ok: styles.css: sección BurofaxLegal entera bajo .site-burofaxlegal
+  ok: styles.css: el banner de cookies respeta [hidden]
+  ok: burofaxlegal.es artículos en JSON: 4
+  ok: burofaxlegal.es sitemap: 18 URLs
+  ok: revisioncontratos.es sitemap: 17 URLs
+
+Verificando 37 enlaces externos...
+  ok: https://epostal.correos.es/OV2PREENVWEB/jsp/gestionclientes/_rlvid.jsp.faces?_rap=altaModifClientes.obtenerClausulaVigente&_rvip=%2Fjsp%2Fgestionclientes%2FcondicionesServicio.jsp&codProducto=16
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1885-6627#art50
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1100
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1101
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1124
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1255
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1454
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1561
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1753
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1973
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906#aveintiuno
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501#adieciseis
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a10
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a17
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a18
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a27
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a36
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a9
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-2000-323#a22
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-2000-323#a264
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a62
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a82
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a83
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a86
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a89
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a90
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-2015-10565#a16
+  ok: https://www.boe.es/buscar/act.php?id=BOE-A-2025-76#a5
+  ok: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-76
+  ok: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-6545
+  ok: https://www.boe.es/eli/es/l/2000/01/07/1/con#a22
+  ok: https://www.boe.es/eli/es/l/2000/01/07/1/con#a264
+  ok: https://www.boe.es/eli/es/l/2000/01/07/1/con#a299
+  ok: https://www.correos.es/es/es/actualidad/2026/carta-certificada-o-burofax-como-elegir-el-servicio-adecuado
+  ok: https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax
+  ok: https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/carta/carta-certificada
+  ok: https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177110&idp=1254735976607&menu=ultiDatos
+
+PUERTA SUPERADA
+Analytics tests passed: both sites; consent, reload, allowlist, contacts, intake success/failure, PII and accessible feedback
+RC polish PASS: 18 HTML, 17 public routes; 31 sibling/original-asset hashes unchanged; prices, groups, helpers, preferences, no kickers

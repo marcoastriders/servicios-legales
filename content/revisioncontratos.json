@@ -9,7 +9,7 @@
   "ctaTitle": "¿Tienes un contrato sobre la mesa?",
   "ctaWhatsapp": "Hola, quiero que revisen mi contrato antes de firmar.",
   "ctaMailSubject": "Solicitud de revisión de contrato",
-  "llmsSummary": "revisioncontratos.es es un servicio de revisión de contratos dirigido por la abogada Carla Morales, colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa contratos de alquiler, compraventa, arras y préstamos entre particulares, y redacta contratos a medida. Tres niveles de precio cerrado: Revisión Esencial 79 € (alquiler, informe escrito en 48-72 horas laborables), Revisión Profesional 199 € (contratos complejos, con llamada de 30 minutos y contraoferta redactada) y Firma Blindada 399 € (la abogada negocia directamente con la otra parte y revisa la versión final). Extras: entrega exprés 24 h por 49 € (solo alquiler) y consulta de 30 minutos por 49 €. No interviene como defensa en juicio.",
+  "llmsSummary": "revisioncontratos.es es un servicio de revisión de contratos dirigido por la abogada Carla Morales, colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa contratos de alquiler, compraventa, arras y préstamos entre particulares, y redacta contratos a medida. Tres niveles de precio cerrado: Revisión Esencial 79 € (alquiler, informe escrito en 48-72 horas laborables), Revisión Profesional 199 € (contratos complejos, con llamada de 30 minutos y contraoferta redactada) y Firma Blindada 399 € (la abogada negocia directamente con la otra parte y revisa la versión final). Extras: entrega exprés 24 h por 49 € (solo alquiler) y consulta de 30 minutos por 49 €. No interviene como defensa en juicio. Solicita la revisión con el nivel que te interesa. Carla confirma el alcance y el encargo y te indica el pago por Bizum o transferencia. La revisión y su plazo empiezan cuando recibe el pago, los datos necesarios y el contrato completo y legible. Cobro online temporalmente desactivado.",
   "nav": [
     {
       "path": "/precios/",
@@ -40,7 +40,7 @@
       },
       {
         "h2": "Cómo trabajamos",
-        "html": "<p>Subes el contrato en PDF o fotos y me cuentas tu situación. Yo lo leo completo y te entrego un informe escrito con los riesgos que veo, las cláusulas que deberías pedir que cambien y una orientación práctica para negociarlas.</p><p>Si eliges la Revisión Profesional, añado una contraoferta redactada y lista para enviar. El informe no sustituye tu decisión: tú decides si firmas, negocias o rechazas.</p>"
+        "html": "<p>Eliges la revisión y envías tu solicitud. Confirmo el encargo y te facilito las instrucciones de pago por Bizum o transferencia; si tienes dudas, puedes consultar antes de pagar. Envías tus datos en el formulario y después el contrato en PDF o fotos respondiendo al correo de confirmación. Yo lo leo completo y te entrego un informe escrito con los riesgos que veo, las cláusulas que deberías pedir que cambien y una orientación práctica para negociarlas.</p><p>Si eliges la Revisión Profesional, añado una contraoferta redactada y lista para enviar. El informe no sustituye tu decisión: tú decides si firmas, negocias o rechazas.</p>"
       },
       {
         "h2": "Qué no hacemos",
@@ -54,7 +54,7 @@
       },
       {
         "q": "¿Qué formatos de contrato aceptáis?",
-        "a": "PDF, fotos legibles del papel o texto copiado en el correo. Antes de confirmar el encargo se comprueba que el documento pueda abrirse y leerse. Después se comunica la tarifa y solo se inicia la revisión cuando el pago está confirmado."
+        "a": "PDF, fotos legibles o texto copiado en el correo. Solicita la revisión en el formulario y responde al correo de confirmación con el contrato. Carla confirma el encargo y te indica el pago por Bizum o transferencia; la revisión comienza tras recibir el pago, los datos y el documento completo y legible."
       },
       {
         "q": "¿El informe garantiza que me acepten los cambios?",
@@ -150,13 +150,38 @@
         "precept": "art. 1753",
         "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1753"
       }
+    ],
+    "serviceGroups": [
+      {
+        "title": "Alquiler y sus condiciones",
+        "slugs": [
+          "revision-contrato-alquiler",
+          "clausulas-abusivas-alquiler",
+          "actualizacion-renta-irav",
+          "prorroga-contrato-alquiler",
+          "reclamar-fianza"
+        ]
+      },
+      {
+        "title": "Arras y préstamos",
+        "slugs": [
+          "revision-contrato-arras",
+          "revision-prestamo-particulares"
+        ]
+      },
+      {
+        "title": "Redacción desde cero",
+        "slugs": [
+          "contrato-a-medida"
+        ]
+      }
     ]
   },
   "pricing": {
     "title": "Precios de revisión de contratos | RevisiónContratos",
     "description": "Precios cerrados de revisión de contratos: 79 € la Revisión Esencial de alquiler, 199 € la Revisión Profesional con llamada para contratos complejos y 399 € la Firma Blindada con negociación. IVA incluido.",
     "h1": "Precios de la revisión de contratos",
-    "answer": "Tres niveles de precio cerrado según lo que necesites: la Revisión Esencial para contratos de alquiler (79 €), la Revisión Profesional para arras, compraventas, préstamos y contratos complejos (199 €, con llamada incluida) y la Firma Blindada, en la que además negocio yo directamente con la otra parte (399 €). Todas incluyen IVA. Puedes añadir la entrega exprés en 24 horas o una consulta por 49 € cada una. Pagas por adelantado y, si cancelas antes de que empiece la revisión, te devuelvo el importe completo.",
+    "answer": "Tres niveles de revisión, IVA incluido. Elige según el contrato y el apoyo que necesitas. Si dudas sobre el alcance o el plazo, consulta antes de pagar.",
     "tiers": [
       {
         "name": "Revisión Esencial (alquiler)",
@@ -177,7 +202,7 @@
         "includes": [
           "Lectura completa del contrato e informe escrito de riesgos",
           "Para arras, compraventa, préstamos y contratos complejos",
-          "Plazo de entrega confirmado antes del pago según la complejidad",
+          "Plazo según la complejidad: consúltalo antes de pagar si necesitas confirmarlo",
           "Llamada de 30 minutos con la abogada (se agenda según disponibilidad)",
           "Contraoferta y redacción alternativa listas para enviar"
         ]
@@ -196,16 +221,12 @@
     ],
     "sections": [
       {
-        "h2": "Extras para la Revisión Esencial",
-        "html": "<ul><li><strong>Entrega exprés 24 h: +49 €.</strong> Revisión Esencial + exprés: 128 € en total. Solo hay una plaza diaria; si ya estuviera ocupada, puedes elegir el plazo normal o recibir de inmediato la devolución de los 49 € del extra.</li><li><strong>Consulta de 30 minutos: +49 €.</strong> Revisión Esencial + consulta: 128 € en total. La llamada se agenda según disponibilidad.</li><li><strong>Exprés + consulta: 177 € en total.</strong></li></ul><p>Los niveles Profesional y Firma Blindada ya incluyen la llamada; por su complejidad y porque dependen de terceros, no ofrecen entrega en 24 horas.</p>"
-      },
-      {
         "h2": "¿Necesitas redactar un contrato desde cero?",
         "html": "<p>La redacción de un <a href=\"/contrato-a-medida/\">contrato a medida</a> es un servicio independiente de estos tres niveles de revisión y parte de 199 € IVA incluido. Primero estudio la operación y confirmo por escrito el precio y el plazo antes de que pagues.</p>"
       },
       {
         "h2": "Cómo se paga",
-        "html": "<p>El pago se realiza por adelantado: online con tarjeta o Bizum desde el enlace de pago del nivel elegido, o por Bizum/transferencia manual si lo prefieres. La revisión comienza cuando tengo el pago, tus datos y el contrato completo y legible.</p>"
+        "html": "<p>Solicita la revisión con el nivel que te interesa. Carla confirma el alcance y el encargo y te indica el pago por Bizum o transferencia. La revisión y su plazo empiezan cuando recibe el pago, los datos necesarios y el contrato completo y legible. El cobro online está temporalmente desactivado.</p>"
       },
       {
         "h2": "Cancelaciones y reembolso",
@@ -242,18 +263,19 @@
         "a": "Te lo digo igualmente: un contrato limpio también es un resultado, y te lo dejo por escrito en el informe, con el análisis completo y la constancia de que el documento no esconde riesgos relevantes."
       }
     ],
-    "paymentNote": "Paga online con tarjeta o Bizum desde el botón «Contratar y pagar» del nivel elegido. Si prefieres Bizum o transferencia manual, indícalo en «Cuéntanos tu caso» y Carla te facilita los datos. Después envía el contrato desde la misma página o respondiendo al correo de confirmación."
+    "paymentNote": "Solicita la revisión con el nivel que te interesa. Carla confirma el alcance y el encargo y te indica el pago por Bizum o transferencia. La revisión y su plazo empiezan cuando recibe el pago, los datos necesarios y el contrato completo y legible.",
+    "extrasInfo": "<ul><li><strong>Entrega exprés 24 h: +49 €.</strong> Revisión Esencial + exprés: 128 € en total. Solo hay una plaza diaria; si ya estuviera ocupada, puedes elegir el plazo normal o recibir de inmediato la devolución de los 49 € del extra.</li><li><strong>Consulta de 30 minutos: +49 €.</strong> Revisión Esencial + consulta: 128 € en total. La llamada se agenda según disponibilidad.</li><li><strong>Exprés + consulta: 177 € en total.</strong></li></ul><p>Los niveles Profesional y Firma Blindada ya incluyen la llamada; por su complejidad y porque dependen de terceros, no ofrecen entrega en 24 horas.</p>"
   },
   "pages": {
     "comoFunciona": {
       "title": "Cómo funciona la revisión de contratos | RevisiónContratos",
-      "description": "Cuatro pasos para revisar tu contrato: envías el documento, confirmamos el nivel, pagas y una abogada te entrega un informe con riesgos y recomendaciones. Los niveles superiores incluyen llamada y negociación.",
+      "description": "Solicita la revisión, envía el contrato por correo y recibe la confirmación de Carla antes del pago por Bizum o transferencia.",
       "h1": "Cómo funciona",
-      "answer": "Eliges el nivel, pagas directamente y me envías los datos del caso. Después respondes al correo de confirmación adjuntando el contrato en PDF o fotos legibles. Los alquileres tienen un plazo habitual de 48-72 horas laborables, con opción exprés de 24 horas; los contratos complejos reciben un plazo según el caso.",
+      "answer": "Solicita la revisión con el nivel que te interesa. Carla confirma el alcance y el encargo y te indica el pago por Bizum o transferencia. La revisión y su plazo empiezan cuando recibe el pago, los datos necesarios y el contrato completo y legible. Los alquileres tienen un plazo habitual de 48-72 horas laborables, con opción exprés de 24 horas; los contratos complejos reciben un plazo según el caso.",
       "sections": [
         {
           "h2": "Los cuatro pasos",
-          "html": "<ul><li><strong>1. Elige tu revisión.</strong> Selecciona la Revisión Esencial, Profesional o Firma Blindada y completa «Cuéntanos tu caso» con el servicio elegido.</li><li><strong>2. Recibe los datos de pago.</strong> Carla confirma tu encargo y te facilita los datos para pagar por Bizum o transferencia.</li><li><strong>3. Adjunta el contrato.</strong> Recibirás un correo automático; respóndelo con el PDF o las fotos legibles del contrato.</li><li><strong>4. Revisión y entrega.</strong> Leo el documento completo, contrasto las cláusulas con la norma y te entrego lo incluido en tu nivel.</li></ul>"
+          "html": "<ol><li><strong>Solicita tu revisión.</strong> Compara los niveles en <a href=\"/precios/\">Precios</a> y completa <a href=\"/cuenta-tu-caso/\">el formulario</a> con el paquete que te interesa.</li><li><strong>Envía el contrato por correo.</strong> Responde al correo de confirmación adjuntando el PDF o fotos legibles. El formulario no adjunta archivos.</li><li><strong>Confirmación y pago.</strong> Carla confirma el alcance, el nivel y la aceptación del encargo y te indica el pago por Bizum o transferencia. El cobro online está temporalmente desactivado.</li><li><strong>Revisión y entrega.</strong> El trabajo y su plazo comienzan con el pago confirmado, el contrato completo y legible y los datos necesarios. Recibes lo incluido en tu nivel.</li></ol>"
         },
         {
           "h2": "Qué contiene el informe",
@@ -348,7 +370,7 @@
         },
         {
           "h2": "Qué datos trato y para qué",
-          "html": "<ul><li><strong>Datos de contacto</strong> (nombre, correo, teléfono) para gestionar tu solicitud y responder a tus consultas.</li><li><strong>Documentos que subes</strong> (contratos, fotos, correos) para realizar la revisión encargada. Estos documentos contienen datos personales tuyos y de terceros, y se tratan estrictamente para el encargo.</li><li><strong>Datos de pago</strong> para emitir la factura correspondiente.</li></ul>"
+          "html": "<ul><li><strong>Datos de contacto</strong> (nombre, correo, teléfono) para gestionar tu solicitud y responder a tus consultas.</li><li><strong>Documentos que envías por correo</strong> (contratos, fotos, correos) para realizar la revisión encargada. Estos documentos contienen datos personales tuyos y de terceros, y se tratan estrictamente para el encargo.</li><li><strong>Datos de pago</strong> para emitir la factura correspondiente.</li></ul>"
         },
         {
           "h2": "Base jurídica y conservación",
@@ -380,7 +402,7 @@
         },
         {
           "h2": "Cómo cambiar tu decisión",
-          "html": "<p>Puedes rechazar la medición cuando aparece el aviso inicial. Si ya aceptaste, puedes borrar los datos del sitio en tu navegador para que vuelva a aparecer el aviso de preferencias.</p>"
+          "html": "<p>Usa «Cambiar preferencias de cookies» al pie de cualquier página para aceptar o rechazar la medición. Tu decisión se guarda en este navegador.</p>"
         }
       ],
       "noCta": true
@@ -392,11 +414,11 @@
       "sections": [
         {
           "h2": "Aceptación del encargo",
-          "html": "<p>El encargo se perfecciona cuando realizas el pago y facilitas los datos y documentos necesarios. El plazo empieza cuando dispongo del contrato completo y legible. Si el servicio elegido no corresponde al documento o no puedo aceptar el encargo, te ofrezco cambiar de nivel o te devuelvo el importe íntegro.</p>"
+          "html": "<p>Primero solicitas la revisión y Carla confirma el alcance y la aceptación del encargo. El encargo se formaliza tras esa confirmación y el pago. El trabajo y su plazo empiezan cuando dispongo también de los datos necesarios y el contrato completo y legible. Si el nivel no corresponde al documento, se acuerda el adecuado antes del pago; si no puedo aceptar el encargo, no se solicita el pago.</p>"
         },
         {
           "h2": "Pago",
-          "html": "<p>El pago se realiza por adelantado con el importe del servicio elegido, online con tarjeta o Bizum mediante el enlace de pago o por Bizum/transferencia manual. No se inicia la revisión hasta recibir también el contrato completo y los datos del caso.</p>"
+          "html": "<p>El pago se realiza por adelantado, después de que Carla confirme el encargo, por Bizum o transferencia según sus instrucciones. El cobro online está temporalmente desactivado. No se inicia la revisión ni su plazo hasta recibir el pago, el contrato completo y legible y los datos del caso.</p>"
         },
         {
           "h2": "Plazo de entrega",
@@ -1300,9 +1322,9 @@
   "prelaunch": false,
   "intake": {
     "title": "Cuéntanos tu caso | RevisiónContratos",
-    "description": "Contrata tu revisión, envía los datos del caso y adjunta el contrato respondiendo al correo de confirmación.",
+    "description": "Solicita tu revisión. Carla confirma el encargo y te indica el pago por Bizum o transferencia; contrato por correo.",
     "h1": "Cuéntanos tu caso",
-    "answer": "<p>Cuéntanos el caso y el servicio que te interesa; si ya has pagado, indica el paquete y tu nombre o correo. Al enviar el formulario recibirás un correo automático: respóndelo adjuntando el contrato en PDF o fotos legibles. Si todavía tienes dudas, también puedes usar este formulario antes de decidir.</p>",
+    "answer": "<p>Solicita la revisión con el nivel que te interesa. Carla confirma el alcance y el encargo y te indica el pago por Bizum o transferencia. La revisión y su plazo empiezan cuando recibe el pago, los datos necesarios y el contrato completo y legible. Al enviar el formulario recibirás un correo automático: respóndelo adjuntando el contrato en PDF o fotos legibles. El correo automático acredita la recepción de tu solicitud, no la aceptación del encargo ni el pago.</p>",
     "asuntos": [
       "Revisión de contrato de alquiler",
       "Cláusulas abusivas",
@@ -1322,5 +1344,25 @@
     "essentialExpress": "https://buy.stripe.com/28E6oI5sZcOl0cigUP2Nq03",
     "essentialCall": "https://buy.stripe.com/fZubJ24oV4hP4sydID2Nq04",
     "essentialBoth": "https://buy.stripe.com/bJeeVe8Fb29H9MS33Z2Nq05"
-  }
+  },
+  "ui": {
+    "primary": "Solicitar revisión",
+    "consult": "Consultar el encargo",
+    "ctaNote": "Solicita la revisión con el nivel que te interesa. Carla confirma el alcance y el encargo y te indica el pago por Bizum o transferencia. La revisión y su plazo empiezan cuando recibe el pago, los datos necesarios y el contrato completo y legible.",
+    "decide": "Tres niveles de precio cerrado, IVA incluido. Solicita tu revisión; Carla confirma el encargo antes del pago por Bizum o transferencia.",
+    "serviceNote": "Carla confirma el nivel, el alcance y el plazo antes del pago por Bizum o transferencia. El contrato a medida requiere presupuesto previo.",
+    "caseHelp": "Describe el contrato, tu posición y qué te preocupa. Mínimo 30 caracteres. Este formulario no adjunta archivos: envía el contrato respondiendo al correo de confirmación.",
+    "preferences": "Cambiar preferencias de cookies",
+    "intakeSummary": "solicitud de revisión, confirmación del encargo y pago por Bizum o transferencia; contrato por correo",
+    "extrasTitle": "Extras para la Revisión Esencial",
+    "extrasLabels": [
+      "Esencial + exprés · 128 €",
+      "Esencial + consulta · 128 €",
+      "Esencial + exprés + consulta · 177 €"
+    ],
+    "afterPay": "Ya he pagado · enviar los datos; contrato por correo",
+    "submitLabel": "Solicitar revisión",
+    "successMessage": "<strong>Solicitud enviada.</strong> Revisa tu email y responde adjuntando el contrato en PDF o fotos legibles. Carla confirma el encargo y te indica el pago por Bizum o transferencia antes de empezar."
+  },
+  "paymentPaused": true
 }

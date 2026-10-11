@@ -1,0 +1,52 @@
+/* Refinement of the existing RC editorial composition; target-only. */
+body.site-revisioncontratos { --rc-brass:#705b35; scrollbar-color:#64726b #f7f4ee; }
+.site-revisioncontratos ::selection { background:#24483d; color:#fffdfa; }
+.site-revisioncontratos :is(input,textarea) { caret-color:#24483d; }
+.site-revisioncontratos h1,.site-revisioncontratos h2 { text-wrap:balance; }
+.site-revisioncontratos .marca-sub { font-size:.8rem; text-transform:none; letter-spacing:0; }
+.site-revisioncontratos .analytics-consent { position:static; inset:auto; width:auto; max-width:76rem; margin:0 auto; padding:1rem clamp(1.25rem,4vw,3rem); display:flex; align-items:center; gap:1.5rem; border:0; border-bottom:1px solid var(--linea); background:#edf1ea; box-shadow:none; }
+.site-revisioncontratos .analytics-consent[hidden] { display:none !important; }
+.site-revisioncontratos .analytics-consent p { margin:0; }
+.site-revisioncontratos .analytics-actions { flex-shrink:0; }
+.site-revisioncontratos :is(button,.boton,summary,.nav a) { min-height:44px; }
+.site-revisioncontratos .analytics-consent button { border-radius:2px; font:inherit; }
+.site-revisioncontratos #analytics-preferences { background:transparent; border:1px solid #dfe5df; color:#dfe5df; font:inherit; padding:.6rem .8rem; cursor:pointer; }
+.site-revisioncontratos .pie a { display:inline-block; min-height:44px; padding-block:.4rem; }
+.site-revisioncontratos .quien-revisa-portrait { box-shadow:none; }
+.site-revisioncontratos .respuesta-directa,.site-revisioncontratos .page-simple section p { max-width:70ch; }
+.site-revisioncontratos .precio-destacado { order:initial; margin-top:0; }
+.site-revisioncontratos .precio-card { display:flex; flex-direction:column; min-width:0; padding:1.5rem; }
+.site-revisioncontratos .precio-card h2 { margin:0 0 .75rem; }
+.site-revisioncontratos .precio-card .precio-cifra { margin:.25rem 0 .75rem; }
+.site-revisioncontratos .precio-card ul { margin:0 0 1rem; }
+.site-revisioncontratos .precio-card .boton { width:100%; }
+.site-revisioncontratos .precios-grid { margin:1.5rem 0 2rem; }
+.site-revisioncontratos .pago-opciones h2 { margin-top:0; }
+.site-revisioncontratos .pago-opciones > p,.site-revisioncontratos .pago-opciones > ul { max-width:70ch; }
+.site-revisioncontratos .rc-service-index > h3 { margin:2rem 0 .5rem; font-size:1.65rem; }
+.site-revisioncontratos .tarjetas { margin-top:.5rem; }
+.site-revisioncontratos .tarjeta h3 a { display:inline-block; min-height:44px; }
+.site-revisioncontratos .boton:hover { transform:none; }
+.site-revisioncontratos .tabla { max-width:100%; overflow:auto; scrollbar-color:#64726b #f7f4ee; }
+.site-revisioncontratos .campo-check label { padding-block:.6rem; }
+@media(max-width:56rem) {
+ .site-revisioncontratos .analytics-consent { flex-wrap:wrap; gap:.75rem; }
+ .site-revisioncontratos .rc-service-body { display:flex; flex-direction:column; }
+ .site-revisioncontratos .rc-service-aside { order:-1; width:100%; }
+ .site-revisioncontratos .rc-service-head { padding-bottom:1.5rem; }
+}
+@media(max-width:48rem) {
+ .site-revisioncontratos .precio-card { padding:1.25rem 0; }
+ .site-revisioncontratos .nav { gap:.25rem .8rem; }
+ .site-revisioncontratos .intake { padding:1rem; }
+ .site-revisioncontratos .campo select { width:100%; min-width:0; font-size:1rem; }
+ .site-revisioncontratos .rc-hero { padding-top:0; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .site-revisioncontratos *, .site-revisioncontratos *::before, .site-revisioncontratos *::after { transition:none !important; animation:none !important; scroll-behavior:auto !important; }
+}
+
+.site-revisioncontratos .precio-card > ul { order:3; }
+.site-revisioncontratos .precio-card > .pago-confirmado { order:4; }
+.site-revisioncontratos .precio-card > p:has(.boton-pago) { margin:.5rem 0 1rem; }
+@media(max-width:56rem) { .site-revisioncontratos .rc-service-body > .rc-prose { width:100%; max-width:100%; min-width:0; } }

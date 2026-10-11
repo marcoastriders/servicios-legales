@@ -1,0 +1,215 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "route": "/",
+      "overflow": false,
+      "consentPosition": "static",
+      "consent": {
+        "x": 112,
+        "y": 100.078125,
+        "width": 1216,
+        "height": 81.484375
+      },
+      "cta": {
+        "x": 160,
+        "y": 713.8125,
+        "width": 307.28125,
+        "height": 53.921875
+      },
+      "sheet": true,
+      "overflowElements": [],
+      "smallTargets": [],
+      "brass": "#705b35"
+    },
+    {
+      "width": 1440,
+      "route": "/precios/",
+      "overflow": false,
+      "consentPosition": "static",
+      "consent": {
+        "x": 112,
+        "y": 100.078125,
+        "width": 1216,
+        "height": 81.484375
+      },
+      "cta": null,
+      "sheet": true,
+      "overflowElements": [],
+      "smallTargets": [],
+      "brass": "#705b35"
+    },
+    {
+      "width": 1440,
+      "route": "/como-funciona/",
+      "overflow": false,
+      "consentPosition": "static",
+      "consent": {
+        "x": 112,
+        "y": 100.078125,
+        "width": 1216,
+        "height": 81.484375
+      },
+      "cta": null,
+      "sheet": true,
+      "overflowElements": [],
+      "smallTargets": [],
+      "brass": "#705b35"
+    },
+    {
+      "width": 1440,
+      "route": "/cuenta-tu-caso/",
+      "overflow": false,
+      "consentPosition": "static",
+      "consent": {
+        "x": 112,
+        "y": 100.078125,
+        "width": 1216,
+        "height": 81.484375
+      },
+      "cta": null,
+      "sheet": true,
+      "overflowElements": [],
+      "smallTargets": [],
+      "brass": "#705b35"
+    },
+    {
+      "width": 1440,
+      "querySelection": "Revisión Profesional — 199 €",
+      "fakePaymentConfirmation": false
+    },
+    {
+      "width": 1440,
+      "rejectedDisplay": "none"
+    },
+    {
+      "width": 1440,
+      "persistedDisplay": "none"
+    },
+    {
+      "width": 1440,
+      "preferencesFocus": "analytics-accept"
+    },
+    {
+      "width": 1440,
+      "acceptedDisplay": "none"
+    },
+    {
+      "width": 1440,
+      "zoom200Overflow": false
+    },
+    {
+      "width": 1440,
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      }
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "overflow": false,
+      "consentPosition": "static",
+      "consent": {
+        "x": 0,
+        "y": 223.265625,
+        "width": 390,
+        "height": 151.265625
+      },
+      "cta": {
+        "x": 20,
+        "y": 778.953125,
+        "width": 350,
+        "height": 53.921875
+      },
+      "sheet": true,
+      "overflowElements": [],
+      "smallTargets": [],
+      "brass": "#705b35"
+    },
+    {
+      "width": 390,
+      "route": "/precios/",
+      "overflow": false,
+      "consentPosition": "static",
+      "consent": {
+        "x": 0,
+        "y": 223.265625,
+        "width": 390,
+        "height": 151.265625
+      },
+      "cta": null,
+      "sheet": true,
+      "overflowElements": [],
+      "smallTargets": [],
+      "brass": "#705b35"
+    },
+    {
+      "width": 390,
+      "route": "/como-funciona/",
+      "overflow": false,
+      "consentPosition": "static",
+      "consent": {
+        "x": 0,
+        "y": 223.265625,
+        "width": 390,
+        "height": 151.265625
+      },
+      "cta": null,
+      "sheet": true,
+      "overflowElements": [],
+      "smallTargets": [],
+      "brass": "#705b35"
+    },
+    {
+      "width": 390,
+      "route": "/cuenta-tu-caso/",
+      "overflow": false,
+      "consentPosition": "static",
+      "consent": {
+        "x": 0,
+        "y": 223.265625,
+        "width": 390,
+        "height": 151.265625
+      },
+      "cta": null,
+      "sheet": true,
+      "overflowElements": [],
+      "smallTargets": [],
+      "brass": "#705b35"
+    },
+    {
+      "width": 390,
+      "querySelection": "Revisión Profesional — 199 €",
+      "fakePaymentConfirmation": false
+    },
+    {
+      "width": 390,
+      "rejectedDisplay": "none"
+    },
+    {
+      "width": 390,
+      "persistedDisplay": "none"
+    },
+    {
+      "width": 390,
+      "preferencesFocus": "analytics-accept"
+    },
+    {
+      "width": 390,
+      "acceptedDisplay": "none"
+    },
+    {
+      "width": 390,
+      "zoom200Overflow": false
+    },
+    {
+      "width": 390,
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      }
+    }
+  ],
+  "errors": []
+}

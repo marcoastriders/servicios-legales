@@ -87,7 +87,7 @@
     {
       "route": "/cuenta-tu-caso/",
       "status": 200,
-      "h1": "Cuéntanos tu caso",
+      "h1": "Cuéntame tu caso",
       "h1Count": 1,
       "width": 390,
       "scroll": 390,
@@ -96,10 +96,10 @@
         "x": 20,
         "y": 454.0625,
         "width": 350,
-        "height": 97.65625,
+        "height": 48.828125,
         "top": 454.0625,
         "right": 370,
-        "bottom": 551.71875,
+        "bottom": 502.890625,
         "left": 20
       },
       "overflow": false,
@@ -444,7 +444,7 @@
     {
       "route": "/cuenta-tu-caso/",
       "width": 390,
-      "h1": "Cuéntanos tu caso",
+      "h1": "Cuéntame tu caso",
       "h1Count": 1,
       "scroll": 390,
       "client": 390,
@@ -452,10 +452,10 @@
         "x": 20,
         "y": 454.0625,
         "width": 350,
-        "height": 97.65625,
+        "height": 48.828125,
         "top": 454.0625,
         "right": 370,
-        "bottom": 551.71875,
+        "bottom": 502.890625,
         "left": 20
       },
       "overflow": false,
@@ -544,7 +544,7 @@
     {
       "route": "/cuenta-tu-caso/",
       "width": 768,
-      "h1": "Cuéntanos tu caso",
+      "h1": "Cuéntame tu caso",
       "h1Count": 1,
       "scroll": 768,
       "client": 768,
@@ -629,14 +629,14 @@
       "scroll": 1440,
       "client": 1440,
       "h1Rect": {
-        "x": 128,
+        "x": 360,
         "y": 291.390625,
         "width": 720,
         "height": 169.5,
         "top": 291.390625,
-        "right": 848,
+        "right": 1080,
         "bottom": 460.890625,
-        "left": 128
+        "left": 360
       },
       "overflow": false,
       "font": "\"BF Bodoni\", Georgia, serif"
@@ -644,19 +644,19 @@
     {
       "route": "/cuenta-tu-caso/",
       "width": 1440,
-      "h1": "Cuéntanos tu caso",
+      "h1": "Cuéntame tu caso",
       "h1Count": 1,
       "scroll": 1440,
       "client": 1440,
       "h1Rect": {
-        "x": 128,
+        "x": 360,
         "y": 291.390625,
         "width": 720,
         "height": 84.75,
         "top": 291.390625,
-        "right": 848,
+        "right": 1080,
         "bottom": 376.140625,
-        "left": 128
+        "left": 360
       },
       "overflow": false,
       "font": "\"BF Bodoni\", Georgia, serif"
@@ -669,14 +669,14 @@
       "scroll": 1440,
       "client": 1440,
       "h1Rect": {
-        "x": 128,
+        "x": 360,
         "y": 291.390625,
         "width": 720,
         "height": 339,
         "top": 291.390625,
-        "right": 848,
+        "right": 1080,
         "bottom": 630.390625,
-        "left": 128
+        "left": 360
       },
       "overflow": false,
       "font": "\"BF Bodoni\", Georgia, serif"
@@ -689,14 +689,14 @@
       "scroll": 1440,
       "client": 1440,
       "h1Rect": {
-        "x": 128,
+        "x": 360,
         "y": 291.390625,
         "width": 720,
         "height": 254.25,
         "top": 291.390625,
-        "right": 848,
+        "right": 1080,
         "bottom": 545.640625,
-        "left": 128
+        "left": 360
       },
       "overflow": false,
       "font": "\"BF Bodoni\", Georgia, serif"
@@ -765,16 +765,16 @@
     },
     {
       "route": "/",
-      "text": "Cuéntanos tu caso",
+      "text": "Cuéntame tu caso",
       "fg": "rgb(24, 60, 53)",
       "bg": "rgb(244, 240, 230)",
       "rect": {
         "x": 861.375,
         "y": 552.140625,
-        "width": 189.703125,
+        "width": 186.015625,
         "height": 60.53125,
         "top": 552.140625,
-        "right": 1051.078125,
+        "right": 1047.390625,
         "bottom": 612.671875,
         "left": 861.375
       },
@@ -786,31 +786,31 @@
       "fg": "rgb(244, 240, 230)",
       "bg": "rgb(24, 60, 53)",
       "rect": {
-        "x": 1061.46875,
+        "x": 1057.78125,
         "y": 552.140625,
         "width": 132.171875,
         "height": 60.53125,
         "top": 552.140625,
-        "right": 1193.640625,
+        "right": 1189.953125,
         "bottom": 612.671875,
-        "left": 1061.46875
+        "left": 1057.78125
       },
       "ratio": 10.626164557896967
     },
     {
       "route": "/",
-      "text": "Cuéntanos tu caso",
+      "text": "Cuéntame tu caso",
       "fg": "rgb(24, 60, 53)",
       "bg": "rgb(244, 240, 230)",
       "rect": {
-        "x": 192,
+        "x": 360,
         "y": 6650.40625,
-        "width": 189.703125,
+        "width": 186.015625,
         "height": 60.53125,
         "top": 6650.40625,
-        "right": 381.703125,
+        "right": 546.015625,
         "bottom": 6710.9375,
-        "left": 192
+        "left": 360
       },
       "ratio": 10.626164557896967
     },
@@ -820,14 +820,14 @@
       "fg": "rgb(244, 240, 230)",
       "bg": "rgb(24, 60, 53)",
       "rect": {
-        "x": 393.703125,
+        "x": 558.015625,
         "y": 6650.40625,
         "width": 186.03125,
         "height": 60.53125,
         "top": 6650.40625,
-        "right": 579.734375,
+        "right": 744.046875,
         "bottom": 6710.9375,
-        "left": 393.703125
+        "left": 558.015625
       },
       "ratio": 10.626164557896967
     },
@@ -837,48 +837,48 @@
       "fg": "rgb(73, 96, 89)",
       "bg": "rgb(244, 240, 230)",
       "rect": {
-        "x": 128,
+        "x": 360,
         "y": 428.5,
         "width": 720,
         "height": 96.609375,
         "top": 428.5,
-        "right": 848,
+        "right": 1080,
         "bottom": 525.109375,
-        "left": 128
+        "left": 360
       },
       "ratio": 5.951338241216647
     },
     {
       "route": "/precios/",
-      "text": "Cuéntanos tu caso y recibe tu presupuesto cerrado",
+      "text": "Cuéntame tu caso y recibe tu presupuesto cerrado",
       "fg": "rgb(255, 255, 255)",
       "bg": "rgb(40, 89, 76)",
       "rect": {
-        "x": 128,
+        "x": 256,
         "y": 766.875,
-        "width": 447.578125,
+        "width": 443.890625,
         "height": 60.53125,
         "top": 766.875,
-        "right": 575.578125,
+        "right": 699.890625,
         "bottom": 827.40625,
-        "left": 128
+        "left": 256
       },
       "ratio": 8.004466665140875
     },
     {
       "route": "/precios/",
-      "text": "Cuéntanos tu caso",
+      "text": "Cuéntame tu caso",
       "fg": "rgb(24, 60, 53)",
       "bg": "rgb(244, 240, 230)",
       "rect": {
-        "x": 192,
+        "x": 360,
         "y": 1246.40625,
-        "width": 189.703125,
+        "width": 186.015625,
         "height": 60.53125,
         "top": 1246.40625,
-        "right": 381.703125,
+        "right": 546.015625,
         "bottom": 1306.9375,
-        "left": 192
+        "left": 360
       },
       "ratio": 10.626164557896967
     },
@@ -888,31 +888,31 @@
       "fg": "rgb(244, 240, 230)",
       "bg": "rgb(24, 60, 53)",
       "rect": {
-        "x": 393.703125,
+        "x": 558.015625,
         "y": 1246.40625,
         "width": 186.03125,
         "height": 60.53125,
         "top": 1246.40625,
-        "right": 579.734375,
+        "right": 744.046875,
         "bottom": 1306.9375,
-        "left": 393.703125
+        "left": 558.015625
       },
       "ratio": 10.626164557896967
     },
     {
       "route": "/cuenta-tu-caso/",
-      "text": "Cuéntanos qué ha pasado con todos los detalles: fechas, personas impli",
+      "text": "Cuéntame qué ha pasado con todos los detalles: fechas, personas implic",
       "fg": "rgb(73, 96, 89)",
       "bg": "rgb(244, 240, 230)",
       "rect": {
-        "x": 128,
+        "x": 360,
         "y": 343.75,
         "width": 720,
         "height": 128.8125,
         "top": 343.75,
-        "right": 848,
+        "right": 1080,
         "bottom": 472.5625,
-        "left": 128
+        "left": 360
       },
       "ratio": 5.951338241216647
     },
@@ -922,14 +922,14 @@
       "fg": "rgb(73, 96, 89)",
       "bg": "rgb(252, 250, 244)",
       "rect": {
-        "x": 177,
+        "x": 409,
         "y": 995.171875,
-        "width": 830,
-        "height": 24.625,
+        "width": 622,
+        "height": 49.25,
         "top": 995.171875,
-        "right": 1007,
-        "bottom": 1019.796875,
-        "left": 177
+        "right": 1031,
+        "bottom": 1044.421875,
+        "left": 409
       },
       "ratio": 6.4887576824257716
     },
@@ -939,19 +939,122 @@
       "fg": "rgb(255, 255, 255)",
       "bg": "rgb(40, 89, 76)",
       "rect": {
-        "x": 177,
-        "y": 1390.484375,
+        "x": 409,
+        "y": 1443.109375,
         "width": 178.65625,
         "height": 48,
-        "top": 1390.484375,
-        "right": 355.65625,
-        "bottom": 1438.484375,
-        "left": 177
+        "top": 1443.109375,
+        "right": 587.65625,
+        "bottom": 1491.109375,
+        "left": 409
       },
       "ratio": 8.004466665140875
     }
   ],
   "errors": [],
+  "layout": [
+    {
+      "route": "/",
+      "kids": 8,
+      "ctaP": 3
+    },
+    {
+      "route": "/precios/",
+      "kids": 5,
+      "ctaP": 3
+    },
+    {
+      "route": "/como-funciona/",
+      "kids": 9,
+      "ctaP": 3
+    },
+    {
+      "route": "/quien-revisa/",
+      "kids": 8,
+      "ctaP": 3
+    },
+    {
+      "route": "/cuenta-tu-caso/",
+      "kids": 5,
+      "ctaP": 0
+    },
+    {
+      "route": "/burofax-impago-alquiler/",
+      "kids": 15,
+      "ctaP": 3
+    },
+    {
+      "route": "/burofax-reclamar-fianza/",
+      "kids": 15,
+      "ctaP": 3
+    },
+    {
+      "route": "/burofax-incumplimiento-contrato/",
+      "kids": 15,
+      "ctaP": 3
+    },
+    {
+      "route": "/burofax-comunidad-propietarios/",
+      "kids": 15,
+      "ctaP": 3
+    },
+    {
+      "route": "/burofax-deudas-particulares/",
+      "kids": 15,
+      "ctaP": 3
+    },
+    {
+      "route": "/aviso-legal/",
+      "kids": 6,
+      "ctaP": 0
+    },
+    {
+      "route": "/privacidad/",
+      "kids": 6,
+      "ctaP": 0
+    },
+    {
+      "route": "/cookies/",
+      "kids": 5,
+      "ctaP": 0
+    },
+    {
+      "route": "/condiciones-del-servicio/",
+      "kids": 7,
+      "ctaP": 0
+    },
+    {
+      "route": "/articulos/",
+      "kids": 5,
+      "ctaP": 3
+    },
+    {
+      "route": "/articulos/que-es-un-burofax/",
+      "kids": 12,
+      "ctaP": 3
+    },
+    {
+      "route": "/articulos/casos-en-los-que-necesitas-burofax/",
+      "kids": 17,
+      "ctaP": 3
+    },
+    {
+      "route": "/articulos/burofax-o-carta-certificada/",
+      "kids": 12,
+      "ctaP": 3
+    },
+    {
+      "route": "/articulos/como-enviar-un-burofax/",
+      "kids": 15,
+      "ctaP": 3
+    }
+  ],
+  "cascade": {
+    "h1Color": "#f4f0e6",
+    "btnBg": "#f4f0e6",
+    "btnRadius": "0px",
+    "strongColor": "#ddceaa"
+  },
   "focus": {
     "active": "skip",
     "outline": "rgb(152, 106, 19) solid 3px",
@@ -1004,7 +1107,7 @@
     {
       "route": "/cuenta-tu-caso/",
       "scale": 2,
-      "h1": "Cuéntanos tu caso",
+      "h1": "Cuéntame tu caso",
       "h1Count": 1,
       "width": 1440,
       "scroll": 720,

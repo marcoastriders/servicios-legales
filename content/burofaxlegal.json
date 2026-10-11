@@ -6,8 +6,8 @@
   "description": "Envía un burofax redactado por abogada: requerimientos de alquiler, fianzas, contratos, comunidad y deudas entre particulares. Precio cerrado y revisión antes de enviar.",
   "accent": "#14232e",
   "kicker": "BUROFAX REDACTADO POR ABOGADA",
-  "ctaTitle": "Cuéntanos tu caso y recibe tu burofax revisado",
-  "ctaWhatsapp": "Hola, necesito un burofax. Os cuento mi caso.",
+  "ctaTitle": "Cuéntame tu caso y recibe tu burofax revisado",
+  "ctaWhatsapp": "Hola, necesito un burofax. Te cuento mi caso.",
   "ctaMailSubject": "Solicito burofax revisado por abogada",
   "llmsSummary": "BurofaxLegal es un servicio jurídico online español que redacta y revisa burofaxes con abogada colegiada antes de enviarlos por Correos. Sirve para requerir pagos de alquiler, exigir fianzas, reclamar incumplimientos contractuales, cuotas de comunidad y deudas entre particulares. Presupuesto cerrado por escrito desde 99 € IVA incluido, según la complejidad del caso.",
   "nav": [
@@ -20,7 +20,7 @@
       "label": "Quién revisa"
     },
     {
-      "label": "Cuéntanos tu caso",
+      "label": "Cuéntame tu caso",
       "path": "/cuenta-tu-caso/"
     }
   ],
@@ -129,7 +129,7 @@
       "answer": "<p>El proceso tiene tres pasos. Primero nos cuentas tu caso y nos envías los documentos. Segundo, redactamos el burofax y una abogada lo revisa. Tercero, tú apruebas el texto y lo envías por Correos con la acreditación de contenido y entrega. Todo online: presupuesto cerrado desde 99 € IVA incluido según la complejidad del caso, y pago tras aceptar el presupuesto.</p>",
       "sections": [
         {
-          "h2": "Paso 1: Cuéntanos tu caso con documentos",
+          "h2": "Paso 1: Cuéntame tu caso con documentos",
           "html": "<p>Escríbenos por WhatsApp o correo y cuéntanos qué pasó: qué contrato existe, qué se incumplió, desde cuándo y qué quieres conseguir. Te pediremos el contrato, recibos, mensajes previos y cualquier prueba que tengas.</p><p>Con esa información valoramos si un burofax es la herramienta adecuada. Si no lo es, te lo decimos aquí, antes de cobrar. Si encaja, te remitimos el presupuesto cerrado por escrito; si lo aceptas, recibes las instrucciones de pago y empezamos a redactar.</p>"
         },
         {
@@ -902,10 +902,10 @@
   ],
   "prelaunch": false,
   "intake": {
-    "title": "Cuéntanos tu caso | BurofaxLegal",
-    "description": "Cuéntanos tu caso completo: Carla Morales, abogada colegiada, lo revisa personalmente y te remite un presupuesto cerrado por escrito; si lo aceptas, recibes las instrucciones de pago de forma segura.",
-    "h1": "Cuéntanos tu caso",
-    "answer": "<p>Cuéntanos qué ha pasado con todos los detalles: fechas, personas implicadas, documentos que tienes y qué quieres conseguir. Carla lo revisa personalmente y te responde con un presupuesto cerrado por escrito. Solo pagas si lo aceptas, y recibes las instrucciones de pago.</p>",
+    "title": "Cuéntame tu caso | BurofaxLegal",
+    "description": "Cuéntame tu caso completo: Carla Morales, abogada colegiada, lo revisa personalmente y te remite un presupuesto cerrado por escrito; si lo aceptas, recibes las instrucciones de pago de forma segura.",
+    "h1": "Cuéntame tu caso",
+    "answer": "<p>Cuéntame qué ha pasado con todos los detalles: fechas, personas implicadas, documentos que tienes y qué quieres conseguir. Carla lo revisa personalmente y te responde con un presupuesto cerrado por escrito. Solo pagas si lo aceptas, y recibes las instrucciones de pago.</p>",
     "asuntos": [
       "Impago de alquiler",
       "Devolución de fianza",

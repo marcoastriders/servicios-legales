@@ -198,7 +198,7 @@ const blockCta = (site, text = null) => site.prelaunch ? `
 <div class="cta">
   <p class="cta-titulo">${text || esc(site.ctaTitle)}</p>
   <p class="cta-botones">
-    <a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a>
+    <a class="boton" href="/cuenta-tu-caso/">${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : 'Cuéntanos tu caso'}</a>
     <a class="boton boton-sec" href="https://wa.me/${shared.whatsappIntl}?text=${encodeURIComponent(site.ctaWhatsapp)}">WhatsApp directo</a>
   </p>
   <p class="cta-nota">${site.id === 'revisioncontratos' ? 'Elige un nivel y cuéntanos tu caso. Carla confirma el alcance, el plazo y la forma de pago antes de empezar.' : 'Carla revisa tu caso y te indica por escrito qué servicio y tarifa corresponden antes de empezar.'}</p>
@@ -297,7 +297,7 @@ ${blockCta(site)}` : site.id === 'burofaxlegal' ? `
   <div class="bf-opening">
     ${blockAnswer(site.home.answer)}
     <div class="bf-action">
-      <p class="hero-botones"><a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a> <a class="boton boton-sec" href="/precios/">Ver precios</a></p>
+      <p class="hero-botones"><a class="boton" href="/cuenta-tu-caso/">Cuéntame tu caso</a> <a class="boton boton-sec" href="/precios/">Ver precios</a></p>
       <ul class="bf-sello">
         <li>Redactado sobre tus hechos</li>
         <li>Revisado por abogada colegiada</li>
@@ -309,7 +309,7 @@ ${blockCta(site)}` : site.id === 'burofaxlegal' ? `
 <div class="bf-accountability">${blockTrustCarla(site)}</div>
 <section class="bf-proceso" aria-label="Cómo funciona el servicio">
   <ol class="bf-proceso-lista">
-    <li><span class="bf-num" aria-hidden="true">01</span><h2>Cuéntanos tu caso con documentos</h2><p>Qué contrato existe, qué se incumplió, desde cuándo y qué quieres conseguir.</p></li>
+    <li><span class="bf-num" aria-hidden="true">01</span><h2>Cuéntame tu caso con documentos</h2><p>Qué contrato existe, qué se incumplió, desde cuándo y qué quieres conseguir.</p></li>
     <li><span class="bf-num" aria-hidden="true">02</span><h2>Presupuesto cerrado antes de empezar</h2><p>Te remitimos por escrito el importe exacto y las instrucciones de pago. Solo comenzamos cuando aceptas el presupuesto y recibimos el pago.</p></li>
     <li><span class="bf-num" aria-hidden="true">03</span><h2>Redacción, revisión por abogada y tu aprobación</h2><p>Redactamos sobre tus hechos concretos y la abogada revisa plazos y cantidades antes de enviártelo. Solo cuando apruebas el texto final pasas al envío, que contratas directamente con Correos.</p></li>
   </ol>
@@ -384,7 +384,7 @@ ${cards}
     : `<section class="precio-cerrado" aria-label="Honorarios del servicio">
   <p class="precio-cifra">${esc(site.pricing.quoteFrom)}</p>
   <p class="precio-detalle">${esc(site.pricing.quoteNote)}</p>
-  <p><a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso y recibe tu presupuesto cerrado</a></p>
+  <p><a class="boton" href="/cuenta-tu-caso/">Cuéntame tu caso y recibe tu presupuesto cerrado</a></p>
 </section>`;
   const body = `
 <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · Precios</nav>
@@ -556,7 +556,7 @@ function renderIntake(site) {
       ${asuntos}
     </select></p>
   ${packageFields}
-  <p class="campo"><label for="f-caso">Cuéntanos tu historia completa *</label>
+  <p class="campo"><label for="f-caso">${site.id === 'burofaxlegal' ? 'Cuéntame tu historia completa' : 'Cuéntanos tu historia completa'} *</label>
     <span class="campo-ayuda" id="f-caso-ayuda">${caseHelp}</span>
     <textarea id="f-caso" name="caso" rows="9" required minlength="30" maxlength="8000" aria-describedby="f-caso-ayuda"></textarea></p>
   <p class="campo campo-oculto" aria-hidden="true"><label>Website <input name="website" type="text" tabindex="-1" autocomplete="off"></label></p>
@@ -595,12 +595,12 @@ function renderIntake(site) {
 })();
 </script>`;
   const body = `
-<nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · Cuéntanos tu caso</nav>
+<nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · ${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : 'Cuéntanos tu caso'}</nav>
 <h1>${site.intake.h1}</h1>
 ${blockAnswer(site.intake.answer)}
 ${formBody}
 ${blockTrustCarla(site)}`;
-  return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: 'Cuéntanos tu caso', path: '/cuenta-tu-caso/' }] }, {
+  return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : 'Cuéntanos tu caso', path: '/cuenta-tu-caso/' }] }, {
     title: site.intake.title, description: site.intake.description, path: '/cuenta-tu-caso/', body, bodyClass: 'page-intake',
   });
 }
@@ -659,7 +659,7 @@ ${site.prelaunch ? '\n> Estado: sitio en preparación. Tarifas, plazos y alcance
 ## Páginas
 - [Inicio](https://${site.domain}/): qué es el servicio y cómo pedirlo.
 - [Precios](https://${site.domain}/precios/): tarifas cerradas con IVA incluido.
-- [Cuéntanos tu caso](https://${site.domain}/cuenta-tu-caso/): ${site.id === 'revisioncontratos' ? 'envío de datos para que Carla confirme el nivel, el alcance, el plazo y la forma de pago' : 'formulario para que Carla valore el caso e indique el servicio y presupuesto que correspondan'}.
+- [${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : 'Cuéntanos tu caso'}](https://${site.domain}/cuenta-tu-caso/): ${site.id === 'revisioncontratos' ? 'envío de datos para que Carla confirme el nivel, el alcance, el plazo y la forma de pago' : 'formulario para que Carla valore el caso e indique el servicio y presupuesto que correspondan'}.
 - [Cómo funciona](https://${site.domain}/como-funciona/): pasos del encargo, plazos y qué recibe el cliente.
 - [Quién revisa](https://${site.domain}/quien-revisa/): la abogada que firma el trabajo.
 

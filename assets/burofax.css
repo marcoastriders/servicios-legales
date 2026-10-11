@@ -30,7 +30,7 @@ body.site-burofaxlegal {
 .site-burofaxlegal .respuesta-directa { border:0; padding:0; font-family:var(--bf-body); font-size:1.15rem; max-width:65ch; line-height:1.75; }
 .site-burofaxlegal .bf-hero { display:block; padding:clamp(2.5rem,5vw,4.5rem) 0; margin:0; background:var(--bf-ink); }
 .site-burofaxlegal .bf-hero h1 { max-width:23ch; font-size:clamp(3rem,6.2vw,5.75rem); line-height:1.06; margin:0 0 .55em; }
-.site-burofaxlegal .bf-hero h1 strong { color:var(--bf-parch); font-weight:400; }
+.site-burofaxlegal .bf-hero h1 strong { color:var(--bf-copper-light); }
 .site-burofaxlegal .bf-opening { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(0,1fr); gap:clamp(2rem,6vw,5rem); padding-top:2rem; border-top:1px solid #a0ad94; }
 .site-burofaxlegal .bf-opening .respuesta-directa { margin:0; max-width:64ch; color:var(--bf-parch-dim); }
 .site-burofaxlegal .bf-action .hero-botones { margin:0; display:flex; flex-wrap:wrap; gap:.65rem; }
@@ -79,6 +79,30 @@ body.site-burofaxlegal {
 .site-burofaxlegal .checklist, .site-burofaxlegal .relacionado { border-left:0; border-radius:0; background:var(--acento-suave); padding:1.5rem 2rem; }
 .site-burofaxlegal .precio-linea { border-left:0; padding:0; font-family:var(--bf-body); font-size:1.1rem; }
 .site-burofaxlegal .tabla { max-width:100%; margin-inline:0; padding-inline:0; scrollbar-color:var(--acento) var(--fondo); }
+/* Una sola vertical: la columna de lectura (45rem) y sus bloques afines se
+   centran dentro del contenedor de 82rem; las bandas de ancho completo (hero,
+   ficha, CTA) se quedan simétricas. Sin esto, texto y tabla quedaban pegados
+   al borde izquierdo con ~400px de aire a la derecha. */
+.site-burofaxlegal main > h1,
+.site-burofaxlegal main > .migas,
+.site-burofaxlegal main > .respuesta-directa,
+.site-burofaxlegal main > .precio-linea,
+.site-burofaxlegal main > section { margin-inline:auto; }
+.site-burofaxlegal main > .migas,
+.site-burofaxlegal main > .precio-linea { display:block; max-width:var(--bf-reading); }
+/* El shared sheet usa `margin` shorthand en estos bloques y anularía el centrado. */
+.site-burofaxlegal main > section.checklist,
+.site-burofaxlegal main > section.precios-grid,
+.site-burofaxlegal main > ul.tarjetas { margin-inline:auto; }
+.site-burofaxlegal main > figure.tabla { max-width:min(100%,58rem); margin-inline:auto; }
+.site-burofaxlegal main > p,
+.site-burofaxlegal main > ul { max-width:var(--bf-reading); margin-inline:auto; }
+/* Formulario y ficha profesional se alinean con la misma vertical. */
+.site-burofaxlegal main > form.intake,
+.site-burofaxlegal main > .confianza { max-width:var(--bf-reading); margin-inline:auto; }
+/* La banda del CTA sigue ocupando el contenedor, pero su texto arranca en la
+   misma vertical que la columna de lectura. */
+.site-burofaxlegal .cta > p { max-width:var(--bf-reading); margin-inline:auto; }
 .site-burofaxlegal th { font-family:var(--bf-body); text-transform:none; letter-spacing:0; }
 .site-burofaxlegal table { font-variant-numeric:tabular-nums; }
 .site-burofaxlegal .precio-cerrado { text-align:left; padding:2.5rem 0; border:0; border-block:1px solid var(--tinta); border-radius:0; background:transparent; box-shadow:none; max-width:58rem; margin-block:3rem; }

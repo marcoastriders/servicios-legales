@@ -31,7 +31,7 @@
       "name": "Primary Button",
       "kind": "button",
       "description": "Primary Button del sistema construido",
-      "html": "<button class=\"ds-primary\">Cuéntanos tu caso</button>",
+      "html": "<button class=\"ds-primary\">Cuéntame tu caso</button>",
       "css": ".ds-primary{font-family:sans-serif;border-radius:0;min-height:48px;padding:.9rem 1.25rem;border:1px solid #28594c;background:#28594c;color:#f4f0e6}.ds-primary:hover{background:#102e28}.ds-primary:focus-visible{outline:3px solid #986a13;outline-offset:4px}",
       "refersTo": "button-primary"
     },
@@ -39,7 +39,7 @@
       "name": "Inverse Button",
       "kind": "button",
       "description": "Inverse Button del sistema construido",
-      "html": "<div class=\"ds-dark\"><button class=\"ds-inverse\">Cuéntanos tu caso</button></div>",
+      "html": "<div class=\"ds-dark\"><button class=\"ds-inverse\">Cuéntame tu caso</button></div>",
       "css": ".ds-dark{padding:20px;background:#183c35}.ds-inverse{font-family:sans-serif;border-radius:0;min-height:48px;padding:.9rem 1.25rem;border:1px solid #28594c;background:#f4f0e6;color:#183c35;border-color:#f4f0e6}.ds-inverse:hover{background:#ddceaa}.ds-inverse:focus-visible{outline:3px solid #ddceaa;outline-offset:4px}",
       "refersTo": "button-inverse"
     },
@@ -62,7 +62,7 @@
       "name": "Navigation",
       "kind": "nav",
       "description": "Navigation del sistema construido",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Ejemplo\"><a href=\"#\">Cómo funciona</a><a href=\"#\">Quién revisa</a><a href=\"#\">Cuéntanos tu caso</a></nav>",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Ejemplo\"><a href=\"#\">Cómo funciona</a><a href=\"#\">Quién revisa</a><a href=\"#\">Cuéntame tu caso</a></nav>",
       "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:20px;font:14px sans-serif}.ds-nav a{padding:12px 0;color:#183c35;text-decoration:none}.ds-nav a:last-child{border:1px solid #183c35;padding:12px}.ds-nav a:hover{text-decoration:underline;text-underline-offset:4px}.ds-nav a:focus-visible{outline:3px solid #986a13;outline-offset:4px}"
     },
     {

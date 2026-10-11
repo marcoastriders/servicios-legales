@@ -205,7 +205,7 @@
       },
       {
         "h2": "Cómo se paga",
-        "html": "<p>El pago se realiza por adelantado mediante Bizum o transferencia. Al enviar tu caso, Carla te facilita los datos de pago. La revisión comienza cuando tengo el pago, tus datos y el contrato completo y legible.</p>"
+        "html": "<p>El pago se realiza por adelantado: online con tarjeta o Bizum desde el enlace de pago del nivel elegido, o por Bizum/transferencia manual si lo prefieres. La revisión comienza cuando tengo el pago, tus datos y el contrato completo y legible.</p>"
       },
       {
         "h2": "Cancelaciones y reembolso",
@@ -242,7 +242,7 @@
         "a": "Te lo digo igualmente: un contrato limpio también es un resultado, y te lo dejo por escrito en el informe, con el análisis completo y la constancia de que el documento no esconde riesgos relevantes."
       }
     ],
-    "paymentNote": "Puedes contratar completando «Cuéntanos tu caso» con el servicio elegido. Carla confirma tu encargo y te facilita los datos para pagar por Bizum o transferencia. Después responde al correo de confirmación adjuntando el contrato."
+    "paymentNote": "Paga online con tarjeta o Bizum desde el botón «Contratar y pagar» del nivel elegido. Si prefieres Bizum o transferencia manual, indícalo en «Cuéntanos tu caso» y Carla te facilita los datos. Después envía el contrato desde la misma página o respondiendo al correo de confirmación."
   },
   "pages": {
     "comoFunciona": {
@@ -396,7 +396,7 @@
         },
         {
           "h2": "Pago",
-          "html": "<p>El pago se realiza por adelantado mediante Bizum o transferencia, con el importe del servicio elegido. No se inicia la revisión hasta recibir también el contrato completo y los datos del caso.</p>"
+          "html": "<p>El pago se realiza por adelantado con el importe del servicio elegido, online con tarjeta o Bizum mediante el enlace de pago o por Bizum/transferencia manual. No se inicia la revisión hasta recibir también el contrato completo y los datos del caso.</p>"
         },
         {
           "h2": "Plazo de entrega",
@@ -1314,5 +1314,13 @@
       "Contrato a medida",
       "Otro asunto"
     ]
+  },
+  "paymentLinks": {
+    "essential": "https://buy.stripe.com/8x200k8Fb9C94sy8oj2Nq00",
+    "professional": "https://buy.stripe.com/5kQcN608F5lT3ou5c72Nq01",
+    "blindada": "https://buy.stripe.com/00weVe08F6pX2kq6gb2Nq02",
+    "essentialExpress": "https://buy.stripe.com/28E6oI5sZcOl0cigUP2Nq03",
+    "essentialCall": "https://buy.stripe.com/fZubJ24oV4hP4sydID2Nq04",
+    "essentialBoth": "https://buy.stripe.com/bJeeVe8Fb29H9MS33Z2Nq05"
   }
 }

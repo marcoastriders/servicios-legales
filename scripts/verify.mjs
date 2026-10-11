@@ -101,7 +101,20 @@ for (const expected of [['Revisión Esencial', 79], ['Revisión Profesional', 19
   const tier = revisionContent.pricing.tiers.find((t) => t.name.includes(expected[0]));
   if (!tier || tier.priceValue !== expected[1]) fail(`nivel ${expected[0]} no coincide con ${expected[1]} €`);
 }
-if ('paymentLinks' in revisionContent) fail('revisioncontratos.es conserva paymentLinks (PayPal eliminado)');
+if ('paymentLinks' in revisionContent) {
+  const pl = revisionContent.paymentLinks;
+  for (const k of ['essential', 'professional', 'blindada']) {
+    if (!/^https:\/\/buy\.stripe\.com\//.test(pl[k] || '')) fail(`paymentLinks.${k} no es un enlace de pago de Stripe`);
+  }
+} else {
+  fail('revisioncontratos.es no tiene paymentLinks de Stripe (cobro online)');
+}
+{
+  const preciosHtml = readFileSync(join(dist, 'revisioncontratos.es', 'precios', 'index.html'), 'utf8');
+  const n = (preciosHtml.match(/boton-pago/g) || []).length;
+  if (n < 3) fail(`precios: solo ${n} botones de pago (esperados al menos 3)`);
+  if (/paypal\.(me|com)/i.test(preciosHtml)) fail('precios: conserva mención de PayPal');
+}
 const alquilerHtml = readFileSync(join(dist, 'revisioncontratos.es', 'revision-contrato-alquiler', 'index.html'), 'utf8');
 if (alquilerHtml.includes('Si contratas la opción de contraoferta'))
   fail('la página de alquiler conserva una contraoferta ambigua sin nivel ni precio');
@@ -202,6 +215,13 @@ if (burofaxContent.pricing.quoteFrom !== 'desde 99 €') fail(`burofaxlegal.es: 
 if (!burofaxAll.includes(burofaxContent.pricing.quoteFrom)) fail('burofaxlegal.es: falta la ancla de precio «desde» en las páginas servidas');
 for (const oldPrice of ['79 €', '149 €', '249 €']) {
   if (burofaxAll.includes(oldPrice)) fail(`burofaxlegal.es conserva el precio cerrado ${oldPrice}`);
+}
+{
+  const bfIntake = readFileSync(join(dist, 'burofaxlegal.es', 'cuenta-tu-caso', 'index.html'), 'utf8');
+  if (!bfIntake.includes('id="f-telefono" name="telefono" type="tel" autocomplete="tel" required')) fail('intake burofaxlegal: el teléfono debe ser obligatorio');
+  if (!bfIntake.includes('name="adjuntos" type="file"')) fail('intake burofaxlegal: falta el campo de adjuntos');
+  if (!bfIntake.includes("fd.append('adjuntos'")) fail('intake burofaxlegal: falta el envío multipart de adjuntos');
+  if (bfIntake.includes('name="paquete"')) fail('intake burofaxlegal: no debe tener el campo de paquete');
 }
 
 // 10. artículos del blog: presencia, sitemap y estado de revisión

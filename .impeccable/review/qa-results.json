@@ -897,17 +897,34 @@
     },
     {
       "route": "/cuenta-tu-caso/",
+      "text": "PDF, JPG o PNG. Hasta 5 archivos y 10 MB en total. Solo los utiliza Ca",
+      "fg": "rgb(73, 96, 89)",
+      "bg": "rgb(252, 250, 244)",
+      "rect": {
+        "x": 409,
+        "y": 1403.90625,
+        "width": 622,
+        "height": 49.25,
+        "top": 1403.90625,
+        "right": 1031,
+        "bottom": 1453.15625,
+        "left": 409
+      },
+      "ratio": 6.4887576824257716
+    },
+    {
+      "route": "/cuenta-tu-caso/",
       "text": "Enviar mi caso a Carla",
       "fg": "rgb(255, 255, 255)",
       "bg": "rgb(40, 89, 76)",
       "rect": {
         "x": 409,
-        "y": 1443.109375,
+        "y": 1576.5,
         "width": 178.65625,
         "height": 48,
-        "top": 1443.109375,
+        "top": 1576.5,
         "right": 587.65625,
-        "bottom": 1491.109375,
+        "bottom": 1624.5,
         "left": 409
       },
       "ratio": 8.004466665140875
@@ -916,7 +933,7 @@
   "errors": [],
   "redirect": {
     "status": 301,
-    "location": "http://burofaxlegal.es/cuenta-tu-caso/"
+    "location": "https://burofaxlegal.es/cuenta-tu-caso/"
   },
   "layout": [
     {
@@ -1149,6 +1166,14 @@
     },
     "overflow": false,
     "font": "\"BF Bodoni\", Georgia, serif"
+  },
+  "phoneRequired": {
+    "blocked": true,
+    "msg": "Revisa los campos marcados: faltan datos obligatorios o el texto es muy corto."
+  },
+  "multipart": {
+    "ctype": "multipart/form-data; boundary=----WebKitFormBoundaryYyg2MGM7W9xCGi1C",
+    "bytes": 1104
   },
   "sibling": {
     "files": 22,

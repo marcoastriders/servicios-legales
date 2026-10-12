@@ -192,8 +192,8 @@ body.site-revisioncontratos {
   --tarjeta: #fffdfa;
   --tinta: #202d2b;
   --tinta-suave: #53615b;
-  --acento: #183f37;
-  --acento-suave: #edf1ea;
+  --acento: #8b7448;
+  --acento-suave: #f0ead8;
   --linea: #d5d9d1;
   --rc-brass: #8b7448;
   --rc-focus: #165fcc;
@@ -234,7 +234,7 @@ body.site-revisioncontratos {
 .site-revisioncontratos .nav a:last-child { min-height: 44px; display: inline-flex; align-items: center; padding: .55rem .9rem; color: #fff; background: var(--acento); text-decoration: none; }
 .site-revisioncontratos .kicker { font-size: .74rem; letter-spacing: .15em; color: var(--rc-brass); }
 .site-revisioncontratos .boton { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; padding: .72rem 1.15rem; border-radius: var(--rc-radius); font-weight: 650; border: 1px solid var(--acento); transition: background .15s ease, color .15s ease, transform .15s ease; }
-.site-revisioncontratos .boton:hover { transform: translateY(-1px); background: #0e3029; }
+.site-revisioncontratos .boton:hover { transform: translateY(-1px); background: #6e5a33; }
 .site-revisioncontratos .boton-sec { background: transparent; color: var(--acento) !important; border: 1px solid var(--acento); }
 .site-revisioncontratos .boton-sec:hover { color: #fff !important; }
 .site-revisioncontratos .cta .boton { background: #fff; color: var(--acento) !important; }

@@ -54,3 +54,14 @@ body.site-revisioncontratos { --rc-brass:#705b35; scrollbar-color:#64726b #f7f4e
   .site-revisioncontratos .faq { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 3rem; align-items:start; }
   .site-revisioncontratos .faq h2 { grid-column:1 / -1; }
 }
+
+/* Cabecera masthead editorial + hero espejado: estructura propia de RC,
+   distinta de la barra partida marca/nav de burofaxlegal. Desktop >=56rem. */
+@media (min-width: 56rem) {
+  .site-revisioncontratos .cabecera-in { flex-wrap:wrap; justify-content:center; row-gap:0; }
+  .site-revisioncontratos .marca { flex-basis:100%; text-align:center; font-size:1.55rem; padding-bottom:.3rem; }
+  .site-revisioncontratos .nav { width:100%; justify-content:center; gap:clamp(1.2rem,3vw,2.4rem); margin-top:.55rem; padding:.7rem 0 .6rem; border-top:1px solid var(--linea); border-bottom:2px solid var(--rc-brass); }
+  .site-revisioncontratos .nav a { margin-inline-start:0; }
+  .site-revisioncontratos .rc-hero { grid-template-columns:1fr 1.45fr; }
+  .site-revisioncontratos .rc-hero-aside { order:-1; }
+}

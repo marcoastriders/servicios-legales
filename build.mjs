@@ -182,7 +182,7 @@ ${analyticsId ? `<aside id="analytics-consent" class="analytics-consent" aria-la
         <a href="/cookies/">Cookies</a> ·
         <a href="/condiciones-del-servicio/">Condiciones del servicio</a>${site.articles?.length ? ' ·\n        <a href="/articulos/">Artículos</a>' : ''}
       </p>
-      ${site.ui?.preferences ? `<p><button type="button" id="analytics-preferences">${esc(site.ui.preferences)}</button></p>\n      ` : ''}<p class="pie-copy">© ${year} ${esc(site.name)}</p>
+      ${(site.ui?.preferences || shared.preferences) ? `<p><button type="button" id="analytics-preferences">${esc(site.ui?.preferences || shared.preferences)}</button></p>\n      ` : ''}<p class="pie-copy">© ${year} ${esc(site.name)}</p>
     </div>
   </div>
 </footer>

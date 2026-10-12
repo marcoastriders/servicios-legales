@@ -6,12 +6,12 @@ colors:
   surface: "#fffdfa"
   ink: "#202d2b"
   muted: "#53615b"
-  primary: "#183f37"
+  primary: "#8b7448"
   sage: "#edf1ea"
   rule: "#d5d9d1"
   brass: "#705b35"
   focus: "#165fcc"
-  primary-hover: "#0e3029"
+  primary-hover: "#6e5a33"
   white: "#ffffff"
   payment: "#183b66"
   field-border: "#9da9a3"
@@ -69,7 +69,7 @@ Fuente normativa de implementación: bloque RC de `assets/styles.css`, seguido d
 
 ## Colors
 ### Primary
-Verde de acción para CTA y enlaces; verde más profundo en hover. El azul de pago queda reservado para el flujo futuro; durante la pausa se usa CTA verde Solicitar revisión. Latón oscuro separa secciones y marca el nivel destacado; no demuestra certificaciones ni privilegios comerciales.
+Latón de acción para CTA, enlaces y cifras de precio (pase 2026-10-12: el verde #183f37 se retiró por leerse idéntico al verde #183c35 de BurofaxLegal a simple vista; decisión del titular); latón más oscuro en hover. El verde tinta permanece en texto, pie y superficies oscuras. El azul de pago queda reservado para el flujo futuro; durante la pausa se usa CTA latón Solicitar revisión. Latón oscuro #705b35 (override de polish) separa secciones y marca el nivel destacado; no demuestra certificaciones ni privilegios comerciales.
 ### Neutral
 Papel para fondo, superficie clara para intake, tinta para lectura, muted para respuesta/ayuda, salvia para consentimiento y cabeceras de tabla. Reglas finas delimitan regiones; el pie usa tinta y texto claro.
 
@@ -82,6 +82,8 @@ H1 limitado a 17ch; h1/h2 balancean líneas. Respuesta directa fluida `clamp(1.0
 
 ## Layout
 Shell 76rem, lectura 44rem, gutter y sección fluidos del frontmatter. Portada grid 1.45fr/1fr, módulo de decisión .85fr/1.15fr; índice abierto con filas texto/precio y grupos de servicios. Interior de servicio: prosa y aside de contratación. La introducción de precio permanece centrada en decidir alcance; tres paneles en orden original y extras agrupados una sola vez.
+
+**Estructura dossier (pase 2026-10-12, decisión del titular: la estructura no podía ser la misma que BurofaxLegal).** A partir de 68rem la cabecera se convierte en un raíl lateral izquierdo fijo de 15rem: marca sobre regla de latón, navegación vertical con marcador latón en el elemento activo y CTA «Cuéntanos tu caso» fijado al pie del raíl; main y pie van desplazados margin-left 15rem y la tarjeta de consentimiento libera el raíl. Bajo 68rem se conserva la barra superior heredada (sin rail). FAQ de portada a dos columnas a partir de 80rem. BurofaxLegal nunca adopta este raíl: su cabecera superior permanece.
 
 A 56rem se apilan hero/decisión/lectura. En servicios la hoja del pase usa flex columna, aside antes de prosa, prosa con width/max-width 100% y min-width 0; el aside conserva max-width 28rem heredado. A 48rem navegación de dos columnas, precios de una columna, filas de servicios apiladas e intake con padding 1rem. Los paneles pasan a padding 1.25rem 0. A 30rem confianza y acciones se apilan. Retrato de quién revisa tiene además breakpoint heredado de 700px.
 

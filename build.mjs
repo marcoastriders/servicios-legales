@@ -137,12 +137,12 @@ ${site.prelaunch ? `<aside class="prelaunch" role="status"><div class="wrap"><st
 <main id="contenido" class="wrap">
 ${body}
 </main>
-${analyticsId ? `<aside id="analytics-consent" class="analytics-consent" aria-label="Consentimiento de cookies" hidden>
-  <div class="analytics-cuerpo">
-    <p class="analytics-titulo">Cookies y privacidad</p>
-    <p class="analytics-texto">Usamos cookies técnicas, necesarias para que el sitio funcione. La medición con Google Analytics solo se activa si das tu permiso. <a href="/cookies/">Política de cookies</a>.</p>
+${analyticsId ? `<aside id="analytics-consent" class="analytics-consent" role="dialog" aria-label="Aviso de cookies" hidden>
+  <p class="analytics-texto">Usamos cookies técnicas necesarias y, solo si aceptas, cookies analíticas para medir el uso de la web. Puedes aceptar o rechazar las no necesarias.</p>
+  <div class="analytics-inferior">
+    <a class="analytics-politica" href="/cookies/">Cómo usamos las cookies</a>
+    <div class="analytics-actions"><button type="button" id="analytics-reject" class="analytics-btn analytics-btn-secundario">Rechazar</button><button type="button" id="analytics-accept" class="analytics-btn">Aceptar</button></div>
   </div>
-  <p class="analytics-actions"><button type="button" id="analytics-reject" class="analytics-btn analytics-btn-secundario">Rechazar</button><button type="button" id="analytics-accept" class="analytics-btn">Aceptar</button></p>
 </aside>
 <script>
 (function(){

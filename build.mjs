@@ -137,15 +137,19 @@ ${site.prelaunch ? `<aside class="prelaunch" role="status"><div class="wrap"><st
 <main id="contenido" class="wrap">
 ${body}
 </main>
-${analyticsId ? `<aside id="analytics-consent" class="analytics-consent" aria-label="Preferencias de cookies" hidden>
-  <p><strong>Medición opcional.</strong> Google Analytics solo se activa si aceptas. <a href="/cookies/">Ver detalles</a>.</p>
-  <p class="analytics-actions"><button type="button" id="analytics-accept">Aceptar</button> <button type="button" id="analytics-reject">Rechazar</button></p>
+${analyticsId ? `<aside id="analytics-consent" class="analytics-consent" aria-label="Consentimiento de cookies" hidden>
+  <div class="analytics-cuerpo">
+    <p class="analytics-titulo">Cookies y privacidad</p>
+    <p class="analytics-texto">Usamos cookies técnicas, necesarias para que el sitio funcione. La medición con Google Analytics solo se activa si das tu permiso. <a href="/cookies/">Política de cookies</a>.</p>
+  </div>
+  <p class="analytics-actions"><button type="button" id="analytics-reject" class="analytics-btn analytics-btn-secundario">Rechazar</button><button type="button" id="analytics-accept" class="analytics-btn">Aceptar</button></p>
 </aside>
 <script>
 (function(){
   var key='ga_consent_${site.id}', banner=document.getElementById('analytics-consent');
   if(!banner) return;${['burofaxlegal','revisioncontratos'].includes(site.id) ? "\n  banner.parentNode.insertBefore(banner,document.getElementById('contenido'));" : ''}
-${site.id === 'revisioncontratos' ? `  document.addEventListener('click',function(ev){if(ev.target && ev.target.id==='analytics-preferences'){banner.hidden=false;document.getElementById('analytics-accept').focus();}});\n` : ''}  var choice=localStorage.getItem(key);
+  document.addEventListener('click',function(ev){if(ev.target && ev.target.id==='analytics-preferences'){banner.hidden=false;document.getElementById('analytics-accept').focus();}});
+  var choice=localStorage.getItem(key);
   if(choice==='accepted'||choice==='rejected') update(choice);
   else banner.hidden=false;
   function update(value){
@@ -178,7 +182,7 @@ ${site.id === 'revisioncontratos' ? `  document.addEventListener('click',functio
         <a href="/cookies/">Cookies</a> ·
         <a href="/condiciones-del-servicio/">Condiciones del servicio</a>${site.articles?.length ? ' ·\n        <a href="/articulos/">Artículos</a>' : ''}
       </p>
-      ${site.id === 'revisioncontratos' ? `<p><button type="button" id="analytics-preferences">${esc(site.ui.preferences)}</button></p>\n      ` : ''}<p class="pie-copy">© ${year} ${esc(site.name)}</p>
+      ${site.ui?.preferences ? `<p><button type="button" id="analytics-preferences">${esc(site.ui.preferences)}</button></p>\n      ` : ''}<p class="pie-copy">© ${year} ${esc(site.name)}</p>
     </div>
   </div>
 </footer>

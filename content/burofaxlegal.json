@@ -1179,5 +1179,8 @@
       "reviewedAt": "2026-10-02",
       "publishedAt": "2026-10-02"
     }
-  ]
+  ],
+  "ui": {
+    "preferences": "Ajustar cookies"
+  }
 }

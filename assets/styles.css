@@ -33,11 +33,19 @@ a { color: var(--acento); }
 .nav a:hover { opacity: 1; text-decoration: underline; }
 .prelaunch { background: #fff0c7; color: #503b00; border-bottom: 1px solid #e2c875; padding: 0.65rem 0; font-size: 0.94rem; }
 .prelaunch strong { color: #342700; }
-.analytics-consent { position: fixed; z-index: 20; inset: auto 1rem 1rem; max-width: 42rem; margin-inline: auto; padding: 1rem 1.1rem; background: #fff; color: #183131; border: 1px solid #9ab7b7; border-radius: 0.5rem; box-shadow: 0 0.5rem 2rem #12333333; }
-.analytics-consent p { margin: 0 0 0.65rem; }
-.analytics-consent .analytics-actions { margin-bottom: 0; }
-.analytics-consent button { margin-right: 0.5rem; padding: 0.55rem 0.8rem; border: 1px solid #0e4f4f; border-radius: 0.3rem; background: #0e4f4f; color: #fff; cursor: pointer; }
-.analytics-consent button + button { background: #fff; color: #0e4f4f; }
+.analytics-consent { position: fixed; z-index: 60; inset: auto 1rem 1rem; max-width: 30rem; margin-inline: auto; padding: 1.15rem 1.3rem 1.25rem; background: #fff; color: #183131; border: 1px solid #9ab7b7; border-radius: 0.75rem; box-shadow: 0 1rem 2.5rem rgba(18, 51, 49, .18); }
+.analytics-consent[hidden] { display: none; }
+.analytics-titulo { margin: 0 0 .35rem; font-size: 1.02rem; font-weight: 700; }
+.analytics-texto { margin: 0; font-size: .92rem; line-height: 1.55; color: #3a4a48; }
+.analytics-texto a { color: #0e4f4f; font-weight: 600; }
+.analytics-actions { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: flex-end; margin: .95rem 0 0; }
+.analytics-btn { padding: .55rem 1.15rem; border: 1px solid #0e4f4f; border-radius: .45rem; background: #0e4f4f; color: #fff; font: inherit; font-size: .92rem; font-weight: 600; cursor: pointer; transition: background .15s ease, color .15s ease, border-color .15s ease; }
+.analytics-btn:hover { background: #0a3a3a; border-color: #0a3a3a; }
+.analytics-btn-secundario { background: transparent; color: #0e4f4f; }
+.analytics-btn-secundario:hover { background: #0e4f4f; color: #fff; border-color: #0e4f4f; }
+.analytics-btn:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+#analytics-preferences { background: none; border: 0; padding: 0; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+#analytics-preferences:hover { color: var(--acento, #0e4f4f); }
 
 /* Confianza: bloque de la abogada */
 .confianza { display: flex; gap: 1.1rem; align-items: flex-start; background: #f4f7fb; border: 1px solid #dde5ee; border-radius: 12px; padding: 1.2rem 1.4rem; margin: 2rem 0; }
@@ -312,7 +320,13 @@ body.site-revisioncontratos {
 .site-revisioncontratos .campo select,
 .site-revisioncontratos .campo textarea { min-height: 46px; border-radius: var(--rc-radius); border-color: #9da9a3; }
 .site-revisioncontratos .form-success { padding: 1rem 0; font-size: 1.08rem; border-block: 1px solid var(--linea); }
-.site-revisioncontratos .analytics-consent { inset: auto 1rem 1rem auto; width: min(27rem,calc(100vw - 2rem)); padding: 1rem; border-radius: var(--rc-radius); box-shadow: 0 1rem 3rem rgba(32,45,43,.18); }
+.site-revisioncontratos .analytics-consent { inset: auto 1rem 1rem auto; width: min(27rem, calc(100vw - 2rem)); background: var(--tarjeta); border-color: var(--linea); border-top: 3px solid var(--rc-brass); border-radius: var(--rc-radius); box-shadow: 0 1rem 3rem rgba(32, 45, 43, .18); }
+.site-revisioncontratos .analytics-texto { color: var(--tinta-suave); }
+.site-revisioncontratos .analytics-texto a { color: var(--acento); }
+.site-revisioncontratos .analytics-btn { background: var(--acento); border-color: var(--acento); }
+.site-revisioncontratos .analytics-btn:hover { background: #122e28; border-color: #122e28; }
+.site-revisioncontratos .analytics-btn-secundario { background: transparent; color: var(--acento); }
+.site-revisioncontratos .analytics-btn-secundario:hover { background: var(--acento); color: #fff; }
 .site-revisioncontratos .pie { background: #202d2b; color: #dfe5df; border-top: 3px solid var(--rc-brass); }
 .site-revisioncontratos .pie-in { max-width: var(--rc-shell); }
 
@@ -554,10 +568,17 @@ body.site-burofaxlegal {
 .site-burofaxlegal .pie a { color: var(--bf-parch); }
 .site-burofaxlegal .pie-marca { font-family: var(--bf-display); font-size: 1.35rem; font-weight: 700; letter-spacing: -.015em; color: var(--bf-parch); }
 
-.site-burofaxlegal .analytics-consent { inset: auto 0 0 0; width: 100%; max-width: none; margin: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1.5rem; background: var(--tarjeta); color: var(--tinta); border: 0; border-top: 3px solid var(--bf-copper); border-radius: 0; box-shadow: 0 -0.75rem 2rem rgba(20,35,46,.18); padding: .9rem var(--bf-gutter); }
+.site-burofaxlegal .analytics-consent { inset: auto 0 0 0; width: 100%; max-width: none; margin: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 2rem; background: var(--bf-ink); color: #f5efe4; border: 0; border-top: 3px solid var(--bf-copper); border-radius: 0; box-shadow: 0 -0.75rem 2rem rgba(20, 35, 46, .22); padding: .95rem var(--bf-gutter); }
 .site-burofaxlegal .analytics-consent[hidden] { display: none; }
-.site-burofaxlegal .analytics-consent p { margin: 0; max-width: 44rem; }
-.site-burofaxlegal .analytics-consent .analytics-actions { margin: 0; white-space: nowrap; }
+.site-burofaxlegal .analytics-cuerpo { max-width: 46rem; }
+.site-burofaxlegal .analytics-titulo { color: #fff; }
+.site-burofaxlegal .analytics-texto { color: #d9d0c2; }
+.site-burofaxlegal .analytics-texto a { color: var(--bf-copper-light); }
+.site-burofaxlegal .analytics-actions { margin: 0; }
+.site-burofaxlegal .analytics-btn { background: var(--bf-copper); border-color: var(--bf-copper); }
+.site-burofaxlegal .analytics-btn:hover { background: var(--bf-copper-text); border-color: var(--bf-copper-text); }
+.site-burofaxlegal .analytics-btn-secundario { background: transparent; color: #f5efe4; border-color: #d9d0c2; }
+.site-burofaxlegal .analytics-btn-secundario:hover { background: #f5efe4; color: var(--bf-ink); border-color: #f5efe4; }
 .site-burofaxlegal .analytics-consent button { background: var(--bf-copper-text); border-color: var(--bf-copper-text); border-radius: var(--bf-radius); }
 .site-burofaxlegal .analytics-consent button + button { background: #fff; color: var(--bf-copper-text); }
 

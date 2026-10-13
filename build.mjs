@@ -525,7 +525,7 @@ function renderIntake(site) {
   const asuntos = site.intake.asuntos.map((a) => `<option value="${esc(a)}">${esc(a)}</option>`).join('\n        ');
   const packageFields = isRevision ? `
   <p class="campo"><label for="f-paquete">Paquete elegido</label>
-    <select id="f-paquete" name="paquete">
+    <select id="f-paquete" name="paquete" required>
       <option value="">Selecciona el paquete que has pagado</option>
       <option value="Revisión Esencial — 129 €">Revisión Esencial — 129 €</option>
       <option value="Esencial + exprés — 178 €">Esencial + exprés — 178 €</option>

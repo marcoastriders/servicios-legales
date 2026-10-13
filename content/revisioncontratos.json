@@ -273,7 +273,7 @@
       "answer": "Elige el nivel que necesitas y paga directamente online con tarjeta o Bizum a través de Stripe. Después del pago, completa el formulario y adjunta el contrato completo y legible. Los alquileres tienen un plazo habitual de 48-72 horas laborables, con opción exprés de 24 horas; los contratos complejos reciben un plazo según el caso.",
       "sections": [
         {
-          "h2": "Los cuatro pasos",
+          "h2": "Los tres pasos",
           "html": "<ol><li><strong>Elige y paga.</strong> Compara los niveles en <a href=\"/precios/\">Precios</a> y paga directamente online con tarjeta o Bizum.</li><li><strong>Completa el encargo.</strong> Después del pago, abre <a href=\"/cuenta-tu-caso/\">el formulario</a> y envía tus datos y el contrato completo en PDF o fotos legibles.</li><li><strong>Recibe la revisión.</strong> La revisión empieza cuando recibimos el pago, los datos necesarios y el contrato completo y legible.</li></ol>"
         },
         {
@@ -1361,7 +1361,7 @@
     ],
     "afterPay": "Ya he pagado · completar el encargo",
     "submitLabel": "Enviar datos y contrato",
-    "successMessage": "<strong>Datos recibidos.</strong> El pago ya consta. Carla revisará el contrato completo y te enviará la confirmación y el plazo por email."
+    "successMessage": "<strong>Datos recibidos.</strong> Carla verificará el pago y revisará el contrato completo. Te confirmará por email la recepción y el plazo."
   },
   "paymentPaused": false
 }

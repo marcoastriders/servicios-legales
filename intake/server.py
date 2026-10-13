@@ -30,6 +30,11 @@ VALID_ASUNTOS = {
     'Prórroga de alquiler', 'Arras', 'Préstamo entre particulares', 'Contrato a medida',
     'Otro asunto',
 }
+VALID_REVISION_PAQUETES = {
+    'Revisión Esencial — 129 €', 'Esencial + exprés — 178 €',
+    'Esencial + consulta — 178 €', 'Esencial + exprés + consulta — 227 €',
+    'Revisión Profesional — 249 €', 'Firma Blindada — 499 €',
+}
 RATE = defaultdict(list)  # ip -> [timestamps]
 LIMIT, WINDOW = 3, 600
 
@@ -69,10 +74,9 @@ def confirm_client(email, nombre, site_name, n_adjuntos=0):
         if n_adjuntos else ''
     )
     if site_name == 'RevisiónContratos':
-        body = (f'Hola {nombre},\n\nHemos recibido tus datos y tu contrato. '
-                'El pago se verifica de forma independiente mediante Stripe. '
+        body = (f'Hola {nombre},\n\nHemos recibido tus datos. '
                 + (docs if n_adjuntos else 'El contrato está pendiente: responde a este correo adjuntando el documento completo.\n')
-                + 'Carla revisará el encargo pagado y te confirmará por email la recepción y el plazo de entrega.\n')
+                + 'Carla verificará el pago y te confirmará por email la recepción y el plazo de entrega.\n')
         send_mail(f'Tus datos han llegado — {site_name}', body, to=email, cc=None)
         return
     body = (
@@ -312,12 +316,14 @@ class H(BaseHTTPRequestHandler):
         telefono = str(d.get('telefono', '')).strip()[:40]
         asunto = str(d.get('asunto', '')).strip()
         caso = str(d.get('caso', '')).strip()[:8000]
+        paquete = str(d.get('paquete', '')).strip()
         web = 'burofaxlegal.es' if origin in ('https://burofaxlegal.es', 'https://www.burofaxlegal.es') else 'revisioncontratos.es'
 
         errs = []
         if len(nombre) < 2: errs.append('nombre')
         if not EMAIL_RE.match(email): errs.append('email')
         if 'burofax' in web and len(DIGITS_RE.sub('', telefono)) < 5: errs.append('telefono')
+        if 'revisioncontratos' in web and paquete not in VALID_REVISION_PAQUETES: errs.append('paquete')
         if asunto not in VALID_ASUNTOS: errs.append('asunto')
         if len(caso) < 30: errs.append('caso')
         if d.get('privacidad') is not True: errs.append('privacidad')
@@ -336,7 +342,7 @@ class H(BaseHTTPRequestHandler):
         body = (
             f'Nuevo caso recibido desde {web}\n\n'
             f'Nombre: {nombre}\nEmail: {email}\nTeléfono: {telefono or "(no indicado)"}\n'
-            f'Asunto: {asunto}\n\nHistoria:\n{caso}\n\n'
+            f'Asunto: {asunto}\nPaquete: {paquete or "(no indicado)"}\n\nHistoria:\n{caso}\n\n'
             f'{adjuntos_linea + chr(10) if adjuntos_linea else ""}---\nIP: {ip}\n'
             f'Responder escribiendo a: {email}\n'
         )

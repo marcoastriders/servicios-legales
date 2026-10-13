@@ -97,7 +97,7 @@ for (const [domain, file] of htmlFiles) {
 for (const oldPrice of ['59 €', '119 €']) {
   if (revisionAll.includes(oldPrice)) fail(`revisioncontratos.es conserva el precio antiguo ${oldPrice}`);
 }
-for (const expected of [['Revisión Esencial', 129], ['Revisión Profesional', 250], ['Firma Blindada', 449]]) {
+for (const expected of [['Revisión Esencial', 129], ['Revisión Profesional', 249], ['Firma Blindada', 499]]) {
   const tier = revisionContent.pricing.tiers.find((t) => t.name.includes(expected[0]));
   if (!tier || tier.priceValue !== expected[1]) fail(`nivel ${expected[0]} no coincide con ${expected[1]} €`);
 }
@@ -112,9 +112,14 @@ if ('paymentLinks' in revisionContent) {
 {
   const preciosHtml = readFileSync(join(dist, 'revisioncontratos.es', 'precios', 'index.html'), 'utf8');
   const n = (preciosHtml.match(/boton-pago/g) || []).length;
-  if (!revisionContent.paymentPaused && n < 6) fail(`precios: solo ${n} botones de pago (esperados al menos 6)`);
   if (!revisionContent.paymentPaused) {
+    if (n < 6) fail(`precios: solo ${n} botones de pago (esperados al menos 6)`);
     for (const url of Object.values(revisionContent.paymentLinks)) if (!preciosHtml.includes(`href="${url}"`)) fail('precios: enlace online configurado no renderizado');
+    if ((preciosHtml.match(/class="precio-bump"/g) || []).length !== 1) fail('precios: falta el bump único de la Revisión Esencial');
+    for (const label of revisionContent.ui.extrasLabels) if (!preciosHtml.includes(label)) fail(`precios: falta el extra ${label}`);
+    if (/cobro online.*desactivado|Bizum o transferencia|consulta antes de pagar|confirma el encargo.*antes del pago/i.test(preciosHtml + revisionAll)) fail('revisioncontratos: conserva copy de pago manual o contacto previo');
+    const intakeHtml = readFileSync(join(dist, 'revisioncontratos.es', 'cuenta-tu-caso', 'index.html'), 'utf8');
+    if (!intakeHtml.includes('name="paquete"') || !intakeHtml.includes('name="paquete" required')) fail('intake revisioncontratos: paquete pagado no es obligatorio');
   }
   if (revisionContent.paymentPaused) {
     for (const [, file] of htmlFiles.filter(([domain]) => domain === 'revisioncontratos.es')) {
@@ -129,7 +134,7 @@ if ('paymentLinks' in revisionContent) {
 const alquilerHtml = readFileSync(join(dist, 'revisioncontratos.es', 'revision-contrato-alquiler', 'index.html'), 'utf8');
 if (alquilerHtml.includes('Si contratas la opción de contraoferta'))
   fail('la página de alquiler conserva una contraoferta ambigua sin nivel ni precio');
-if (!alquilerHtml.includes('Revisión Profesional de 250 €'))
+if (!alquilerHtml.includes('Revisión Profesional de 249 €'))
   fail('la página de alquiler no asigna expresamente la contraoferta al nivel Profesional');
 const siteContents = {
   'revisioncontratos.es': revisionContent,

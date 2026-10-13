@@ -69,11 +69,11 @@ def confirm_client(email, nombre, site_name, n_adjuntos=0):
         if n_adjuntos else ''
     )
     if site_name == 'RevisiónContratos':
-        body = (f'Hola {nombre},\n\nHemos recibido tu consulta. '
-                'El pago se verifica de forma independiente mediante Stripe; este correo no confirma un pago. '
-                + (docs if n_adjuntos else 'Los documentos están pendientes: responde a este correo adjuntando el contrato.\n')
-                + 'Carla confirmará la recepción de los documentos y del pago antes de iniciar la revisión.\n')
-        send_mail(f'Tu consulta ha llegado — {site_name}', body, to=email, cc=None)
+        body = (f'Hola {nombre},\n\nHemos recibido tus datos y tu contrato. '
+                'El pago se verifica de forma independiente mediante Stripe. '
+                + (docs if n_adjuntos else 'El contrato está pendiente: responde a este correo adjuntando el documento completo.\n')
+                + 'Carla revisará el encargo pagado y te confirmará por email la recepción y el plazo de entrega.\n')
+        send_mail(f'Tus datos han llegado — {site_name}', body, to=email, cc=None)
         return
     body = (
         f"Hola {nombre},\n\n"

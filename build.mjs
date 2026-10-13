@@ -204,7 +204,7 @@ const blockCta = (site, text = null) => site.prelaunch ? `
   <p class="cta-titulo">${text || esc(site.ctaTitle)}</p>
   <p class="cta-botones">
     <a class="boton" href="${site.id === 'revisioncontratos' ? '/precios/' : '/cuenta-tu-caso/'}">${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : esc(site.ui.primary)}</a>
-    <a class="boton boton-sec" href="https://wa.me/${shared.whatsappIntl}?text=${encodeURIComponent(site.ctaWhatsapp)}">WhatsApp directo</a>
+    ${site.id === 'revisioncontratos' ? '<a class="boton boton-sec" href="/precios/">Ver extras</a>' : `<a class="boton boton-sec" href="https://wa.me/${shared.whatsappIntl}?text=${encodeURIComponent(site.ctaWhatsapp)}">WhatsApp directo</a>`}
   </p>
   <p class="cta-nota">${site.id === 'revisioncontratos' ? esc(site.ui.ctaNote) : 'Carla revisa tu caso y te indica por escrito qué servicio y tarifa corresponden antes de empezar.'}</p>
 </div>`;
@@ -268,7 +268,7 @@ function renderHome(site) {
   <div class="rc-hero-copy">
     <h1>${site.home.h1}</h1>
     ${blockAnswer(site.home.answer)}
-    <p class="hero-botones"><a class="boton" href="/precios/">Ver precios y elegir revisión</a> <a class="boton boton-sec" href="/cuenta-tu-caso/">${esc(site.ui.consult)}</a></p>
+    <p class="hero-botones"><a class="boton" href="/precios/">Elegir nivel y pagar</a> <a class="boton boton-sec" href="/precios/">Ver extras y opciones</a></p>
   </div>
   <div class="rc-hero-aside">${blockTrustCarla(site)}</div>
 </section>
@@ -362,6 +362,7 @@ function renderPrecios(site) {
       <p class="precio-cifra">${esc(t.price)}</p>
       <ul>${t.includes.map((item) => `<li>${item}</li>`).join('')}</ul>
       ${!site.paymentPaused && site.paymentLinks?.[payKeys[i]] ? `<p><a class="boton boton-pago" href="${esc(site.paymentLinks[payKeys[i]])}" target="_blank" rel="noopener">Contratar y pagar ${esc(t.price)}</a></p>
+      ${site.id === 'revisioncontratos' && i === 0 ? `<div class="precio-bump" aria-label="Añade un extra a la Revisión Esencial"><p><strong>¿Quieres más rapidez o apoyo?</strong></p><p class="precio-bump-ayuda">Añádelo ahora y paga el paquete completo en un clic:</p><a href="${esc(site.paymentLinks.essentialExpress)}" target="_blank" rel="noopener">+ exprés · 178 €</a><a href="${esc(site.paymentLinks.essentialCall)}" target="_blank" rel="noopener">+ consulta · 178 €</a><a href="${esc(site.paymentLinks.essentialBoth)}" target="_blank" rel="noopener">+ exprés + consulta · 227 €</a></div>` : ''}
       <p class="pago-confirmado"><a href="/cuenta-tu-caso/?paquete=${payKeys[i]}">${esc(site.ui.afterPay)}</a></p>` : `<p><a class="boton" href="/cuenta-tu-caso/${site.paymentPaused ? `?paquete=${payKeys[i]}` : ''}">${esc(site.paymentPaused ? site.ui.primary : 'Cuéntanos tu caso')}</a></p>`}
     </article>`).join('\n') : '';
   const offersLd = hasTiers ? site.pricing.tiers.map((t) => ({
@@ -430,7 +431,7 @@ function renderService(site, s) {
   <aside class="rc-service-aside" aria-label="Precio y contratación">
     <p class="precio-linea">${esc(s.priceLabel)}</p>
     <p><a href="/precios/">Comparar los tres niveles</a></p>
-    <p><a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a></p>
+    <p><a class="boton" href="/precios/">Elegir nivel y pagar</a></p>
     <p class="cta-nota">${esc(site.ui.serviceNote)}</p>
   </aside>
 </div>
@@ -525,7 +526,7 @@ function renderIntake(site) {
   const packageFields = isRevision ? `
   <p class="campo"><label for="f-paquete">Paquete elegido</label>
     <select id="f-paquete" name="paquete">
-      <option value="Todavía no he confirmado el encargo">Todavía no he confirmado el encargo / tengo dudas</option>
+      <option value="">Selecciona el paquete que has pagado</option>
       <option value="Revisión Esencial — 129 €">Revisión Esencial — 129 €</option>
       <option value="Esencial + exprés — 178 €">Esencial + exprés — 178 €</option>
       <option value="Esencial + consulta — 178 €">Esencial + consulta — 178 €</option>
@@ -678,7 +679,7 @@ function renderIntake(site) {
 </form>
 <script>${isRevision ? submitJsRevision : submitJsBurofax}</script>`;
   const body = `
-<nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · ${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : 'Cuéntanos tu caso'}</nav>
+<nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · ${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : 'Completa tu encargo'}</nav>
 <h1>${site.intake.h1}</h1>
 ${blockAnswer(site.intake.answer)}
 ${formBody}

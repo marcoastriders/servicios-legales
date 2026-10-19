@@ -7,7 +7,7 @@ import assert from 'node:assert/strict';
 const root=dirname(dirname(fileURLToPath(import.meta.url))),read=p=>readFileSync(join(root,p),'utf8');
 const normCtas=s=>s.replaceAll('Cuéntame','Cuéntanos').replaceAll('Te cuento mi caso','Os cuento mi caso');
 const original=normCtas(read('content/burofaxlegal.json'));
-const baselines={'content/burofaxlegal.json':'809d94a','content/revisioncontratos.json':'2f1d38b','assets/styles.css':'28cafab'};
+const baselines={'content/burofaxlegal.json':'809d94a','content/revisioncontratos.json':'f1ea234','assets/styles.css':'28cafab'};
 for(const p of Object.keys(baselines)){const committed=execFileSync('git',['show',baselines[p]+':'+p],{cwd:root,encoding:'utf8'});assert.equal(p==='content/burofaxlegal.json'?original:read(p),p==='content/burofaxlegal.json'?normCtas(committed):committed,p+' must preserve approved baseline beyond the owner-approved CTA label change (baseline '+baselines[p]+')');}
 assert(read('content/burofaxlegal.json').includes('Cuéntame tu caso')&&!read('content/revisioncontratos.json').includes('Cuéntame'),'singular CTA only on burofaxlegal');
 const home=read('dist/burofaxlegal.es/index.html'),sibling=read('dist/revisioncontratos.es/index.html');

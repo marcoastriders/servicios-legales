@@ -68,11 +68,17 @@ def send_mail(subject, body, reply_to=None, to=None, cc=None, attachments=()):
         s.login(SMTP_USER, SMTP_PASS)
         s.send_message(msg)
 
-def confirm_client(email, nombre, site_name, n_adjuntos=0):
+def confirm_client(email, nombre, site_name, n_adjuntos=0, mode=''):
     docs = (
         'Hemos recibido también los documentos adjuntos; Carla los revisará junto a tu historia.\n'
         if n_adjuntos else ''
     )
+    if site_name == 'RevisiónContratos' and mode == 'custom_quote':
+        body = (f'Hola {nombre},\n\nHemos recibido tu solicitud de presupuesto para un contrato a medida. '
+                'Carla valorará tu caso y te responderá con un presupuesto antes de empezar.\n'
+                + docs + 'Puedes responder a este correo para añadir información o documentos.\n')
+        send_mail(f'Presupuesto solicitado — {site_name}', body, to=email, cc=None)
+        return
     if site_name == 'RevisiónContratos':
         body = (f'Hola {nombre},\n\nHemos recibido tus datos. '
                 + (docs if n_adjuntos else 'El contrato está pendiente: responde a este correo adjuntando el documento completo.\n')
@@ -319,11 +325,17 @@ class H(BaseHTTPRequestHandler):
         paquete = str(d.get('paquete', '')).strip()
         web = 'burofaxlegal.es' if origin in ('https://burofaxlegal.es', 'https://www.burofaxlegal.es') else 'revisioncontratos.es'
 
+        mode = d.get('mode', '')
+        custom_quote = mode == 'custom_quote'
         errs = []
+        if mode not in ('', 'custom_quote'):
+            errs.append('mode')
+        if custom_quote and (web != 'revisioncontratos.es' or asunto != 'Contrato a medida' or paquete):
+            errs.append('custom_quote')
         if len(nombre) < 2: errs.append('nombre')
         if not EMAIL_RE.match(email): errs.append('email')
         if 'burofax' in web and len(DIGITS_RE.sub('', telefono)) < 5: errs.append('telefono')
-        if 'revisioncontratos' in web and paquete not in VALID_REVISION_PAQUETES: errs.append('paquete')
+        if 'revisioncontratos' in web and not custom_quote and paquete not in VALID_REVISION_PAQUETES: errs.append('paquete')
         if asunto not in VALID_ASUNTOS: errs.append('asunto')
         if len(caso) < 30: errs.append('caso')
         if d.get('privacidad') is not True: errs.append('privacidad')
@@ -348,7 +360,7 @@ class H(BaseHTTPRequestHandler):
         )
         try:
             send_mail(subject, body, reply_to=email, cc=CC, attachments=adjuntos)
-            confirm_client(email, nombre, site_name, n_adjuntos=len(adjuntos))
+            confirm_client(email, nombre, site_name, n_adjuntos=len(adjuntos), mode=mode)
         except Exception as e:
             print('SMTP ERROR:', e, flush=True)
             return self._json(502, {'ok': False, 'error': 'no se pudo enviar, prueba de nuevo o escribe a abogada@carlamorales.es'})

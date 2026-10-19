@@ -120,6 +120,13 @@ if ('paymentLinks' in revisionContent) {
     if (/cobro online.*desactivado|Bizum o transferencia|consulta antes de pagar|confirma el encargo.*antes del pago/i.test(preciosHtml + revisionAll)) fail('revisioncontratos: conserva copy de pago manual o contacto previo');
     const intakeHtml = readFileSync(join(dist, 'revisioncontratos.es', 'cuenta-tu-caso', 'index.html'), 'utf8');
     if (!intakeHtml.includes('name="paquete"') || !intakeHtml.includes('name="paquete" required')) fail('intake revisioncontratos: paquete pagado no es obligatorio');
+    // El contrato a medida solicita presupuesto, nunca un paquete ya pagado.
+    const quoteHtml = readFileSync(join(dist, 'revisioncontratos.es', 'solicitar-contrato', 'index.html'), 'utf8');
+    if (!quoteHtml.includes('custom_quote') || quoteHtml.includes('id="f-paquete"')) fail('contrato a medida: formulario de presupuesto incorrecto');
+    if (!quoteHtml.includes('Solicitud recibida') || !quoteHtml.includes('Todavía no has contratado ni pagado')) fail('contrato a medida: confirmación de presupuesto incorrecta');
+    const customService = readFileSync(join(dist, 'revisioncontratos.es', 'contrato-a-medida', 'index.html'), 'utf8');
+    if ((customService.match(/class="boton" href="\/solicitar-contrato\/"/g) || []).length < 2) fail('contrato a medida: sidebar y CTA final deben solicitar presupuesto');
+    if (!readFileSync(join(dist, 'revisioncontratos.es', 'sitemap.xml'), 'utf8').includes('/solicitar-contrato/')) fail('sitemap sin solicitud de contrato');
     // order page /contratar/
     const orderPath = join(dist, 'revisioncontratos.es', 'contratar', 'index.html');
     if (!existsSync(orderPath)) fail('revisioncontratos: falta la order page /contratar/');

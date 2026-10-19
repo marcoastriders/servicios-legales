@@ -9,7 +9,7 @@
   "ctaTitle": "¿Tienes un contrato sobre la mesa?",
   "ctaWhatsapp": "Hola, quiero que revisen mi contrato antes de firmar.",
   "ctaMailSubject": "Solicitud de revisión de contrato",
-  "llmsSummary": "revisioncontratos.es es un servicio de revisión de contratos dirigido por la abogada Carla Morales, colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa contratos de alquiler, compraventa, arras y préstamos entre particulares, y redacta contratos a medida. Tres niveles de precio cerrado: Revisión Esencial 129 € (alquiler, informe escrito en 48-72 horas laborables), Revisión Profesional 249 € (contratos complejos, con llamada de 30 minutos y contraoferta redactada) y Firma Blindada 499 € (la abogada negocia directamente con la otra parte y revisa la versión final). Extras: entrega exprés 24 h por 49 € (solo alquiler) y consulta de 30 minutos por 49 €. No interviene como defensa en juicio. Elige el nivel y paga directamente online con tarjeta o Bizum a través de Stripe; después envía los datos y el contrato completo. La revisión y su plazo empiezan cuando recibimos el pago, los datos necesarios y el contrato completo y legible.",
+  "llmsSummary": "revisioncontratos.es es un servicio de revisión de contratos dirigido por la abogada Carla Morales, colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa contratos de alquiler, compraventa, arras y préstamos entre particulares, y redacta contratos a medida. Tres niveles de precio cerrado: Revisión Esencial 129 € (alquiler, informe escrito en 48-72 horas laborables), Revisión Profesional 249 € (contratos complejos, con llamada de 30 minutos y contraoferta redactada) y Firma Blindada 499 € (la abogada negocia directamente con la otra parte y revisa la versión final). Extras: entrega exprés 24 h por 49 € (solo alquiler) y consulta de 30 minutos por 49 €. No interviene como defensa en juicio. Elige el nivel y paga directamente online con tarjeta a través de Stripe; después envía los datos y el contrato completo. La revisión y su plazo empiezan cuando recibimos el pago, los datos necesarios y el contrato completo y legible.",
   "nav": [
     {
       "path": "/precios/",
@@ -40,7 +40,7 @@
       },
       {
         "h2": "Cómo trabajamos",
-        "html": "<p>Eliges el nivel y pagas directamente online con tarjeta o Bizum a través de Stripe. Después completas el formulario y adjuntas el contrato en PDF o fotos legibles. Yo lo leo completo y te entrego un informe escrito con los riesgos que veo, las cláusulas que deberías pedir que cambien y una orientación práctica para negociarlas.</p><p>Si eliges la Revisión Profesional, añado una contraoferta redactada y lista para enviar. El informe no sustituye tu decisión: tú decides si firmas, negocias o rechazas.</p>"
+        "html": "<p>Eliges el nivel y pagas directamente online con tarjeta a través de Stripe. Después completas el formulario y adjuntas el contrato en PDF o fotos legibles. Yo lo leo completo y te entrego un informe escrito con los riesgos que veo, las cláusulas que deberías pedir que cambien y una orientación práctica para negociarlas.</p><p>Si eliges la Revisión Profesional, añado una contraoferta redactada y lista para enviar. El informe no sustituye tu decisión: tú decides si firmas, negocias o rechazas.</p>"
       },
       {
         "h2": "Qué no hacemos",
@@ -225,7 +225,7 @@
       },
       {
         "h2": "Cómo se paga",
-        "html": "<p>Elige el nivel que necesitas y paga directamente online con tarjeta o Bizum a través de Stripe. Después del pago, completa el formulario de encargo y adjunta el contrato completo y legible. La revisión y su plazo empiezan cuando recibimos el pago, los datos necesarios y el contrato.</p>"
+        "html": "<p>Elige el nivel que necesitas y paga directamente online con tarjeta a través de Stripe. Después del pago, completa el formulario de encargo y adjunta el contrato completo y legible. La revisión y su plazo empiezan cuando recibimos el pago, los datos necesarios y el contrato.</p>"
       },
       {
         "h2": "Cancelaciones y reembolso",
@@ -262,7 +262,7 @@
         "a": "Te lo digo igualmente: un contrato limpio también es un resultado, y te lo dejo por escrito en el informe, con el análisis completo y la constancia de que el documento no esconde riesgos relevantes."
       }
     ],
-    "paymentNote": "Elige el nivel y paga directamente online con tarjeta o Bizum a través de Stripe. Después del pago, completa el formulario y adjunta el contrato completo y legible. La revisión y su plazo empiezan cuando recibimos el pago, los datos necesarios y el contrato.",
+    "paymentNote": "Elige el nivel y paga directamente online con tarjeta a través de Stripe. Después del pago, completa el formulario y adjunta el contrato completo y legible. La revisión y su plazo empiezan cuando recibimos el pago, los datos necesarios y el contrato.",
     "extrasInfo": "<ul><li><strong>Entrega exprés 24 h: +49 €.</strong> Revisión Esencial + exprés: 178 € en total. Solo hay una plaza diaria; si ya estuviera ocupada, puedes elegir el plazo normal o recibir de inmediato la devolución de los 49 € del extra.</li><li><strong>Consulta de 30 minutos: +49 €.</strong> Revisión Esencial + consulta: 178 € en total. La llamada se agenda según disponibilidad.</li><li><strong>Exprés + consulta: 227 € en total.</strong></li></ul><p>Los niveles Profesional y Firma Blindada ya incluyen la llamada; por su complejidad y porque dependen de terceros, no ofrecen entrega en 24 horas.</p>"
   },
   "pages": {
@@ -270,11 +270,11 @@
       "title": "Cómo funciona la revisión de contratos | RevisiónContratos",
       "description": "Elige y paga directamente tu revisión de contrato online. Después envía los datos y el contrato completo.",
       "h1": "Cómo funciona",
-      "answer": "Elige el nivel que necesitas y paga directamente online con tarjeta o Bizum a través de Stripe. Después del pago, completa el formulario y adjunta el contrato completo y legible. Los alquileres tienen un plazo habitual de 48-72 horas laborables, con opción exprés de 24 horas; los contratos complejos reciben un plazo según el caso.",
+      "answer": "Elige el nivel que necesitas y paga directamente online con tarjeta a través de Stripe. Después del pago, completa el formulario y adjunta el contrato completo y legible. Los alquileres tienen un plazo habitual de 48-72 horas laborables, con opción exprés de 24 horas; los contratos complejos reciben un plazo según el caso.",
       "sections": [
         {
           "h2": "Los tres pasos",
-          "html": "<ol><li><strong>Elige y paga.</strong> Compara los niveles en <a href=\"/precios/\">Precios</a> y paga directamente online con tarjeta o Bizum.</li><li><strong>Completa el encargo.</strong> Después del pago, abre <a href=\"/cuenta-tu-caso/\">el formulario</a> y envía tus datos y el contrato completo en PDF o fotos legibles.</li><li><strong>Recibe la revisión.</strong> La revisión empieza cuando recibimos el pago, los datos necesarios y el contrato completo y legible.</li></ol>"
+          "html": "<ol><li><strong>Elige y paga.</strong> Compara los niveles en <a href=\"/precios/\">Precios</a> y paga directamente online con tarjeta.</li><li><strong>Completa el encargo.</strong> Después del pago, abre <a href=\"/cuenta-tu-caso/\">el formulario</a> y envía tus datos y el contrato completo en PDF o fotos legibles.</li><li><strong>Recibe la revisión.</strong> La revisión empieza cuando recibimos el pago, los datos necesarios y el contrato completo y legible.</li></ol>"
         },
         {
           "h2": "Qué contiene el informe",
@@ -417,7 +417,7 @@
         },
         {
           "h2": "Pago",
-          "html": "<p>El pago se realiza por adelantado, directamente online con tarjeta o Bizum a través de Stripe. No se inicia la revisión ni su plazo hasta recibir el pago, el contrato completo y legible y los datos del caso.</p>"
+          "html": "<p>El pago se realiza por adelantado, directamente online con tarjeta a través de Stripe. No se inicia la revisión ni su plazo hasta recibir el pago, el contrato completo y legible y los datos del caso.</p>"
         },
         {
           "h2": "Plazo de entrega",
@@ -1344,9 +1344,19 @@
     "essentialCall": "https://buy.stripe.com/6oU9AUcVr5lT4sycEz2Nq0a",
     "essentialBoth": "https://buy.stripe.com/bJebJ2bRn29He38fQL2Nq0b"
   },
+  "customOrder": {
+    "title": "Solicitar contrato a medida | RevisiónContratos",
+    "description": "Solicita presupuesto para redactar tu contrato a medida. Desde 199 € IVA incluido; Carla confirma el alcance y el precio antes de que pagues.",
+    "h1": "Solicita tu contrato a medida",
+    "answer": "Cuéntanos qué contrato necesitas y qué debe recoger. Carla revisará la solicitud y te enviará un presupuesto cerrado antes de cualquier pago. La redacción a medida parte de 199 € IVA incluido y no es uno de los paquetes de revisión de un contrato existente.",
+    "submitLabel": "Solicitar presupuesto de redacción",
+    "ctaNote": "Carla confirma el alcance y el presupuesto de la redacción antes de cualquier pago. Desde 199 € IVA incluido; no elijas un paquete de revisión para este servicio.",
+    "caseHelp": "Describe el contrato que necesitas, las partes, el objetivo y las condiciones que quieres incluir. Mínimo 30 caracteres. Puedes adjuntar documentación de referencia.",
+    "successMessage": "<strong>Solicitud recibida.</strong> Carla valorará la redacción y te enviará el alcance y el presupuesto por email. Todavía no has contratado ni pagado el servicio."
+  },
   "order": {
     "title": "Contratar revisión de contrato | RevisiónContratos",
-    "description": "Elige el nivel de revisión, añade exprés o consulta si lo necesitas y paga online con tarjeta o Bizum. Precio cerrado, IVA incluido.",
+    "description": "Elige el nivel de revisión, añade exprés o consulta si lo necesitas y paga online con tarjeta. Precio cerrado, IVA incluido.",
     "h1": "Contrata tu revisión",
     "answer": "Tres pasos: elige el nivel, añade los extras que quieras a la Revisión Esencial y paga online. Tras el pago vuelves aquí para enviar tus datos y adjuntar el contrato.",
     "stepLevel": "1 · Elige el nivel",
@@ -1354,7 +1364,7 @@
     "extrasDisabledNote": "La llamada de 30 minutos ya está incluida en la Profesional y la Firma Blindada; la entrega exprés no está disponible en esos niveles por la complejidad del servicio.",
     "totalLabel": "Total, IVA incluido",
     "payButton": "Pagar y contratar",
-    "afterNote": "Pago seguro con Stripe (tarjeta o Bizum). Al terminar, vuelves a esta web para enviar tus datos y adjuntar el contrato completo y legible.",
+    "afterNote": "Pago seguro con Stripe (tarjeta). Al terminar, vuelves a esta web para enviar tus datos y adjuntar el contrato completo y legible.",
     "levelShort": {
       "essential": "Alquiler · informe escrito en 48-72 h",
       "professional": "Contratos complejos · llamada incluida",

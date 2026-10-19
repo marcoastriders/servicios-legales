@@ -22,6 +22,7 @@ ROUTES = {
     'https://revisioncontratos.es/contratar/': 'id="order-pagar"',
     'https://revisioncontratos.es/cuenta-tu-caso/': 'id="f-paquete"',
     'https://revisioncontratos.es/solicitar-contrato/': 'custom_quote',
+    'https://revisioncontratos.es/solicitar-presupuesto/': 'territory_quote',
     'https://burofaxlegal.es/': 'site-burofaxlegal',
     'https://burofaxlegal.es/cuenta-tu-caso/': 'id="intake"',
     'https://intake.marcospera.com/health': None,
@@ -79,11 +80,40 @@ def check_page(url, body):
     if marker is None:
         return [] if json.loads(body).get('ok') is True else ['intake: health sin ok']
     errors = [] if marker in body else [f'{url}: identidad o control obligatorio ausente']
+    if url.startswith('https://revisioncontratos.es/') and 'buy.stripe.com/' in body:
+        errors.append(f'{url}: enlace antiguo que evita el filtro territorial')
     if url.endswith('/precios/'):
         p = Anchors()
         p.feed(body)
-        if len(set(h for h in p.hrefs if h.startswith('https://buy.stripe.com/'))) < 6:
-            errors.append('/precios/: faltan enlaces reales de los seis paquetes')
+        packages = set()
+        for href in p.hrefs:
+            u = urlparse(href)
+            if u.path != '/contratar/':
+                continue
+            q = parse_qs(u.query)
+            level = q.get('nivel', [''])[0]
+            if level == 'essential':
+                express, call = q.get('expres') == ['1'], q.get('consulta') == ['1']
+                level = 'essentialBoth' if express and call else 'essentialExpress' if express else 'essentialCall' if call else 'essential'
+            if level in LINKS:
+                packages.add(level)
+        if packages != set(LINKS):
+            errors.append('/precios/: faltan rutas internas de los seis paquetes')
+    return errors
+
+
+def check_checkout_status(status, tax_rate, expected_tax_id):
+    errors = []
+    if status.get('ok') is not True or status.get('ready') is not True:
+        errors.append('checkout: servidor no preparado para crear pagos')
+    if status.get('mode') != 'fixed_vat21' or status.get('vat_rate') != 21 or status.get('scope') != 'ES-mainland-balearic':
+        errors.append('checkout: tipo fijo o ámbito territorial incorrectos')
+    if status.get('prices') != {key: spec[1] for key, spec in LINKS.items()}:
+        errors.append('checkout: catálogo de importes incorrecto')
+    if status.get('tax_rate_id') != expected_tax_id:
+        errors.append('checkout: identificador de IVA distinto del esperado')
+    if tax_rate.get('id') != expected_tax_id or tax_rate.get('active') is not True or tax_rate.get('inclusive') is not True or tax_rate.get('percentage') != 21:
+        errors.append('Stripe: tipo fijo del 21 % incluido incorrecto o inactivo')
     return errors
 
 
@@ -101,22 +131,14 @@ def main():
         with urllib.request.urlopen(req, timeout=20) as r:
             return json.load(r)
 
-    def one(item):
-        k, expected = item
-        pid = expected[0]
-        try:
-            return check_link(k, expected, api('payment_links/' + pid), api('payment_links/' + pid + '/line_items'))
-        except Exception as e:
-            return [f'{k}: comprobación API fallida ({type(e).__name__})']
-
     alerts = []
-    with ThreadPoolExecutor(max_workers=6) as pool:
-        for result in pool.map(one, LINKS.items()):
-            alerts.extend(result)
     try:
-        alerts.extend(check_tax(api('tax/settings'), api('tax/registrations?limit=100')))
+        with urllib.request.urlopen('https://intake.marcospera.com/checkout/status', timeout=20) as r:
+            status = json.load(r)
+        rate_id = env['STRIPE_TAX_RATE_ID']
+        alerts.extend(check_checkout_status(status, api('tax_rates/' + rate_id), rate_id))
     except Exception as e:
-        alerts.append(f'Comprobación fiscal fallida ({type(e).__name__})')
+        alerts.append(f'Comprobación de checkout o IVA fijo fallida ({type(e).__name__})')
 
     def page(url):
         try:

@@ -13,7 +13,7 @@ class Forms(unittest.TestCase):
   c=http.client.HTTPConnection('127.0.0.1',self.http.server_port); c.request('POST','/',body,{'Origin':origin,'Content-Type':ctype,**(extra or {})}); r=c.getresponse(); out=(r.status,dict(r.getheaders()),r.read()); c.close(); return out
  def check(self,result,status,origin='https://revisioncontratos.es'):
   self.assertEqual(result[0],status); self.assertEqual(result[1].get('Access-Control-Allow-Origin'),origin)
- def valid(self): return {'nombre':'Offline Test','email':'offline@example.test','asunto':'Arras','caso':'Consulta de prueba offline de longitud suficiente','privacidad':True}
+ def valid(self):    return {'paquete':'Revisión Esencial — 129 €', 'nombre':'Offline Test','email':'offline@example.test','asunto':'Arras','caso':'Consulta de prueba offline de longitud suficiente','privacidad':True}
  def test_errors(self):
   for body,ctype,status in [(b'{}','application/json',400),(b'[]','application/json',400),(b'null','application/json',400),(b'{','application/json',400),(b'x','text/plain',415),(b'','application/json',400)]:
    with self.subTest(body=body): self.check(self.req(body,ctype),status)

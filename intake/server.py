@@ -5,6 +5,8 @@ con adjuntos opcionales, y lo envía por email a Carla.
 Sin dependencias externas: solo stdlib.
 """
 import base64, hashlib, hmac, json, os, re, smtplib, ssl, time, sqlite3, threading, ipaddress
+import urllib.request
+import urllib.parse
 from collections import defaultdict
 from email import policy
 from email.message import EmailMessage
@@ -73,6 +75,12 @@ def confirm_client(email, nombre, site_name, n_adjuntos=0, mode=''):
         'Hemos recibido también los documentos adjuntos; Carla los revisará junto a tu historia.\n'
         if n_adjuntos else ''
     )
+    if site_name == 'RevisiónContratos' and mode == 'territory_quote':
+        body = (f'Hola {nombre},\n\nHemos recibido tu solicitud de presupuesto según tu territorio. '
+                'Carla valorará tu caso y te responderá con un presupuesto antes de empezar.\n'
+                + docs + 'Puedes responder a este correo para añadir información o documentos.\n')
+        send_mail(f'Presupuesto solicitado — {site_name}', body, to=email, cc=None)
+        return
     if site_name == 'RevisiónContratos' and mode == 'custom_quote':
         body = (f'Hola {nombre},\n\nHemos recibido tu solicitud de presupuesto para un contrato a medida. '
                 'Carla valorará tu caso y te responderá con un presupuesto antes de empezar.\n'
@@ -153,6 +161,68 @@ PRICES = {'essential': 12900, 'professional': 24900, 'blindada': 49900, 'essenti
 PAYMENT_LINKS = {'essential': 'plink_1UPVgBJ9L8bkYbaiupBbsFLQ', 'professional': 'plink_1UPVgCJ9L8bkYbaiVp6IWMJ5', 'blindada': 'plink_1UPVgEJ9L8bkYbaiGo8XPoTg', 'essentialExpress': 'plink_1UPVgGJ9L8bkYbaiIruOsIDd', 'essentialCall': 'plink_1UPVgIJ9L8bkYbaiiStxoIPt', 'essentialBoth': 'plink_1UPVgJJ9L8bkYbaibFnBZKOL'}
 PAYMENT_DB = os.environ.get('PAYMENT_DB', '/data/payments.sqlite3')
 
+CHECKOUT_ORIGINS = {'https://revisioncontratos.es', 'https://www.revisioncontratos.es'}
+# Local development may use only an already allowlisted loopback origin.
+_local_checkout_origin = os.environ.get('CHECKOUT_TEST_ORIGIN', '')
+if _local_checkout_origin in {'http://localhost:8080', 'http://127.0.0.1:8080'}:
+    CHECKOUT_ORIGINS.add(_local_checkout_origin)
+PACKAGE_NAMES = {
+    'essential': 'Revisión Esencial — 129 €',
+    'professional': 'Revisión Profesional — 249 €',
+    'blindada': 'Firma Blindada — 499 €',
+    'essentialExpress': 'Esencial + exprés — 178 €',
+    'essentialCall': 'Esencial + consulta — 178 €',
+    'essentialBoth': 'Esencial + exprés + consulta — 227 €',
+}
+CHECKOUT_RATE = defaultdict(list)
+CHECKOUT_LOCK = threading.Lock()
+
+def tax_rate_id():
+    return os.environ.get('STRIPE_TAX_RATE_ID', 'txr_1UPPG3J9L8bkYbaijK75sIPA')
+
+def checkout_ready():
+    return bool(os.environ.get('STRIPE_SECRET_KEY', '').strip() and re.fullmatch(r'txr_[A-Za-z0-9]+', tax_rate_id()))
+
+def fixed_tax(amount):
+    # Round inclusive VAT to the nearest cent, without floating point.
+    return (amount * 21 + 60) // 121
+
+def eligible_postal(postal):
+    return (isinstance(postal, str) and re.fullmatch(r'[0-9]{5}', postal) is not None
+            and 1 <= int(postal[:2]) <= 52 and postal[:2] not in {'35', '38', '51', '52'})
+
+def create_checkout(key, postal):
+    amount = PRICES[key]
+    metadata = {'site': 'revisioncontratos.es', 'key': key, 'tax_mode': 'fixed_vat21'}
+    params = {
+        'mode': 'payment', 'line_items[0][quantity]': 1,
+        'line_items[0][price_data][currency]': 'eur',
+        'line_items[0][price_data][unit_amount]': amount,
+        'line_items[0][price_data][product_data][name]': PACKAGE_NAMES[key],
+        'line_items[0][price_data][tax_behavior]': 'inclusive',
+        'line_items[0][tax_rates][0]': tax_rate_id(),
+        'success_url': 'https://revisioncontratos.es/cuenta-tu-caso/?' + urllib.parse.urlencode({'paquete': key}) + '&session_id={CHECKOUT_SESSION_ID}',
+        'cancel_url': 'https://revisioncontratos.es/contratar/?' + urllib.parse.urlencode({'paquete': key}),
+    }
+    params.update({'metadata[' + k + ']': v for k, v in metadata.items()})
+    req = urllib.request.Request('https://api.stripe.com/v1/checkout/sessions',
+        data=urllib.parse.urlencode(params).encode(),
+        headers={'Authorization': 'Bearer ' + os.environ['STRIPE_SECRET_KEY'], 'Content-Type': 'application/x-www-form-urlencoded'}, method='POST')
+    with urllib.request.urlopen(req, timeout=20) as response:
+        session = json.loads(response.read(100_001))
+    if not isinstance(session, dict):
+        raise ValueError('session schema')
+    sid, url = session.get('id'), session.get('url')
+    if (not isinstance(sid, str) or not re.fullmatch(r'cs_(?:live|test)_[A-Za-z0-9]+', sid)
+            or not isinstance(url, str) or not re.fullmatch(r'https://checkout\.stripe\.com/[A-Za-z0-9_/#?=&.%+~-]+', url)
+            or type(session.get('amount_total')) is not int or session['amount_total'] != amount
+            or session.get('currency') != 'eur'
+            or not isinstance(session.get('total_details'), dict)
+            or type(session['total_details'].get('amount_tax')) is not int
+            or session['total_details']['amount_tax'] != fixed_tax(amount)):
+        raise ValueError('checkout mismatch')
+    return session
+
 from contextlib import contextmanager
 
 @contextmanager
@@ -162,6 +232,7 @@ def payment_db():
     db.execute('PRAGMA synchronous=FULL')
     db.execute('CREATE TABLE IF NOT EXISTS events (id TEXT PRIMARY KEY, session TEXT NOT NULL)')
     db.execute("CREATE TABLE IF NOT EXISTS payments (session TEXT PRIMARY KEY, payload TEXT NOT NULL, sent INTEGER NOT NULL DEFAULT 0, attempts INTEGER NOT NULL DEFAULT 0, next_try REAL NOT NULL DEFAULT 0)")
+    db.execute('CREATE TABLE IF NOT EXISTS checkout_sessions (session TEXT PRIMARY KEY, key TEXT NOT NULL, amount INTEGER NOT NULL, tax INTEGER NOT NULL, country TEXT NOT NULL, postal TEXT NOT NULL, tax_rate TEXT NOT NULL)')
     try:
         with db:
             yield db
@@ -181,11 +252,24 @@ def accept_payment(event):
     if not isinstance(meta, dict):
         raise ValueError('metadata schema')
     key = meta.get('key')
+    if not isinstance(key, str):
+        return 'ignored'
+    recognized = session.get('payment_link') == PAYMENT_LINKS.get(key) and key in PAYMENT_LINKS
+    if session.get('payment_link') is None and key in PRICES:
+        with payment_db() as db:
+            stored = db.execute('SELECT key,amount,tax,country,postal,tax_rate FROM checkout_sessions WHERE session=?', (session.get('id') if isinstance(session.get('id'), str) else '',)).fetchone()
+        details = session.get('total_details')
+        recognized = bool(stored and stored[0] == key and stored[1] == PRICES[key]
+                          and stored[2] == fixed_tax(PRICES[key]) and stored[3] == 'ES'
+                          and eligible_postal(stored[4]) and re.fullmatch(r'txr_[A-Za-z0-9]+', stored[5])
+                          and meta.get('tax_mode') == 'fixed_vat21'
+                          and isinstance(details, dict) and type(details.get('amount_tax')) is int
+                          and details['amount_tax'] == stored[2])
     valid = (event['livemode'] is True and session.get('livemode') is True
              and session.get('mode') == 'payment' and session.get('status') == 'complete'
              and session.get('payment_status') == 'paid' and session.get('currency') == 'eur'
              and meta.get('site') == 'revisioncontratos.es' and key in PRICES
-             and session.get('payment_link') == PAYMENT_LINKS.get(key)
+             and recognized
              and type(session.get('amount_total')) is int and session['amount_total'] == PRICES.get(key)
              and re.fullmatch(r'cs_live_[A-Za-z0-9]+', str(session.get('id', ''))))
     if not valid:
@@ -263,7 +347,7 @@ class H(BaseHTTPRequestHandler):
         self.send_header('Content-Type', 'application/json; charset=utf-8')
         if origin in ALLOWED_ORIGINS:
             self.send_header('Access-Control-Allow-Origin', origin)
-        self.send_header('Access-Control-Allow-Methods', 'POST, OPTIONS')
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
         self.send_header('Access-Control-Allow-Headers', 'Content-Type')
         self.send_header('Cache-Control', 'no-store')
         self.end_headers()
@@ -273,12 +357,54 @@ class H(BaseHTTPRequestHandler):
         self._json(204, {}, origin=self.headers.get('Origin', ''))
 
     def do_GET(self):
+        if self.path == '/checkout/status':
+            return self._json(200, {'ok': True, 'ready': checkout_ready(), 'mode': 'fixed_vat21', 'vat_rate': 21, 'scope': 'ES-mainland-balearic', 'prices': PRICES, 'tax_rate_id': tax_rate_id()})
         if self.path == '/health':
             self._json(200, {'ok': True})
         else:
             self._json(404, {'ok': False})
 
+    def _checkout(self):
+        origin = self.headers.get('Origin', '')
+        if origin not in CHECKOUT_ORIGINS:
+            return self._json(403, {'ok': False, 'error': 'origen no permitido'})
+        ip = client_ip(self.client_address[0], self.headers)
+        now = time.time()
+        with CHECKOUT_LOCK:
+            CHECKOUT_RATE[ip] = [t for t in CHECKOUT_RATE[ip] if now - t < WINDOW]
+            if len(CHECKOUT_RATE[ip]) >= 30:
+                return self._json(429, {'ok': False, 'error': 'demasiados intentos'})
+            CHECKOUT_RATE[ip].append(now)
+        try:
+            n = int(self.headers.get('Content-Length', '0'))
+            if n <= 0 or n > MAX_JSON:
+                raise ValueError('longitud')
+            if self.headers.get('Content-Type', '').split(';')[0].strip() != 'application/json':
+                return self._json(415, {'ok': False, 'error': 'JSON requerido'})
+            data = json.loads(self.rfile.read(n))
+            if (not isinstance(data, dict) or set(data) != {'key', 'country', 'postal_code'}
+                    or not isinstance(data['key'], str) or data['key'] not in PRICES
+                    or data['country'] != 'ES' or not eligible_postal(data['postal_code'])):
+                raise ValueError('fuera de ámbito o campos no válidos')
+        except (ValueError, TypeError):
+            return self._json(400, {'ok': False, 'error': 'datos de contratación no válidos'})
+        if not checkout_ready():
+            return self._json(503, {'ok': False, 'error': 'pago no disponible'})
+        try:
+            session = create_checkout(data['key'], data['postal_code'])
+        except Exception:
+            return self._json(502, {'ok': False, 'error': 'no se pudo crear el pago'})
+        try:
+            with payment_db() as db:
+                db.execute('INSERT INTO checkout_sessions VALUES (?,?,?,?,?,?,?)',
+                           (session['id'], data['key'], PRICES[data['key']], fixed_tax(PRICES[data['key']]), 'ES', data['postal_code'], tax_rate_id()))
+        except Exception:
+            return self._json(503, {'ok': False, 'error': 'registro de pago no disponible'})
+        return self._json(200, {'ok': True, 'url': session['url'], 'session_id': session['id']})
+
     def do_POST(self):
+        if self.path == '/checkout':
+            return self._checkout()
         if self.path == '/stripe/webhook':
             return self._stripe_webhook()
         origin = self.headers.get('Origin', '')
@@ -327,15 +453,19 @@ class H(BaseHTTPRequestHandler):
 
         mode = d.get('mode', '')
         custom_quote = mode == 'custom_quote'
+        territory_quote = mode == 'territory_quote'
+        region = d.get('region', '')
         errs = []
-        if mode not in ('', 'custom_quote'):
+        if mode not in ('', 'custom_quote', 'territory_quote'):
             errs.append('mode')
+        if territory_quote and (origin not in CHECKOUT_ORIGINS or paquete or not isinstance(region, str) or len(region.strip()) < 2 or len(region) > 200):
+            errs.append('territory_quote')
         if custom_quote and (web != 'revisioncontratos.es' or asunto != 'Contrato a medida' or paquete):
             errs.append('custom_quote')
         if len(nombre) < 2: errs.append('nombre')
         if not EMAIL_RE.match(email): errs.append('email')
         if 'burofax' in web and len(DIGITS_RE.sub('', telefono)) < 5: errs.append('telefono')
-        if 'revisioncontratos' in web and not custom_quote and paquete not in VALID_REVISION_PAQUETES: errs.append('paquete')
+        if 'revisioncontratos' in web and not (custom_quote or territory_quote) and paquete not in VALID_REVISION_PAQUETES: errs.append('paquete')
         if asunto not in VALID_ASUNTOS: errs.append('asunto')
         if len(caso) < 30: errs.append('caso')
         if d.get('privacidad') is not True: errs.append('privacidad')
@@ -354,6 +484,7 @@ class H(BaseHTTPRequestHandler):
         body = (
             f'Nuevo caso recibido desde {web}\n\n'
             f'Nombre: {nombre}\nEmail: {email}\nTeléfono: {telefono or "(no indicado)"}\n'
+            f'Modalidad: {mode or "revision"}\nTerritorio: {region if territory_quote else "(no indicado)"}\n'
             f'Asunto: {asunto}\nPaquete: {paquete or "(no indicado)"}\n\nHistoria:\n{caso}\n\n'
             f'{adjuntos_linea + chr(10) if adjuntos_linea else ""}---\nIP: {ip}\n'
             f'Responder escribiendo a: {email}\n'

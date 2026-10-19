@@ -101,6 +101,9 @@ for (const expected of [['Revisión Esencial', 129], ['Revisión Profesional', 2
   const tier = revisionContent.pricing.tiers.find((t) => t.name.includes(expected[0]));
   if (!tier || tier.priceValue !== expected[1]) fail(`nivel ${expected[0]} no coincide con ${expected[1]} €`);
 }
+if (revisionContent.checkoutMode !== 'fixed_vat21') fail('revisioncontratos: checkout debe usar IVA fijo del 21 % incluido');
+if (/buy\.stripe\.com\//.test(revisionAll)) fail('revisioncontratos: enlace antiguo evita la validación territorial');
+// Los paymentLinks conservados en contenido son históricos: no se publican.
 if ('paymentLinks' in revisionContent) {
   const pl = revisionContent.paymentLinks;
   for (const k of ['essential', 'professional', 'blindada', 'essentialExpress', 'essentialCall', 'essentialBoth']) {
@@ -114,7 +117,8 @@ if ('paymentLinks' in revisionContent) {
   const n = (preciosHtml.match(/boton-pago/g) || []).length;
   if (!revisionContent.paymentPaused) {
     if (n < 6) fail(`precios: solo ${n} botones de pago (esperados al menos 6)`);
-    for (const url of Object.values(revisionContent.paymentLinks)) if (!preciosHtml.includes(`href="${url}"`)) fail('precios: enlace online configurado no renderizado');
+    const purchasePaths = ['/contratar/?nivel=essential', '/contratar/?nivel=professional', '/contratar/?nivel=blindada', '/contratar/?nivel=essential&expres=1', '/contratar/?nivel=essential&consulta=1', '/contratar/?nivel=essential&expres=1&consulta=1'];
+    for (const url of purchasePaths) if (!preciosHtml.replaceAll('&amp;', '&').includes(`href="${url}"`)) fail('precios: falta preselección interna de paquete '+url);
     if ((preciosHtml.match(/class="precio-bump"/g) || []).length !== 1) fail('precios: falta el bump único de la Revisión Esencial');
     for (const label of revisionContent.ui.extrasLabels) if (!preciosHtml.includes(label)) fail(`precios: falta el extra ${label}`);
     if (/cobro online.*desactivado|Bizum o transferencia|consulta antes de pagar|confirma el encargo.*antes del pago/i.test(preciosHtml + revisionAll)) fail('revisioncontratos: conserva copy de pago manual o contacto previo');
@@ -131,7 +135,11 @@ if ('paymentLinks' in revisionContent) {
     const orderPath = join(dist, 'revisioncontratos.es', 'contratar', 'index.html');
     if (!existsSync(orderPath)) fail('revisioncontratos: falta la order page /contratar/');
     const orderHtml = readFileSync(orderPath, 'utf8');
-    for (const url of Object.values(revisionContent.paymentLinks)) if (!orderHtml.includes(url)) fail('contratar: enlace Stripe ausente de la order page');
+    if (!orderHtml.includes('https://intake.marcospera.com/checkout') || !orderHtml.includes('id="order-postal"') || !orderHtml.includes('id="order-territory"')) fail('contratar: falta checkout protegido por código postal y residencia');
+    if (!orderHtml.includes('21 % de IVA incluido')) fail('contratar: falta el desglose de tipo fijo incluido');
+    const territoryHtml = readFileSync(join(dist, 'revisioncontratos.es', 'solicitar-presupuesto', 'index.html'), 'utf8');
+    if (!territoryHtml.includes('territory_quote') || territoryHtml.includes('id="f-paquete"') || !territoryHtml.includes('name="region"')) fail('presupuesto territorial: modo/campos incorrectos');
+    if (!readFileSync(join(dist, 'revisioncontratos.es', 'sitemap.xml'), 'utf8').includes('/solicitar-presupuesto/')) fail('sitemap sin presupuesto territorial');
     if (!orderHtml.includes('id="order-total"') || !orderHtml.includes('aria-live="polite"')) fail('contratar: falta el total dinámico accesible');
     if (!orderHtml.includes('<noscript>') || (orderHtml.match(/order-noscript/g) || []).length < 1) fail('contratar: falta el fallback noscript');
     if ((orderHtml.match(/<input type="radio" name="nivel"/g) || []).length !== 3) fail('contratar: deben renderizarse los 3 niveles como radios');

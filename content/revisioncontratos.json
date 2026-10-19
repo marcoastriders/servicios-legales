@@ -181,7 +181,7 @@
     "title": "Precios de revisión de contratos | RevisiónContratos",
     "description": "Precios cerrados de revisión de contratos: 129 € la Revisión Esencial de alquiler, 249 € la Revisión Profesional con llamada para contratos complejos y 499 € la Firma Blindada con negociación. IVA incluido.",
     "h1": "Precios de la revisión de contratos",
-    "answer": "Tres niveles de revisión, IVA incluido. Elige según el contrato y el apoyo que necesitas y paga directamente online. La Revisión Esencial admite tres extras: exprés, consulta o ambos.",
+    "answer": "Tres niveles de revisión, con IVA del 21 % incluido, para contratación directa en Península y Baleares. Otros territorios requieren presupuesto previo. Elige según el contrato y el apoyo que necesitas y paga directamente online. La Revisión Esencial admite tres extras: exprés, consulta o ambos.",
     "tiers": [
       {
         "name": "Revisión Esencial (alquiler)",
@@ -411,6 +411,10 @@
       "description": "Condiciones del servicio de revisión de contratos: aceptación, pago por adelantado, plazos según el nivel, cancelación y límites del encargo.",
       "h1": "Condiciones del servicio",
       "sections": [
+        {
+          "h2": "Ámbito territorial y precio final",
+          "html": "<p>La contratación directa de los paquetes de revisión está limitada a clientes con residencia fiscal en Península y Baleares. Los importes publicados son precios finales con IVA del 21 % incluido; no se añade ningún impuesto sobre ese total. El código postal y la declaración de residencia deben corresponder al domicilio fiscal real del cliente.</p><p>Para Canarias, Ceuta, Melilla y clientes de otros países, solicita un <a href=\"/solicitar-presupuesto/\">presupuesto previo</a>. Carla confirmará el alcance y los impuestos aplicables antes del pago. La redacción de contratos a medida también requiere presupuesto previo.</p>"
+        },
         {
           "h2": "Aceptación del encargo",
           "html": "<p>El encargo se formaliza al pagar online el nivel elegido. El trabajo y su plazo empiezan cuando dispongo también de los datos necesarios y el contrato completo y legible. Si el nivel no corresponde al documento, te propongo el cambio antes de empezar; si no puedo aceptar el encargo, se tramita la devolución.</p>"
@@ -1344,6 +1348,18 @@
     "essentialCall": "https://buy.stripe.com/6oU9AUcVr5lT4sycEz2Nq0a",
     "essentialBoth": "https://buy.stripe.com/bJebJ2bRn29He38fQL2Nq0b"
   },
+  "territoryOrder": {
+    "title": "Solicitar presupuesto de revisión | RevisiónContratos",
+    "description": "Presupuesto personalizado de revisión de contratos para Canarias, Ceuta, Melilla y clientes de otros países. Sin pago previo.",
+    "h1": "Solicita tu presupuesto",
+    "answer": "La contratación directa con IVA del 21 % incluido está limitada a Península y Baleares. Si tu residencia fiscal está en Canarias, Ceuta, Melilla o fuera de España, cuéntanos tu caso: Carla confirmará el alcance, los impuestos aplicables y el presupuesto antes de cualquier pago.",
+    "submitLabel": "Solicitar presupuesto",
+    "caseHelp": "Describe el contrato, tu posición y qué necesitas revisar. Mínimo 30 caracteres. No necesitas haber pagado para solicitar este presupuesto.",
+    "successMessage": "<strong>Solicitud recibida.</strong> Carla revisará tu caso y te enviará un presupuesto con el tratamiento fiscal que corresponda. Todavía no has contratado ni pagado el servicio.",
+    "ctaNote": "Presupuesto previo, sin pago ni compromiso de contratación.",
+    "regionLabel": "País y territorio de residencia fiscal",
+    "regionHelp": "Por ejemplo: Canarias, Ceuta, Melilla o el país en el que resides fiscalmente."
+  },
   "customOrder": {
     "title": "Solicitar contrato a medida | RevisiónContratos",
     "description": "Solicita presupuesto para redactar tu contrato a medida. Desde 199 € IVA incluido; Carla confirma el alcance y el precio antes de que pagues.",
@@ -1362,7 +1378,17 @@
     "stepLevel": "1 · Elige el nivel",
     "stepExtras": "2 · Extras para la Revisión Esencial",
     "extrasDisabledNote": "La llamada de 30 minutos ya está incluida en la Profesional y la Firma Blindada; la entrega exprés no está disponible en esos niveles por la complejidad del servicio.",
-    "totalLabel": "Total, IVA incluido",
+    "territoryTitle": "3 · Confirma tu residencia fiscal",
+    "territoryHelp": "Contratación directa solo para residentes fiscales en Península y Baleares. Para Canarias, Ceuta, Melilla u otros países, solicita presupuesto.",
+    "postalLabel": "Código postal de tu domicilio fiscal",
+    "postalHelp": "Introduce los cinco dígitos de tu código postal de Península o Baleares.",
+    "territoryConfirm": "Confirmo que mi residencia fiscal está en Península o Baleares.",
+    "quoteLabel": "Estoy en otro territorio · solicitar presupuesto",
+    "quotePath": "/solicitar-presupuesto/",
+    "creatingLabel": "Preparando pago seguro…",
+    "checkoutError": "No se pudo preparar el pago. Inténtalo de nuevo; no se ha realizado ningún cargo.",
+    "scopeNote": "21 % de IVA incluido para contratación directa en Península y Baleares. Otros territorios, por presupuesto.",
+    "totalLabel": "Total, 21 % de IVA incluido",
     "payButton": "Pagar y contratar",
     "afterNote": "Pago seguro con Stripe (tarjeta). Al terminar, vuelves a esta web para enviar tus datos y adjuntar el contrato completo y legible.",
     "levelShort": {
@@ -1376,7 +1402,7 @@
   "ui": {
     "primary": "Elegir nivel y pagar",
     "consult": "Ver extras y opciones",
-    "ctaNote": "Elige el nivel y paga directamente online. Después del pago, completa el formulario y adjunta el contrato completo y legible.",
+    "ctaNote": "Contratación directa en Península y Baleares, con IVA del 21 % incluido. Otros territorios, por presupuesto. Después del pago, completa el formulario y adjunta el contrato completo y legible.",
     "decide": "Tres niveles de precio cerrado, IVA incluido. Elige el nivel, paga directamente y añade exprés o consulta a la Revisión Esencial si lo necesitas.",
     "serviceNote": "Elige el nivel y paga directamente online. Después del pago, completa el formulario y adjunta el contrato. El contrato a medida requiere presupuesto previo.",
     "caseHelp": "Indica qué contrato has pagado, tu posición y qué te preocupa. Mínimo 30 caracteres. Adjunta el contrato completo en PDF, JPG o PNG.",
@@ -1392,5 +1418,6 @@
     "submitLabel": "Enviar datos y contrato",
     "successMessage": "<strong>Datos recibidos.</strong> Carla verificará el pago y revisará el contrato completo. Te confirmará por email la recepción y el plazo."
   },
+  "checkoutMode": "fixed_vat21",
   "paymentPaused": false
 }

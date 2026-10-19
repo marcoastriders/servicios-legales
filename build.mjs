@@ -203,7 +203,7 @@ const blockCta = (site, text = null, quote = false) => site.prelaunch ? `
 <div class="cta">
   <p class="cta-titulo">${text || esc(site.ctaTitle)}</p>
   <p class="cta-botones">
-    <a class="boton" href="${quote ? '/solicitar-contrato/' : site.id === 'revisioncontratos' && !site.paymentPaused ? '/contratar/' : '/cuenta-tu-caso/'}">${quote ? esc(site.customOrder.submitLabel) : site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : esc(site.ui.primary)}</a>
+    <a class="boton" href="${quote ? '/solicitar-contrato/' : site.id === 'revisioncontratos' ? (site.paymentPaused ? '/solicitar-presupuesto/' : '/contratar/') : '/cuenta-tu-caso/'}">${quote ? esc(site.customOrder.submitLabel) : site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : esc(site.ui.primary)}</a>
     ${site.id === 'revisioncontratos' ? '<a class="boton boton-sec" href="/precios/">Ver precios y niveles</a>' : `<a class="boton boton-sec" href="https://wa.me/${shared.whatsappIntl}?text=${encodeURIComponent(site.ctaWhatsapp)}">WhatsApp directo</a>`}
   </p>
   <p class="cta-nota">${quote ? esc(site.customOrder.ctaNote) : site.id === 'revisioncontratos' ? esc(site.ui.ctaNote) : 'Carla revisa tu caso y te indica por escrito qué servicio y tarifa corresponden antes de empezar.'}</p>
@@ -334,7 +334,7 @@ ${blockCta(site)}` : `
   <p class="kicker">${esc(site.kicker)}</p>
   <h1>${site.home.h1}</h1>
   ${blockAnswer(site.home.answer)}
-  <p class="hero-botones"><a class="boton" href="${site.id === 'revisioncontratos' && !site.paymentPaused ? '/contratar/' : '/cuenta-tu-caso/'}">${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : esc(site.ui.primary)}</a> <a class="boton boton-sec" href="/precios/">Ver precios</a></p>
+  <p class="hero-botones"><a class="boton" href="${site.id === 'revisioncontratos' ? (site.paymentPaused ? '/solicitar-presupuesto/' : '/contratar/') : '/cuenta-tu-caso/'}">${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : esc(site.ui.primary)}</a> <a class="boton boton-sec" href="/precios/">Ver precios</a></p>
 </section>
 ${blockTrustCarla(site)}
 ${sections(site.home.sections)}
@@ -361,9 +361,9 @@ function renderPrecios(site) {
       <h2>${esc(t.name)}</h2>
       <p class="precio-cifra">${esc(t.price)}</p>
       <ul>${t.includes.map((item) => `<li>${item}</li>`).join('')}</ul>
-      ${!site.paymentPaused && site.paymentLinks?.[payKeys[i]] ? `<p><a class="boton boton-pago" href="${esc(site.paymentLinks[payKeys[i]])}" target="_blank" rel="noopener">Contratar y pagar ${esc(t.price)}</a></p>
-      ${site.id === 'revisioncontratos' && i === 0 ? `<div class="precio-bump" aria-label="Añade un extra a la Revisión Esencial"><p><strong>¿Quieres más rapidez o apoyo?</strong></p><p class="precio-bump-ayuda">Añádelo ahora y paga el paquete completo en un clic:</p><a href="${esc(site.paymentLinks.essentialExpress)}" target="_blank" rel="noopener">+ exprés · 178 €</a><a href="${esc(site.paymentLinks.essentialCall)}" target="_blank" rel="noopener">+ consulta · 178 €</a><a href="${esc(site.paymentLinks.essentialBoth)}" target="_blank" rel="noopener">+ exprés + consulta · 227 €</a></div>` : ''}
-      <p class="pago-confirmado"><a href="/cuenta-tu-caso/?paquete=${payKeys[i]}">${esc(site.ui.afterPay)}</a></p>` : `<p><a class="boton" href="/cuenta-tu-caso/${site.paymentPaused ? `?paquete=${payKeys[i]}` : ''}">${esc(site.paymentPaused ? site.ui.primary : 'Cuéntanos tu caso')}</a></p>`}
+      ${!site.paymentPaused && site.paymentLinks?.[payKeys[i]] ? `<p><a class="boton boton-pago" href="/contratar/?nivel=${payKeys[i]}" target="_blank" rel="noopener">Contratar y pagar ${esc(t.price)}</a></p>
+      ${site.id === 'revisioncontratos' && i === 0 ? `<div class="precio-bump" aria-label="Añade un extra a la Revisión Esencial"><p><strong>¿Quieres más rapidez o apoyo?</strong></p><p class="precio-bump-ayuda">Añádelo ahora y paga el paquete completo en un clic:</p><a href="/contratar/?nivel=essential&amp;expres=1" target="_blank" rel="noopener">+ exprés · 178 €</a><a href="/contratar/?nivel=essential&amp;consulta=1" target="_blank" rel="noopener">+ consulta · 178 €</a><a href="/contratar/?nivel=essential&amp;expres=1&amp;consulta=1" target="_blank" rel="noopener">+ exprés + consulta · 227 €</a></div>` : ''}
+      <p class="pago-confirmado"><a href="/cuenta-tu-caso/?paquete=${payKeys[i]}">${esc(site.ui.afterPay)}</a></p>` : `<p><a class="boton" href="${site.paymentPaused ? '/solicitar-presupuesto/' : '/cuenta-tu-caso/'}">${esc(site.paymentPaused ? site.ui.primary : 'Cuéntanos tu caso')}</a></p>`}
     </article>`).join('\n') : '';
   const offersLd = hasTiers ? site.pricing.tiers.map((t) => ({
     '@type': 'Offer', name: t.name, price: t.priceValue, priceCurrency: 'EUR',
@@ -375,9 +375,9 @@ function renderPrecios(site) {
   ${site.pricing.extrasInfo}
   <p>${esc(site.pricing.paymentNote || '')}</p>
   <div class="extras-pago">
-    <a class="boton boton-pago" href="${esc(site.paymentLinks.essentialExpress)}" target="_blank" rel="noopener">${esc(site.ui.extrasLabels[0])}</a>
-    <a class="boton boton-pago" href="${esc(site.paymentLinks.essentialCall)}" target="_blank" rel="noopener">${esc(site.ui.extrasLabels[1])}</a>
-    <a class="boton boton-pago" href="${esc(site.paymentLinks.essentialBoth)}" target="_blank" rel="noopener">${esc(site.ui.extrasLabels[2])}</a>
+    <a class="boton boton-pago" href="/contratar/?nivel=essential&amp;expres=1" target="_blank" rel="noopener">${esc(site.ui.extrasLabels[0])}</a>
+    <a class="boton boton-pago" href="/contratar/?nivel=essential&amp;consulta=1" target="_blank" rel="noopener">${esc(site.ui.extrasLabels[1])}</a>
+    <a class="boton boton-pago" href="/contratar/?nivel=essential&amp;expres=1&amp;consulta=1" target="_blank" rel="noopener">${esc(site.ui.extrasLabels[2])}</a>
   </div>
   <p class="pago-confirmado"><a href="/cuenta-tu-caso/">Después del pago, envía los datos y el contrato</a></p>
 </section>` : site.paymentPaused ? `<section class="pago-opciones"><h2>${esc(site.ui.extrasTitle)}</h2>${site.pricing.extrasInfo}<p>${esc(site.pricing.paymentNote)}</p><p>${site.ui.extrasLabels.map(esc).join(' · ')}</p></section>` : '';
@@ -433,7 +433,7 @@ function renderService(site, s) {
     <p><a href="/precios/">Comparar los tres niveles</a></p>
     ${s.slug === 'contrato-a-medida' ? `<p><a class="boton" href="/solicitar-contrato/">${esc(site.customOrder.submitLabel)}</a></p>` : (!site.paymentPaused && ({ 129: 'essential', 249: 'professional', 499: 'blindada' })[s.priceValue])
       ? `<p><a class="boton" href="/contratar/?nivel=${({ 129: 'essential', 249: 'professional', 499: 'blindada' })[s.priceValue]}">Elegir nivel y pagar</a></p>`
-      : `<p><a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a></p>`}
+      : `<p><a class="boton" href="${site.paymentPaused ? '/solicitar-presupuesto/' : '/cuenta-tu-caso/'}">Cuéntanos tu caso</a></p>`}
     <p class="cta-nota">${esc(s.slug === 'contrato-a-medida' ? site.customOrder.ctaNote : site.ui.serviceNote)}</p>
   </aside>
 </div>
@@ -468,7 +468,7 @@ function renderSimple(site, p, path, name) {
 <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · ${esc(name)}</nav>
 <h1>${p.h1}</h1>
 ${path === '/quien-revisa/' ? `<section class="quien-revisa-intro"><div class="quien-revisa-copy">${p.answer ? blockAnswer(p.answer) : ''}</div>${blockPortrait()}</section>` : (p.answer ? blockAnswer(p.answer) : '')}
-${sections(p.sections)}
+${sections(p.sections)}${site.id === 'revisioncontratos' && path === '/condiciones-del-servicio/' ? `<p><a href="/solicitar-presupuesto/">${esc(site.order.quoteLabel)}</a></p>` : ''}
 ${p.faqs ? blockFaq(p.faqs) : ''}
 ${p.sources ? blockSources(p.sources) : ''}
 ${p.noCta ? '' : blockCta(site)}`;
@@ -522,12 +522,13 @@ ${blockCta(site)}`;
   });
 }
 
-function renderIntake(site, { customQuote = false } = {}) {
-  const intake = customQuote ? site.customOrder : site.intake;
-  const intakePath = customQuote ? '/solicitar-contrato/' : '/cuenta-tu-caso/';
+function renderIntake(site, { customQuote = false, territoryQuote = false } = {}) {
+  const quoteOnly = customQuote || territoryQuote;
+  const intake = territoryQuote ? site.territoryOrder : customQuote ? site.customOrder : site.intake;
+  const intakePath = territoryQuote ? '/solicitar-presupuesto/' : customQuote ? '/solicitar-contrato/' : '/cuenta-tu-caso/';
   const isRevision = site.id === 'revisioncontratos';
   const asuntos = (customQuote ? ['Contrato a medida'] : site.intake.asuntos).map((a) => `<option value="${esc(a)}">${esc(a)}</option>`).join('\n        ');
-  const packageFields = isRevision && !customQuote ? `
+  const packageFields = isRevision && !quoteOnly ? `
   <p class="campo"><label for="f-paquete">Paquete elegido</label>
     <select id="f-paquete" name="paquete" required>
       <option value="">Selecciona el paquete que has pagado</option>
@@ -538,11 +539,11 @@ function renderIntake(site, { customQuote = false } = {}) {
       <option value="Revisión Profesional — 249 €">Revisión Profesional — 249 €</option>
       <option value="Firma Blindada — 499 €">Firma Blindada — 499 €</option>
     </select></p>` : '';
-  const submitLabel = customQuote ? intake.submitLabel : isRevision ? (site.ui.submitLabel || 'Enviar los datos del contrato') : 'Enviar mi caso a Carla';
-  const caseHelp = customQuote ? intake.caseHelp : isRevision
+  const submitLabel = quoteOnly ? intake.submitLabel : isRevision ? (site.ui.submitLabel || 'Enviar los datos del contrato') : 'Enviar mi caso a Carla';
+  const caseHelp = quoteOnly ? intake.caseHelp : isRevision
     ? site.ui.caseHelp
     : 'Qué ha pasado, fechas aproximadas, qué documentos tienes y qué quieres conseguir. Cuanto más contexto, mejor valoración.';
-  const successMessage = customQuote ? intake.successMessage : isRevision
+  const successMessage = quoteOnly ? intake.successMessage : isRevision
     ? (site.ui.successMessage || '<strong>Datos enviados.</strong> Revisa tu email y responde al mensaje de confirmación adjuntando el contrato en PDF o fotos legibles.')
     : '<strong>Caso enviado.</strong> Carla lo revisará personalmente y te responderá con el servicio y presupuesto que correspondan. Te llegará una confirmación a tu email.';
   const phoneField = isRevision
@@ -551,7 +552,7 @@ function renderIntake(site, { customQuote = false } = {}) {
     : `<p class="campo"><label for="f-telefono">Tu teléfono *</label>
     <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" required maxlength="40"></p>`;
   const docsField = `<p class="campo"><label for="f-docs">Documentos que ayuden a valorar tu caso (opcional)</label>
-    <span class="campo-ayuda" id="f-docs-ayuda">PDF, JPG o PNG. Hasta 5 archivos y 10 MB en total. ${isRevision && !customQuote ? 'Si ya tienes el contrato a la vista, adjúntalo aquí: viaja con la solicitud y Carla lo lee desde el primer momento.' : 'Solo los utiliza Carla para preparar tu presupuesto.'}</span>
+    <span class="campo-ayuda" id="f-docs-ayuda">PDF, JPG o PNG. Hasta 5 archivos y 10 MB en total. ${isRevision && !quoteOnly ? 'Si ya tienes el contrato a la vista, adjúntalo aquí: viaja con la solicitud y Carla lo lee desde el primer momento.' : 'Solo los utiliza Carla para preparar tu presupuesto.'}</span>
     <input id="f-docs" name="adjuntos" type="file" multiple accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" aria-describedby="f-docs-ayuda"></p>`;
   const submitJsRevision = `
 (function(){
@@ -575,10 +576,12 @@ function renderIntake(site, { customQuote = false } = {}) {
     if(f.pago&&f.pago.value.trim()){prefijo+='Identidad de pago: '+f.pago.value.trim()+'\\n';}
     if(prefijo){prefijo+='\\n';}
     var nombre=f.nombre.value.trim(),email=f.email.value.trim(),telefono=f.telefono.value.trim(),asunto=f.asunto.value,caso=(prefijo+f.caso.value.trim()).slice(0,8000),web=location.hostname.replace(/^www\\./,''),website=f.website.value;
-    var mode=${JSON.stringify(customQuote ? 'custom_quote' : '')},paquete=f.paquete?f.paquete.value:'';
+    var mode=${JSON.stringify(territoryQuote ? 'territory_quote' : customQuote ? 'custom_quote' : '')},paquete=f.paquete?f.paquete.value:'';
+    var region=f.region?f.region.value.trim():'';
     var headers={'Content-Type':'application/json'},payload;
     if(files.length){
       var fd=new FormData();
+      if(mode==='territory_quote')fd.append('region',region);
       fd.append('nombre',nombre);
       fd.append('email',email);
       fd.append('telefono',telefono);
@@ -592,7 +595,7 @@ function renderIntake(site, { customQuote = false } = {}) {
       for(i=0;i<files.length;i++){fd.append('adjuntos',files[i],files[i].name);}
       headers={};payload=fd;
     }else{
-      payload=JSON.stringify({nombre:nombre,email:email,telefono:telefono,asunto:asunto,paquete:paquete,mode:mode,caso:caso,web:web,website:website,privacidad:f.privacidad.checked});
+      payload=JSON.stringify({nombre:nombre,email:email,telefono:telefono,asunto:asunto,paquete:paquete,mode:mode,${territoryQuote ? 'region:region,' : ''}caso:caso,web:web,website:website,privacidad:f.privacidad.checked});
     }
     fetch('https://intake.marcospera.com/',{method:'POST',headers:headers,body:payload})
       .then(function(r){return r.json().then(function(j){return {ok:r.ok&&j.ok,error:j.error};});})
@@ -674,7 +677,7 @@ function renderIntake(site, { customQuote = false } = {}) {
       ${customQuote ? '' : '<option value="">Selecciona una opción</option>'}
       ${asuntos}
     </select></p>
-  ${packageFields}
+  ${packageFields}${territoryQuote ? `<p class="campo"><label for="f-region">${esc(intake.regionLabel)}</label><span class="campo-ayuda" id="f-region-ayuda">${esc(intake.regionHelp)}</span><input id="f-region" name="region" required maxlength="200" autocomplete="address-level1" aria-describedby="f-region-ayuda"></p>` : ''}
   <p class="campo"><label for="f-caso">${site.id === 'burofaxlegal' ? 'Cuéntame tu historia completa' : 'Cuéntanos tu historia completa'} *</label>
     <span class="campo-ayuda" id="f-caso-ayuda">${caseHelp}</span>
     <textarea id="f-caso" name="caso" rows="9" required minlength="30" maxlength="8000" aria-describedby="f-caso-ayuda"></textarea></p>${docsField}
@@ -686,12 +689,12 @@ function renderIntake(site, { customQuote = false } = {}) {
 </form>
 <script>${isRevision ? submitJsRevision : submitJsBurofax}</script>`;
   const body = `
-<nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · ${customQuote ? 'Solicitar contrato' : site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : 'Completa tu encargo'}</nav>
+<nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · ${territoryQuote ? 'Solicitar presupuesto' : customQuote ? 'Solicitar contrato' : site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : 'Completa tu encargo'}</nav>
 <h1>${intake.h1}</h1>
 ${blockAnswer(intake.answer)}
 ${formBody}
 ${blockTrustCarla(site)}`;
-  return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: customQuote ? 'Solicitar contrato' : site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : 'Cuéntanos tu caso', path: intakePath }] }, {
+  return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: territoryQuote ? 'Solicitar presupuesto' : customQuote ? 'Solicitar contrato' : site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : 'Cuéntanos tu caso', path: intakePath }] }, {
     title: intake.title, description: intake.description, path: intakePath, body, bodyClass: 'page-intake',
   });
 }
@@ -722,16 +725,11 @@ function renderOrder(site) {
           <span class="order-nivel-precio">${esc(t.price)}</span>
         </span>
       </label>`).join('\n');
-  const combos = [
-    ['essential', 'Revisión Esencial — 129 €'],
-    ['essentialExpress', 'Esencial + entrega exprés 24 h — 178 €'],
-    ['essentialCall', 'Esencial + consulta de 30 minutos — 178 €'],
-    ['essentialBoth', 'Esencial + exprés + consulta — 227 €'],
-    ['professional', 'Revisión Profesional — 249 €'],
-    ['blindada', 'Firma Blindada — 499 €'],
-  ];
-  const noscript = combos.map(([k, label]) => `<li><a href="${esc(site.paymentLinks[k])}" target="_blank" rel="noopener">${label}</a></li>`).join('\n      ');
-  const linksJson = JSON.stringify(site.paymentLinks);
+  const base = Number(site.pricing.tiers[0].priceValue || parseFloat(site.pricing.tiers[0].price));
+  const extra = Number(o.extraExpress.match(/([0-9]+)\s*€/)[1]);
+  const call = Number(o.extraCall.match(/([0-9]+)\s*€/)[1]);
+  const prices = Object.fromEntries(site.pricing.tiers.map((t,i)=>[keys[i],Number(t.priceValue || parseFloat(t.price))]));
+  Object.assign(prices,{essentialExpress:base+extra,essentialCall:base+call,essentialBoth:base+extra+call});
   const body = `
 <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · Contratar</nav>
 <h1>${o.h1}</h1>
@@ -747,21 +745,30 @@ ${niveles}
     <label class="order-extra"><input type="checkbox" name="extra" value="expres"><span>${esc(o.extraExpress)}</span></label>
     <label class="order-extra"><input type="checkbox" name="extra" value="consulta"><span>${esc(o.extraCall)}</span></label>
   </fieldset>
-  <p class="order-total" aria-live="polite"><span>${esc(o.totalLabel)}</span> <strong id="order-total">129 €</strong></p>
-  <p class="order-accion"><a class="boton order-pagar" id="order-pagar" href="${esc(site.paymentLinks.essential)}" target="_blank" rel="noopener">${esc(o.payButton)} · 129 €</a></p>
+  <p class="order-total" aria-live="polite"><span>${esc(o.totalLabel)}</span> <strong id="order-total">${base} €</strong></p>
+  <fieldset class="order-grupo">
+    <legend>${esc(o.territoryTitle)}</legend>
+    <p id="order-scope">${esc(o.territoryHelp)} ${esc(o.scopeNote)}</p>
+    <p><label for="order-postal">${esc(o.postalLabel)}</label><input id="order-postal" name="postal_code" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}" maxlength="5" required aria-describedby="order-postal-help order-scope"><span id="order-postal-help" class="campo-ayuda">${esc(o.postalHelp)}</span></p>
+    <label class="order-extra"><input type="checkbox" id="order-territory" required><span>${esc(o.territoryConfirm)}</span></label>
+    <p id="order-quote"><a href="/solicitar-presupuesto/">${esc(o.quoteLabel)}</a></p>
+  </fieldset>
+  <p id="order-status" role="status" aria-live="polite" aria-atomic="true"></p>
+  <p class="order-accion"><button class="boton order-pagar" type="submit" id="order-pagar" disabled>${esc(o.payButton)} · ${base} €</button></p>
   <p class="order-nota">${esc(o.afterNote)}</p>
 </form>
-<noscript><ul class="order-noscript">
-      ${noscript}
-</ul></noscript>
+<noscript><p class="order-noscript"><a href="/solicitar-presupuesto/">${esc(o.quoteLabel)}</a></p></noscript>
 <script>
 (function(){
 var f=document.getElementById('order'),btn=document.getElementById('order-pagar'),tot=document.getElementById('order-total'),nota=document.getElementById('order-extras-nota');
 if(!f||!btn)return;
-var PRICE={essential:129,essentialExpress:178,essentialCall:178,essentialBoth:227,professional:249,blindada:499};
-var LINK=${linksJson};
+var PRICE=${JSON.stringify(prices)};
+var postal=document.getElementById('order-postal'),confirm=document.getElementById('order-territory'),status=document.getElementById('order-status'),quote=document.getElementById('order-quote'),pending=false;
+btn.disabled=false;
 function compute(){
-var n=f.querySelector('input[name="nivel"]:checked').value;
+var selected=f.querySelector('input[name="nivel"]:checked');
+var n=selected&&selected.value;
+if(['essential','professional','blindada'].indexOf(n)===-1)return null;
 var ex=f.querySelectorAll('input[name="extra"]');
 var es=n==='essential';
 for(var i=0;i<ex.length;i++){ex[i].disabled=!es;if(!es)ex[i].checked=false;}
@@ -771,9 +778,26 @@ if(es){var e=ex[0].checked,c=ex[1].checked;key=e&&c?'essentialBoth':e?'essential
 var price=PRICE[key];
 tot.textContent=price+' \\u20ac';
 btn.textContent=${JSON.stringify(o.payButton)}+' \\u00b7 '+price+' \\u20ac';
-btn.href=LINK[key];
+return key;
 }
-f.addEventListener('change',compute);
+f.addEventListener('change',function(){if(!pending)compute();});
+f.addEventListener('submit',function(ev){
+ ev.preventDefault();if(pending)return;
+ var key=compute(),code=postal.value.trim(),province=Number(code.slice(0,2));
+ if(!/^[0-9]{5}$/.test(code)||province<1||province>52){status.textContent=${JSON.stringify(o.postalHelp)};return;}
+ if([35,38,51,52].indexOf(province)!==-1){status.textContent=${JSON.stringify(o.territoryHelp)};quote.hidden=false;return;}
+ if(!confirm.checked){status.textContent=${JSON.stringify(o.territoryConfirm)};return;}
+ if(!key||!Object.prototype.hasOwnProperty.call(PRICE,key)){status.textContent=${JSON.stringify(o.checkoutError)};return;}
+ pending=true;btn.disabled=true;btn.textContent=${JSON.stringify(o.creatingLabel)};status.textContent='';
+ fetch('https://intake.marcospera.com/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key:key,country:'ES',postal_code:code})})
+ .then(function(r){if(!r.ok)throw Error('checkout');return r.json();})
+ .then(function(data){
+   if(!data.ok||typeof data.url!=='string')throw Error('checkout');
+   var url=new URL(data.url);
+   if(url.protocol!=='https:'||url.hostname!=='checkout.stripe.com'||url.port||url.username||url.password)throw Error('checkout');
+   location.assign(url.href);
+ }).catch(function(){pending=false;btn.disabled=false;compute();status.textContent=${JSON.stringify(o.checkoutError)};});
+});
 var q=new URLSearchParams(location.search);
 var nv=q.get('nivel'),sel=['essential','professional','blindada'].indexOf(nv)!==-1&&f.querySelector('input[name="nivel"][value="'+nv+'"]');
 if(sel)sel.checked=true;
@@ -826,7 +850,7 @@ ${site.prelaunch ? '\n> Estado: sitio en preparación. Tarifas, plazos y alcance
 
 ## Páginas
 - [Inicio](https://${site.domain}/): qué es el servicio y cómo pedirlo.
-${site.id === 'burofaxlegal' ? `- [Cuéntame tu caso](https://${site.domain}/cuenta-tu-caso/): presupuesto cerrado por escrito antes de empezar.` : `${site.paymentPaused ? `- [Solicitar contrato a medida](https://${site.domain}/solicitar-contrato/): solicitud de presupuesto.` : `- [Contratar](https://${site.domain}/contratar/): pago online directo de la revisión con tarjeta.`}\n- [Precios](https://${site.domain}/precios/): tarifas cerradas con IVA incluido.`}
+${site.id === 'burofaxlegal' ? `- [Cuéntame tu caso](https://${site.domain}/cuenta-tu-caso/): presupuesto cerrado por escrito antes de empezar.` : `${site.paymentPaused ? `- [Solicitar contrato a medida](https://${site.domain}/solicitar-contrato/): solicitud de presupuesto.` : `- [Contratar](https://${site.domain}/contratar/): pago online directo de la revisión con tarjeta.`}\n- [Precios](https://${site.domain}/precios/): tarifas cerradas con IVA incluido.\n- [Solicitar presupuesto](https://${site.domain}/solicitar-presupuesto/): otros territorios; sin pago online.`}
 - [${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : 'Completa tu encargo'}](https://${site.domain}/cuenta-tu-caso/): ${site.id === 'revisioncontratos' ? site.ui.intakeSummary : 'formulario para que Carla valore el caso e indique el servicio y presupuesto que correspondan'}.
 - [Cómo funciona](https://${site.domain}/como-funciona/): pasos del encargo, plazos y qué recibe el cliente.
 - [Quién revisa](https://${site.domain}/quien-revisa/): la abogada que firma el trabajo.
@@ -864,6 +888,8 @@ for (const site of sites) {
   if (site.id === 'revisioncontratos') {
     put('solicitar-contrato/index.html', renderIntake(site, { customQuote: true }));
     urls.push({ path: '/solicitar-contrato/', priority: '0.9' });
+    put('solicitar-presupuesto/index.html', renderIntake(site, { territoryQuote: true }));
+    urls.push({ path: '/solicitar-presupuesto/', priority: '0.9' });
   }
   urls.push({ path: '/cuenta-tu-caso/', priority: '0.9' });
   if (site.id === 'revisioncontratos' && site.order && site.paymentLinks && !site.paymentPaused) {

@@ -82,5 +82,12 @@ body.site-revisioncontratos { --rc-brass:#705b35; scrollbar-color:#64726b #f7f4e
 .order-total strong{font-size:1.7rem;color:#8b7448}
 .order-accion{margin:1rem 0 .4rem}
 .order-pagar{display:inline-block;font-size:1.15rem;padding:.85rem 1.6rem}
+.site-revisioncontratos #order-postal{display:block;width:10rem;max-width:100%;margin:.4rem 0;padding:.65rem;border:1px solid #8b7448;background:#fffdf7;color:#242a28;font:inherit}
+.site-revisioncontratos #order-postal:focus-visible{outline:2px solid #8b7448;outline-offset:3px}
+.site-revisioncontratos #order-status:not(:empty){padding:.8rem;border-left:3px solid #8b7448;background:#f0ead8}
+.site-revisioncontratos .order-pagar:disabled{opacity:.6;cursor:wait}
+.site-revisioncontratos .order-extra input:required{flex-shrink:0}
+.site-revisioncontratos .order-total{flex-wrap:wrap;gap:.5rem}
+.site-revisioncontratos #order-quote[hidden]{display:none}
 .order-nota{color:#5c5540;font-size:.9rem}
 .order-noscript li{margin:.4rem 0}

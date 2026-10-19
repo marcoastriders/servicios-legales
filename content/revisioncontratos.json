@@ -24,8 +24,8 @@
       "label": "Quién revisa"
     },
     {
-      "label": "Completa tu encargo",
-      "path": "/cuenta-tu-caso/"
+      "label": "Contratar",
+      "path": "/contratar/"
     }
   ],
   "home": {
@@ -1343,6 +1343,25 @@
     "essentialExpress": "https://buy.stripe.com/14AdRa6x36pX0cifQL2Nq09",
     "essentialCall": "https://buy.stripe.com/6oU9AUcVr5lT4sycEz2Nq0a",
     "essentialBoth": "https://buy.stripe.com/bJebJ2bRn29He38fQL2Nq0b"
+  },
+  "order": {
+    "title": "Contratar revisión de contrato | RevisiónContratos",
+    "description": "Elige el nivel de revisión, añade exprés o consulta si lo necesitas y paga online con tarjeta o Bizum. Precio cerrado, IVA incluido.",
+    "h1": "Contrata tu revisión",
+    "answer": "Tres pasos: elige el nivel, añade los extras que quieras a la Revisión Esencial y paga online. Tras el pago vuelves aquí para enviar tus datos y adjuntar el contrato.",
+    "stepLevel": "1 · Elige el nivel",
+    "stepExtras": "2 · Extras para la Revisión Esencial",
+    "extrasDisabledNote": "La llamada de 30 minutos ya está incluida en la Profesional y la Firma Blindada; la entrega exprés no está disponible en esos niveles por la complejidad del servicio.",
+    "totalLabel": "Total, IVA incluido",
+    "payButton": "Pagar y contratar",
+    "afterNote": "Pago seguro con Stripe (tarjeta o Bizum). Al terminar, vuelves a esta web para enviar tus datos y adjuntar el contrato completo y legible.",
+    "levelShort": {
+      "essential": "Alquiler · informe escrito en 48-72 h",
+      "professional": "Contratos complejos · llamada incluida",
+      "blindada": "La abogada negocia con la otra parte"
+    },
+    "extraExpress": "Entrega exprés 24 h (+49 €)",
+    "extraCall": "Consulta de 30 minutos (+49 €)"
   },
   "ui": {
     "primary": "Elegir nivel y pagar",

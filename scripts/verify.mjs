@@ -120,8 +120,22 @@ if ('paymentLinks' in revisionContent) {
     if (/cobro online.*desactivado|Bizum o transferencia|consulta antes de pagar|confirma el encargo.*antes del pago/i.test(preciosHtml + revisionAll)) fail('revisioncontratos: conserva copy de pago manual o contacto previo');
     const intakeHtml = readFileSync(join(dist, 'revisioncontratos.es', 'cuenta-tu-caso', 'index.html'), 'utf8');
     if (!intakeHtml.includes('name="paquete"') || !intakeHtml.includes('name="paquete" required')) fail('intake revisioncontratos: paquete pagado no es obligatorio');
+    // order page /contratar/
+    const orderPath = join(dist, 'revisioncontratos.es', 'contratar', 'index.html');
+    if (!existsSync(orderPath)) fail('revisioncontratos: falta la order page /contratar/');
+    const orderHtml = readFileSync(orderPath, 'utf8');
+    for (const url of Object.values(revisionContent.paymentLinks)) if (!orderHtml.includes(url)) fail('contratar: enlace Stripe ausente de la order page');
+    if (!orderHtml.includes('id="order-total"') || !orderHtml.includes('aria-live="polite"')) fail('contratar: falta el total dinámico accesible');
+    if (!orderHtml.includes('<noscript>') || (orderHtml.match(/order-noscript/g) || []).length < 1) fail('contratar: falta el fallback noscript');
+    if ((orderHtml.match(/<input type="radio" name="nivel"/g) || []).length !== 3) fail('contratar: deben renderizarse los 3 niveles como radios');
+    if (!orderHtml.includes('value="expres"') || !orderHtml.includes('value="consulta"')) fail('contratar: faltan los checkboxes de extras');
+    if (!readFileSync(join(dist, 'revisioncontratos.es', 'sitemap.xml'), 'utf8').includes('/contratar/')) fail('sitemap revisioncontratos sin /contratar/');
+    const bfAll = htmlFiles.filter(([d]) => d === 'burofaxlegal.es').map(([, f]) => readFileSync(f, 'utf8')).join('\n');
+    if (bfAll.includes('href="/contratar/')) fail('burofaxlegal: no debe enlazar a la order page de revisioncontratos');
+    if (existsSync(join(dist, 'burofaxlegal.es', 'contratar'))) fail('burofaxlegal: no debe generar /contratar/ (flujo presupuesto)');
   }
   if (revisionContent.paymentPaused) {
+    if (existsSync(join(dist, 'revisioncontratos.es', 'contratar'))) fail('revisioncontratos: /contratar/ generada durante la pausa');
     for (const [, file] of htmlFiles.filter(([domain]) => domain === 'revisioncontratos.es')) {
       const html = readFileSync(file, 'utf8');
       if (/buy\.stripe\.com|Contratar y pagar|contrat(?:a|ar) online|pag(?:a|as|ar|ue|ues|o) online|Pago online con tarjeta/i.test(html)) fail(`${file}: cobro online renderizado durante pausa`);

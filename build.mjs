@@ -129,7 +129,7 @@ ${ld}
   <div class="wrap cabecera-in">
     <a class="marca" href="/">${esc(site.name)}<span class="marca-sub">por Carla Morales · Abogada</span></a>
     <nav class="nav" aria-label="Principal">
-      ${site.nav.map((n) => `<a href="${n.path}"${n.path === path ? ' aria-current="page"' : ''}>${esc(n.label)}</a>`).join('\n      ')}
+      ${site.nav.filter((n) => !(n.path === '/contratar/' && site.paymentPaused)).map((n) => `<a href="${n.path === '/contratar/' && site.paymentPaused ? '/cuenta-tu-caso/' : n.path}"${n.path === path ? ' aria-current="page"' : ''}>${esc(n.label)}</a>`).join('\n      ')}
     </nav>
   </div>
 </header>
@@ -203,8 +203,8 @@ const blockCta = (site, text = null) => site.prelaunch ? `
 <div class="cta">
   <p class="cta-titulo">${text || esc(site.ctaTitle)}</p>
   <p class="cta-botones">
-    <a class="boton" href="${site.id === 'revisioncontratos' ? '/precios/' : '/cuenta-tu-caso/'}">${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : esc(site.ui.primary)}</a>
-    ${site.id === 'revisioncontratos' ? '<a class="boton boton-sec" href="/precios/">Ver extras</a>' : `<a class="boton boton-sec" href="https://wa.me/${shared.whatsappIntl}?text=${encodeURIComponent(site.ctaWhatsapp)}">WhatsApp directo</a>`}
+    <a class="boton" href="${site.id === 'revisioncontratos' ? '/contratar/' : '/cuenta-tu-caso/'}">${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : esc(site.ui.primary)}</a>
+    ${site.id === 'revisioncontratos' ? '<a class="boton boton-sec" href="/precios/">Ver precios y niveles</a>' : `<a class="boton boton-sec" href="https://wa.me/${shared.whatsappIntl}?text=${encodeURIComponent(site.ctaWhatsapp)}">WhatsApp directo</a>`}
   </p>
   <p class="cta-nota">${site.id === 'revisioncontratos' ? esc(site.ui.ctaNote) : 'Carla revisa tu caso y te indica por escrito qué servicio y tarifa corresponden antes de empezar.'}</p>
 </div>`;
@@ -334,7 +334,7 @@ ${blockCta(site)}` : `
   <p class="kicker">${esc(site.kicker)}</p>
   <h1>${site.home.h1}</h1>
   ${blockAnswer(site.home.answer)}
-  <p class="hero-botones"><a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a> <a class="boton boton-sec" href="/precios/">Ver precios</a></p>
+  <p class="hero-botones"><a class="boton" href="${site.id === 'revisioncontratos' ? '/contratar/' : '/cuenta-tu-caso/'}">${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : esc(site.ui.primary)}</a> <a class="boton boton-sec" href="/precios/">Ver precios</a></p>
 </section>
 ${blockTrustCarla(site)}
 ${sections(site.home.sections)}
@@ -431,7 +431,9 @@ function renderService(site, s) {
   <aside class="rc-service-aside" aria-label="Precio y contratación">
     <p class="precio-linea">${esc(s.priceLabel)}</p>
     <p><a href="/precios/">Comparar los tres niveles</a></p>
-    <p><a class="boton" href="/precios/">Elegir nivel y pagar</a></p>
+    ${(({ 129: 'essential', 249: 'professional', 499: 'blindada' })[s.priceValue])
+      ? `<p><a class="boton" href="/contratar/?nivel=${({ 129: 'essential', 249: 'professional', 499: 'blindada' })[s.priceValue]}">Elegir nivel y pagar</a></p>`
+      : `<p><a class="boton" href="/cuenta-tu-caso/">Cuéntanos tu caso</a></p>`}
     <p class="cta-nota">${esc(site.ui.serviceNote)}</p>
   </aside>
 </div>
@@ -703,6 +705,83 @@ function render404(site) {
   });
 }
 
+function renderOrder(site) {
+  const o = site.order;
+  const keys = ['essential', 'professional', 'blindada'];
+  const niveles = site.pricing.tiers.map((t, i) => `
+      <label class="order-nivel">
+        <input type="radio" name="nivel" value="${keys[i]}"${i === 0 ? ' checked' : ''}>
+        <span class="order-nivel-in">
+          <span class="order-nivel-nombre">${esc(t.name)}</span>
+          <span class="order-nivel-detalle">${esc(o.levelShort[keys[i]])}</span>
+          <span class="order-nivel-precio">${esc(t.price)}</span>
+        </span>
+      </label>`).join('\n');
+  const combos = [
+    ['essential', 'Revisión Esencial — 129 €'],
+    ['essentialExpress', 'Esencial + entrega exprés 24 h — 178 €'],
+    ['essentialCall', 'Esencial + consulta de 30 minutos — 178 €'],
+    ['essentialBoth', 'Esencial + exprés + consulta — 227 €'],
+    ['professional', 'Revisión Profesional — 249 €'],
+    ['blindada', 'Firma Blindada — 499 €'],
+  ];
+  const noscript = combos.map(([k, label]) => `<li><a href="${esc(site.paymentLinks[k])}" target="_blank" rel="noopener">${label}</a></li>`).join('\n      ');
+  const linksJson = JSON.stringify(site.paymentLinks);
+  const body = `
+<nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · Contratar</nav>
+<h1>${o.h1}</h1>
+${blockAnswer(o.answer)}
+<form class="order" id="order" action="/contratar/" method="get">
+  <fieldset class="order-grupo">
+    <legend>${esc(o.stepLevel)}</legend>
+${niveles}
+  </fieldset>
+  <fieldset class="order-grupo">
+    <legend>${esc(o.stepExtras)}</legend>
+    <p class="order-extras-nota" id="order-extras-nota" hidden>${esc(o.extrasDisabledNote)}</p>
+    <label class="order-extra"><input type="checkbox" name="extra" value="expres"><span>${esc(o.extraExpress)}</span></label>
+    <label class="order-extra"><input type="checkbox" name="extra" value="consulta"><span>${esc(o.extraCall)}</span></label>
+  </fieldset>
+  <p class="order-total" aria-live="polite"><span>${esc(o.totalLabel)}</span> <strong id="order-total">129 €</strong></p>
+  <p class="order-accion"><a class="boton order-pagar" id="order-pagar" href="${esc(site.paymentLinks.essential)}" target="_blank" rel="noopener">${esc(o.payButton)} · 129 €</a></p>
+  <p class="order-nota">${esc(o.afterNote)}</p>
+</form>
+<noscript><ul class="order-noscript">
+      ${noscript}
+</ul></noscript>
+<script>
+(function(){
+var f=document.getElementById('order'),btn=document.getElementById('order-pagar'),tot=document.getElementById('order-total'),nota=document.getElementById('order-extras-nota');
+if(!f||!btn)return;
+var PRICE={essential:129,essentialExpress:178,essentialCall:178,essentialBoth:227,professional:249,blindada:499};
+var LINK=${linksJson};
+function compute(){
+var n=f.querySelector('input[name="nivel"]:checked').value;
+var ex=f.querySelectorAll('input[name="extra"]');
+var es=n==='essential';
+for(var i=0;i<ex.length;i++){ex[i].disabled=!es;if(!es)ex[i].checked=false;}
+nota.hidden=es;
+var key=n;
+if(es){var e=ex[0].checked,c=ex[1].checked;key=e&&c?'essentialBoth':e?'essentialExpress':c?'essentialCall':'essential';}
+var price=PRICE[key];
+tot.textContent=price+' \\u20ac';
+btn.textContent=${JSON.stringify(o.payButton)}+' \\u00b7 '+price+' \\u20ac';
+btn.href=LINK[key];
+}
+f.addEventListener('change',compute);
+var q=new URLSearchParams(location.search);
+var nv=q.get('nivel'),sel=nv&&f.querySelector('input[name="nivel"][value="'+nv+'"]');
+if(sel)sel.checked=true;
+if(q.get('expres')==='1')f.querySelector('input[value="expres"]').checked=true;
+if(q.get('consulta')==='1')f.querySelector('input[value="consulta"]').checked=true;
+compute();
+})();
+</script>`;
+  return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: 'Contratar', path: '/contratar/' }] }, {
+    title: o.title, description: o.description, path: '/contratar/', body, bodyClass: 'page-simple page-order',
+  });
+}
+
 function sitemap(site, urls) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -742,8 +821,8 @@ ${site.prelaunch ? '\n> Estado: sitio en preparación. Tarifas, plazos y alcance
 
 ## Páginas
 - [Inicio](https://${site.domain}/): qué es el servicio y cómo pedirlo.
-${site.id === 'burofaxlegal' ? `- [Cuéntame tu caso](https://${site.domain}/cuenta-tu-caso/): presupuesto cerrado por escrito antes de empezar.` : `- [Precios](https://${site.domain}/precios/): tarifas cerradas con IVA incluido.`}
-- [${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : 'Cuéntanos tu caso'}](https://${site.domain}/cuenta-tu-caso/): ${site.id === 'revisioncontratos' ? site.ui.intakeSummary : 'formulario para que Carla valore el caso e indique el servicio y presupuesto que correspondan'}.
+${site.id === 'burofaxlegal' ? `- [Cuéntame tu caso](https://${site.domain}/cuenta-tu-caso/): presupuesto cerrado por escrito antes de empezar.` : `- [Contratar](https://${site.domain}/contratar/): pago online directo de la revisión con tarjeta o Bizum.\n- [Precios](https://${site.domain}/precios/): tarifas cerradas con IVA incluido.`}
+- [${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : 'Completa tu encargo'}](https://${site.domain}/cuenta-tu-caso/): ${site.id === 'revisioncontratos' ? site.ui.intakeSummary : 'formulario para que Carla valore el caso e indique el servicio y presupuesto que correspondan'}.
 - [Cómo funciona](https://${site.domain}/como-funciona/): pasos del encargo, plazos y qué recibe el cliente.
 - [Quién revisa](https://${site.domain}/quien-revisa/): la abogada que firma el trabajo.
 
@@ -778,6 +857,10 @@ for (const site of sites) {
   if (hasPricingPage) put('precios/index.html', renderPrecios(site));
   put('cuenta-tu-caso/index.html', renderIntake(site));
   urls.push({ path: '/cuenta-tu-caso/', priority: '0.9' });
+  if (site.id === 'revisioncontratos' && site.order && site.paymentLinks && !site.paymentPaused) {
+    put('contratar/index.html', renderOrder(site));
+    urls.push({ path: '/contratar/', priority: '0.9' });
+  }
   put('como-funciona/index.html', renderSimple(site, site.pages.comoFunciona, '/como-funciona/', 'Cómo funciona'));
   put('quien-revisa/index.html', renderSimple(site, site.pages.quienRevisa, '/quien-revisa/', 'Quién revisa'));
   for (const s of site.services) {

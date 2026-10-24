@@ -294,7 +294,7 @@
       "h1": "Burofax de <strong>requerimiento de pago de rentas</strong> al inquilino",
       "answer": "<p>Si tu inquilino adeuda rentas, redactamos un requerimiento adaptado a tu contrato y al detalle de los impagos. El servicio está dirigido a arrendadores de vivienda y comprende la revisión por una abogada y las indicaciones para realizar un envío fehaciente.</p><p>El impago permite al arrendador instar la resolución del contrato conforme al artículo 27.2.a) de la Ley de Arrendamientos Urbanos (LAU). El burofax reclama la deuda y deja constancia de la comunicación; la recuperación judicial de la vivienda exige el procedimiento correspondiente.</p>",
       "teaser": "Requiere al inquilino el pago de rentas y prepara, si se cumplen todos los requisitos legales, la oposición a una posterior enervación.",
-      "llmsTeaser": "Servicio de redacción de burofax para requerir el pago de alquileres adeudados, evitando la enervación del desahucio mediante requerimiento previo de 30 días (LEC art. 22.4).",
+      "llmsTeaser": "Servicio de redacción de burofax para requerir rentas adeudadas y preparar, cuando se cumplen los requisitos y no concurre una excepción legal, la exclusión de la enervación conforme al artículo 22 LEC.",
       "priceLabel": "Desde 99 € IVA incluido",
       "priceValue": 99,
       "sections": [
@@ -304,7 +304,7 @@
         },
         {
           "h2": "Efectos del requerimiento sobre la enervación",
-          "html": "<p>La enervación permite, cuando procede, finalizar el desahucio mediante el pago íntegro de lo reclamado y de lo adeudado hasta ese momento. El artículo 22.4 LEC la excluye si existe un requerimiento fehaciente con al menos 30 días de antelación a la demanda y la deuda no se ha pagado al presentarla. También limita su repetición, con la excepción legal por causas imputables al arrendador.</p><p>El envío, por sí solo, no garantiza ese efecto. La abogada debe revisar el contenido, la comunicación al destinatario y las fechas antes de valorar una demanda.</p>"
+          "html": "<p>La enervación permite, cuando procede, finalizar el desahucio mediante el pago íntegro de lo reclamado y de lo adeudado hasta ese momento. El artículo 22.4 LEC la excluye si existe un requerimiento fehaciente con al menos 30 días de antelación a la demanda y la deuda no se ha pagado al presentarla. También limita su repetición, con la excepción legal por causas imputables al arrendador.</p><p>En arrendamientos de vivienda, el artículo 22.6 LEC contiene además una excepción vinculada a la suspensión del procedimiento prevista en el artículo 441.5 y a la persistencia del impago. El envío, por sí solo, no garantiza ningún efecto: la abogada debe revisar el contenido, la comunicación al destinatario, las fechas y las circunstancias procesales antes de valorar una demanda.</p>"
         },
         {
           "h2": "Requerimiento de pago y negociación previa",
@@ -387,7 +387,7 @@
         },
         {
           "label": "Ley 1/2000, de Enjuiciamiento Civil",
-          "precept": "Arts. 22.4 y 438.5: enervación, requerimiento previo y requerimiento judicial",
+          "precept": "Arts. 22.4, 22.6, 438.5 y 441.5: enervación, excepciones, requerimiento previo y requerimiento judicial",
           "url": "https://www.boe.es/eli/es/l/2000/01/07/1/con#a22"
         },
         {
@@ -979,7 +979,7 @@
       "sections": [
         {
           "h2": "1. Tu inquilino no paga el alquiler",
-          "html": "<p>Detalla las mensualidades, los importes y los pagos recibidos. El art. 22.4 de la Ley de Enjuiciamiento Civil excluye la enervación si hubo requerimiento fehaciente de pago al menos treinta días antes de presentar la demanda y el impago persiste al presentarla. El requerimiento debe prepararse atendiendo a esos requisitos.</p>"
+          "html": "<p>Detalla las mensualidades, los importes y los pagos recibidos. El art. 22.4 de la Ley de Enjuiciamiento Civil excluye la enervación si hubo requerimiento fehaciente de pago al menos treinta días antes de presentar la demanda y el impago persiste al presentarla. En vivienda debe revisarse también la excepción del art. 22.6, vinculada a determinados supuestos de suspensión del procedimiento y persistencia del impago. El requerimiento debe prepararse atendiendo a todos esos requisitos.</p>"
         },
         {
           "h2": "2. El casero no te devuelve la fianza",

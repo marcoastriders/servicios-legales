@@ -39,7 +39,6 @@ function legalServiceGraph(site) {
     url: `https://${site.domain}/`,
     areaServed: { '@type': 'Country', name: 'España' },
     provider: { '@id': 'https://carlamorales.es/#person' },
-    parentOrganization: { '@id': 'https://carlamorales.es/#person' },
   };
 }
 
@@ -195,7 +194,7 @@ const blockAnswer = (t) => /^\s*<p[\s>]/i.test(t)
   ? `<div class="respuesta-directa">${t}</div>`
   : `<p class="respuesta-directa">${t}</p>`;
 
-const blockCta = (site, text = null, quote = false) => site.prelaunch ? `
+const blockCta = (site, text = null, quote = false, level = null) => site.prelaunch ? `
 <div class="cta cta-prelaunch">
   <p class="cta-titulo">Próxima apertura</p>
   <p>La infraestructura y la información están preparadas. El servicio se abrirá cuando Carla confirme personalmente tarifas, plazos y alcance.</p>
@@ -203,7 +202,7 @@ const blockCta = (site, text = null, quote = false) => site.prelaunch ? `
 <div class="cta">
   <p class="cta-titulo">${text || esc(site.ctaTitle)}</p>
   <p class="cta-botones">
-    <a class="boton" href="${quote ? '/solicitar-contrato/' : site.id === 'revisioncontratos' ? (site.paymentPaused ? '/solicitar-presupuesto/' : '/contratar/') : '/cuenta-tu-caso/'}">${quote ? esc(site.customOrder.submitLabel) : site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : esc(site.ui.primary)}</a>
+    <a class="boton" href="${quote ? '/solicitar-contrato/' : site.id === 'revisioncontratos' ? (site.paymentPaused ? '/solicitar-presupuesto/' : `/contratar/${level ? `?nivel=${level}` : ''}`) : '/cuenta-tu-caso/'}">${quote ? esc(site.customOrder.submitLabel) : site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : esc(site.ui.primary)}</a>
     ${site.id === 'revisioncontratos' ? '<a class="boton boton-sec" href="/precios/">Ver precios y niveles</a>' : `<a class="boton boton-sec" href="https://wa.me/${shared.whatsappIntl}?text=${encodeURIComponent(site.ctaWhatsapp)}">WhatsApp directo</a>`}
   </p>
   <p class="cta-nota">${quote ? esc(site.customOrder.ctaNote) : site.id === 'revisioncontratos' ? esc(site.ui.ctaNote) : 'Carla revisa tu caso y te indica por escrito qué servicio y tarifa corresponden antes de empezar.'}</p>
@@ -412,7 +411,7 @@ function renderService(site, s) {
     url: `https://${site.domain}/${s.slug}/`,
     provider: { '@id': `https://${site.domain}/#legalservice` },
     areaServed: { '@type': 'Country', name: 'España' },
-    offers: { '@type': 'Offer', price: s.priceValue, priceCurrency: 'EUR', url: `https://${site.domain}/precios/` },
+    offers: { '@type': 'Offer', price: s.priceValue, priceCurrency: 'EUR', url: `https://${site.domain}/${s.slug}/` },
   }, faqGraph(s.faqs)];
   const body = site.id === 'revisioncontratos' ? `
 <div class="rc-service-head">
@@ -442,7 +441,7 @@ ${blockTrustCarla(site)}
   <h2>${esc(s.crossSell.h2)}</h2>
   <p>${s.crossSell.html}</p>
 </section>
-${blockCta(site, s.ctaText || null, s.slug === 'contrato-a-medida')}` : `
+${blockCta(site, s.ctaText || null, s.slug === 'contrato-a-medida', ({ 129: 'essential', 249: 'professional', 499: 'blindada' })[s.priceValue] || null)}` : `
 <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · ${esc(s.title)}</nav>
 <h1>${s.h1}</h1>
 ${blockAnswer(s.answer)}

@@ -602,7 +602,7 @@
         },
         {
           "h2": "Qué puedes hacer con esa información",
-          "html": "<p>Sabes qué cláusulas pueden ser nulas, cuáles conviene impugnar y cómo plantearlo a la otra parte sin asumir que el conflicto está resuelto. El informe te da argumentos, no solo diagnóstico.</p><p>Que una cláusula sea nula no significa que la otra parte lo acepte de buen grado. A veces hará falta reclamar con formalidad, y ahí un burofax suele ser el primer paso.</p>"
+          "html": "<p>Sabes qué cláusulas pueden ser nulas, cuáles conviene impugnar y cómo plantearlo a la otra parte sin asumir que el conflicto está resuelto. El informe te da argumentos, no solo diagnóstico.</p><p>Que una cláusula sea nula no significa que la otra parte lo acepte de buen grado. A veces hará falta reclamar con formalidad, y ahí un burofax suele ser el primer paso.</p><p>Consulta también la <a href=\"/articulos/clausulas-abusivas-contrato-alquiler/\">guía sobre cláusulas abusivas en el contrato de alquiler</a>, revisada por Carla Morales.</p>"
         }
       ],
       "table": {
@@ -893,7 +893,7 @@
         },
         {
           "h2": "Contexto normativo",
-          "html": "<p>El RD-ley 8/2026 introdujo una prórroga extraordinaria con efectos limitados, pero fue derogado el 30 de abril de 2026 al no convalidarse. La regulación vigente parte de los arts. 9 y 10 de la LAU. El propio art. 10 contempla prórrogas extraordinarias en supuestos concretos, entre ellos determinadas situaciones de vulnerabilidad y viviendas situadas en zonas de mercado residencial tensionado; su aplicación exige revisar los requisitos del caso.</p>"
+          "html": "<p>El RD-ley 8/2026 introdujo una prórroga extraordinaria con efectos limitados, pero fue derogado el 30 de abril de 2026 al no convalidarse. La regulación vigente parte de los arts. 9 y 10 de la LAU. El propio art. 10 contempla prórrogas extraordinarias en supuestos concretos, entre ellos determinadas situaciones de vulnerabilidad y viviendas situadas en zonas de mercado residencial tensionado; su aplicación exige revisar los requisitos del caso.</p><p>Consulta también la <a href=\"/articulos/duracion-y-prorrogas-contrato-alquiler/\">guía sobre duración, prórrogas y preavisos del alquiler</a>, revisada por Carla Morales.</p>"
         }
       ],
       "table": {
@@ -999,7 +999,7 @@
         },
         {
           "h2": "El paso siguiente",
-          "html": "<p>La reclamación seria empieza casi siempre por un burofax. Deja constancia de la fecha, del importe y de la voluntad de reclamar judicialmente si no hay respuesta. Documenta la petición y permite acreditar qué se reclamó, cuándo y con qué propuesta de solución.</p>"
+          "html": "<p>La reclamación seria empieza casi siempre por un burofax. Deja constancia de la fecha, del importe y de la voluntad de reclamar judicialmente si no hay respuesta. Documenta la petición y permite acreditar qué se reclamó, cuándo y con qué propuesta de solución.</p><p>Consulta también la <a href=\"/articulos/devolucion-fianza-plazos/\">guía sobre devolución de la fianza, intereses y reclamación</a>, revisada por Carla Morales.</p>"
         }
       ],
       "table": {
@@ -1477,5 +1477,305 @@
     "successMessage": "<strong>Datos recibidos.</strong> Carla verificará el pago y revisará el contrato completo. Te confirmará por email la recepción y el plazo."
   },
   "checkoutMode": "fixed_vat21",
-  "paymentPaused": false
+  "paymentPaused": false,
+  "articles": [
+    {
+      "slug": "clausulas-abusivas-contrato-alquiler",
+      "title": "Cláusulas abusivas en el contrato de alquiler y cómo reclamar",
+      "description": "Cláusulas abusivas en el alquiler: gastos de agencia, garantías, seguros y penalizaciones. Cómo revisarlas y reclamar con fuentes oficiales.",
+      "answer": "<p>En un contrato de alquiler pueden aparecer cláusulas abusivas o contrarias a la ley. Este artículo se centra en el alquiler de vivienda habitual.</p><p>Revisa qué dice tu alquiler sobre los gastos de agencia, las garantías y las penalizaciones. Si alguna condición te genera dudas, reúne el contrato y los justificantes de pago. Pide una revisión jurídica antes de reclamar por escrito su corrección o las cantidades que correspondan.</p>",
+      "h1": "Cláusulas abusivas en el contrato de alquiler y cómo reclamar",
+      "sections": [
+        {
+          "h2": "Cuándo una cláusula merece revisión y por qué importa quién alquila",
+          "html": "<p>Una condición puede perjudicarte de algún modo, aunque esto no siempre supone que nos hallemos ante una cláusula abusiva.</p><p>La normativa de consumo se aplica cuando el arrendador actúa como empresario o profesional y el inquilino alquila para su uso particular. En ese caso, las condiciones no negociadas individualmente que, contra la buena fe, causen un desequilibrio importante en perjuicio del inquilino pueden ser abusivas y nulas (artículos 82 y 83 del texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios, TRLGDCU). Si ambas partes actúan como particulares, ese control de consumo no resulta aplicable.</p><p>Una condición también puede ser nula por contradecir normas imperativas de la Ley de Arrendamientos Urbanos (LAU), aunque el alquiler se celebre entre particulares.</p><p>Al revisar el contrato, es relevante y útil también cómo lo contrataste. Guarda la primera versión, las modificaciones que propusiste y las respuestas recibidas. Si el contrato afirma que negociaste todas las cláusulas, conserva también los mensajes en los que te indicaron que no se admitían cambios.</p>"
+        },
+        {
+          "h2": "Gastos de agencia, fianza y seguros: tres comprobaciones concretas",
+          "html": "<p>Si encuentras alguna de estas condiciones, revísala junto con el resto del contrato. Hay que comprobar cuándo se firmó y qué régimen legal le corresponde: las reformas no se aplican automáticamente del mismo modo a todos los contratos anteriores.</p><ul><li>Gastos de gestión o formalización a tu cargo. Por ejemplo, una factura por preparar el contrato. El artículo 20.2 de la Ley de Arrendamientos Urbanos impide repercutir esos gastos al inquilino, directa o indirectamente. Pide el desglose del servicio y quién lo encargó.</li><li>Fianza o garantía excesiva. La fianza obligatoria de vivienda es una mensualidad. La garantía adicional, una cobertura distinta de esa fianza, tiene un límite de dos mensualidades en contratos de hasta cinco años, o siete si el arrendador es persona jurídica, como una sociedad. Comprueba a qué corresponde cada pago antes de compararlo con el límite.</li><li>Seguro de impago impuesto. El artículo 36.5 de la Ley de Arrendamientos Urbanos (LAU) prohíbe exigirte contratar seguros de impago de renta o coberturas análogas. Pide la póliza y la condición que obliga a contratarla.</li></ul>"
+        },
+        {
+          "h2": "Penalizaciones encubiertas y obligación de pagar todas las costas",
+          "html": "<p>Revisa también si el contrato prevé que pierdas automáticamente la fianza por marcharte antes de completar la duración pactada. Una nota informativa del Ministerio de Derechos Sociales, Consumo y Agenda 2030 identifica esa pérdida automática como una penalización encubierta. También advierte sobre las cláusulas que trasladan de forma general al inquilino todos los gastos procesales y costas. Esa nota es informativa; la validez de cada condición debe contrastarse con la normativa aplicable al contrato.</p><p>Merece tu atención una frase del contrato como «el inquilino pagará todos los gastos judiciales en cualquier caso».</p><p>Márcala para revisión. Esa obligación general escrita en el contrato es distinta de los gastos que puedan corresponder después de analizar un procedimiento concreto.</p><p>Si te exigen una penalización por salir antes, anota cuándo firmaste y cuándo prevés marcharte, y ten a mano la comunicación que enviaste. No calcules lo que debes solo con la cláusula. Antes de aceptar un descuento o firmar un acuerdo de liquidación, que fija las cuentas al terminar, pide que comprueben la fecha del contrato y la regulación aplicable.</p>"
+        },
+        {
+          "h2": "Cómo preparar y enviar una reclamación al arrendador",
+          "html": "<p>En la reclamación, señala la cláusula que discutes y el cobro concreto. Una acusación general sobre todo el contrato ayuda menos a explicar lo que pides. Puedes organizar el escrito así:</p><ul><li>Identifica la vivienda, el contrato y a quién diriges la reclamación.</li><li>Copia el apartado discutido y explica qué te han pedido o cobrado.</li><li>Adjunta el justificante de pago o la comunicación donde aparece la exigencia.</li><li>Indica qué solicitas: aclarar el concepto, corregir la cláusula, dejar de aplicar un cobro o devolver una cantidad identificada.</li><li>Solicita respuesta por escrito y guarda el envío completo con sus anexos.</li></ul><p>Por ejemplo, si pagaste una factura descrita como preparación del contrato, aporta la factura y el recibo. Pide que te expliquen qué servicio te cobraron y que revisen el cobro conforme al artículo 20.2 de la Ley de Arrendamientos Urbanos (LAU). Si los documentos recogen el importe exacto, usa esa cantidad en la reclamación.</p><p>Elige un medio que te permita conservar el contenido y documentar el envío y su recepción. Antes de dejar de pagar cantidades, descontarlas de la renta o firmar una renuncia, consulta las consecuencias para tu caso. Una reclamación escrita no resuelve por sí sola la discrepancia.</p>"
+        },
+        {
+          "h2": "Hoja de reclamaciones, consumo y vía judicial",
+          "html": "<p>Si interviene una agencia o un arrendador profesional, consulta si corresponde pedir una hoja de reclamaciones. También puedes acudir a la oficina municipal de información al consumidor para que te orienten sobre el cauce disponible. Lleva el contrato, las facturas y la reclamación previa. Pregunta si pueden tramitar tu reclamación: dependerá de contra quién reclames y del lugar.</p><p>Si tu arrendador es un particular, explica esa circunstancia desde el principio. Una oficina de consumo no puede tramitar cualquier conflicto de alquiler. Presentar allí una reclamación tampoco implica que vayas a recuperar el dinero.</p><p>Si no llegas a un acuerdo, consulta si te conviene acudir a la vía judicial. Antes de iniciarla, pide que se revisen el procedimiento adecuado, los plazos, el riesgo de costas y si debes acreditar un intento previo de negociación conforme a la Ley Orgánica 1/2025. No cualquier escrito de reclamación cumple necesariamente ese requisito.</p><p>Puedes solicitarnos una <a href=\"/clausulas-abusivas-alquiler/\">revisión de las cláusulas de tu alquiler</a>. Analizaremos el contrato y los justificantes para indicarte qué puedes reclamar y qué vía resulta adecuada para tu situación.</p>"
+        },
+        {
+          "h2": "Qué revisar antes de firmar el contrato de alquiler",
+          "html": "<p>Pide el borrador y los anexos antes de la cita. Subraya quién paga cada gasto, qué cantidades se entregan como garantía y qué ocurre si necesitas marcharte. Comprueba que los cambios acordados figuren en la versión que vas a firmar y conserva una copia completa.</p><p>Lleva anotadas las dudas que quieras resolver. Si te explican verbalmente que una penalización no se aplicará, pide que aclaren el texto. Puedes solicitarnos una <a href=\"/revision-contrato-alquiler/\">revisión del contrato de alquiler antes de firmar</a> y <a href=\"/precios/\">consultar el precio del servicio</a> antes de encargarla.</p>"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 6: nulidad de estipulaciones perjudiciales contrarias a normas imperativas",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a6",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 11: desistimiento del contrato de vivienda",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a11",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 20.2: gastos de gestión inmobiliaria y formalización del contrato",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a20",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 36: fianza y garantías adicionales",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a36",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios",
+          "precept": "Art. 2: concepto de consumidor y usuario",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a2",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios",
+          "precept": "Art. 3: concepto general de consumidor y usuario",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a3",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios",
+          "precept": "Art. 4: concepto de empresario",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a4",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios",
+          "precept": "Art. 82: concepto de cláusula abusiva",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a82",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios",
+          "precept": "Art. 83: nulidad y efectos de las cláusulas abusivas",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a83",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios",
+          "precept": "Art. 85.6: cláusulas que vinculan el contrato a la voluntad del empresario",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a85",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ministerio de Derechos Sociales, Consumo y Agenda 2030",
+          "precept": "Nota informativa de mayo de 2026 sobre cláusulas abusivas en contratos de alquiler; debe leerse conforme a las reformas legales posteriores",
+          "url": "https://www.dsca.gob.es/es/comunicacion/notas-prensa/consumo-informa-principales-clausulas-abusivas-detectadas-contratos",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Real Decreto-ley 29/2026, de 6 de octubre",
+          "precept": "Art. 3: modificación de la Ley de Arrendamientos Urbanos",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823#a3",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley Orgánica 1/2025, de 2 de enero",
+          "precept": "Art. 5: requisito de procedibilidad y negociación previa",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76#a5",
+          "checkedAt": "2026-10-29"
+        }
+      ],
+      "reviewStatus": "reviewed",
+      "reviewedAt": "2026-10-29",
+      "publishedAt": "2026-10-31",
+      "professionalReview": [],
+      "titleTag": "Cláusulas abusivas en el alquiler: cómo reclamar | RevisiónContratos"
+    },
+    {
+      "slug": "duracion-y-prorrogas-contrato-alquiler",
+      "title": "Duración del contrato de alquiler: plazos, prórrogas y cómo salir",
+      "description": "Plazos del alquiler de vivienda: prórroga obligatoria, no renovación, desistimiento y preavisos para inquilinos y caseros.",
+      "answer": "<p>Si tu alquiler de vivienda habitual se rige por las reglas que explicamos aquí, un plazo inicial corto puede prolongarse hasta cinco años, o siete si alquilas a una persona jurídica, como una sociedad.</p><p>Puedes desistir tras seis meses con al menos treinta días de preaviso. No es lo mismo que no renovar al vencimiento. Antes de avisar, comprueba en qué prórroga estás. Revisa también la fecha del contrato para saber qué redacción legal te corresponde.</p><p>Esta guía recoge las reglas vigentes a 29 de octubre de 2026. Los contratos anteriores pueden tener un régimen distinto. Al final se incluye una nota sobre la reforma publicada y pendiente de convalidación.</p>",
+      "h1": "Duración del contrato de alquiler: plazos, prórrogas y cómo salir",
+      "sections": [
+        {
+          "h2": "Cuánto dura el alquiler de vivienda y cómo funciona la prórroga obligatoria",
+          "html": "<p>La Ley de Arrendamientos Urbanos (LAU) permite pactar la duración del alquiler. El artículo 9.1 de la LAU establece una prórroga obligatoria: el contrato continúa por anualidades cuando el plazo pactado es inferior a cinco años, o a siete si el arrendador, quien te alquila, es una persona jurídica.</p><p>Hay excepciones. Esa regla no obliga a que cualquier alquiler dure todo ese tiempo.</p><p>Si firmas por un año y te resulta aplicable este régimen, el vencimiento de ese año no basta para que el propietario pueda darlo por terminado. Si tú no comunicas que no quieres renovar en los términos legales, el contrato se prorroga hasta alcanzar el mínimo correspondiente. Para el arrendatario, ese mínimo tampoco es una obligación de permanencia de cinco o siete años: puedes salir antes si cumples los requisitos.</p><p>El plazo empieza a contar desde la fecha del contrato o, si es posterior, desde que tienes la vivienda a tu disposición. Conserva la prueba de esta última fecha. Si no se pactó duración, o quedó indeterminada, el artículo 9.2 de la LAU considera el contrato celebrado por un año, sin eliminar el derecho a las prórrogas previstas en el apartado anterior.</p>"
+        },
+        {
+          "h2": "Recuperación por necesidad del arrendador y final del mínimo legal",
+          "html": "<p>El artículo 9.3 de la LAU regula una excepción por necesidad de vivienda antes de completar los cinco años. No es una autorización general para no renovar al terminar el mínimo. Exige que el arrendador sea una persona física y que haya transcurrido el primer año del contrato.</p><p>El contrato debe recoger expresamente, desde su firma, la necesidad de ocupar la vivienda como residencia permanente para el propio arrendador, sus familiares de primer grado por consanguinidad o adopción, o su cónyuge en los supuestos de sentencia firme de separación, divorcio o nulidad matrimonial. El primer grado comprende, por ejemplo, padres e hijos; no cualquier familiar.</p><p>Si el propietario quiere recuperar la vivienda por esta vía, debe comunicarte la necesidad y especificar la causa. Tiene que avisarte con al menos dos meses de antelación a la fecha en que vaya a necesitarla. El artículo 9.3 de la LAU prevé que entregues la vivienda en ese plazo si no acordáis otra cosa. Si recibes un aviso, revisa tanto su contenido como lo que decía el contrato al firmarlo.</p><p>La no renovación ordinaria al alcanzar el mínimo legal se regula en el artículo 10.1 de la LAU, no en el artículo 9.3 de la LAU. No confundas sus preavisos con los de recuperación por necesidad.</p>"
+        },
+        {
+          "h2": "Prórroga anual tras el plazo mínimo: cómo funciona y cuándo avisar",
+          "html": "<p>El artículo 10.1 de la LAU se aplica al vencimiento del contrato de alquiler de vivienda habitual o de cualquiera de sus prórrogas, una vez transcurridos como mínimo cinco años de duración, o siete si el arrendador es una persona jurídica.</p><p>Si ni tú ni el arrendador habéis comunicado al otro que no queréis renovar con la antelación exigida, el contrato se prorroga obligatoriamente por plazos anuales hasta un máximo de tres años más.</p><p>Para evitar esa prórroga, el arrendador debe notificar su voluntad de no renovar con al menos cuatro meses de antelación al vencimiento. Tú, como arrendatario, debes hacerlo con al menos dos meses. Durante esas anualidades adicionales, puedes comunicar al arrendador que no quieres renovar con un mes de antelación a la fecha de terminación de cualquiera de ellas. Esta salida corresponde al final de la anualidad, no a una fecha intermedia.</p><p>Comprueba la fase y las fechas de tu contrato antes de enviar el aviso. Puedes consultarnos el <a href=\"/prorroga-contrato-alquiler/\">servicio de revisión de la prórroga del alquiler</a>.</p><p>También deben comprobarse las prórrogas extraordinarias de los artículos 10.2 y 10.3 de la LAU y de la disposición final quinta del Real Decreto-ley 29/2026. Algunas dependen de la vulnerabilidad del inquilino, de que el arrendador sea gran tenedor o de que la vivienda esté en una zona de mercado residencial tensionado. Otras exigen comprobar vencimientos, pagos y excepciones. Un aviso de no renovación no permite descartar por sí solo estas prórrogas.</p><p>La recuperación por necesidad tampoco tiene idénticos requisitos en todas esas situaciones. La disposición final quinta del Real Decreto-ley 29/2026 permite, bajo sus condiciones, oponerse a su prórroga extraordinaria por una necesidad real y acreditada aunque no figurase esa facultad en el contrato.</p>"
+        },
+        {
+          "h2": "Cómo salir de la vivienda arrendada antes del vencimiento",
+          "html": "<p>El desistimiento es tu decisión de terminar el alquiler antes de que llegue su vencimiento. El artículo 11.1 de la LAU permite hacerlo una vez transcurridos al menos seis meses, con una comunicación al arrendador de al menos treinta días de antelación. Estos requisitos se refieren al desistimiento del inquilino; no a una facultad equivalente del propietario.</p><p>Antes de mandar el aviso, identifica la fecha en que quieres que termine el contrato. Después comprueba que para entonces se hayan cumplido los seis meses y que la comunicación respete la antelación necesaria. No confundas la fecha de salida física con la fecha de terminación que estás comunicando. Si todavía no han pasado seis meses, este supuesto no resuelve por sí solo tu salida.</p><p>Antes de aceptar una indemnización por terminar el alquiler antes de tiempo, revisa si corresponde pagarla. La redacción vigente del artículo 11.3 de la LAU indica que el desistimiento ejercido conforme a los apartados anteriores no genera derecho de indemnización para el arrendador. Por lo tanto, que una penalización figure en tu contrato no basta para darla por válida. En contratos sujetos a la redacción anterior del artículo 11 de la LAU, sí podía pactarse una indemnización de una mensualidad de renta por cada año pendiente, con la parte proporcional para períodos inferiores. Hay que comprobar qué régimen corresponde a tu contrato.</p><p>Antes de calcular cantidades, puedes pedir una revisión jurídica para comprobar cómo se aplica a tu contrato, sobre todo si es anterior, y qué ocurre con tu cláusula concreta. Conserva el contrato completo y cualquier anexo; para revisar la penalización hace falta algo más que esa frase aislada.</p>"
+        },
+        {
+          "h2": "No renovar al vencimiento: cuándo encajan los treinta días",
+          "html": "<p>La no renovación consiste en comunicar que no quieres continuar cuando llegue el vencimiento del contrato o de una prórroga. No estás eligiendo una fecha intermedia como en el desistimiento. Durante el régimen de prórroga obligatoria del artículo 9.1 de la LAU, puedes comunicar que no quieres renovar con al menos treinta días de antelación a la terminación del contrato o de cualquiera de las prórrogas.</p><p>No conviertas esos treinta días en una regla para cualquier momento del alquiler. Primero comprueba en qué fase está tu contrato. Al completarse el mínimo legal, el artículo 10.1 de la LAU exige al arrendatario al menos dos meses para evitar la prórroga; durante las anualidades adicionales, puedes no renovar al final de cualquiera de ellas avisando con un mes de antelación.</p><p>Por ejemplo, si estás dentro de una anualidad de prórroga obligatoria y quieres irte justo cuando termine, revisa la no renovación del artículo 9.1 de la LAU. Si quieres irte a mitad de esa anualidad, revisa el desistimiento del artículo 11 de la LAU. Identifica en el aviso el contrato y la vivienda a los que te refieres. Indica también la fecha de terminación propuesta. Guarda el texto que envíes y la constancia de que lo han recibido.</p>"
+        },
+        {
+          "h2": "Quién avisa y qué plazo debe respetar",
+          "html": "<p>Busca el supuesto que corresponda a tu salida o al aviso que has recibido. Tendrás que contrastar estos plazos con las fechas de tu contrato.</p><ul><li>Inquilino que no renueva dentro del artículo 9.1 de la LAU. Avisa al menos treinta días antes del vencimiento correspondiente. Comunica que no quiere continuar en la siguiente prórroga.</li><li>Inquilino que desiste conforme al artículo 11.1 de la LAU. Deben haber transcurrido al menos seis meses y debe respetar treinta días de preaviso. Termina anticipadamente en los términos de ese precepto; la indemnización exige atender a la redacción aplicable.</li><li>Propietario persona física que recupera por necesidad conforme al artículo 9.3 de la LAU. Debe haber pasado el primer año y cumplirse las condiciones del contrato y de la causa legal. Comunica la necesidad con al menos dos meses de antelación.</li><li>No renovación al completarse el mínimo legal: artículo 10.1 de la LAU. El arrendador avisa con al menos cuatro meses y el arrendatario con al menos dos meses de antelación al vencimiento. Sin esos avisos, el contrato se prorroga por anualidades hasta un máximo de tres años más. Durante esas anualidades, el arrendatario puede no renovar avisando con un mes de antelación al final de cualquiera de ellas.</li></ul>"
+        },
+        {
+          "h2": "Errores que suelen cometerse y qué revisar antes de enviar el aviso",
+          "html": "<p>No des por hecho que escribir once meses elimina cualquier prórroga. Tampoco firmes una cláusula de alquiler temporal sin aclarar qué situación describe. El artículo 9.4 de la LAU excluye los contratos de vivienda temporal de las reglas de duración de sus apartados anteriores. La causa temporal debe ser real y acreditable, conforme al artículo 7.2 de la LAU. Pide que revisen qué tipo de contrato has firmado y qué consecuencias tiene.</p><p>Reúne el contrato con sus anexos y las comunicaciones previas. Busca también la prueba de la fecha en que tuviste la vivienda a tu disposición. Señala si quieres abandonar la vivienda al vencimiento o antes. Si eres propietario, concreta si alegas necesidad de vivienda o simplemente quieres terminar la relación al acabar el plazo.</p><p>Con esa documentación puedes solicitar una <a href=\"/revision-contrato-alquiler/\">revisión del contrato de alquiler</a> para saber qué vía corresponde a tu caso y qué información falta antes de redactar el aviso.</p>"
+        },
+        {
+          "h2": "Nota sobre la reforma pendiente de convalidación",
+          "html": "<p>El Real Decreto-ley 28/2026, de 6 de octubre, está publicado en el BOE, pero a la fecha de revisión está pendiente de convalidación parlamentaria y aún no ha entrado en vigor. Su entrada en vigor está prevista para el 15 de noviembre de 2026. Por ello, este artículo no desarrolla sus cambios en materia de prórrogas, preavisos e indemnización por no renovación. Si se convalida y entra en vigor, publicaremos un artículo específico sobre su alcance y aplicación a los contratos existentes. Antes de enviar un aviso, conviene comprobar la situación de esta reforma y la normativa aplicable.</p>"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 7.2: arrendamiento de vivienda temporal",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a7",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 9: plazo mínimo, prórroga obligatoria y recuperación por necesidad",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a9",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 10: prórroga tras el plazo mínimo y preavisos",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a10",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 11: desistimiento del arrendatario",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a11",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos — redacción histórica",
+          "precept": "Art. 11 en la redacción anterior, para contratos sometidos al régimen previo",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003&p=20230525&tn=1#a11",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Real Decreto-ley 29/2026, de 6 de octubre",
+          "precept": "Art. 3: reforma de la LAU",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823#a3",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Real Decreto-ley 29/2026, de 6 de octubre",
+          "precept": "Disposición final quinta: prórroga extraordinaria",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823#df-5",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Real Decreto-ley 29/2026, de 6 de octubre",
+          "precept": "Disposición final decimoprimera: entrada en vigor",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823#df-11",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Real Decreto-ley 28/2026, de 6 de octubre",
+          "precept": "Artículo único: reforma publicada de la LAU",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-20822#au",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Real Decreto-ley 28/2026, de 6 de octubre",
+          "precept": "Disposición transitoria única",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-20822#dt",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Real Decreto-ley 28/2026, de 6 de octubre",
+          "precept": "Disposición final segunda: entrada en vigor prevista",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-20822#df-2",
+          "checkedAt": "2026-10-29"
+        }
+      ],
+      "reviewStatus": "reviewed",
+      "reviewedAt": "2026-10-29",
+      "publishedAt": "2026-10-31",
+      "professionalReview": [],
+      "titleTag": "Duración y prórrogas del alquiler: plazos y avisos | RevisiónContratos"
+    },
+    {
+      "slug": "devolucion-fianza-plazos",
+      "title": "Devolución de la fianza del alquiler: plazos, intereses y cómo reclamarla",
+      "description": "Cuándo debe devolverse la fianza, cuándo genera intereses, qué descuentos revisar y cómo reclamarla por escrito con pruebas.",
+      "answer": "<p>Al terminar el alquiler, revisa el saldo de la fianza que debe devolverte el casero. Según el artículo 36.4 de la Ley de Arrendamientos Urbanos (LAU), transcurrido un mes desde la entrega de llaves sin devolución, ese saldo devenga el interés legal. Revisa si los descuentos corresponden a tus obligaciones y si el casero los acredita: no basta con una cifra genérica por daños. Documenta la entrega y pide un desglose antes de aceptar la liquidación.</p>",
+      "h1": "Devolución de la fianza del alquiler: plazos, intereses y cómo reclamarla",
+      "sections": [
+        {
+          "h2": "Qué establece la ley sobre la fianza y las garantías adicionales",
+          "html": "<p>La fianza es la cantidad en metálico que entregas al comenzar el alquiler. El artículo 36.1 de la Ley de Arrendamientos Urbanos (LAU) establece una mensualidad de renta en los arrendamientos de vivienda y dos en los de uso distinto del de vivienda. Cuando pidas la devolución, busca el justificante de lo que pagaste y comprueba a qué corresponde cada importe en el contrato.</p><p>La garantía adicional se pacta aparte de esa fianza. El artículo 36.5 de la LAU limita su valor a dos mensualidades en contratos de vivienda de hasta cinco años, o hasta siete si el arrendador es una persona jurídica, como una sociedad. Para los arrendamientos temporales, el límite que recoge el precepto es una mensualidad. El mismo apartado prohíbe exigir al inquilino la contratación de seguros de impago de renta u otras coberturas análogas. Estas reglas deben contrastarse con la fecha y el régimen aplicable al contrato, especialmente si es anterior a las reformas.</p><p>No confundas la fianza con la garantía adicional al solicitar la devolución. Anota por separado la fianza y cualquier garantía adicional, junto con el concepto que figura en el contrato. Si tienes dudas sobre lo que firmaste, puedes encargarnos una <a href=\"/revision-contrato-alquiler/\">revisión de tu contrato de alquiler</a>.</p>"
+        },
+        {
+          "h2": "Cuándo se generan intereses",
+          "html": "<p>El artículo 36.4 de la LAU vincula el interés legal a la entrega de llaves. Si transcurre un mes desde esa entrega y no se ha devuelto el saldo de la fianza que corresponda restituir, ese saldo genera interés legal. Para reclamar el interés legal, utiliza el tipo vigente durante cada período de retraso. No añadas una penalización arbitraria.</p><p>El precepto habla del saldo que deba devolverse al final del alquiler. Comprueba por separado cuándo entregaste las llaves y cuánto queda pendiente que te devuelvan. Salir de la vivienda no supone perder automáticamente toda la fianza. Tampoco puedes resolver una discusión sobre daños contando únicamente los días transcurridos.</p><p>Guarda un documento de entrega con fecha e identificación de la vivienda. El artículo 36.7 de la LAU prevé documentar el estado de la vivienda al finalizar el alquiler, con la firma de ambas partes; comprueba su aplicación a tu contrato. No firmes una conformidad con daños o descuentos que discutes. Si solo tienes mensajes, conserva la conversación completa y pide confirmación por escrito. Evita confundir la fecha de la mudanza con la fecha en que entregaste las llaves. Tampoco confundas el fin del contrato con su preaviso.</p><p>Puedes consultar nuestra <a href=\"/articulos/duracion-y-prorrogas-contrato-alquiler/\">guía sobre duración y prórrogas del alquiler</a>.</p><p>Para calcular intereses, prepara las fechas y el saldo discutido, sin aplicar porcentajes de una plantilla antigua de Internet. Si lo prefieres, puedes encargarnos el cálculo.</p>"
+        },
+        {
+          "h2": "Cómo revisar los gastos que quiere descontar el casero",
+          "html": "<p>El artículo 1555 del Código Civil obliga al inquilino a pagar la renta en los términos acordados y a utilizar el inmueble con diligencia, es decir, con cuidado y conforme al uso pactado. Si el casero te reclama rentas pendientes o daños por un uso descuidado, revisa qué te exige a partir de esas obligaciones.</p><p>El casero no puede justificar cualquier descuento basándose en esas obligaciones. El artículo 1561 del Código Civil excluye de la obligación de restitución los menoscabos debidos al tiempo o a una causa inevitable. En vivienda habitual, las pequeñas reparaciones por el uso ordinario sí corresponden al inquilino, conforme al artículo 21.4 de la LAU. No todo desgaste justifica, por tanto, descontar el coste de una renovación.</p><p>Si te reclama una renta, contrasta el periodo con tus transferencias. Si señala un daño, pídele que identifique el elemento afectado y explique qué te atribuye. Solicita también el importe desglosado. Compara las fotos de entrada y salida. Una factura puede ayudar a conocer el coste, pero también necesitas entender qué trabajo recoge y qué relación tiene con lo que se discute.</p><ul><li>Ante una cantidad por alquiler pendiente, busca el recibo del mes señalado y revisa si existe un pago no contabilizado.</li><li>Si te cobra pintura o limpieza, o incluye reparaciones en un cargo global, solicita el desglose y contrástalo con el estado documentado de la vivienda.</li><li>Ante un desperfecto que ya habías comunicado, incorpora aquel mensaje y las fotografías que conserves.</li></ul><p>No aceptes ni rechaces todos los cargos en bloque. Prepara tu respuesta concepto por concepto. Para saber quién debe pagar los trabajos de pintura o reparación, hay que revisar el contrato y lo ocurrido en la vivienda. No des por hecho que corresponden siempre a la misma parte.</p>"
+        },
+        {
+          "h2": "Cómo pedir la devolución por escrito, paso a paso",
+          "html": "<p>Reúne el contrato y el justificante de la fianza. Añade el documento de entrega de llaves. Después prepara una liquidación: anota cuánto entregaste y cuánto te han devuelto para calcular lo que reclamas.</p><p>Separa los conceptos que aceptas de los que discutes. Si falta información, pídela expresamente.</p><ul><li>Identifica a las partes y la vivienda, y señala cuándo entregaste las llaves.</li><li>Indica la fianza abonada y el saldo cuya devolución solicitas. Explica cualquier diferencia con la propuesta del casero.</li><li>Pide el detalle de los descuentos y los documentos que los respalden. Adjunta tus justificantes relevantes.</li><li>Facilita una cuenta para el abono y propone un plazo concreto de respuesta, sin presentarlo como un plazo legal universal.</li><li>Conserva el escrito enviado y la respuesta. Si optas por un burofax, revisa las opciones para documentar su contenido y el resultado de la entrega.</li></ul><p>Si ha transcurrido el mes del artículo 36.4 de la LAU, incluye la petición de interés legal sobre el saldo que deba restituirse. El escrito no asegura el cobro.</p><p>Si no recibes respuesta o persiste el desacuerdo, puedes valorar con un abogado una reclamación judicial de una cantidad líquida, esto es, concretada en dinero. Antes de elegir el procedimiento, revisa sus requisitos y la negociación previa exigida, con carácter general, por el artículo 5 de la Ley Orgánica 1/2025. El burofax puede servir para documentarla, pero su mero envío no garantiza que se haya cumplido ese requisito.</p>"
+        },
+        {
+          "h2": "Pruebas que conviene conservar",
+          "html": "<p>Prepara una carpeta con documentos completos, no solo capturas aisladas. Ordena los archivos por fecha y conserva también las respuestas del casero, aunque discrepes de ellas. Así podrás comprobar de dónde sale el saldo que reclamas, sin depender de una explicación larga sin justificantes.</p><ul><li>Contrato y anexos, incluidos el inventario y los pactos sobre cantidades entregadas.</li><li>Justificante de la fianza y de la garantía adicional, si la hubo.</li><li>Recibos de renta y transferencias que permitan identificar cada pago.</li><li>Documento o comunicaciones sobre la entrega de llaves.</li><li>Fotografías de entrada y salida, y mensajes donde comunicaste desperfectos.</li><li>Propuesta de liquidación con los justificantes de los descuentos. Guarda también las reclamaciones intercambiadas.</li></ul><p>Por ejemplo, si el casero propone descontar una reparación y tú conservas un mensaje anterior donde ya describías ese problema, presenta ambos documentos juntos. Así podrás mostrar por qué discrepas, aunque esos documentos no prueben por sí solos quién debe asumir el gasto.</p><p>Si necesitas preparar tu petición, consúltanos el <a href=\"/reclamar-fianza/\">servicio para reclamar la fianza del alquiler</a> y adjunta los documentos que respalden la cantidad que pides.</p>"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 21.4: pequeñas reparaciones por desgaste ordinario",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a21",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 36: fianza, garantías, entrega de llaves e intereses",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a36",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Código Civil",
+          "precept": "Art. 1555: obligaciones del arrendatario",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1555",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Código Civil",
+          "precept": "Art. 1561: restitución del inmueble y desgaste por tiempo o causa inevitable",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1561",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley Orgánica 1/2025, de 2 de enero",
+          "precept": "Art. 5: requisito de procedibilidad y negociación previa",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76#a5",
+          "checkedAt": "2026-10-29"
+        }
+      ],
+      "reviewStatus": "reviewed",
+      "reviewedAt": "2026-10-29",
+      "publishedAt": "2026-10-31",
+      "professionalReview": [],
+      "titleTag": "Devolución de la fianza: plazo, intereses y reclamación | RevisiónContratos"
+    }
+  ]
 }

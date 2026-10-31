@@ -241,18 +241,23 @@ const blockChecklist = (title, items) => `
   <ul>${items.map((i) => `<li>${i}</li>`).join('\n')}</ul>
 </section>`;
 
-const blockFaq = (faqs) => `
+const prose = (html) => /^\s*<(p|ul|ol|div)\b/.test(String(html)) ? String(html) : `<p>${html}</p>`;
+
+const blockFaq = (faqs, title = 'Preguntas que nos hacen los clientes') => `
 <section class="faq">
-  <h2>Preguntas que nos hacen los clientes</h2>
-  ${faqs.map((f) => `<details><summary>${esc(f.q)}</summary><p>${f.a}</p></details>`).join('\n')}
+  <h2>${esc(title)}</h2>
+  ${faqs.map((f) => `<details><summary>${esc(f.q)}</summary>${prose(f.a)}</details>`).join('\n')}
 </section>`;
 
-const blockSources = (sources) => `
+const blockSources = (sources) => {
+  const checked = sources.map((s) => s.checkedAt).filter(Boolean).sort().at(-1) || CHECKED;
+  return `
 <section class="fuentes">
   <h2>Fuentes normativas</h2>
   <ul>${sources.map((s) => `<li>${esc(s.label)} — <a href="${s.url}" rel="noopener">${esc(s.precept)}</a></li>`).join('\n')}</ul>
-  <p class="comprobado">Comprobado el ${CHECKED}. Los textos enlazados son los consolidados del BOE.</p>
+  <p class="comprobado">Comprobado el ${esc(checked)}. Los textos enlazados son los consolidados del BOE.</p>
 </section>`;
+};
 
 const sections = (list) => list.map((s) => `<section><h2>${esc(s.h2)}</h2>\n${s.html}</section>`).join('\n');
 
@@ -418,13 +423,14 @@ function renderService(site, s) {
   <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · ${esc(s.title)}</nav>
   <h1>${s.h1}</h1>
   ${blockAnswer(s.answer)}
+  ${s.reviewStatus === 'reviewed' && s.reviewedAt ? `<p class="comprobado">Revisión jurídica de Carla Morales · ${esc(s.reviewedAt)}.</p>` : ''}
 </div>
 <div class="rc-service-body">
   <div class="rc-prose">
     ${sections(s.sections)}
     ${blockTable(s.table.caption, s.table.head, s.table.rows)}
     ${blockChecklist(s.checklist.title, s.checklist.items)}
-    ${blockFaq(s.faqs)}
+    ${blockFaq(s.faqs, s.faqTitle)}
     ${blockSources(s.sources)}
   </div>
   <aside class="rc-service-aside" aria-label="Precio y contratación">
@@ -439,22 +445,23 @@ function renderService(site, s) {
 ${blockTrustCarla(site)}
 <section class="relacionado">
   <h2>${esc(s.crossSell.h2)}</h2>
-  <p>${s.crossSell.html}</p>
+  ${prose(s.crossSell.html)}
 </section>
 ${blockCta(site, s.ctaText || null, s.slug === 'contrato-a-medida', ({ 129: 'essential', 249: 'professional', 499: 'blindada' })[s.priceValue] || null)}` : `
 <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · ${esc(s.title)}</nav>
 <h1>${s.h1}</h1>
 ${blockAnswer(s.answer)}
+${s.reviewStatus === 'reviewed' && s.reviewedAt ? `<p class="comprobado">Revisión jurídica de Carla Morales · ${esc(s.reviewedAt)}.</p>` : ''}
 <p class="precio-linea">${esc(s.priceLabel)} — <a href="/cuenta-tu-caso/">recibe tu presupuesto cerrado</a></p>
 ${sections(s.sections)}
 ${blockTable(s.table.caption, s.table.head, s.table.rows)}
 ${blockChecklist(s.checklist.title, s.checklist.items)}
-${blockFaq(s.faqs)}
+${blockFaq(s.faqs, s.faqTitle)}
 ${blockSources(s.sources)}
 ${blockTrustCarla(site)}
 <section class="relacionado">
   <h2>${esc(s.crossSell.h2)}</h2>
-  <p>${s.crossSell.html}</p>
+  ${prose(s.crossSell.html)}
 </section>
 ${blockCta(site, s.ctaText || null)}`;
   return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: s.title, path: `/${s.slug}/` }] }, {
@@ -484,7 +491,9 @@ function renderArticulo(site, a) {
     description: a.description,
     datePublished: a.publishedAt,
     dateModified: a.reviewedAt,
-    author: { '@type': 'Organization', name: site.name, url: `https://${site.domain}/` },
+    author: a.reviewStatus === 'reviewed'
+      ? { '@id': 'https://carlamorales.es/#person' }
+      : { '@type': 'Organization', name: site.name, url: `https://${site.domain}/` },
     publisher: { '@id': `https://${site.domain}/#legalservice` },
     mainEntityOfPage: `https://${site.domain}${path}`,
     inLanguage: 'es',
@@ -499,25 +508,31 @@ ${blockSources(a.sources)}
 ${blockTrustCarla(site)}
 ${blockCta(site)}`;
   return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: 'Artículos', path: '/articulos/' }, { name: a.title, path }] }, {
-    title: `${a.title} | ${site.name}`, description: a.description, path, body,
+    title: a.titleTag || `${a.title} | ${site.name}`, description: a.description, path, body,
     extraLd: [blogLd], bodyClass: 'page-article',
   });
 }
 
 function renderArticulosIndex(site) {
-  const intro = '<p>Guías prácticas sobre el burofax: qué es, cuándo hace falta, cómo enviarlo y qué constancias pedir. Cada artículo cita sus fuentes oficiales de Correos y del BOE.</p>';
+  const isRevision = site.id === 'revisioncontratos';
+  const intro = isRevision
+    ? '<p>Guías prácticas sobre contratos de alquiler, cláusulas, prórrogas y fianzas. Los artículos han sido revisados por Carla Morales y enlazan la normativa oficial aplicable.</p>'
+    : '<p>Guías prácticas sobre el burofax: qué es, cuándo hace falta, cómo enviarlo y qué constancias pedir. Cada artículo cita sus fuentes oficiales de Correos y del BOE.</p>';
+  const h1 = isRevision ? 'Artículos sobre contratos y alquileres' : 'Artículos sobre burofax';
+  const title = isRevision ? `Artículos sobre contratos y alquileres | ${site.name}` : `Artículos sobre burofax | ${site.name}`;
+  const description = isRevision
+    ? 'Guías jurídicas revisadas sobre contratos de alquiler, cláusulas abusivas, prórrogas, fianzas y reclamaciones, con fuentes oficiales.'
+    : 'Guías prácticas sobre burofax con fuentes oficiales: qué es, cuándo hace falta, cómo enviarlo y qué constancias conservar.';
   const body = `
 <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · Artículos</nav>
-<h1>Artículos sobre burofax</h1>
+<h1>${h1}</h1>
 ${blockAnswer(intro)}
 <ul class="tarjetas">
   ${site.articles.map((a) => `<li class="tarjeta"><h3><a href="/articulos/${a.slug}/">${esc(a.title)}</a></h3><p>${esc(a.description)}</p></li>`).join('\n')}
 </ul>
 ${blockCta(site)}`;
   return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: 'Artículos', path: '/articulos/' }] }, {
-    title: `Artículos sobre burofax | ${site.name}`,
-    description: 'Guías prácticas sobre burofax con fuentes oficiales: qué es, cuándo hace falta, cómo enviarlo y qué constancias conservar.',
-    path: '/articulos/', body, bodyClass: 'page-simple',
+    title, description, path: '/articulos/', body, bodyClass: 'page-simple',
   });
 }
 

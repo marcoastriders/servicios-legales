@@ -284,31 +284,66 @@ for (const oldPrice of ['79 €', '149 €', '249 €']) {
   }
 }
 
-// 11. artículos del blog: presencia, sitemap y estado de revisión
-{
-  const burofaxContent = siteContents['burofaxlegal.es'];
-  const articles = Array.isArray(burofaxContent.articles) ? burofaxContent.articles : [];
-  const sm = readFileSync(join(dist, 'burofaxlegal.es', 'sitemap.xml'), 'utf8');
-  ok(`burofaxlegal.es artículos en JSON: ${articles.length}`);
-  if (articles.length === 0) fail('burofaxlegal.es: articles vacío o ausente (docs 38-41 no aplicados)');
+// 11. artículos: presencia, sitemap, metadatos y estado de revisión en ambos dominios
+for (const domain of DOMAINS) {
+  const content = siteContents[domain];
+  const articles = Array.isArray(content.articles) ? content.articles : [];
+  const sm = readFileSync(join(dist, domain, 'sitemap.xml'), 'utf8');
+  ok(`${domain} artículos en JSON: ${articles.length}`);
   for (const a of articles) {
-    const rel = `/burofaxlegal.es/articulos/${a.slug}/index.html`;
-    const file = join(dist, 'burofaxlegal.es', 'articulos', a.slug, 'index.html');
+    const rel = `/${domain}/articulos/${a.slug}/index.html`;
+    const file = join(dist, domain, 'articulos', a.slug, 'index.html');
     if (!existsSync(file)) fail(`artículo sin generar: ${rel}`);
     else {
       const html = readFileSync(file, 'utf8');
       if (!html.includes('respuesta-directa')) fail(`${rel}: sin bloque de respuesta directa`);
       if (!html.includes('"BlogPosting"')) fail(`${rel}: sin schema BlogPosting`);
+      if (!html.includes('https://carlamorales.es/#person')) fail(`${rel}: schema sin Carla Morales`);
+      if (!html.includes(`<link rel="canonical" href="https://${domain}/articulos/${a.slug}/">`)) fail(`${rel}: canonical incorrecta`);
+      if (!html.includes(`<meta name="description" content="${a.description.replace(/&/g, '&amp;').replace(/"/g, '&quot;')}`)) fail(`${rel}: meta description no corresponde al JSON`);
       if (/\b(19|20)\d{2}\b/.test(a.slug)) fail(`${rel}: año en slug`);
-      if (!sm.includes(`/articulos/${a.slug}/`)) fail(`sitemap sin artículo: ${a.slug}`);
+      if (!sm.includes(`/articulos/${a.slug}/`)) fail(`sitemap sin artículo: ${domain}/${a.slug}`);
       if (a.reviewStatus !== 'reviewed') fail(`${rel}: reviewStatus=${a.reviewStatus} (artículo sin revisar publicado)`);
       if (!a.reviewedAt) fail(`${rel}: sin reviewedAt`);
+      if (!a.sources?.length || a.sources.some((s) => !s.checkedAt)) fail(`${rel}: fuente sin checkedAt`);
     }
   }
-  if (!sm.includes('/articulos/')) fail('sitemap sin el índice /articulos/');
+  if (articles.length && !sm.includes('/articulos/')) fail(`${domain}: sitemap sin el índice /articulos/`);
 }
 
-// 10. archivos de descubrimiento
+// 12. páginas nuevas del Lote A: servicios, enlaces internos y sitemap
+{
+  const expected = [
+    ['burofaxlegal.es', '/burofax-entrega-de-llaves/', '/burofax-no-renovacion-alquiler/'],
+    ['revisioncontratos.es', '/articulos/clausulas-abusivas-contrato-alquiler/', '/articulos/duracion-y-prorrogas-contrato-alquiler/', '/articulos/devolucion-fianza-plazos/'],
+  ];
+  for (const [domain, ...paths] of expected) {
+    const sm = readFileSync(join(dist, domain, 'sitemap.xml'), 'utf8');
+    for (const path of paths) {
+      const file = join(dist, domain, path, 'index.html');
+      if (!existsSync(file)) { fail(`${domain}${path}: no generado`); continue; }
+      const html = readFileSync(file, 'utf8');
+      if (!sm.includes(path)) fail(`${domain}: sitemap sin ${path}`);
+      if (!html.includes(`<link rel="canonical" href="https://${domain}${path}">`)) fail(`${domain}${path}: canonical incorrecta`);
+      if (!html.includes('Revisión jurídica de Carla Morales')) fail(`${domain}${path}: sin revisión profesional visible`);
+      if (!html.includes('Comprobado el 2026-10-29')) fail(`${domain}${path}: fecha de fuentes incorrecta`);
+    }
+  }
+  const rcContent = siteContents['revisioncontratos.es'];
+  for (const [serviceSlug, articleSlug] of [
+    ['clausulas-abusivas-alquiler','clausulas-abusivas-contrato-alquiler'],
+    ['prorroga-contrato-alquiler','duracion-y-prorrogas-contrato-alquiler'],
+    ['reclamar-fianza','devolucion-fianza-plazos'],
+  ]) {
+    const html = readFileSync(join(dist,'revisioncontratos.es',serviceSlug,'index.html'),'utf8');
+    if (!html.includes(`/articulos/${articleSlug}/`)) fail(`revisioncontratos.es/${serviceSlug}: sin enlace interno al artículo ${articleSlug}`);
+  }
+  void rcContent;
+  const impago = readFileSync(join(dist,'burofaxlegal.es','burofax-impago-alquiler','index.html'),'utf8');
+  for (const path of ['/burofax-entrega-de-llaves/','/burofax-no-renovacion-alquiler/']) if (!impago.includes(path)) fail(`burofax-impago-alquiler: sin enlace interno a ${path}`);
+}
+
+// 13. archivos de descubrimiento
 for (const d of DOMAINS) {
   for (const f of ['sitemap.xml', 'robots.txt', 'llms.txt']) {
     if (!existsSync(join(dist, d, f))) fail(`${d}: falta ${f}`);

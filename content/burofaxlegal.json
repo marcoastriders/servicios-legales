@@ -312,7 +312,7 @@
         },
         {
           "h2": "Documentación para preparar el encargo",
-          "html": "<p>Necesitamos el contrato y sus modificaciones, los datos del arrendador y del arrendatario, la dirección de la vivienda y un domicilio para el requerimiento. Aporta una relación de mensualidades impagadas, justificantes de cobros y gastos, comunicaciones anteriores y los datos de la cuenta en la que solicitas el pago.</p><p>Indica si hubo un desahucio anterior, si ya has enviado requerimientos o si existe un procedimiento judicial abierto. Esa información permite valorar el alcance del nuevo escrito.</p>"
+          "html": "<p>Necesitamos el contrato y sus modificaciones, los datos del arrendador y del arrendatario, la dirección de la vivienda y un domicilio para el requerimiento. Aporta una relación de mensualidades impagadas, justificantes de cobros y gastos, comunicaciones anteriores y los datos de la cuenta en la que solicitas el pago.</p><p>Indica si hubo un desahucio anterior, si ya has enviado requerimientos o si existe un procedimiento judicial abierto. Esa información permite valorar el alcance del nuevo escrito.</p><p>Si el contrato ya termina y faltan las llaves, revisa el <a href=\"/burofax-entrega-de-llaves/\">burofax de requerimiento de entrega de llaves</a>. Para comunicar el fin del alquiler, consulta el <a href=\"/burofax-no-renovacion-alquiler/\">burofax de no renovación</a>.</p>"
         }
       ],
       "table": {
@@ -898,6 +898,346 @@
         "html": "<p>Si el préstamo entre particulares tiene contrato privado o pagaré, revísalo antes de reclamar: así sabrás qué intereses y vencimientos puedes exigir. En <a href=\"https://revisioncontratos.es/\">Revisión de Contratos</a> analizamos el documento.</p><p>Del burofax, si no hay respuesta, el camino habitual termina en un juicio verbal por la cantidad. Los pasos intermedios los tienes en <a href=\"https://tramitesjuridicos.com/guias/\">las guías de Trámites Jurídicos</a>.</p>"
       },
       "ctaText": "Quiero reclamar mi préstamo"
+    },
+    {
+      "slug": "burofax-entrega-de-llaves",
+      "title": "Burofax de requerimiento de entrega de llaves",
+      "titleTag": "Burofax de entrega de llaves | BurofaxLegal",
+      "description": "Si el alquiler ha terminado y necesitas reclamar las llaves, revisamos tu documentación y preparamos el requerimiento. Te damos presupuesto antes de contratar.",
+      "h1": "Burofax de <strong>requerimiento de entrega de llaves</strong>",
+      "answer": "<p>Si ha terminado el alquiler y tu inquilino no entrega las llaves, podemos preparar un burofax para requerir la devolución de la vivienda y proponer cómo realizarla. Antes de redactarlo, revisamos el contrato y los mensajes que habéis intercambiado para comprobar si procede reclamar. Recibes un presupuesto antes de contratar. El escrito documenta tu petición, pero no desaloja por sí solo ni sustituye la vía judicial si no hay entrega voluntaria.</p>",
+      "teaser": "Requiere la entrega de llaves con un escrito adaptado al contrato y a las comunicaciones previas. Solicita presupuesto antes de contratar.",
+      "llmsTeaser": "Servicio de redacción de burofax para solicitar la entrega de llaves al finalizar un alquiler, previa revisión del caso y aceptación de presupuesto. No incluye el procedimiento judicial ni garantiza la recuperación de la vivienda.",
+      "priceLabel": "Desde 99 € IVA incluido",
+      "priceValue": "99",
+      "sections": [
+        {
+          "h2": "Finalización del contrato de alquiler y entrega de llaves",
+          "html": "<p>Antes de reclamar las llaves, hay que comprobar si el alquiler ha terminado. La fecha que figura en el contrato no basta. Necesitamos saber cuándo se firmó y qué duración se pactó. Revisamos también las comunicaciones que habéis intercambiado; si el inquilino ha anunciado su salida o si existe un acuerdo de terminación. Antes de afirmar en el escrito que el alquiler ha terminado, es necesario comprobarlo.</p><p>El artículo 9 de la Ley de Arrendamientos Urbanos (LAU) regula la duración y las prórrogas obligatorias, es decir, las prolongaciones del contrato previstas legalmente.</p><p>El artículo 11 de la LAU regula el desistimiento: la decisión del inquilino de terminar antes el alquiler en las condiciones aplicables. Son situaciones distintas. Revisamos tus documentos para saber en qué situación estás y explicar por qué pides la devolución.</p><p>Antes de aplicar el texto de la ley, hay que comprobar la fecha del contrato y las circunstancias de tu alquiler, incluidas las prórrogas del artículo 10 de la LAU. El artículo 1561 del Código Civil establece la obligación de devolver el inmueble al concluir el arrendamiento.</p>"
+        },
+        {
+          "h2": "Qué se solicita en el burofax y qué permite documentar",
+          "html": "<p>En el escrito, constan los datos de las partes y del contrato, con la identificación de la vivienda. Explicamos por qué solicitas su devolución y pedimos las llaves, teniendo en cuenta las comunicaciones previas. Podemos proponer cuándo y dónde entregarlas e indicar cómo responder para acordar la cita.</p><p>El requerimiento también puede advertir que, si no hay entrega voluntaria, tendrás que valorar la reclamación por vía judicial. Esa advertencia no equivale a una orden de desalojo. Tampoco convierte la fecha propuesta en una fecha judicial ni permite recuperar la vivienda por tu cuenta. El artículo 441 del Código Civil exige acudir a la autoridad competente cuando quien posee el inmueble se opone a entregarlo.</p>"
+        },
+        {
+          "h2": "Certificación del contenido y justificantes de entrega",
+          "html": "<p>Solicita la certificación del contenido y un justificante del resultado de la entrega, como el acuse de recibo o la prueba de entrega electrónica. Conserva el texto enviado y los documentos que emita el operador. La documentación del envío sirve para acreditar qué has pedido y cómo se ha comunicado; no demuestra por sí sola que el contrato haya terminado correctamente.</p>"
+        },
+        {
+          "h2": "Cómo organizamos la entrega voluntaria",
+          "html": "<p>Si el inquilino acepta entregar las llaves, conviene acordar por escrito los detalles para evitar una cita sin confirmar. Indica cuántos juegos de llaves hay y si también deben devolverse mandos del garaje u otros dispositivos de acceso. Si interviene otra persona, comunícalo antes para que podamos valorar qué documentación necesitas.</p><p>Recomendamos dejar constancia de la fecha, de las llaves que recibes y de la devolución efectiva de la posesión de la vivienda. Puedes aportar fotografías y lecturas de contadores obtenidas durante una entrega acordada. Son datos útiles para revisar después las cuentas, pero no sustituyen la comprobación del contrato ni resuelven por sí mismos las discrepancias sobre el estado de la vivienda.</p><p>Si el inquilino dice que se ha marchado pero no concreta la devolución, será necesario que nos envíes el mensaje completo. Una frase aislada no te autoriza a entrar a tu propiedad. Tampoco el silencio del inquilino ni que parezca haberse marchado.</p><p>Antes de actuar, necesitamos revisar la documentación para decidir cómo proceder.</p>"
+        },
+        {
+          "h2": "Entrega de llaves y devolución de la fianza",
+          "html": "<p>La fecha en que recibes las llaves resulta de especial relevancia al liquidar la fianza.</p><p>El artículo 36.4 de la LAU establece que el saldo que deba devolverse al terminar el arriendo devenga el interés legal cuando transcurre un mes desde la entrega de las llaves sin que se haya restituido. Ese mes se cuenta desde la entrega, no desde la fecha del burofax.</p><p>La regla se refiere al saldo que corresponda devolver; no supone que cualquier descuento sea válido ni que puedas quedarte con toda la fianza por falta de respuesta. Aporta las cuentas y los justificantes para que puedan revisarse por separado.</p><p>El artículo 1555 del Código Civil recoge obligaciones del inquilino relativas al pago y al uso diligente de la vivienda. No utilizamos esa referencia para atribuir automáticamente una deuda concreta: cada concepto necesita su propia valoración.</p>"
+        },
+        {
+          "h2": "Presupuesto y alcance del encargo",
+          "html": "<p>Envíanos el contrato y cuéntanos qué ha ocurrido. Con esa información valoramos el encargo y te facilitamos un presupuesto antes de contratar. El precio orientativo es desde 99 € IVA incluido.</p><p>Ese importe no es un precio cerrado para todos los casos. En el presupuesto verás qué trabajo te proponemos y qué queda excluido.</p><p>Estudiamos la documentación que aportes y redactamos el requerimiento. También te explicamos cómo enviarlo. Los gastos del operador postal no están incluidos. Si después necesitas negociar o preparar un documento de entrega, te daremos otro presupuesto. La asistencia judicial también se presupuesta aparte; la solicitud inicial no incluye estos trabajos.</p>"
+        }
+      ],
+      "table": {
+        "caption": "Qué cubre el servicio según el presupuesto que aceptes",
+        "head": [
+          "Incluye",
+          "No incluye"
+        ],
+        "rows": [
+          [
+            "Estudio del contrato y sus modificaciones",
+            "Recuperación material de la vivienda"
+          ],
+          [
+            "Revisión de las comunicaciones que aportes",
+            "Investigación sobre quién ocupa el inmueble"
+          ],
+          [
+            "Redacción del requerimiento de entrega de llaves",
+            "Presentación de una demanda"
+          ],
+          [
+            "Propuesta de entrega y plazo adaptados al caso",
+            "Asistencia presencial a la entrega"
+          ],
+          [
+            "Explicación del texto e indicaciones de envío",
+            "Gastos del envío y servicios del operador postal"
+          ],
+          [
+            "Detalle del trabajo contratado en el presupuesto",
+            "Negociación posterior o documentos adicionales, salvo encargo separado"
+          ]
+        ]
+      },
+      "checklist": {
+        "title": "Documentación que debes aportar",
+        "items": [
+          "Contrato completo con sus anexos, incluidas las modificaciones de duración",
+          "Datos del arrendador y del inquilino, con la dirección de la vivienda",
+          "Domicilio conocido para enviar el requerimiento",
+          "Preavisos o acuerdos de terminación, con los justificantes de haberlos comunicado",
+          "Mensajes sobre la salida del inquilino y la devolución de las llaves, incluidas las propuestas de entrega",
+          "Importe de la fianza y justificantes de las cantidades que quieras revisar",
+          "Información sobre procedimientos abiertos o requerimientos anteriores"
+        ]
+      },
+      "faqs": [
+        {
+          "q": "¿El contrato termina aunque no entregue las llaves?",
+          "a": "<p>La terminación del contrato y la entrega efectiva son cuestiones distintas.</p><p>Para saber si ha finalizado correctamente el contrato, hay que revisar la duración y las prórrogas junto con las comunicaciones que habéis intercambiado. Que no tengas las llaves no basta para dar por finalizado el contrato de arrendamiento.</p><p>El burofax tampoco subsana un preaviso incorrecto por el mero hecho de enviarlo.</p>"
+        },
+        {
+          "q": "¿Puedo cambiar la cerradura?",
+          "a": "<p>No cambies la cerradura para impedir el acceso al inquilino ni intentes desalojarlo por tu cuenta.</p><p>Deja constancia del requerimiento y trata de acordar una entrega voluntaria que puedas acreditar. Si no se produce, consulta con un abogado qué reclamación judicial corresponde.</p><p>El burofax no te autoriza a entrar ni a retirar pertenencias. Tampoco a cortar suministros.</p>"
+        },
+        {
+          "q": "¿Qué pasa con la fianza si no entrega las llaves?",
+          "a": "<p>El mes previsto en el artículo 36.4 de la LAU para el devengo de intereses sobre el saldo pendiente se cuenta desde la entrega de las llaves.</p><p>Consulta la explicación y la fuente enlazada en el apartado de fianza. No confundas esa regla con un derecho automático a retener todo el importe: la liquidación necesita revisión y justificantes.</p>"
+        },
+        {
+          "q": "¿Cuánto tarda el procedimiento judicial?",
+          "a": "<p>No podemos darte un plazo determinado sin estudiar el asunto ni asegurar una fecha de recuperación.</p><p>El requerimiento y el procedimiento judicial son actuaciones diferentes. Si necesitas acudir al juzgado, habrá que estudiar qué vía corresponde y qué requisitos exige, incluida la negociación previa que proceda conforme al artículo 5 de la Ley Orgánica 1/2025. El mero envío de este requerimiento no garantiza que se cumpla ese requisito.</p><p>También se revisarán las circunstancias que puedan afectar a la tramitación.</p><p>Esta vía queda excluida del presupuesto de burofax.</p>"
+        },
+        {
+          "q": "¿Y si no recoge el burofax o no contesta?",
+          "a": "<p>Conserva los justificantes y comunícanos el resultado exacto del envío.</p><p>No damos por acreditada una entrega que no consta ni interpretamos el silencio como aceptación. Habrá que estudiar la incidencia y la documentación antes de decidir cómo continuar. La falta de respuesta no permite recuperar la vivienda por tu cuenta.</p>"
+        },
+        {
+          "q": "¿Tengo que pagar antes de que reviséis mi caso?",
+          "a": "<p>Primero solicitas presupuesto y aportas la información necesaria para valorar el encargo. Antes de contratar conocerás el alcance y el precio propuestos. La referencia desde 99 € IVA incluido no es un cobro automático ni incluye el envío postal o la posible reclamación por vía judicial.</p>"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 9: duración y prórroga obligatoria",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a9",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 10: prórrogas posteriores y preavisos",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a10",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 11: desistimiento",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a11",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 36.4: interés legal desde un mes tras la entrega de llaves",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a36",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Código Civil",
+          "precept": "Art. 441: recuperación de la posesión por la autoridad competente",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art441",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Código Civil",
+          "precept": "Art. 1555: pago y uso diligente",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1555",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Código Civil",
+          "precept": "Art. 1561: devolución del inmueble al concluir el arrendamiento",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1561",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley Orgánica 1/2025, de 2 de enero",
+          "precept": "Art. 5: requisito de procedibilidad y negociación previa",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76#a5",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Correos",
+          "precept": "Burofax Premium: certificación de contenido y justificantes de entrega",
+          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax",
+          "checkedAt": "2026-10-29"
+        }
+      ],
+      "crossSell": {
+        "h2": "Si también hay impagos o dudas con el contrato",
+        "html": "<p>Si además de las llaves necesitas reclamar rentas pendientes, consulta el servicio de <a href=\"/burofax-impago-alquiler/\">burofax por impago de alquiler</a>. Explica ambos problemas al solicitar presupuesto para concretar qué trabajo necesitas.</p><p>Si todavía hay dudas sobre la duración o las cláusulas pactadas, puedes solicitar una <a href=\"https://revisioncontratos.es/revision-contrato-alquiler/\">revisión del contrato de alquiler</a> antes de enviar el requerimiento.</p>"
+      },
+      "ctaText": "Cuéntanos qué ha ocurrido para presupuestar el requerimiento de entrega de llaves.",
+      "professionalReview": [],
+      "reviewStatus": "reviewed",
+      "reviewedAt": "2026-10-29",
+      "publishedAt": "2026-10-31",
+      "faqTitle": "Preguntas frecuentes"
+    },
+    {
+      "slug": "burofax-no-renovacion-alquiler",
+      "title": "Burofax de preaviso de no renovación del alquiler",
+      "titleTag": "Burofax de no renovación del alquiler | BurofaxLegal",
+      "description": "Si no quieres renovar el alquiler, revisamos tu contrato y redactamos el burofax. Atendemos a inquilinos y caseros, con presupuesto previo desde 99 €.",
+      "h1": "Burofax de <strong>preaviso de no renovación</strong> del contrato de alquiler",
+      "answer": "<p>Si eres inquilino, preparamos el burofax para comunicar que no quieres seguir con el alquiler. Si eres casero, revisamos cuándo puedes comunicar su finalización según el contrato.</p><p>Te proporcionamos un presupuesto cerrado por escrito. Comprobamos si corresponde una no renovación o si necesitas otro escrito, por salida anticipada o incumplimiento. La comunicación no permite terminar cualquier contrato en cualquier momento ni garantiza la entrega de la vivienda.</p><p>Los plazos que se explican corresponden a la normativa vigente a 29 de octubre de 2026 y deben contrastarse con el régimen aplicable a cada contrato.</p>",
+      "teaser": "El aviso de no renovación cambia según seas inquilino o casero. Revisamos qué corresponde en tu contrato.",
+      "llmsTeaser": "Redactamos y revisamos burofaxes de no renovación para inquilinos y arrendadores. Antes del envío comprobamos el contrato y qué régimen se aplica. Recibes presupuesto previo.",
+      "priceLabel": "Desde 99 € IVA incluido",
+      "priceValue": "99",
+      "sections": [
+        {
+          "h2": "Si eres inquilino y no quieres renovar",
+          "html": "<p>El preaviso es la comunicación anticipada de que no quieres continuar. En el supuesto del artículo 9.1 de la Ley de Arrendamientos Urbanos (LAU), puedes comunicar que no quieres renovar al menos treinta días antes del final del contrato o de cualquiera de sus prórrogas.</p><p>Una prórroga es la prolongación del contrato: no significa necesariamente que hayas firmado un contrato distinto.</p><p>El burofax identifica la vivienda y el contrato:</p><p>Dejamos constancia de tu decisión y de la fecha propuesta para terminar el alquiler y coordinar la entrega de llaves. Si quieres marcharte antes del vencimiento, lo revisamos como una salida anticipada, no como una no renovación.</p><p>Si al vencimiento ya han transcurrido al menos cinco años, o siete si el arrendador es persona jurídica, el artículo 10.1 de la LAU exige que comuniques tu voluntad de no renovar con al menos dos meses de antelación. Si comienza la prórroga anual de ese artículo, puedes evitar la siguiente anualidad avisando al menos un mes antes de que termine la que esté en curso.</p><p>No confundas estos plazos con los treinta días del artículo 9.1 de la LAU ni con el desistimiento anticipado.</p>"
+        },
+        {
+          "h2": "Si eres casero y quieres comunicar la finalización",
+          "html": "<p>Si eres casero, la fecha escrita en la primera página del contrato no basta para darlo por terminado. El artículo 9.1 de la LAU contempla prórrogas anuales hasta alcanzar cinco años, o siete si el arrendador es una persona jurídica, como una sociedad.</p><p>Antes de redactar el aviso comprobamos en qué prórroga está tu alquiler.</p><p>Para la finalización ordinaria al vencimiento del contrato o de sus prórrogas:</p><p>Una vez transcurridos al menos cinco años, o siete si eres arrendador persona jurídica, el artículo 10.1 de la LAU exige que comuniques tu voluntad de no renovar con al menos cuatro meses de antelación; si quien no quiere renovar es el inquilino, el plazo es de al menos dos meses. Si ninguna parte avisa en esos términos, el contrato se prorroga obligatoriamente por anualidades hasta un máximo de tres años más. Durante esa prórroga, el inquilino puede no renovar la siguiente anualidad avisando al menos un mes antes de terminar la que esté en curso; esa salida anual no se atribuye al casero.</p><p>El artículo 9.3 de la LAU regula un supuesto diferente:</p><p>La recuperación por necesidad del arrendador persona física: después del primer año, con previsión expresa al contratar y para los destinos familiares que enumera. Exige comunicar la causa al menos dos meses antes de necesitar la vivienda. No es la regla general de no renovación al terminar el mínimo legal.</p>"
+        },
+        {
+          "h2": "No renovar y desistir son decisiones distintas",
+          "html": "<p>No renovar el contrato de alquiler significa comunicar que no quieres prolongar el arrendamiento al vencimiento que corresponda.</p><p>Desistir significa que el inquilino pone fin al contrato antes de ese vencimiento por su propia decisión. El artículo 11.1 de la LAU permite el desistimiento una vez transcurridos al menos seis meses, con un preaviso mínimo de treinta días.</p><p>El artículo 11.3 de la LAU establece que el desistimiento así ejercido no genera derecho de indemnización para el arrendador. Antes de aplicarlo a tu caso, comprobamos qué redacción corresponde según la fecha del contrato. En los contratos sujetos al régimen anterior podía pactarse una indemnización por desistimiento dentro de los límites del artículo 11 de la LAU en aquella redacción.</p><p>Si planteas resolver por incumplimiento, atribuyes a la otra parte una falta en sus obligaciones y pides terminar el contrato por ese motivo. Debemos estudiar ese supuesto por separado. Si existen impagos u otro conflicto, aporta sus documentos: no lo presentamos como una simple no renovación ni damos por válida la terminación con solo enviar el escrito.</p>"
+        },
+        {
+          "h2": "Presupuesto, borrador y aprobación antes de enviar",
+          "html": "<p>Es necesario que nos señales si eres el inquilino o el casero y en qué fecha quieres terminar el alquiler. Adjunta el contrato completo y las comunicaciones anteriores, también las que hayas recibido. Si ya enviaste un aviso con otra fecha, necesitamos leerlo antes de preparar uno nuevo.</p><p>Tras valorar la documentación recibes un presupuesto cerrado por escrito, desde 99 € IVA incluido según la complejidad. Empezamos a redactar cuando aceptas el presupuesto y sigues las instrucciones de pago. El presupuesto concreta el alcance y los plazos del encargo.</p><p>Una posterior negociación, si resulta necesaria, se valora aparte en otro presupuesto.</p><p>Preparamos el borrador y lo revisamos jurídicamente antes de que lo apruebes. Revisa los datos personales y de la vivienda. Comprueba también las fechas y cómo hemos expresado tu decisión. Tú contratas el envío postal, cuyo coste no está incluido. La fecha de entrega depende del operador postal.</p>"
+        },
+        {
+          "h2": "Qué guardar y qué revisar después del envío",
+          "html": "<p>Solicita certificación del contenido y prueba de entrega, y conserva el texto definitivo junto con los justificantes. Revisa el resultado del envío. Si hay una incidencia, envíanos el documento correspondiente: no confundas presentar el burofax con acreditar su recepción.</p><p>Organiza por separado la comunicación de finalización y la entrega de llaves. Guarda las propuestas de fecha y las respuestas, incluidas aquellas en las que haya desacuerdo. Si la otra parte no está de acuerdo, será necesario estudiar su contestación y el contrato antes de decidir qué hacer.</p><p>El burofax no sustituye una demanda. El encargo tampoco incluye la representación en juicio.</p>"
+        }
+      ],
+      "table": {
+        "caption": "Alcance del encargo de preaviso",
+        "head": [
+          "Incluye",
+          "No incluye"
+        ],
+        "rows": [
+          [
+            "Lectura del contrato y anexos para preparar el aviso",
+            "Revisión completa de todas las cláusulas del alquiler"
+          ],
+          [
+            "Revisión de las fechas y de tu posición como inquilino o casero",
+            "Dar por terminado el contrato sin comprobar su régimen"
+          ],
+          [
+            "Redacción del preaviso según lo que hayamos comprobado",
+            "Afirmar incumplimientos sin documentación"
+          ],
+          [
+            "Revisión jurídica del borrador antes de tu aprobación",
+            "Garantía de aceptación de la otra parte"
+          ],
+          [
+            "Indicaciones para preparar el envío y conservar justificantes",
+            "Tarifa postal y servicios adicionales del operador"
+          ],
+          [
+            "Explicación del alcance de la comunicación",
+            "Negociación posterior o defensa judicial, salvo encargo separado"
+          ]
+        ]
+      },
+      "checklist": {
+        "title": "Documentación que debes aportar",
+        "items": [
+          "Contrato completo con sus anexos; también los acuerdos posteriores sobre duración",
+          "Datos de las partes y si el arrendador es una persona física o una sociedad",
+          "Fecha de inicio y de puesta de la vivienda a disposición del inquilino",
+          "Dirección de la vivienda y domicilio de la otra parte para comunicar el aviso",
+          "Preavisos y mensajes anteriores, con sus justificantes de recepción",
+          "Fecha en la que quieres terminar y motivo de tu solicitud",
+          "Si alegas necesidad de vivienda, cláusula contractual y documentación de los hechos"
+        ]
+      },
+      "faqs": [
+        {
+          "q": "¿Qué ocurre si no cumplo con el preaviso?",
+          "a": "<p>Puede producirse una prolongación del alquiler o una discrepancia sobre la fecha de salida.</p><p>Depende de la fase en la que esté tu contrato y del régimen que le corresponda. Si el plazo parece vencido, aporta las comunicaciones anteriores señaladas en esta guía.</p>"
+        },
+        {
+          "q": "¿Puedo no renovar un contrato temporal?",
+          "a": "<p>Necesitamos leerlo y conocer el uso real de la vivienda. No basta con ver la duración escrita para elegir un modelo de preaviso. El artículo 9.4 de la LAU excluye la vivienda temporal de las reglas de duración de sus apartados anteriores; antes de fijar tu fecha de finalización, revisamos qué régimen corresponde.</p>"
+        },
+        {
+          "q": "¿Puede el casero no renovar después de cinco años?",
+          "a": "<p>Sí, si ese es el vencimiento que corresponde a tu contrato y resulta aplicable el artículo 10.1 de la LAU: deben haber transcurrido al menos cinco años, o siete si el arrendador es persona jurídica, y debes comunicar tu voluntad de no renovar con al menos cuatro meses de antelación. Para el inquilino el preaviso en ese vencimiento es de al menos dos meses.</p><p>Sin aviso de ninguna parte en esos términos, hay prórrogas anuales hasta un máximo de tres años más; el inquilino puede evitar la siguiente anualidad avisando al menos un mes antes de terminar la actual.</p><p>Revisamos la duración pactada, el régimen temporal y las posibles prórrogas extraordinarias. No es la recuperación por necesidad del artículo 9.3 de la LAU.</p>"
+        },
+        {
+          "q": "¿Cómo acredito que recibió el burofax?",
+          "a": "<p>Conserva la prueba de entrega contratada y la certificación del texto, además del justificante de admisión. Si el justificante recoge una incidencia, como un rechazo o una ausencia, hay que estudiarla. También si la dirección era incorrecta. Esos resultados no equivalen automáticamente a una recepción válida.</p>"
+        },
+        {
+          "q": "¿Son lo mismo los treinta días para no renovar y para desistir del contrato?",
+          "a": "<p>No. El plazo del artículo 9.1 de la LAU corresponde a su supuesto de no renovación al vencimiento. El del artículo 11.1 de la LAU acompaña al desistimiento del inquilino tras al menos seis meses. Aunque coincidan en treinta días, la decisión y la fecha a la que se refieren son distintas.</p><p>En cambio, en el supuesto del artículo 10.1 de la LAU, el preaviso del inquilino al vencimiento tras el mínimo es de al menos dos meses; durante su prórroga anual, es de al menos un mes para no renovar la siguiente anualidad.</p>"
+        },
+        {
+          "q": "¿Tengo que pagar antes de conocer el precio final?",
+          "a": "<p>No. Primero aportas la documentación y recibes el presupuesto cerrado por escrito. El precio parte de 99 € IVA incluido y depende del trabajo necesario. Pagas después de aceptarlo. El envío postal se contrata y paga aparte.</p>"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 9: plazo mínimo, prórroga y recuperación por necesidad",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a9",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 10: no renovación, prórrogas y preavisos",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a10",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos",
+          "precept": "Art. 11: desistimiento",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a11",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Ley de Arrendamientos Urbanos — redacción histórica",
+          "precept": "Art. 11 anterior, para contratos sometidos al régimen previo",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003&p=20230525&tn=1#a11",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Real Decreto-ley 28/2026, de 6 de octubre",
+          "precept": "Artículo único: reforma publicada de la LAU",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-20822#au",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Real Decreto-ley 28/2026, de 6 de octubre",
+          "precept": "Disposición transitoria única",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-20822#dt",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Real Decreto-ley 28/2026, de 6 de octubre",
+          "precept": "Disposición final segunda: entrada en vigor prevista",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-20822#df-2",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "label": "Correos",
+          "precept": "Burofax Premium: certificación de contenido y justificantes de entrega",
+          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax",
+          "checkedAt": "2026-10-29"
+        }
+      ],
+      "crossSell": {
+        "h2": "Si también necesitas tratar la entrega o los impagos",
+        "html": "<p>Si necesitas reclamar la devolución de la vivienda, consulta el <a href=\"/burofax-entrega-de-llaves/\">burofax de requerimiento de entrega de llaves</a>. Si existen rentas pendientes, el <a href=\"/burofax-impago-alquiler/\">burofax por impago de alquiler</a> aborda esa reclamación. Son encargos distintos del aviso de no renovación.</p><p>Puedes enviarnos el contrato para que valoremos el preaviso y te demos presupuesto.</p><p>NOTA SOBRE LA REFORMA PENDIENTE DE CONVALIDACIÓN</p>"
+      },
+      "ctaText": "El Real Decreto-ley 28/2026, de 6 de octubre, está publicado en el BOE, pero a la fecha de revisión está pendiente de convalidación parlamentaria y aún no ha entrado en vigor. Su entrada en vigor está prevista para el 15 de noviembre de 2026. Por ello, esta página no desarrolla sus cambios sobre prórrogas, preavisos e indemnización por no renovación. Si se convalida y entra en vigor, publicaremos un artículo específico. Antes de enviar el preaviso, comprobaremos su situación y la normativa aplicable a tu contrato.",
+      "reviewStatus": "reviewed",
+      "reviewedAt": "2026-10-29",
+      "publishedAt": "2026-10-31",
+      "professionalReview": [],
+      "faqTitle": "Preguntas frecuentes"
     }
   ],
   "prelaunch": false,
@@ -948,22 +1288,26 @@
         {
           "label": "Correos",
           "precept": "Burofax Premium: servicios adicionales y modalidades de envío.",
-          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax"
+          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax",
+          "checkedAt": "2026-10-02"
         },
         {
           "label": "Correos",
           "precept": "Comparación entre carta certificada y burofax: entrega y certificación de contenido.",
-          "url": "https://www.correos.es/es/es/actualidad/2026/carta-certificada-o-burofax-como-elegir-el-servicio-adecuado"
+          "url": "https://www.correos.es/es/es/actualidad/2026/carta-certificada-o-burofax-como-elegir-el-servicio-adecuado",
+          "checkedAt": "2026-10-02"
         },
         {
           "label": "Ley 1/2000, de Enjuiciamiento Civil",
           "precept": "Arts. 299 y 326: medios de prueba y documentos electrónicos.",
-          "url": "https://www.boe.es/eli/es/l/2000/01/07/1/con#a299"
+          "url": "https://www.boe.es/eli/es/l/2000/01/07/1/con#a299",
+          "checkedAt": "2026-10-02"
         },
         {
           "label": "Ley Orgánica 1/2025",
           "precept": "Arts. 5 y 10: negociación previa y acreditación.",
-          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76#a5"
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76#a5",
+          "checkedAt": "2026-10-02"
         }
       ],
       "reviewStatus": "reviewed",
@@ -1022,47 +1366,56 @@
         {
           "label": "Ley de Enjuiciamiento Civil",
           "precept": "Arts. 22.4, 135 y 264.4.º: enervación, escritos procesales y negociación previa.",
-          "url": "https://www.boe.es/eli/es/l/2000/01/07/1/con#a22"
+          "url": "https://www.boe.es/eli/es/l/2000/01/07/1/con#a22",
+          "checkedAt": "2026-10-02"
         },
         {
           "label": "Ley 29/1994, de Arrendamientos Urbanos",
           "precept": "Arts. 11 y 36.4: desistimiento y devolución de fianza.",
-          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a36"
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a36",
+          "checkedAt": "2026-10-02"
         },
         {
           "label": "Ley 49/1960, sobre propiedad horizontal",
           "precept": "Art. 21.3: liquidación y notificación de la deuda.",
-          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906#aveintiuno"
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906#aveintiuno",
+          "checkedAt": "2026-10-02"
         },
         {
           "label": "Código Civil",
           "precept": "Arts. 1124, 1753 y 1973: incumplimiento, préstamo y prescripción.",
-          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1124"
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1124",
+          "checkedAt": "2026-10-02"
         },
         {
           "label": "Ley Orgánica 1/2025",
           "precept": "Arts. 5, 9 y 10: negociación, confidencialidad y acreditación.",
-          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76#a5"
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76#a5",
+          "checkedAt": "2026-10-02"
         },
         {
           "label": "Texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios",
           "precept": "Art. 62: finalización de contratos.",
-          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a62"
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555#a62",
+          "checkedAt": "2026-10-02"
         },
         {
           "label": "Ley 50/1980, de Contrato de Seguro",
           "precept": "Art. 16: comunicación del siniestro.",
-          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501#adieciseis"
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501#adieciseis",
+          "checkedAt": "2026-10-02"
         },
         {
           "label": "Ley 39/2015",
           "precept": "Art. 16: registros para la presentación de escritos administrativos.",
-          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-10565#a16"
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-10565#a16",
+          "checkedAt": "2026-10-02"
         },
         {
           "label": "Correos",
           "precept": "Burofax Premium: certificación de contenido y prueba de entrega.",
-          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax"
+          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax",
+          "checkedAt": "2026-10-02"
         }
       ],
       "reviewStatus": "reviewed",
@@ -1101,22 +1454,26 @@
         {
           "label": "Correos",
           "precept": "Carta certificada: registro, entrega bajo firma y servicios adicionales.",
-          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/carta/carta-certificada"
+          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/carta/carta-certificada",
+          "checkedAt": "2026-10-02"
         },
         {
           "label": "Correos",
           "precept": "Carta certificada o burofax: diferencia en la certificación del contenido.",
-          "url": "https://www.correos.es/es/es/actualidad/2026/carta-certificada-o-burofax-como-elegir-el-servicio-adecuado"
+          "url": "https://www.correos.es/es/es/actualidad/2026/carta-certificada-o-burofax-como-elegir-el-servicio-adecuado",
+          "checkedAt": "2026-10-02"
         },
         {
           "label": "Correos",
           "precept": "Burofax Premium: certificación de contenido, prueba de entrega y tarifas.",
-          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax"
+          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax",
+          "checkedAt": "2026-10-02"
         },
         {
           "label": "Ley de Enjuiciamiento Civil",
           "precept": "Arts. 299 y 326: medios de prueba y documentos privados.",
-          "url": "https://www.boe.es/eli/es/l/2000/01/07/1/con#a299"
+          "url": "https://www.boe.es/eli/es/l/2000/01/07/1/con#a299",
+          "checkedAt": "2026-10-02"
         }
       ],
       "reviewStatus": "reviewed",
@@ -1167,12 +1524,14 @@
         {
           "label": "Correos",
           "precept": "Burofax Premium: PDF, modalidades, servicios, custodia y condiciones de entrega.",
-          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax"
+          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax",
+          "checkedAt": "2026-10-02"
         },
         {
           "label": "Correos",
           "precept": "Condiciones generales de Mi Oficina para burofax. Apartados I.2 e I.2.1: documento, revisión, aceptación y admisión.",
-          "url": "https://epostal.correos.es/OV2PREENVWEB/jsp/gestionclientes/_rlvid.jsp.faces?_rap=altaModifClientes.obtenerClausulaVigente&_rvip=%2Fjsp%2Fgestionclientes%2FcondicionesServicio.jsp&codProducto=16"
+          "url": "https://epostal.correos.es/OV2PREENVWEB/jsp/gestionclientes/_rlvid.jsp.faces?_rap=altaModifClientes.obtenerClausulaVigente&_rvip=%2Fjsp%2Fgestionclientes%2FcondicionesServicio.jsp&codProducto=16",
+          "checkedAt": "2026-10-02"
         }
       ],
       "reviewStatus": "reviewed",

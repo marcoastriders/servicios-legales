@@ -6,7 +6,7 @@
   "description": "Revisión de contratos de alquiler, compraventa y préstamos por una abogada colegiada: Revisión Esencial 129 € (alquiler), Revisión Profesional 249 € con llamada (contratos complejos) y Firma Blindada 499 € con negociación directa con la otra parte. IVA incluido.",
   "accent": "#274060",
   "kicker": "Revisión legal de contratos",
-  "ctaTitle": "¿Tienes un contrato sobre la mesa?",
+  "ctaTitle": "Elige el alcance de la revisión antes de contratar",
   "ctaWhatsapp": "Hola, quiero que revisen mi contrato antes de firmar.",
   "ctaMailSubject": "Solicitud de revisión de contrato",
   "llmsSummary": "revisioncontratos.es es un servicio de revisión de contratos dirigido por la abogada Carla Morales, colegiada en el Ilustre Colegio de Abogados de Jerez. Revisa contratos de alquiler, compraventa, arras y préstamos entre particulares, y redacta contratos a medida. Tres niveles de precio cerrado: Revisión Esencial 129 € (alquiler, informe escrito en 48-72 horas laborables), Revisión Profesional 249 € (contratos complejos, con llamada de 30 minutos y contraoferta redactada) y Firma Blindada 499 € (la abogada negocia directamente con la otra parte y revisa la versión final). Extras: entrega exprés 24 h por 49 € (solo alquiler) y consulta de 30 minutos por 49 €. No interviene como defensa en juicio. Elige el nivel y paga directamente online con tarjeta a través de Stripe; después envía los datos y el contrato completo. La revisión y su plazo empiezan cuando recibimos el pago, los datos necesarios y el contrato completo y legible.",
@@ -181,7 +181,7 @@
     "title": "Precios de revisión de contratos | RevisiónContratos",
     "description": "Precios cerrados de revisión de contratos: 129 € la Revisión Esencial de alquiler, 249 € la Revisión Profesional con llamada para contratos complejos y 499 € la Firma Blindada con negociación. IVA incluido.",
     "h1": "Precios de la revisión de contratos",
-    "answer": "Tres niveles de revisión, con IVA del 21 % incluido, para contratación directa en Península y Baleares. Otros territorios requieren presupuesto previo. Elige según el contrato y el apoyo que necesitas y paga directamente online. La Revisión Esencial admite tres extras: exprés, consulta o ambos.",
+    "answer": "Tres niveles de revisión con precio final e IVA del 21 % incluido. Compara el alcance, el plazo y lo que recibirás. Después de elegir un nivel, podrás revisar el pedido y añadir extras si corresponden.",
     "tiers": [
       {
         "name": "Revisión Esencial (alquiler)",
@@ -412,8 +412,8 @@
       "h1": "Condiciones del servicio",
       "sections": [
         {
-          "h2": "Ámbito territorial y precio final",
-          "html": "<p>La contratación directa de los paquetes de revisión está limitada a clientes con residencia fiscal en Península y Baleares. Los importes publicados son precios finales con IVA del 21 % incluido; no se añade ningún impuesto sobre ese total. El código postal y la declaración de residencia deben corresponder al domicilio fiscal real del cliente.</p><p>Para Canarias, Ceuta, Melilla y clientes de otros países, solicita un <a href=\"/solicitar-presupuesto/\">presupuesto previo</a>. Carla confirmará el alcance y los impuestos aplicables antes del pago. La redacción de contratos a medida también requiere presupuesto previo.</p>"
+          "h2": "Precio final e impuestos",
+          "html": "<p>Los importes publicados son precios finales e incluyen IVA del 21 %. No se añade ningún impuesto al total mostrado en la página de pedido.</p><p>Antes del pago verás el nivel elegido, los extras opcionales, el alcance del servicio y el importe total. La redacción de contratos a medida requiere presupuesto previo.</p>"
         },
         {
           "h2": "Aceptación del encargo",
@@ -1431,22 +1431,12 @@
   "order": {
     "title": "Contratar revisión de contrato | RevisiónContratos",
     "description": "Elige el nivel de revisión, añade exprés o consulta si lo necesitas y paga online con tarjeta. Precio cerrado, IVA incluido.",
-    "h1": "Contrata tu revisión",
-    "answer": "Tres pasos: elige el nivel, añade los extras que quieras a la Revisión Esencial y paga online. Tras el pago vuelves aquí para enviar tus datos y adjuntar el contrato.",
-    "stepLevel": "1 · Elige el nivel",
-    "stepExtras": "2 · Extras para la Revisión Esencial",
-    "extrasDisabledNote": "La llamada de 30 minutos ya está incluida en la Profesional y la Firma Blindada; la entrega exprés no está disponible en esos niveles por la complejidad del servicio.",
-    "territoryTitle": "3 · Confirma tu residencia fiscal",
-    "territoryHelp": "Contratación directa solo para residentes fiscales en Península y Baleares. Para Canarias, Ceuta, Melilla u otros países, solicita presupuesto.",
-    "postalLabel": "Código postal de tu domicilio fiscal",
-    "postalHelp": "Introduce los cinco dígitos de tu código postal de Península o Baleares.",
-    "territoryConfirm": "Confirmo que mi residencia fiscal está en Península o Baleares.",
-    "quoteLabel": "Estoy en otro territorio · solicitar presupuesto",
-    "quotePath": "/solicitar-presupuesto/",
+    "h1": "Revisa tu pedido",
+    "answer": "Comprueba el nivel elegido, añade extras si están disponibles y revisa el precio final antes de pagar. La revisión identifica riesgos y propone cambios jurídicos; no promete la aceptación de la otra parte ni un resultado concreto.",
+    "stepExtras": "Extras opcionales",
     "creatingLabel": "Preparando pago seguro…",
     "checkoutError": "No se pudo preparar el pago. Inténtalo de nuevo; no se ha realizado ningún cargo.",
-    "scopeNote": "21 % de IVA incluido para contratación directa en Península y Baleares. Otros territorios, por presupuesto.",
-    "totalLabel": "Total, 21 % de IVA incluido",
+    "totalLabel": "Total con IVA del 21 % incluido",
     "payButton": "Pagar y contratar",
     "afterNote": "Pago seguro con Stripe (tarjeta). Al terminar, vuelves a esta web para enviar tus datos y adjuntar el contrato completo y legible.",
     "levelShort": {
@@ -1460,9 +1450,9 @@
   "ui": {
     "primary": "Elegir nivel y pagar",
     "consult": "Ver extras y opciones",
-    "ctaNote": "Contratación directa en Península y Baleares, con IVA del 21 % incluido. Otros territorios, por presupuesto. Después del pago, completa el formulario y adjunta el contrato completo y legible.",
-    "decide": "Tres niveles de precio cerrado, IVA incluido. Elige el nivel, paga directamente y añade exprés o consulta a la Revisión Esencial si lo necesitas.",
-    "serviceNote": "Elige el nivel y paga directamente online. Después del pago, completa el formulario y adjunta el contrato. El contrato a medida requiere presupuesto previo.",
+    "ctaNote": "Compara el alcance, el plazo y el precio final antes de contratar. La revisión identifica riesgos y propone cambios jurídicos; no promete resultados que dependan de terceros.",
+    "decide": "Tres niveles de precio cerrado con IVA incluido. Primero compara el alcance; después revisa el pedido y añade extras opcionales si eliges la Revisión Esencial.",
+    "serviceNote": "Revisa el nivel seleccionado y el precio final antes de pagar. Después del pago, completa el formulario y adjunta el contrato. El contrato a medida requiere presupuesto previo.",
     "caseHelp": "Indica qué contrato has pagado, tu posición y qué te preocupa. Mínimo 30 caracteres. Adjunta el contrato completo en PDF, JPG o PNG.",
     "preferences": "Cambiar preferencias de cookies",
     "intakeSummary": "datos del encargo ya pagado y contrato adjunto",

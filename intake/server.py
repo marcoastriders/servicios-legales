@@ -187,11 +187,12 @@ def fixed_tax(amount):
     # Round inclusive VAT to the nearest cent, without floating point.
     return (amount * 21 + 60) // 121
 
-def eligible_postal(postal):
+def legacy_eligible_postal(postal):
     return (isinstance(postal, str) and re.fullmatch(r'[0-9]{5}', postal) is not None
             and 1 <= int(postal[:2]) <= 52 and postal[:2] not in {'35', '38', '51', '52'})
 
-def create_checkout(key, postal):
+
+def create_checkout(key):
     amount = PRICES[key]
     metadata = {'site': 'revisioncontratos.es', 'key': key, 'tax_mode': 'fixed_vat21'}
     params = {
@@ -202,7 +203,11 @@ def create_checkout(key, postal):
         'line_items[0][price_data][tax_behavior]': 'inclusive',
         'line_items[0][tax_rates][0]': tax_rate_id(),
         'success_url': 'https://revisioncontratos.es/cuenta-tu-caso/?' + urllib.parse.urlencode({'paquete': key}) + '&session_id={CHECKOUT_SESSION_ID}',
-        'cancel_url': 'https://revisioncontratos.es/contratar/?' + urllib.parse.urlencode({'paquete': key}),
+        'cancel_url': 'https://revisioncontratos.es/contratar/?' + urllib.parse.urlencode({
+            'nivel': 'professional' if key == 'professional' else 'blindada' if key == 'blindada' else 'essential',
+            **({'expres': '1'} if key in ('essentialExpress', 'essentialBoth') else {}),
+            **({'consulta': '1'} if key in ('essentialCall', 'essentialBoth') else {}),
+        }),
     }
     params.update({'metadata[' + k + ']': v for k, v in metadata.items()})
     req = urllib.request.Request('https://api.stripe.com/v1/checkout/sessions',
@@ -260,8 +265,10 @@ def accept_payment(event):
             stored = db.execute('SELECT key,amount,tax,country,postal,tax_rate FROM checkout_sessions WHERE session=?', (session.get('id') if isinstance(session.get('id'), str) else '',)).fetchone()
         details = session.get('total_details')
         recognized = bool(stored and stored[0] == key and stored[1] == PRICES[key]
-                          and stored[2] == fixed_tax(PRICES[key]) and stored[3] == 'ES'
-                          and eligible_postal(stored[4]) and re.fullmatch(r'txr_[A-Za-z0-9]+', stored[5])
+                          and stored[2] == fixed_tax(PRICES[key])
+                          and ((stored[3] == 'ALL' and stored[4] == '')
+                               or (stored[3] == 'ES' and legacy_eligible_postal(stored[4])))
+                          and re.fullmatch(r'txr_[A-Za-z0-9]+', stored[5])
                           and meta.get('tax_mode') == 'fixed_vat21'
                           and isinstance(details, dict) and type(details.get('amount_tax')) is int
                           and details['amount_tax'] == stored[2])
@@ -358,7 +365,7 @@ class H(BaseHTTPRequestHandler):
 
     def do_GET(self):
         if self.path == '/checkout/status':
-            return self._json(200, {'ok': True, 'ready': checkout_ready(), 'mode': 'fixed_vat21', 'vat_rate': 21, 'scope': 'ES-mainland-balearic', 'prices': PRICES, 'tax_rate_id': tax_rate_id()})
+            return self._json(200, {'ok': True, 'ready': checkout_ready(), 'mode': 'fixed_vat21', 'vat_rate': 21, 'scope': 'all-orders', 'prices': PRICES, 'tax_rate_id': tax_rate_id()})
         if self.path == '/health':
             self._json(200, {'ok': True})
         else:
@@ -382,22 +389,21 @@ class H(BaseHTTPRequestHandler):
             if self.headers.get('Content-Type', '').split(';')[0].strip() != 'application/json':
                 return self._json(415, {'ok': False, 'error': 'JSON requerido'})
             data = json.loads(self.rfile.read(n))
-            if (not isinstance(data, dict) or set(data) != {'key', 'country', 'postal_code'}
-                    or not isinstance(data['key'], str) or data['key'] not in PRICES
-                    or data['country'] != 'ES' or not eligible_postal(data['postal_code'])):
-                raise ValueError('fuera de ámbito o campos no válidos')
+            if (not isinstance(data, dict) or set(data) != {'key'}
+                    or not isinstance(data['key'], str) or data['key'] not in PRICES):
+                raise ValueError('campos no válidos')
         except (ValueError, TypeError):
             return self._json(400, {'ok': False, 'error': 'datos de contratación no válidos'})
         if not checkout_ready():
             return self._json(503, {'ok': False, 'error': 'pago no disponible'})
         try:
-            session = create_checkout(data['key'], data['postal_code'])
+            session = create_checkout(data['key'])
         except Exception:
             return self._json(502, {'ok': False, 'error': 'no se pudo crear el pago'})
         try:
             with payment_db() as db:
                 db.execute('INSERT INTO checkout_sessions VALUES (?,?,?,?,?,?,?)',
-                           (session['id'], data['key'], PRICES[data['key']], fixed_tax(PRICES[data['key']]), 'ES', data['postal_code'], tax_rate_id()))
+                           (session['id'], data['key'], PRICES[data['key']], fixed_tax(PRICES[data['key']]), 'ALL', '', tax_rate_id()))
         except Exception:
             return self._json(503, {'ok': False, 'error': 'registro de pago no disponible'})
         return self._json(200, {'ok': True, 'url': session['url'], 'session_id': session['id']})

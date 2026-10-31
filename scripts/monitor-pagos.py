@@ -22,7 +22,6 @@ ROUTES = {
     'https://revisioncontratos.es/contratar/': 'id="order-pagar"',
     'https://revisioncontratos.es/cuenta-tu-caso/': 'id="f-paquete"',
     'https://revisioncontratos.es/solicitar-contrato/': 'custom_quote',
-    'https://revisioncontratos.es/solicitar-presupuesto/': 'territory_quote',
     'https://burofaxlegal.es/': 'site-burofaxlegal',
     'https://burofaxlegal.es/cuenta-tu-caso/': 'id="intake"',
     'https://intake.marcospera.com/health': None,
@@ -81,7 +80,7 @@ def check_page(url, body):
         return [] if json.loads(body).get('ok') is True else ['intake: health sin ok']
     errors = [] if marker in body else [f'{url}: identidad o control obligatorio ausente']
     if url.startswith('https://revisioncontratos.es/') and 'buy.stripe.com/' in body:
-        errors.append(f'{url}: enlace antiguo que evita el filtro territorial')
+        errors.append(f'{url}: enlace antiguo que evita el checkout protegido')
     if url.endswith('/precios/'):
         p = Anchors()
         p.feed(body)
@@ -97,8 +96,8 @@ def check_page(url, body):
                 level = 'essentialBoth' if express and call else 'essentialExpress' if express else 'essentialCall' if call else 'essential'
             if level in LINKS:
                 packages.add(level)
-        if packages != set(LINKS):
-            errors.append('/precios/: faltan rutas internas de los seis paquetes')
+        if packages != {'essential', 'professional', 'blindada'}:
+            errors.append('/precios/: faltan las tres rutas de selección de nivel')
     return errors
 
 
@@ -106,8 +105,8 @@ def check_checkout_status(status, tax_rate, expected_tax_id):
     errors = []
     if status.get('ok') is not True or status.get('ready') is not True:
         errors.append('checkout: servidor no preparado para crear pagos')
-    if status.get('mode') != 'fixed_vat21' or status.get('vat_rate') != 21 or status.get('scope') != 'ES-mainland-balearic':
-        errors.append('checkout: tipo fijo o ámbito territorial incorrectos')
+    if status.get('mode') != 'fixed_vat21' or status.get('vat_rate') != 21 or status.get('scope') != 'all-orders':
+        errors.append('checkout: tipo fijo o alcance general incorrectos')
     if status.get('prices') != {key: spec[1] for key, spec in LINKS.items()}:
         errors.append('checkout: catálogo de importes incorrecto')
     if status.get('tax_rate_id') != expected_tax_id:

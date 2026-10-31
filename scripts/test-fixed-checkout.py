@@ -11,7 +11,7 @@ import threading
 import unittest
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError
-from urllib.parse import parse_qs
+from urllib.parse import parse_qs, urlparse
 from unittest.mock import patch
 
 os.environ.setdefault('SMTP_USER', 'test@example.invalid')
@@ -57,39 +57,46 @@ class FixedCheckout(unittest.TestCase):
         self.assertEqual(code, 200); self.assertTrue(body['ready']); self.assertEqual(body['prices'], app.PRICES)
         with patch.dict(os.environ, STRIPE_SECRET_KEY=''):
             self.assertFalse(self.request(path='/checkout/status')[1]['ready'])
-    def test_all_prices_scope_and_server_payload(self):
+    def test_all_prices_fixed_vat_and_server_payload(self):
         for key, amount in app.PRICES.items():
-            for postal in ('28001','07001'):
-                app.RATE.clear(); self.mock_session(key)
-                code, body = self.request(dict(key=key,country='ES',postal_code=postal))
-                self.assertEqual(code,200); self.assertEqual(body['session_id'],self.session['id'])
-                req = self.api.call_args.args[0]; payload = parse_qs(req.data.decode())
-                self.assertEqual(req.full_url,'https://api.stripe.com/v1/checkout/sessions')
-                self.assertEqual(payload['line_items[0][price_data][unit_amount]'],[str(amount)])
-                self.assertEqual(payload['line_items[0][price_data][tax_behavior]'],['inclusive'])
-                self.assertNotIn('automatic_tax[enabled]',payload)
-                self.assertEqual(payload['metadata[tax_mode]'],['fixed_vat21'])
-                self.assertIn('session_id={CHECKOUT_SESSION_ID}',payload['success_url'][0])
-                with app.payment_db() as db:
-                    self.assertIsNotNone(db.execute('SELECT session FROM checkout_sessions WHERE session=?',(body['session_id'],)).fetchone())
+            app.RATE.clear(); self.mock_session(key)
+            code, body = self.request(dict(key=key))
+            self.assertEqual(code,200); self.assertEqual(body['session_id'],self.session['id'])
+            req = self.api.call_args.args[0]; payload = parse_qs(req.data.decode())
+            self.assertEqual(req.full_url,'https://api.stripe.com/v1/checkout/sessions')
+            self.assertEqual(payload['line_items[0][price_data][unit_amount]'],[str(amount)])
+            self.assertEqual(payload['line_items[0][price_data][tax_behavior]'],['inclusive'])
+            self.assertNotIn('automatic_tax[enabled]',payload)
+            self.assertEqual(payload['metadata[tax_mode]'],['fixed_vat21'])
+            self.assertIn('session_id={CHECKOUT_SESSION_ID}',payload['success_url'][0])
+            cancel = urlparse(payload['cancel_url'][0])
+            q = parse_qs(cancel.query)
+            expected_nivel = {'professional':'professional','blindada':'blindada'}.get(key,'essential')
+            self.assertEqual((cancel.scheme,cancel.netloc,cancel.path),('https','revisioncontratos.es','/contratar/'))
+            self.assertEqual(q.get('nivel'),[expected_nivel])
+            self.assertEqual(q.get('expres'),['1'] if key in ('essentialExpress','essentialBoth') else None)
+            self.assertEqual(q.get('consulta'),['1'] if key in ('essentialCall','essentialBoth') else None)
+            with app.payment_db() as db:
+                stored = db.execute('SELECT country,postal FROM checkout_sessions WHERE session=?',(body['session_id'],)).fetchone()
+                self.assertEqual(stored, ('ALL', ''))
     def test_rejections_and_errors(self):
-        for changes in ({'country':'FR'},{'postal_code':'35001'},{'postal_code':'38001'},{'postal_code':'51001'},{'postal_code':'52001'},{'postal_code':'00001'},{'postal_code':'53001'},{'postal_code':'2800'},{'postal_code':28001},{'key':'forged'},{'price':1}):
+        for data in ({'key':'forged'},{'key':'essential','price':1},{'key':'essential','country':'ES'},{'key':'essential','postal_code':'28001'}):
             app.RATE.clear(); self.api.reset_mock()
-            self.assertEqual(self.request(dict(key='essential',country='ES',postal_code='28001',**{}) | changes)[0],400)
+            self.assertEqual(self.request(data)[0],400)
             self.api.assert_not_called()
         for origin in ('https://burofaxlegal.es','https://www.burofaxlegal.es','https://evil.invalid',''):
             self.assertEqual(self.request({},origin=origin)[0],403)
         self.assertEqual(self.request({})[0],400)
         app.RATE.clear(); self.mock_session(); self.api.side_effect=OSError('network')
-        self.assertEqual(self.request(dict(key='essential',country='ES',postal_code='28001'))[0],502)
+        self.assertEqual(self.request(dict(key='essential'))[0],502)
         self.api.side_effect=None; app.RATE.clear(); self.mock_session(); self.session['amount_total']=1
         self.api.return_value.__enter__.return_value.read.return_value=json.dumps(self.session).encode()
-        self.assertEqual(self.request(dict(key='essential',country='ES',postal_code='28001'))[0],502)
+        self.assertEqual(self.request(dict(key='essential'))[0],502)
         app.RATE.clear(); self.mock_session()
         with patch.object(app,'PAYMENT_DB',self.tmp.name+'/absent/db'):
-            self.assertEqual(self.request(dict(key='essential',country='ES',postal_code='28001'))[0],503)
+            self.assertEqual(self.request(dict(key='essential'))[0],503)
     def test_stripe_malformed_responses_body_limit_and_rate_limit(self):
-        data = dict(key='essential', country='ES', postal_code='28001')
+        data = dict(key='essential')
         for field, value in (('currency','usd'), ('total_details', {'amount_tax':0}), ('id','forged'), ('url','https://evil.invalid/pay'), ('url','https://checkout.stripe.com.evil.invalid/pay')):
             self.mock_session(); self.session[field] = value
             self.api.return_value.__enter__.return_value.read.return_value = json.dumps(self.session).encode()
@@ -107,10 +114,19 @@ class FixedCheckout(unittest.TestCase):
 
     def test_webhook_provenance(self):
         self.mock_session()
-        session = self.session | dict(object='checkout.session',livemode=True,mode='payment',status='complete',payment_status='paid',payment_link=None,metadata=dict(site='revisioncontratos.es',key='essential',tax_mode='fixed_vat21'),customer_details={'email':'client@example.invalid'})
+        session = dict(self.session | dict(object='checkout.session',livemode=True,mode='payment',status='complete',payment_status='paid',payment_link=None,metadata=dict(site='revisioncontratos.es',key='essential',tax_mode='fixed_vat21'),customer_details={'email':'client@example.invalid'}))
         event = dict(object='event',id='evt_Mocked',livemode=True,type='checkout.session.completed',data={'object':session})
         self.assertEqual(app.accept_payment(event),'ignored')
-        self.assertEqual(self.request(dict(key='essential',country='ES',postal_code='28001'))[0],200)
+        self.assertEqual(self.request(dict(key='essential'))[0],200)
+        self.assertEqual(app.accept_payment(event),'queued'); self.assertEqual(app.accept_payment(event),'duplicate')
+        with app.payment_db() as db:
+            db.execute('DELETE FROM events'); db.execute('DELETE FROM payments'); db.execute('DELETE FROM checkout_sessions')
+            sid = session['id']
+            db.execute('INSERT INTO checkout_sessions VALUES (?,?,?,?,?,?,?)',
+                       (sid,'essential',app.PRICES['essential'],app.fixed_tax(app.PRICES['essential']),'ES','28001','txr_1UPPG3J9L8bkYbaijK75sIPA'))
+        event['id']='evt_LegacyPending'
+        self.assertEqual(app.accept_payment(event),'queued')
+        event['id']='evt_Mocked'
         session['total_details']={'amount_tax':0}
         self.assertEqual(app.accept_payment(event),'ignored')
         session['total_details']=self.session['total_details']
@@ -121,7 +137,7 @@ class FixedCheckout(unittest.TestCase):
         session['metadata']['tax_mode'] = 'automatic'
         self.assertEqual(app.accept_payment(event), 'ignored')
         session['metadata']['tax_mode'] = 'fixed_vat21'
-        self.assertEqual(app.accept_payment(event),'queued'); self.assertEqual(app.accept_payment(event),'duplicate')
+        self.assertEqual(app.accept_payment(event),'duplicate')
         event['id']='evt_Legacy'; session['id']='cs_live_Legacy'; session['payment_link']=app.PAYMENT_LINKS['essential']; session['metadata'].pop('tax_mode'); session.pop('total_details')
         self.assertEqual(app.accept_payment(event),'queued')
         self.mail.send_message.side_effect = OSError('mock SMTP unavailable')

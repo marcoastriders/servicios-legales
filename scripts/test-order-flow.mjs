@@ -29,21 +29,13 @@ for (const paused of [false,true]) {
   assert(quote.includes('id="f-privacidad"'));
 }
 rc.paymentPaused=false;
-for(const query of ['?nivel=%22','?nivel=unknown','?nivel=professional','?nivel=blindada','?nivel=essential']){
-  let selected='essential';
-  const extras=[{checked:false},{checked:false}];
-  const f={addEventListener(){},querySelectorAll(){return extras;},querySelector(sel){
-    if(sel==='input[name="nivel"]:checked')return {value:selected};
-    const m=sel.match(/^input\[name="nivel"\]\[value="(essential|professional|blindada)"\]$/);
-    if(m)return {set checked(v){if(v)selected=m[1];}};
-    if(sel.includes('expres'))return extras[0]; if(sel.includes('consulta'))return extras[1];
-    throw Error('unsafe selector '+sel);
-  }};
-  const els={order:f,'order-pagar':{},'order-total':{},'order-extras-nota':{}};
-  const js=scripts(api.renderOrder(rc)).find(s=>s.includes('var PRICE='));
-  vm.runInNewContext(js,{document:{getElementById:id=>els[id]},location:{search:query},URLSearchParams});
-  assert.equal(selected,query.includes('professional')?'professional':query.includes('blindada')?'blindada':'essential');
-}
+const order=api.renderOrder(rc);
+assert(!order.includes('input type="radio" name="nivel"'));
+assert(!order.includes('order-postal'));
+assert(!order.includes('order-territory'));
+assert(order.includes('id="order-resumen-titulo"'));
+assert(order.includes('id="order-extras"'));
+assert(order.includes("body:JSON.stringify({key:key})"));
 for(const customQuote of [false,true]) for(const attached of [false,true]){
   let submit, request;
   const state={setAttribute(){},focus(){}};

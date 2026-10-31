@@ -202,10 +202,10 @@ const blockCta = (site, text = null, quote = false, level = null) => site.prelau
 <div class="cta">
   <p class="cta-titulo">${text || esc(site.ctaTitle)}</p>
   <p class="cta-botones">
-    <a class="boton" href="${quote ? '/solicitar-contrato/' : site.id === 'revisioncontratos' ? (site.paymentPaused ? '/solicitar-presupuesto/' : `/contratar/${level ? `?nivel=${level}` : ''}`) : '/cuenta-tu-caso/'}">${quote ? esc(site.customOrder.submitLabel) : site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : esc(site.ui.primary)}</a>
-    ${site.id === 'revisioncontratos' ? '<a class="boton boton-sec" href="/precios/">Ver precios y niveles</a>' : `<a class="boton boton-sec" href="https://wa.me/${shared.whatsappIntl}?text=${encodeURIComponent(site.ctaWhatsapp)}">WhatsApp directo</a>`}
+    <a class="boton" href="${quote ? '/solicitar-contrato/' : site.id === 'revisioncontratos' ? (site.paymentPaused ? '/solicitar-presupuesto/' : level ? `/contratar/?nivel=${level}` : '/precios/') : '/cuenta-tu-caso/'}">${quote ? esc(site.customOrder.submitLabel) : site.id === 'burofaxlegal' ? 'Enviar el caso y los documentos' : level ? 'Revisar pedido y pagar' : 'Comparar niveles y precios'}</a>
+    ${site.id === 'revisioncontratos' ? `<a class="boton boton-sec" href="${level ? '/precios/' : '/como-funciona/'}">${level ? 'Comparar otros niveles' : 'Cómo funciona'}</a>` : `<a class="boton boton-sec" href="https://wa.me/${shared.whatsappIntl}?text=${encodeURIComponent(site.ctaWhatsapp)}">Escribir por WhatsApp</a>`}
   </p>
-  <p class="cta-nota">${quote ? esc(site.customOrder.ctaNote) : site.id === 'revisioncontratos' ? esc(site.ui.ctaNote) : 'Carla revisa tu caso y te indica por escrito qué servicio y tarifa corresponden antes de empezar.'}</p>
+  <p class="cta-nota">${quote ? esc(site.customOrder.ctaNote) : site.id === 'revisioncontratos' ? esc(site.ui.ctaNote) : 'Carla revisa el contrato y las comunicaciones para confirmar si el burofax encaja. Antes de empezar, recibes por escrito el alcance, el precio final y lo que queda fuera.'}</p>
 </div>`;
 
 const blockTrustCarla = (site) => `
@@ -272,7 +272,7 @@ function renderHome(site) {
   <div class="rc-hero-copy">
     <h1>${site.home.h1}</h1>
     ${blockAnswer(site.home.answer)}
-    <p class="hero-botones"><a class="boton" href="/precios/">Elegir nivel y pagar</a> <a class="boton boton-sec" href="/precios/">Ver extras y opciones</a></p>
+    <p class="hero-botones"><a class="boton" href="/precios/">Comparar niveles y precios</a> <a class="boton boton-sec" href="/como-funciona/">Cómo funciona</a></p>
   </div>
   <div class="rc-hero-aside">${blockTrustCarla(site)}</div>
 </section>
@@ -365,15 +365,13 @@ function renderPrecios(site) {
       <h2>${esc(t.name)}</h2>
       <p class="precio-cifra">${esc(t.price)}</p>
       <ul>${t.includes.map((item) => `<li>${item}</li>`).join('')}</ul>
-      ${!site.paymentPaused && site.paymentLinks?.[payKeys[i]] ? `<p><a class="boton boton-pago" href="/contratar/?nivel=${payKeys[i]}" target="_blank" rel="noopener">Contratar y pagar ${esc(t.price)}</a></p>
-      ${site.id === 'revisioncontratos' && i === 0 ? `<div class="precio-bump" aria-label="Añade un extra a la Revisión Esencial"><p><strong>¿Quieres más rapidez o apoyo?</strong></p><p class="precio-bump-ayuda">Añádelo ahora y paga el paquete completo en un clic:</p><a href="/contratar/?nivel=essential&amp;expres=1" target="_blank" rel="noopener">+ exprés · 178 €</a><a href="/contratar/?nivel=essential&amp;consulta=1" target="_blank" rel="noopener">+ consulta · 178 €</a><a href="/contratar/?nivel=essential&amp;expres=1&amp;consulta=1" target="_blank" rel="noopener">+ exprés + consulta · 227 €</a></div>` : ''}
-      <p class="pago-confirmado"><a href="/cuenta-tu-caso/?paquete=${payKeys[i]}">${esc(site.ui.afterPay)}</a></p>` : `<p><a class="boton" href="${site.paymentPaused ? '/solicitar-presupuesto/' : '/cuenta-tu-caso/'}">${esc(site.paymentPaused ? site.ui.primary : 'Cuéntanos tu caso')}</a></p>`}
+      ${!site.paymentPaused && site.paymentLinks?.[payKeys[i]] ? `<p><a class="boton boton-pago" href="/contratar/?nivel=${payKeys[i]}">Elegir ${esc(t.name)}</a></p>` : `<p><a class="boton" href="${site.paymentPaused ? '/solicitar-presupuesto/' : '/cuenta-tu-caso/'}">${esc(site.paymentPaused ? site.ui.primary : 'Cuéntanos tu caso')}</a></p>`}
     </article>`).join('\n') : '';
   const offersLd = hasTiers ? site.pricing.tiers.map((t) => ({
     '@type': 'Offer', name: t.name, price: t.priceValue, priceCurrency: 'EUR',
     url: `https://${site.domain}/precios/`, seller: { '@id': `https://${site.domain}/#legalservice` },
   })) : [];
-  const paymentOptions = site.paymentLinks && !site.paymentPaused ? `
+  const paymentOptions = site.id === 'revisioncontratos' ? '' : site.paymentLinks && !site.paymentPaused ? `
 <section class="pago-opciones">
   <h2>${esc(site.ui.extrasTitle)}</h2>
   ${site.pricing.extrasInfo}
@@ -401,8 +399,7 @@ ${blockAnswer(site.pricing.answer)}
 ${pricesBlock}
 ${paymentOptions}
 ${(site.pricing.sections || []).length ? sections(site.pricing.sections) : ''}
-${(site.pricing.faqs || []).length ? blockFaq(site.pricing.faqs) : ''}
-${blockCta(site)}`;
+${(site.pricing.faqs || []).length ? blockFaq(site.pricing.faqs) : ''}`;
   return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: 'Precios', path: '/precios/' }] }, {
     title: site.pricing.title, description: site.pricing.description, path: '/precios/', body, extraLd: offersLd, bodyClass: 'page-pricing',
   });
@@ -474,7 +471,7 @@ function renderSimple(site, p, path, name) {
 <nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · ${esc(name)}</nav>
 <h1>${p.h1}</h1>
 ${path === '/quien-revisa/' ? `<section class="quien-revisa-intro"><div class="quien-revisa-copy">${p.answer ? blockAnswer(p.answer) : ''}</div>${blockPortrait()}</section>` : (p.answer ? blockAnswer(p.answer) : '')}
-${sections(p.sections)}${site.id === 'revisioncontratos' && path === '/condiciones-del-servicio/' ? `<p><a href="/solicitar-presupuesto/">${esc(site.order.quoteLabel)}</a></p>` : ''}
+${sections(p.sections)}
 ${p.faqs ? blockFaq(p.faqs) : ''}
 ${p.sources ? blockSources(p.sources) : ''}
 ${p.noCta ? '' : blockCta(site)}`;
@@ -730,80 +727,90 @@ function render404(site) {
 function renderOrder(site) {
   const o = site.order;
   const keys = ['essential', 'professional', 'blindada'];
-  const niveles = site.pricing.tiers.map((t, i) => `
-      <label class="order-nivel">
-        <input type="radio" name="nivel" value="${keys[i]}"${i === 0 ? ' checked' : ''}>
-        <span class="order-nivel-in">
-          <span class="order-nivel-nombre">${esc(t.name)}</span>
-          <span class="order-nivel-detalle">${esc(o.levelShort[keys[i]])}</span>
-          <span class="order-nivel-precio">${esc(t.price)}</span>
-        </span>
-      </label>`).join('\n');
-  const base = Number(site.pricing.tiers[0].priceValue || parseFloat(site.pricing.tiers[0].price));
+  const levels = Object.fromEntries(site.pricing.tiers.map((t, i) => [keys[i], {
+    name: t.name,
+    detail: o.levelShort[keys[i]],
+    price: Number(t.priceValue || parseFloat(t.price)),
+  }]));
+  const base = levels.essential.price;
   const extra = Number(o.extraExpress.match(/([0-9]+)\s*€/)[1]);
   const call = Number(o.extraCall.match(/([0-9]+)\s*€/)[1]);
-  const prices = Object.fromEntries(site.pricing.tiers.map((t,i)=>[keys[i],Number(t.priceValue || parseFloat(t.price))]));
-  Object.assign(prices,{essentialExpress:base+extra,essentialCall:base+call,essentialBoth:base+extra+call});
+  const prices = {
+    essential: base,
+    essentialExpress: base + extra,
+    essentialCall: base + call,
+    essentialBoth: base + extra + call,
+    professional: levels.professional.price,
+    blindada: levels.blindada.price,
+  };
   const body = `
-<nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · Contratar</nav>
-<h1>${o.h1}</h1>
+<nav class="migas" aria-label="Migas de pan"><a href="/">Inicio</a> · <a href="/precios/">Precios</a> · Pedido</nav>
+<h1>${esc(o.h1)}</h1>
 ${blockAnswer(o.answer)}
 <form class="order" id="order" action="/contratar/" method="get">
-  <fieldset class="order-grupo">
-    <legend>${esc(o.stepLevel)}</legend>
-${niveles}
-  </fieldset>
-  <fieldset class="order-grupo">
+  <section class="order-resumen" aria-labelledby="order-resumen-titulo">
+    <div class="order-seleccion">
+      <div>
+        <h2 id="order-resumen-titulo">${esc(levels.essential.name)}</h2>
+        <p id="order-level-detail">${esc(levels.essential.detail)}</p>
+      </div>
+      <strong id="order-base">${base} €</strong>
+    </div>
+    <p class="order-cambiar"><a href="/precios/">Cambiar nivel</a></p>
+  </section>
+  <fieldset class="order-grupo" id="order-extras">
     <legend>${esc(o.stepExtras)}</legend>
-    <p class="order-extras-nota" id="order-extras-nota" hidden>${esc(o.extrasDisabledNote)}</p>
+    <p class="order-extras-nota">Añade solo lo que necesites. No cambia el alcance jurídico de la revisión.</p>
     <label class="order-extra"><input type="checkbox" name="extra" value="expres"><span>${esc(o.extraExpress)}</span></label>
     <label class="order-extra"><input type="checkbox" name="extra" value="consulta"><span>${esc(o.extraCall)}</span></label>
   </fieldset>
-  <p class="order-total" aria-live="polite"><span>${esc(o.totalLabel)}</span> <strong id="order-total">${base} €</strong></p>
-  <fieldset class="order-grupo">
-    <legend>${esc(o.territoryTitle)}</legend>
-    <p id="order-scope">${esc(o.territoryHelp)} ${esc(o.scopeNote)}</p>
-    <p><label for="order-postal">${esc(o.postalLabel)}</label><input id="order-postal" name="postal_code" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}" maxlength="5" required aria-describedby="order-postal-help order-scope"><span id="order-postal-help" class="campo-ayuda">${esc(o.postalHelp)}</span></p>
-    <label class="order-extra"><input type="checkbox" id="order-territory" required><span>${esc(o.territoryConfirm)}</span></label>
-    <p id="order-quote"><a href="/solicitar-presupuesto/">${esc(o.quoteLabel)}</a></p>
-  </fieldset>
+  <div class="order-precio">
+    <p class="order-total" aria-live="polite"><span>${esc(o.totalLabel)}</span> <strong id="order-total">${base} €</strong></p>
+    <p class="order-iva" id="order-iva">IVA incluido: 21 %</p>
+  </div>
   <p id="order-status" role="status" aria-live="polite" aria-atomic="true"></p>
   <p class="order-accion"><button class="boton order-pagar" type="submit" id="order-pagar" disabled>${esc(o.payButton)} · ${base} €</button></p>
   <p class="order-nota">${esc(o.afterNote)}</p>
 </form>
-<noscript><p class="order-noscript"><a href="/solicitar-presupuesto/">${esc(o.quoteLabel)}</a></p></noscript>
+<noscript><p class="order-noscript">Activa JavaScript para iniciar el pago seguro o <a href="/precios/">vuelve a elegir tu nivel</a>.</p></noscript>
 <script>
 (function(){
-var f=document.getElementById('order'),btn=document.getElementById('order-pagar'),tot=document.getElementById('order-total'),nota=document.getElementById('order-extras-nota');
+var f=document.getElementById('order'),btn=document.getElementById('order-pagar'),tot=document.getElementById('order-total'),iva=document.getElementById('order-iva'),extras=document.getElementById('order-extras'),title=document.getElementById('order-resumen-titulo'),detail=document.getElementById('order-level-detail'),baseEl=document.getElementById('order-base'),status=document.getElementById('order-status'),pending=false;
 if(!f||!btn)return;
-var PRICE=${JSON.stringify(prices)};
-var postal=document.getElementById('order-postal'),confirm=document.getElementById('order-territory'),status=document.getElementById('order-status'),quote=document.getElementById('order-quote'),pending=false;
+var LEVEL=${JSON.stringify(levels)},PRICE=${JSON.stringify(prices)};
+var q=new URLSearchParams(location.search),nivel=q.get('nivel');
+if(!Object.prototype.hasOwnProperty.call(LEVEL,nivel))nivel='essential';
+var ex=f.querySelectorAll('input[name="extra"]');
+if(nivel==='essential'){
+ if(q.get('expres')==='1')ex[0].checked=true;
+ if(q.get('consulta')==='1')ex[1].checked=true;
+}else{
+ extras.hidden=true;
+ for(var i=0;i<ex.length;i++){ex[i].checked=false;ex[i].disabled=true;}
+}
+title.textContent=LEVEL[nivel].name;
+detail.textContent=LEVEL[nivel].detail;
+baseEl.textContent=LEVEL[nivel].price+' \\u20ac';
 btn.disabled=false;
 function compute(){
-var selected=f.querySelector('input[name="nivel"]:checked');
-var n=selected&&selected.value;
-if(['essential','professional','blindada'].indexOf(n)===-1)return null;
-var ex=f.querySelectorAll('input[name="extra"]');
-var es=n==='essential';
-for(var i=0;i<ex.length;i++){ex[i].disabled=!es;if(!es)ex[i].checked=false;}
-nota.hidden=es;
-var key=n;
-if(es){var e=ex[0].checked,c=ex[1].checked;key=e&&c?'essentialBoth':e?'essentialExpress':c?'essentialCall':'essential';}
-var price=PRICE[key];
-tot.textContent=price+' \\u20ac';
-btn.textContent=${JSON.stringify(o.payButton)}+' \\u00b7 '+price+' \\u20ac';
-return key;
+ var key=nivel;
+ if(nivel==='essential'){
+  var e=ex[0].checked,c=ex[1].checked;
+  key=e&&c?'essentialBoth':e?'essentialExpress':c?'essentialCall':'essential';
+ }
+ var price=PRICE[key],tax=(price*21/121).toFixed(2).replace('.',',');
+ tot.textContent=price+' \\u20ac';
+ iva.textContent='IVA incluido (21 %): '+tax+' \\u20ac';
+ btn.textContent=${JSON.stringify(o.payButton)}+' \\u00b7 '+price+' \\u20ac';
+ return key;
 }
 f.addEventListener('change',function(){if(!pending)compute();});
 f.addEventListener('submit',function(ev){
  ev.preventDefault();if(pending)return;
- var key=compute(),code=postal.value.trim(),province=Number(code.slice(0,2));
- if(!/^[0-9]{5}$/.test(code)||province<1||province>52){status.textContent=${JSON.stringify(o.postalHelp)};return;}
- if([35,38,51,52].indexOf(province)!==-1){status.textContent=${JSON.stringify(o.territoryHelp)};quote.hidden=false;return;}
- if(!confirm.checked){status.textContent=${JSON.stringify(o.territoryConfirm)};return;}
+ var key=compute();
  if(!key||!Object.prototype.hasOwnProperty.call(PRICE,key)){status.textContent=${JSON.stringify(o.checkoutError)};return;}
  pending=true;btn.disabled=true;btn.textContent=${JSON.stringify(o.creatingLabel)};status.textContent='';
- fetch('https://intake.marcospera.com/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key:key,country:'ES',postal_code:code})})
+ fetch('https://intake.marcospera.com/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key:key})})
  .then(function(r){if(!r.ok)throw Error('checkout');return r.json();})
  .then(function(data){
    if(!data.ok||typeof data.url!=='string')throw Error('checkout');
@@ -812,15 +819,10 @@ f.addEventListener('submit',function(ev){
    location.assign(url.href);
  }).catch(function(){pending=false;btn.disabled=false;compute();status.textContent=${JSON.stringify(o.checkoutError)};});
 });
-var q=new URLSearchParams(location.search);
-var nv=q.get('nivel'),sel=['essential','professional','blindada'].indexOf(nv)!==-1&&f.querySelector('input[name="nivel"][value="'+nv+'"]');
-if(sel)sel.checked=true;
-if(q.get('expres')==='1')f.querySelector('input[value="expres"]').checked=true;
-if(q.get('consulta')==='1')f.querySelector('input[value="consulta"]').checked=true;
 compute();
 })();
 </script>`;
-  return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: 'Contratar', path: '/contratar/' }] }, {
+  return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: 'Precios', path: '/precios/' }, { name: 'Pedido', path: '/contratar/' }] }, {
     title: o.title, description: o.description, path: '/contratar/', body, bodyClass: 'page-simple page-order',
   });
 }
@@ -864,7 +866,7 @@ ${site.prelaunch ? '\n> Estado: sitio en preparación. Tarifas, plazos y alcance
 
 ## Páginas
 - [Inicio](https://${site.domain}/): qué es el servicio y cómo pedirlo.
-${site.id === 'burofaxlegal' ? `- [Cuéntame tu caso](https://${site.domain}/cuenta-tu-caso/): presupuesto cerrado por escrito antes de empezar.` : `${site.paymentPaused ? `- [Solicitar contrato a medida](https://${site.domain}/solicitar-contrato/): solicitud de presupuesto.` : `- [Contratar](https://${site.domain}/contratar/): pago online directo de la revisión con tarjeta.`}\n- [Precios](https://${site.domain}/precios/): tarifas cerradas con IVA incluido.\n- [Solicitar presupuesto](https://${site.domain}/solicitar-presupuesto/): otros territorios; sin pago online.`}
+${site.id === 'burofaxlegal' ? `- [Cuéntame tu caso](https://${site.domain}/cuenta-tu-caso/): presupuesto cerrado por escrito antes de empezar.` : `${site.paymentPaused ? `- [Solicitar presupuesto](https://${site.domain}/solicitar-presupuesto/): alternativa mientras el pago online está pausado.` : `- [Contratar](https://${site.domain}/contratar/): revisa el pedido y paga online con tarjeta.`}\n- [Precios](https://${site.domain}/precios/): compara los tres niveles con IVA incluido.`}
 - [${site.id === 'burofaxlegal' ? 'Cuéntame tu caso' : 'Completa tu encargo'}](https://${site.domain}/cuenta-tu-caso/): ${site.id === 'revisioncontratos' ? site.ui.intakeSummary : 'formulario para que Carla valore el caso e indique el servicio y presupuesto que correspondan'}.
 - [Cómo funciona](https://${site.domain}/como-funciona/): pasos del encargo, plazos y qué recibe el cliente.
 - [Quién revisa](https://${site.domain}/quien-revisa/): la abogada que firma el trabajo.
@@ -902,8 +904,10 @@ for (const site of sites) {
   if (site.id === 'revisioncontratos') {
     put('solicitar-contrato/index.html', renderIntake(site, { customQuote: true }));
     urls.push({ path: '/solicitar-contrato/', priority: '0.9' });
-    put('solicitar-presupuesto/index.html', renderIntake(site, { territoryQuote: true }));
-    urls.push({ path: '/solicitar-presupuesto/', priority: '0.9' });
+    if (site.paymentPaused) {
+      put('solicitar-presupuesto/index.html', renderIntake(site, { territoryQuote: true }));
+      urls.push({ path: '/solicitar-presupuesto/', priority: '0.9' });
+    }
   }
   urls.push({ path: '/cuenta-tu-caso/', priority: '0.9' });
   if (site.id === 'revisioncontratos' && site.order && site.paymentLinks && !site.paymentPaused) {

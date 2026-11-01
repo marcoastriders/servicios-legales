@@ -1230,7 +1230,7 @@
       ],
       "crossSell": {
         "h2": "Si también necesitas tratar la entrega o los impagos",
-        "html": "<p>Si necesitas reclamar la devolución de la vivienda, consulta el <a href=\"/burofax-entrega-de-llaves/\">burofax de requerimiento de entrega de llaves</a>. Si existen rentas pendientes, el <a href=\"/burofax-impago-alquiler/\">burofax por impago de alquiler</a> aborda esa reclamación. Son encargos distintos del aviso de no renovación.</p><p>Puedes enviarnos el contrato para que valoremos el preaviso y te demos presupuesto.</p><p>NOTA SOBRE LA REFORMA PENDIENTE DE CONVALIDACIÓN</p>"
+        "html": "<p>Si necesitas reclamar la devolución de la vivienda, consulta el <a href=\"/burofax-entrega-de-llaves/\">burofax de requerimiento de entrega de llaves</a>. Si existen rentas pendientes, el <a href=\"/burofax-impago-alquiler/\">burofax por impago de alquiler</a> aborda esa reclamación. Son encargos distintos del aviso de no renovación.</p><p>Puedes enviarnos el contrato para que valoremos el preaviso y te demos presupuesto.</p>"
       },
       "ctaText": "El Real Decreto-ley 28/2026, de 6 de octubre, está publicado en el BOE, pero a la fecha de revisión está pendiente de convalidación parlamentaria y aún no ha entrado en vigor. Su entrada en vigor está prevista para el 15 de noviembre de 2026. Por ello, esta página no desarrolla sus cambios sobre prórrogas, preavisos e indemnización por no renovación. Si se convalida y entra en vigor, publicaremos un artículo específico. Antes de enviar el preaviso, comprobaremos su situación y la normativa aplicable a tu contrato.",
       "reviewStatus": "reviewed",

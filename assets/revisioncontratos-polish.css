@@ -64,23 +64,23 @@ body.site-revisioncontratos { --rc-brass:#705b35; scrollbar-color:#64726b #f7f4e
 .order-seleccion{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.4rem 1.2rem;align-items:start}
 .order-seleccion h2{margin:0 0 .25rem;font-size:1.2rem}
 .order-seleccion p{margin:0;color:#5c5540}
-.order-seleccion strong{font-size:1.45rem;color:#8b7448;white-space:nowrap}
+.order-seleccion strong{font-size:1.45rem;color:#89723f;white-space:nowrap}
 .order-includes{list-style:none;margin:.5rem 0 .35rem;padding:0}
 .order-includes li{position:relative;padding-left:1.35rem;margin:.3rem 0;font-size:.95rem;color:#3d372a}
-.order-includes li::before{content:"✓";position:absolute;left:0;top:0;color:#8b7448;font-weight:700}
+.order-includes li::before{content:"✓";position:absolute;left:0;top:0;color:#89723f;font-weight:700}
 .order-cambiar{margin:.75rem 0 0;font-size:.92rem}
 .order-extra{display:flex;gap:.75rem;align-items:flex-start;border:1px solid #d8cfae;border-radius:.6rem;padding:.8rem 1rem;margin:.55rem 0;cursor:pointer;background:#fff}
-.order-extra:hover{border-color:#8b7448;background:#fffdf7}
-.order-extra input{width:1.15rem;height:1.15rem;margin-top:.1rem;accent-color:#8b7448;flex-shrink:0}
+.order-extra:hover{border-color:#89723f;background:#fffdf7}
+.order-extra input{width:1.15rem;height:1.15rem;margin-top:.1rem;accent-color:#89723f;flex-shrink:0}
 .order-extra input:focus-visible{outline:2px solid #6e5a33;outline-offset:3px}
 .order-extras-nota{color:#5c5540;font-size:.92rem;margin:.3rem 0 .75rem}
-.order-precio{border-top:2px solid #8b7448;padding:.9rem .2rem .2rem}
+.order-precio{border-top:2px solid #89723f;padding:.9rem .2rem .2rem}
 .order-total{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin:0;font-size:1.05rem}
-.order-total strong{font-size:1.7rem;color:#8b7448;white-space:nowrap}
+.order-total strong{font-size:1.7rem;color:#89723f;white-space:nowrap}
 .order-iva{margin:.25rem 0 0;text-align:right;color:#5c5540;font-size:.9rem}
 .order-accion{margin:1rem 0 .4rem}
 .order-pagar{display:inline-block;font-size:1.15rem;padding:.85rem 1.6rem}
-.site-revisioncontratos #order-status:not(:empty){padding:.8rem;border-left:1px solid #8b7448;background:#f0ead8}
+.site-revisioncontratos #order-status:not(:empty){padding:.8rem;border-left:1px solid #89723f;background:#f0ead8}
 .site-revisioncontratos .order-pagar:disabled{opacity:.6;cursor:wait}
 .order-nota{color:#5c5540;font-size:.9rem}
 .order-noscript{padding:.8rem;background:#f0ead8}

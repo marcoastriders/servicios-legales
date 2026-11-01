@@ -525,7 +525,7 @@ function renderArticulosIndex(site) {
 <h1>${h1}</h1>
 ${blockAnswer(intro)}
 <ul class="tarjetas">
-  ${site.articles.map((a) => `<li class="tarjeta"><h3><a href="/articulos/${a.slug}/">${esc(a.title)}</a></h3><p>${esc(a.description)}</p></li>`).join('\n')}
+  ${site.articles.map((a) => `<li class="tarjeta"><h2><a href="/articulos/${a.slug}/">${esc(a.title)}</a></h2><p>${esc(a.description)}</p></li>`).join('\n')}
 </ul>
 ${blockCta(site)}`;
   return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: 'Artículos', path: '/articulos/' }] }, {

@@ -111,6 +111,7 @@ th { background: var(--acento-suave); }
 .tarjetas { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; max-width: 62rem; }
 .tarjeta { background: var(--tarjeta); border: 1px solid var(--linea); border-radius: 10px; padding: 1rem 1.2rem; }
 .tarjeta h3 { margin-top: 0.2rem; }
+.tarjeta h2 { margin: 0.2rem 0 0.35rem; border: 0; padding: 0; font-size: 1.15rem; }
 .tarjeta-precio { font-weight: 700; color: var(--acento); }
 
 /* Precios: tarjetas legibles sin tablas horizontales en móvil */
@@ -192,10 +193,10 @@ body.site-revisioncontratos {
   --tarjeta: #fffdfa;
   --tinta: #202d2b;
   --tinta-suave: #53615b;
-  --acento: #8b7448;
+  --acento: #89723f;
   --acento-suave: #f0ead8;
   --linea: #d5d9d1;
-  --rc-brass: #8b7448;
+  --rc-brass: #89723f;
   --rc-focus: #165fcc;
   --rc-display: Georgia, "Times New Roman", serif;
   --rc-body: system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -244,7 +245,7 @@ body.site-revisioncontratos {
 .site-revisioncontratos .respuesta-directa { max-width: 58rem; padding: 0; border: 0; border-radius: 0; background: transparent; color: var(--tinta-suave); font-size: clamp(1.08rem, 1.7vw, 1.28rem); line-height: 1.65; }
 .site-revisioncontratos .respuesta-directa p { margin: 0; }
 .site-revisioncontratos .migas { margin-bottom: 1.35rem; letter-spacing: .02em; }
-.site-revisioncontratos .migas a { color: var(--tinta-suave); }
+.site-revisioncontratos .migas a { color: var(--tinta-suave); display: inline-block; padding-block: .35rem; }
 
 .site-revisioncontratos .rc-hero { display: grid; grid-template-columns: minmax(0,1.45fr) minmax(18rem,1fr); gap: clamp(2.5rem, 6vw, 5rem); align-items: center; padding: clamp(1rem,3vw,2.5rem) 0 var(--rc-section); }
 .site-revisioncontratos .rc-hero-copy .respuesta-directa { max-width: 42rem; }
@@ -267,6 +268,8 @@ body.site-revisioncontratos {
 .site-revisioncontratos .tarjetas { display: block; max-width: none; margin: 1.75rem 0 0; border-top: 1px solid var(--tinta); }
 .site-revisioncontratos .tarjeta { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 2rem; align-items: start; padding: 1.35rem .15rem; border: 0; border-bottom: 1px solid var(--linea); border-radius: 0; background: transparent; }
 .site-revisioncontratos .tarjeta h3 { margin: 0 0 .25rem; }
+.site-revisioncontratos .tarjeta h2 { margin: 0 0 .25rem; border: 0; padding: 0; font-size: 1.28rem; }
+.site-revisioncontratos .tarjeta h2 a { display: inline-block; min-height: 44px; }
 .site-revisioncontratos .tarjeta p { margin: .25rem 0; color: var(--tinta-suave); }
 .site-revisioncontratos .tarjeta-precio { color: var(--acento) !important; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .site-revisioncontratos .rc-learn { display: grid; grid-template-columns: 14rem minmax(0,var(--rc-reading)); justify-content: space-between; gap: clamp(2.5rem,7vw,7rem); padding: var(--rc-section) 0; border-top: 1px solid var(--linea); }
@@ -430,7 +433,7 @@ body.site-burofaxlegal {
 
 .site-burofaxlegal .kicker { font-family: var(--bf-mono); font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--bf-copper-text); margin-bottom: .5rem; }
 .site-burofaxlegal .migas { font-family: var(--bf-mono); font-size: .78rem; letter-spacing: .04em; color: var(--tinta-suave); margin-bottom: 1.4rem; }
-.site-burofaxlegal .migas a { color: var(--tinta-suave); }
+.site-burofaxlegal .migas a { color: var(--tinta-suave); display: inline-block; padding-block: .4rem; }
 .site-burofaxlegal .respuesta-directa { max-width: 52rem; padding: 0 0 0 1.15rem; border: 0; border-left: 3px solid var(--bf-copper); border-radius: 0; background: transparent; color: var(--tinta-suave); font-family: var(--bf-display); font-size: clamp(1.12rem, 1.8vw, 1.35rem); line-height: 1.6; }
 .site-burofaxlegal .respuesta-directa p { margin: 0; }
 .site-burofaxlegal .comprobado { font-style: italic; color: var(--tinta-suave); }
@@ -509,6 +512,8 @@ body.site-burofaxlegal {
 .site-burofaxlegal .tarjetas { display: block; max-width: var(--bf-reading); margin: 1.75rem 0 0; padding: 0; border-top: 1px solid var(--tinta); }
 .site-burofaxlegal .tarjeta { border: 0; border-bottom: 1px solid var(--linea); border-radius: 0; background: transparent; padding: 1.35rem .25rem; }
 .site-burofaxlegal .tarjeta h3 { margin: 0 0 .3rem; font-size: 1.25rem; }
+.site-burofaxlegal .tarjeta h2 { margin: 0 0 .3rem; border: 0; padding: 0; font-size: 1.25rem; }
+.site-burofaxlegal .tarjeta h2 a { display: inline-block; min-height: 44px; }
 .site-burofaxlegal .tarjeta p { margin: .25rem 0; color: var(--tinta-suave); }
 .site-burofaxlegal .tarjeta-precio { color: var(--bf-copper-text) !important; font-family: var(--bf-mono); font-size: .85rem; letter-spacing: .06em; }
 

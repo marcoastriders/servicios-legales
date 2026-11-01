@@ -46,8 +46,6 @@ body.site-revisioncontratos { --rc-brass:#705b35; scrollbar-color:#64726b #f7f4e
  .site-revisioncontratos *, .site-revisioncontratos *::before, .site-revisioncontratos *::after { transition:none !important; animation:none !important; scroll-behavior:auto !important; }
 }
 
-.site-revisioncontratos .precio-card > ul { order:3; }
-.site-revisioncontratos .precio-card > .pago-confirmado { order:4; }
 .site-revisioncontratos .precio-card > p:has(.boton-pago) { margin:.5rem 0 1rem; }
 @media(max-width:56rem) { .site-revisioncontratos .rc-service-body > .rc-prose { width:100%; max-width:100%; min-width:0; } }
 

@@ -65,6 +65,9 @@ body.site-revisioncontratos { --rc-brass:#705b35; scrollbar-color:#64726b #f7f4e
 .order-seleccion h2{margin:0 0 .25rem;font-size:1.2rem}
 .order-seleccion p{margin:0;color:#5c5540}
 .order-seleccion strong{font-size:1.45rem;color:#8b7448;white-space:nowrap}
+.order-includes{list-style:none;margin:.5rem 0 .35rem;padding:0}
+.order-includes li{position:relative;padding-left:1.35rem;margin:.3rem 0;font-size:.95rem;color:#3d372a}
+.order-includes li::before{content:"✓";position:absolute;left:0;top:0;color:#8b7448;font-weight:700}
 .order-cambiar{margin:.75rem 0 0;font-size:.92rem}
 .order-extra{display:flex;gap:.75rem;align-items:flex-start;border:1px solid #d8cfae;border-radius:.6rem;padding:.8rem 1rem;margin:.55rem 0;cursor:pointer;background:#fff}
 .order-extra:hover{border-color:#8b7448;background:#fffdf7}

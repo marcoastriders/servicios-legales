@@ -731,6 +731,7 @@ function renderOrder(site) {
     name: t.name,
     detail: o.levelShort[keys[i]],
     price: Number(t.priceValue || parseFloat(t.price)),
+    includes: t.includes,
   }]));
   const base = levels.essential.price;
   const extra = Number(o.extraExpress.match(/([0-9]+)\s*€/)[1]);
@@ -752,6 +753,9 @@ ${blockAnswer(o.answer)}
     <div class="order-seleccion">
       <div>
         <h2 id="order-resumen-titulo">${esc(levels.essential.name)}</h2>
+        <ul class="order-includes" id="order-includes">
+          ${levels.essential.includes.map((i) => `<li>${esc(i)}</li>`).join('\n          ')}
+        </ul>
         <p id="order-level-detail">${esc(levels.essential.detail)}</p>
       </div>
       <strong id="order-base">${base} €</strong>
@@ -775,7 +779,7 @@ ${blockAnswer(o.answer)}
 <noscript><p class="order-noscript">Activa JavaScript para iniciar el pago seguro o <a href="/precios/">vuelve a elegir tu nivel</a>.</p></noscript>
 <script>
 (function(){
-var f=document.getElementById('order'),btn=document.getElementById('order-pagar'),tot=document.getElementById('order-total'),iva=document.getElementById('order-iva'),extras=document.getElementById('order-extras'),title=document.getElementById('order-resumen-titulo'),detail=document.getElementById('order-level-detail'),baseEl=document.getElementById('order-base'),status=document.getElementById('order-status'),pending=false;
+var f=document.getElementById('order'),btn=document.getElementById('order-pagar'),tot=document.getElementById('order-total'),iva=document.getElementById('order-iva'),extras=document.getElementById('order-extras'),title=document.getElementById('order-resumen-titulo'),detail=document.getElementById('order-level-detail'),inc=document.getElementById('order-includes'),baseEl=document.getElementById('order-base'),status=document.getElementById('order-status'),pending=false;
 if(!f||!btn)return;
 var LEVEL=${JSON.stringify(levels)},PRICE=${JSON.stringify(prices)};
 var q=new URLSearchParams(location.search),nivel=q.get('nivel');
@@ -789,6 +793,7 @@ if(nivel==='essential'){
  for(var i=0;i<ex.length;i++){ex[i].checked=false;ex[i].disabled=true;}
 }
 title.textContent=LEVEL[nivel].name;
+if(inc)inc.innerHTML=LEVEL[nivel].includes.map(function(t){return '<li>'+t+'</li>';}).join('');
 detail.textContent=LEVEL[nivel].detail;
 baseEl.textContent=LEVEL[nivel].price+' \\u20ac';
 btn.disabled=false;

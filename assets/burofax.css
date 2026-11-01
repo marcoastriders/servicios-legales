@@ -13,12 +13,12 @@ body.site-burofaxlegal {
 .site-burofaxlegal input, .site-burofaxlegal textarea { caret-color:var(--acento); accent-color:var(--acento); }
 .site-burofaxlegal a { text-underline-offset:.25em; text-decoration-thickness:1px; }
 .site-burofaxlegal h1, .site-burofaxlegal h2, .site-burofaxlegal h3 { font-weight:400; letter-spacing:-.025em; text-wrap:balance; }
-.site-burofaxlegal h1 { font-size:clamp(2.8rem,5.4vw,5.2rem); max-width:22ch; line-height:1.09; margin:.5em 0 .45em; }
+.site-burofaxlegal h1 { font-size:clamp(2.2rem,5.4vw,5.2rem); max-width:22ch; line-height:1.09; margin:.5em 0 .45em; }
 .site-burofaxlegal h2 { font-size:clamp(1.85rem,3vw,2.7rem); margin:2em 0 .6em; }
 .site-burofaxlegal h3 { font-size:1.6rem; }
 .site-burofaxlegal h1 strong, .site-burofaxlegal h2 strong { color:inherit; font-weight:400; }
 .site-burofaxlegal .cabecera { background:var(--fondo); padding:1.1rem 0; border-bottom:1px solid var(--linea); }
-.site-burofaxlegal .marca { font-size:2rem; font-weight:400; }
+.site-burofaxlegal .marca { font-size:2rem; font-weight:400; line-height:1.15; }
 .site-burofaxlegal .marca-sub { font-family:var(--bf-body); font-size:.7rem; text-transform:none; letter-spacing:0; }
 .site-burofaxlegal .nav a { font-weight:400; font-size:.9rem; }
 .site-burofaxlegal .nav a:last-child { background:transparent; border:1px solid var(--tinta); color:var(--tinta); border-radius:0; }
@@ -29,7 +29,7 @@ body.site-burofaxlegal {
 .site-burofaxlegal .migas { font-family:var(--bf-body); letter-spacing:0; font-size:.82rem; margin-bottom:2rem; }
 .site-burofaxlegal .respuesta-directa { border:0; padding:0; font-family:var(--bf-body); font-size:1.15rem; max-width:65ch; line-height:1.75; }
 .site-burofaxlegal .bf-hero { display:block; padding:clamp(2.5rem,5vw,4.5rem) 0; margin:0; background:var(--bf-ink); }
-.site-burofaxlegal .bf-hero h1 { max-width:23ch; font-size:clamp(3rem,6.2vw,5.75rem); line-height:1.06; margin:0 0 .55em; }
+.site-burofaxlegal .bf-hero h1 { max-width:23ch; font-size:clamp(2rem,6.2vw,5.75rem); line-height:1.08; margin:0 0 .55em; }
 .site-burofaxlegal .bf-hero h1 strong { color:var(--bf-copper-light); }
 .site-burofaxlegal .bf-opening { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(0,1fr); gap:clamp(2rem,6vw,5rem); padding-top:2rem; border-top:1px solid #a0ad94; }
 .site-burofaxlegal .bf-opening .respuesta-directa { margin:0; max-width:64ch; color:var(--bf-parch-dim); }
@@ -50,7 +50,7 @@ body.site-burofaxlegal {
 .site-burofaxlegal .bf-sello li + li { border:0; padding:0; }
 .site-burofaxlegal .confianza { background:transparent; border:0; border-block:1px solid var(--linea); border-radius:0; padding:2rem 0; gap:2rem; }
 .site-burofaxlegal .confianza-foto { width:160px; height:190px; border:0; box-shadow:none; border-radius:0; object-position:center; }
-.site-burofaxlegal .confianza-nombre { font-size:2rem; font-weight:400; }
+.site-burofaxlegal .confianza-nombre { font-size:2rem; font-weight:400; line-height:1.2; }
 .site-burofaxlegal .confianza p { max-width:65ch; }
 .site-burofaxlegal .bf-accountability .confianza { display:grid; grid-template-columns:230px minmax(0,1fr); align-items:center; padding:3.5rem 0; margin:0 0 3rem; border-top:0; }
 .site-burofaxlegal .bf-accountability .confianza-foto { width:230px; height:270px; }
@@ -68,7 +68,7 @@ body.site-burofaxlegal {
 .site-burofaxlegal .bf-prosa p { max-width:65ch; }
 .site-burofaxlegal .bf-indice { padding-block:var(--bf-section); background:var(--acento-suave); box-shadow:0 0 0 100vmax var(--acento-suave); clip-path:inset(0 -100vmax); }
 .site-burofaxlegal .bf-indice-item a { grid-template-columns:minmax(0,1fr) auto; gap:2rem; padding:1.8rem 0; }
-.site-burofaxlegal .bf-indice-cuerpo strong { font-size:1.9rem; font-weight:400; }
+.site-burofaxlegal .bf-indice-cuerpo strong { font-size:1.9rem; font-weight:400; line-height:1.25; }
 .site-burofaxlegal .bf-indice-cuerpo span { max-width:65ch; }
 .site-burofaxlegal .bf-indice-precio { font-family:var(--bf-body); font-size:.9rem; letter-spacing:0; }
 .site-burofaxlegal .faq { max-width:58rem; }
@@ -119,11 +119,11 @@ body.site-burofaxlegal {
 .site-burofaxlegal .boton:disabled { opacity:.65; cursor:wait; }
 .site-burofaxlegal #intake-estado:not(:empty) { padding:1rem; background:var(--acento-suave); color:var(--tinta); }
 .site-burofaxlegal .cta { max-width:none; border-radius:0; padding:clamp(2rem,5vw,4rem); }
-.site-burofaxlegal .cta-titulo { font-weight:400; font-size:clamp(2rem,3.5vw,3rem); max-width:29ch; }
+.site-burofaxlegal .cta-titulo { font-weight:400; font-size:clamp(1.45rem,3.5vw,3rem); line-height:1.15; max-width:29ch; }
 .site-burofaxlegal .cta-botones { display:flex; flex-wrap:wrap; gap:.75rem; }
 .site-burofaxlegal .cta-nota { max-width:65ch; }
 .site-burofaxlegal .pie { border-top:0; padding:4rem 0; }
-.site-burofaxlegal .pie-marca { font-weight:400; font-size:2rem; }
+.site-burofaxlegal .pie-marca { font-weight:400; font-size:2rem; line-height:1.2; }
 .site-burofaxlegal .pie-copy { opacity:1; }
 .site-burofaxlegal .analytics-consent { position:static; width:100%; box-shadow:none; border:0; border-bottom:1px solid var(--linea); background:var(--acento-suave); padding:.7rem max(var(--bf-gutter),calc((100% - 74rem)/2)); font-size:.83rem; }
 .site-burofaxlegal .analytics-consent[hidden] { display:none; }
@@ -143,7 +143,7 @@ body.site-burofaxlegal {
  .site-burofaxlegal .cabecera-in { gap:1rem; }
  .site-burofaxlegal .nav { grid-template-columns:repeat(2,minmax(0,1fr)); overflow:visible; }
  .site-burofaxlegal .nav a:last-child { grid-column:1/-1; }
- .site-burofaxlegal .bf-hero h1 { font-size:clamp(2.9rem,8.5vw,4rem); max-width:23ch; }
+ .site-burofaxlegal .bf-hero h1 { font-size:clamp(2rem,8vw,4rem); max-width:23ch; }
  .site-burofaxlegal .bf-indice-item a { grid-template-columns:1fr; gap:.65rem; }
  .site-burofaxlegal .bf-indice-precio { grid-column:1; }
  .site-burofaxlegal .bf-accountability .confianza { grid-template-columns:160px minmax(0,1fr); gap:1.5rem; }
@@ -153,7 +153,7 @@ body.site-burofaxlegal {
  .site-burofaxlegal .cta-botones { display:grid; grid-template-columns:1fr; }
 }
 @media (max-width:30rem) {
- .site-burofaxlegal h1 { font-size:2.8rem; }
+ .site-burofaxlegal h1 { font-size:clamp(1.9rem,7vw,2.4rem); }
  .site-burofaxlegal .bf-accountability .confianza { grid-template-columns:1fr; gap:1.5rem; padding-block:2.5rem; }
  .site-burofaxlegal .bf-accountability .confianza-foto { width:200px; height:230px; }
  .site-burofaxlegal .bf-action .hero-botones { display:grid; grid-template-columns:1fr; }

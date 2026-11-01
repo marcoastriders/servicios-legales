@@ -27,7 +27,7 @@ a { color: var(--acento); }
 
 .cabecera { background: var(--acento); color: #fff; padding: 0.9rem 0; }
 .cabecera-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem; max-width: 62rem; }
-.marca { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.35rem; font-weight: 700; }
+.marca { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.35rem; font-weight: 700; line-height: 1.2; }
 .marca-sub { display: block; font-size: 0.72rem; font-family: "Segoe UI", system-ui, sans-serif; font-weight: 400; opacity: 0.85; letter-spacing: 0.02em; }
 .nav a { color: #fff; text-decoration: none; margin-left: 1.1rem; font-size: 0.95rem; opacity: 0.92; }
 .nav a:hover { opacity: 1; text-decoration: underline; }
@@ -136,7 +136,7 @@ th { background: var(--acento-suave); }
 .boton-pago { background: #183b66; }
 
 .cta { background: var(--acento); color: #fff; border-radius: 12px; padding: 1.4rem 1.6rem; margin-top: 2.6rem; }
-.cta-titulo { font-family: Georgia, serif; font-size: 1.3rem; margin-top: 0; }
+.cta-titulo { font-family: Georgia, serif; font-size: 1.3rem; margin-top: 0; line-height: 1.35; }
 .cta .boton { background: #fff; color: var(--acento) !important; }
 .cta .boton-sec { background: transparent; color: #fff !important; border-color: #fff; }
 
@@ -227,7 +227,7 @@ body.site-revisioncontratos {
 .site-revisioncontratos summary:focus-visible { outline: 3px solid var(--rc-focus); outline-offset: 3px; }
 .site-revisioncontratos .cabecera { padding: 1.1rem 0; background: rgba(247,244,238,.97); color: var(--tinta); border-bottom: 1px solid var(--linea); }
 .site-revisioncontratos .cabecera-in { max-width: var(--rc-shell); gap: 1.5rem; }
-.site-revisioncontratos .marca { color: var(--tinta); font-size: 1.55rem; font-weight: 400; letter-spacing: -.025em; }
+.site-revisioncontratos .marca { color: var(--tinta); font-size: 1.55rem; font-weight: 400; letter-spacing: -.025em; line-height: 1.2; }
 .site-revisioncontratos .marca-sub { color: var(--tinta-suave); opacity: 1; letter-spacing: .05em; text-transform: uppercase; font-size: .63rem; }
 .site-revisioncontratos .nav { display: flex; align-items: center; gap: .35rem 1.25rem; }
 .site-revisioncontratos .nav a { color: var(--tinta); margin: 0; padding: .65rem 0; font-size: .92rem; opacity: 1; text-underline-offset: .25em; }
@@ -350,7 +350,7 @@ body.site-revisioncontratos {
 }
 @media (max-width: 30rem) {
   .site-revisioncontratos { font-size: 1rem; }
-  .site-revisioncontratos h1 { font-size: clamp(2.25rem,11vw,3rem); }
+  .site-revisioncontratos h1 { font-size: clamp(1.9rem, 8.5vw, 2.6rem); }
   .site-revisioncontratos .rc-hero { gap: 2rem; }
   .site-revisioncontratos .confianza { flex-direction: column; }
   .site-revisioncontratos .confianza-foto { width: 112px; height: 112px; }
@@ -421,7 +421,7 @@ body.site-burofaxlegal {
 
 .site-burofaxlegal .cabecera { padding: 1.05rem 0; background: rgba(248,244,236,.97); color: var(--tinta); border-bottom: 1px solid var(--linea); }
 .site-burofaxlegal .cabecera-in { max-width: var(--bf-shell); gap: 1.5rem; }
-.site-burofaxlegal .marca { color: var(--tinta); font-family: var(--bf-display); font-size: 1.55rem; font-weight: 700; letter-spacing: -.02em; }
+.site-burofaxlegal .marca { color: var(--tinta); font-family: var(--bf-display); font-size: 1.55rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.2; }
 .site-burofaxlegal .marca-sub { display: block; color: var(--tinta-suave); opacity: 1; font-family: var(--bf-mono); text-transform: uppercase; letter-spacing: .14em; font-size: .6rem; margin-top: .15rem; }
 .site-burofaxlegal .nav { display: flex; align-items: center; gap: .35rem 1.35rem; }
 .site-burofaxlegal .nav a { color: var(--tinta); margin: 0; padding: .65rem 0; font-size: .93rem; opacity: 1; font-weight: 600; text-underline-offset: .3em; }

@@ -1,4 +1,21 @@
 /* BurofaxLegal only. Shared sheet and sibling output stay unchanged. */
+.site-burofaxlegal.page-campaign #analytics-consent { position: static; max-width: 54rem; margin: 1rem auto 0; box-shadow: none; }
+.site-burofaxlegal.page-campaign #analytics-consent[hidden] { display: none; }
+.site-burofaxlegal .bf-campaign { max-width: 54rem; margin-inline: auto; overflow-wrap: anywhere; }
+.site-burofaxlegal .bf-campaign .bf-campaign-draft { padding: .8rem 1rem; border: 1px solid var(--bf-copper-text); color: var(--bf-ink); font-weight: 600; }
+.site-burofaxlegal .bf-campaign .bf-campaign-hero { padding-block: 1.5rem 2.5rem; border-bottom: 1px solid var(--linea); }
+.site-burofaxlegal .bf-campaign h1 { max-width: 20ch; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.12; }
+.site-burofaxlegal .bf-campaign section { margin-block: 2.5rem; }
+.site-burofaxlegal .bf-campaign .bf-campaign-price { font-weight: 600; border-left: 3px solid var(--bf-copper-text); padding-left: 1rem; }
+.site-burofaxlegal .bf-campaign .boton,
+.site-burofaxlegal .bf-campaign .boton-sec { white-space: normal; text-align: center; min-height: 44px; }
+.site-burofaxlegal .bf-campaign a:focus-visible { outline: 3px solid var(--bf-copper-text); outline-offset: 4px; }
+@media (max-width: 30rem) {
+ .site-burofaxlegal .bf-campaign h1 { font-size: clamp(1.9rem, 7vw, 2.1rem); }
+ .site-burofaxlegal .bf-campaign .boton,
+ .site-burofaxlegal .bf-campaign .boton-sec { display: block; width: 100%; box-sizing: border-box; }
+}
+
 @font-face { font-family: 'BF Bodoni'; src: url('/assets/fonts/bf-bodoni.ttf') format('truetype'); font-weight: 400; font-display: swap; }
 @font-face { font-family: 'BF Public'; src: url('/assets/fonts/bf-public-sans.ttf') format('truetype'); font-weight: 400; font-display: swap; }
 @font-face { font-family: 'BF Public'; src: url('/assets/fonts/bf-public-sans-semibold.ttf') format('truetype'); font-weight: 600 800; font-display: swap; }

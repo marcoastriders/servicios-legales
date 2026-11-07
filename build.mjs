@@ -63,7 +63,7 @@ function faqGraph(faqs) {
   };
 }
 
-function layout(site, page, { title, description, path, body, extraLd = [], bodyClass = '' }) {
+function layout(site, page, { title, description, path, body, extraLd = [], bodyClass = '', noindex = false }) {
   const url = `https://${site.domain}${path}`;
   const crumbs = breadcrumbs(site, page.crumbs);
   const ld = jsonLdGraph(site, page, [crumbs, ...extraLd]);
@@ -76,7 +76,7 @@ function layout(site, page, { title, description, path, body, extraLd = [], body
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
-${site.prelaunch ? '<meta name="robots" content="noindex,follow">' : '<meta name="robots" content="index,follow">'}
+${site.prelaunch || noindex ? '<meta name="robots" content="noindex,follow">' : '<meta name="robots" content="index,follow">'}
 <link rel="canonical" href="${url}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
@@ -533,6 +533,25 @@ ${blockCta(site)}`;
   });
 }
 
+function renderCampaign(site, slug, campaign) {
+  const path = `/campanas/${slug}/`;
+  const cta = (secondary = false) => `<a class="${secondary ? 'boton-sec' : 'boton'}" href="${esc(campaign.ctaHref)}">${esc(campaign.ctaText)}</a>`;
+  const body = `<article class="bf-campaign">
+<p class="bf-campaign-draft">${esc(campaign.draftBanner)}</p>
+<header class="bf-campaign-hero"><h1>${esc(campaign.h1)}</h1>${blockAnswer(esc(campaign.intro))}${cta()}</header>
+${sections(campaign.sections)}
+<p class="bf-campaign-price">${esc(campaign.price)}</p>
+${cta(true)}
+${blockFaq(campaign.faqs)}
+${blockSources(campaign.sources)}
+${blockTrustCarla(site)}
+</article>`;
+  return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: campaign.h1, path }] }, {
+    title: campaign.title, description: campaign.description, path, body,
+    bodyClass: 'page-campaign', noindex: true, extraLd: [faqGraph(campaign.faqs)],
+  });
+}
+
 function renderIntake(site, { customQuote = false, territoryQuote = false } = {}) {
   const quoteOnly = customQuote || territoryQuote;
   const intake = territoryQuote ? site.territoryOrder : customQuote ? site.customOrder : site.intake;
@@ -563,7 +582,7 @@ function renderIntake(site, { customQuote = false, territoryQuote = false } = {}
     : `<p class="campo"><label for="f-telefono">Tu teléfono *</label>
     <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" required maxlength="40"></p>`;
   const docsField = `<p class="campo"><label for="f-docs">Documentos que ayuden a valorar tu caso (opcional)</label>
-    <span class="campo-ayuda" id="f-docs-ayuda">PDF, JPG o PNG. Hasta 5 archivos y 10 MB en total. ${isRevision && !quoteOnly ? 'Si ya tienes el contrato a la vista, adjúntalo aquí: viaja con la solicitud y Carla lo lee desde el primer momento.' : 'Solo los utiliza Carla para preparar tu presupuesto.'}</span>
+    <span class="campo-ayuda" id="f-docs-ayuda">PDF, JPG o PNG. Hasta 5 archivos${isRevision ? ' y 10 MB en total' : ', 5 MB por archivo y 10 MB en total'}. ${isRevision && !quoteOnly ? 'Si ya tienes el contrato a la vista, adjúntalo aquí: viaja con la solicitud y Carla lo lee desde el primer momento.' : 'Solo los utiliza Carla para preparar tu presupuesto.'}</span>
     <input id="f-docs" name="adjuntos" type="file" multiple accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" aria-describedby="f-docs-ayuda"></p>`;
   const submitJsRevision = `
 (function(){
@@ -628,6 +647,9 @@ function renderIntake(site, { customQuote = false, territoryQuote = false } = {}
   const submitJsBurofax = `
 (function(){
   var f=document.getElementById('intake'),estado=document.getElementById('intake-estado'),btn=document.getElementById('intake-btn');
+  var subjectIndex={'impago-alquiler':'Impago de alquiler'};
+  var selected=new URLSearchParams(location.search).get('asunto');
+  if(Object.prototype.hasOwnProperty.call(subjectIndex,selected)) f.asunto.value=subjectIndex[selected];
   f.addEventListener('submit',function(ev){
     ev.preventDefault();
     if(!f.checkValidity()){estado.textContent='Revisa los campos marcados: faltan datos obligatorios o el texto es muy corto.';f.reportValidity();return;}
@@ -906,6 +928,11 @@ for (const site of sites) {
   put('index.html', renderHome(site));
   if (hasPricingPage) put('precios/index.html', renderPrecios(site));
   put('cuenta-tu-caso/index.html', renderIntake(site));
+  if (site.id === 'burofaxlegal') {
+    for (const [slug, campaign] of Object.entries(site.campaigns || {})) {
+      put(`campanas/${slug}/index.html`, renderCampaign(site, slug, campaign));
+    }
+  }
   if (site.id === 'revisioncontratos') {
     put('solicitar-contrato/index.html', renderIntake(site, { customQuote: true }));
     urls.push({ path: '/solicitar-contrato/', priority: '0.9' });

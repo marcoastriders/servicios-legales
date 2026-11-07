@@ -1538,5 +1538,104 @@
       "reviewedAt": "2026-10-02",
       "publishedAt": "2026-10-02"
     }
-  ]
+  ],
+  "campaigns": {
+    "impago-alquiler": {
+      "reviewStatus": "pending",
+      "title": "¿Tu inquilino no paga? Revisa cómo reclamar | BurofaxLegal",
+      "description": "Revisa el contrato, las rentas pendientes y las comunicaciones para preparar un requerimiento de pago. Recibe presupuesto antes de contratar.",
+      "h1": "¿Tu inquilino no paga el alquiler? Prepara la reclamación con una abogada",
+      "intro": "Antes de enviar un requerimiento, conviene comprobar qué debes reclamar y cómo dejar constancia. Carla revisa tu contrato, las cantidades pendientes y las comunicaciones que ya hayas enviado.",
+      "draftBanner": "Borrador de campaña · pendiente de revisión jurídica",
+      "ctaText": "Enviar mi caso para recibir presupuesto",
+      "ctaHref": "/cuenta-tu-caso/?asunto=impago-alquiler",
+      "price": "Desde 99 € IVA incluido, según la complejidad. El envío de Correos y sus servicios adicionales se pagan aparte.",
+      "sections": [
+        {
+          "h2": "Primero, revisar qué se reclama",
+          "html": "<p>Incluye el estudio del contrato y de la documentación que aportes, el cálculo de las rentas pendientes y la revisión de otros conceptos que puedan reclamarse. La abogada redacta el requerimiento, concreta la cantidad exigida, indica cómo pagar y fija un plazo adecuado al caso.</p><p>También incluye la explicación del texto y las indicaciones para contratar un burofax con certificación del contenido y prueba de entrega, como el acuse de recibo o la certificación de entrega. Debes conservar el escrito y los justificantes del envío.</p><p>La presentación de una demanda, la tramitación del desahucio y la negociación posterior con el inquilino requieren un encargo separado. El precio de Correos corresponde al envío y a los servicios adicionales contratados.</p>"
+        },
+        {
+          "h2": "Qué aporta el burofax y qué no garantiza",
+          "html": "<p>El requerimiento reclama la deuda y deja constancia de la comunicación. No garantiza que el inquilino pague ni recupera por sí solo la vivienda.</p><p>La enervación permite, cuando procede, finalizar el desahucio mediante el pago íntegro de lo reclamado y de lo adeudado hasta ese momento. El artículo 22.4 LEC la excluye si existe un requerimiento fehaciente con al menos 30 días de antelación a la demanda y la deuda no se ha pagado al presentarla. También limita su repetición, con la excepción legal por causas imputables al arrendador.</p><p>En arrendamientos de vivienda, el artículo 22.6 LEC contiene además una excepción vinculada a la suspensión del procedimiento prevista en el artículo 441.5 y a la persistencia del impago. El envío, por sí solo, no garantiza ningún efecto: la abogada debe revisar el contenido, la comunicación al destinatario, las fechas y las circunstancias procesales antes de valorar una demanda.</p>"
+        },
+        {
+          "h2": "Requerimiento de pago y negociación previa",
+          "html": "<p>Con carácter general, una demanda civil de desahucio por impago exige intentar previamente un medio adecuado de solución de controversias (MASC). Una simple exigencia de pago no acredita por sí sola una negociación. Debe existir una auténtica invitación a negociar o propuesta, sobre el mismo objeto del futuro litigio, y documentarse el intento conforme a los artículos 2, 5 y 10 de la Ley Orgánica 1/2025.</p><p>La negociación y su documentación están sujetas a la confidencialidad del artículo 9, con las excepciones legales. Recomendamos documentar separadamente el requerimiento de pago y la actuación MASC. Si necesitas esta última, debe concretarse en el encargo.</p><p>El artículo 264.4.º LEC exige aportar la acreditación del intento cuando sea obligatorio, o la declaración responsable prevista para el desconocimiento del domicilio o medio de requerimiento.</p>"
+        },
+        {
+          "h2": "Qué documentos conviene enviar",
+          "html": "<p>Necesitamos el contrato y sus modificaciones, los datos del arrendador y del arrendatario, la dirección de la vivienda y un domicilio para el requerimiento. Aporta una relación de mensualidades impagadas, justificantes de cobros y gastos, comunicaciones anteriores y los datos de la cuenta en la que solicitas el pago.</p><p>Indica si hubo un desahucio anterior, si ya has enviado requerimientos o si existe un procedimiento judicial abierto. Esa información permite valorar el alcance del nuevo escrito.</p><p>Si el contrato ya termina y faltan las llaves, revisa el <a href=\"/burofax-entrega-de-llaves/\">burofax de requerimiento de entrega de llaves</a>. Para comunicar el fin del alquiler, consulta el <a href=\"/burofax-no-renovacion-alquiler/\">burofax de no renovación</a>.</p>"
+        },
+        {
+          "h2": "Recibe presupuesto antes de contratar",
+          "html": "<ol><li>Envía tu caso y los documentos que tengas.</li><li>Carla valora la documentación y te indica el alcance y el presupuesto que corresponden.</li><li>Si aceptas, abonas el servicio y se prepara el requerimiento con las indicaciones para el envío fehaciente.</li></ol>"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Sirve para cualquier tipo de alquiler?",
+          "a": "<p>Este servicio se centra en vivienda sujeta a la LAU. Para locales y otros arrendamientos de uso distinto debe revisarse el régimen aplicable. La falta de pago también es causa de resolución en esos arrendamientos por la remisión del artículo 35 al artículo 27.2.a) LAU.</p>"
+        },
+        {
+          "q": "¿Cuándo debe pagar el inquilino la renta?",
+          "a": "<p>En vivienda, el artículo 17.2 LAU establece una periodicidad mensual y el pago durante los primeros siete días de cada mes si las partes no han acordado otra cosa. Debe comprobarse lo pactado en tu contrato.</p>"
+        },
+        {
+          "q": "¿Debo darle 30 días para pagar en el burofax?",
+          "a": "<p>El artículo 22.4 LEC no impone un plazo de pago de 30 días en el escrito: exige esa antelación entre el requerimiento fehaciente y la demanda para excluir la enervación. El plazo concedido y la fecha para demandar se valoran por separado.</p>"
+        },
+        {
+          "q": "¿Qué ocurre si el inquilino no responde a la invitación MASC?",
+          "a": "<p>No es necesario alcanzar un acuerdo. El artículo 10.4.a) contempla la terminación sin acuerdo tras 30 días naturales desde la recepción de la invitación inicial en los supuestos allí previstos. El artículo 7.3 limita a un año la eficacia del intento para este requisito.</p>"
+        },
+        {
+          "q": "¿Puedo reclamar gastos e intereses?",
+          "a": "<p>Solo deben incorporarse conceptos exigibles y acreditados. El contrato y la normativa aplicable determinan qué gastos corresponden al arrendatario; una cláusula no basta si infringe una norma imperativa. Los intereses por mora se revisan conforme a los artículos 1100 y 1108 del Código Civil: pueden proceder los válidamente pactados o, en su defecto, el interés legal.</p>"
+        },
+        {
+          "q": "¿Y si el inquilino ya recibió un requerimiento judicial?",
+          "a": "<p>El artículo 438.5 LEC regula el requerimiento judicial de diez días para desalojar, pagar, enervar cuando proceda o formular oposición. Un nuevo burofax no convierte esa comunicación en un requerimiento previo a una demanda ya presentada. Deben revisarse las actuaciones judiciales.</p>"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ley 29/1994, de Arrendamientos Urbanos",
+          "precept": "Arts. 17.2, 27.2.a) y 35: pago de la renta y resolución por impago",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a17",
+          "checkedAt": "2026-10-02"
+        },
+        {
+          "label": "Ley 1/2000, de Enjuiciamiento Civil",
+          "precept": "Arts. 22.4, 22.6, 438.5 y 441.5: enervación, excepciones, requerimiento previo y requerimiento judicial",
+          "url": "https://www.boe.es/eli/es/l/2000/01/07/1/con#a22",
+          "checkedAt": "2026-10-02"
+        },
+        {
+          "label": "Ley Orgánica 1/2025, de 2 de enero",
+          "precept": "Arts. 2, 5, 7.3, 9 y 10: negociación previa, confidencialidad y acreditación. El régimen MASC entró en vigor el 3 de abril de 2025. Esta ley no modificó el artículo 22.4 LEC.",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76#a5",
+          "checkedAt": "2026-10-02"
+        },
+        {
+          "label": "Ley 1/2000, de Enjuiciamiento Civil",
+          "precept": "Art. 264.4.º: acreditación de la negociación previa cuando sea exigible",
+          "url": "https://www.boe.es/eli/es/l/2000/01/07/1/con#a264",
+          "checkedAt": "2026-10-02"
+        },
+        {
+          "label": "Código Civil",
+          "precept": "Arts. 1100 y 1108: mora e intereses",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#art1100",
+          "checkedAt": "2026-10-02"
+        },
+        {
+          "label": "Correos",
+          "precept": "Burofax: certificación de contenido, prueba de entrega y servicios adicionales",
+          "url": "https://www.correos.es/es/es/particulares/enviar/envios-nacionales/burofax-cartas/burofax",
+          "checkedAt": "2026-10-02"
+        }
+      ]
+    }
+  }
 }

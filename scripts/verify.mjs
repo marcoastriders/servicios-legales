@@ -190,7 +190,10 @@ for (const [domain, content] of Object.entries(siteContents)) {
     for (const [, file] of domainFiles) {
       const html = readFileSync(file, 'utf8');
       const rel = file.replace(dist, '');
-      if (!html.includes('<meta name="robots" content="index,follow">')) fail(`${rel}: web abierta sin index,follow`);
+      const campaign = Object.entries(content.campaigns || {}).find(([slug]) => file === join(dist, domain, 'campanas', slug, 'index.html'));
+      if (campaign) {
+        if (!html.includes('<meta name="robots" content="noindex,follow">')) fail(`${rel}: campaña sin noindex`);
+      } else if (!html.includes('<meta name="robots" content="index,follow">')) fail(`${rel}: web abierta sin index,follow`);
       if (html.includes('Sitio en preparación.') || html.includes('Apertura próxima')) fail(`${rel}: conserva aviso de prelaunch`);
       if (html.includes('<p class="respuesta-directa"><p>')) fail(`${rel}: párrafo anidado en respuesta directa`);
     }
@@ -354,6 +357,20 @@ for (const d of DOMAINS) {
   const n = (sm.match(/<loc>/g) || []).length;
   ok(`${d} sitemap: ${n} URLs`);
   if (n < 10) fail(`${d}: sitemap con menos de 10 URLs`);
+}
+
+// Campaigns are deliberately generated outside discovery feeds, even while public.
+for (const [slug, campaign] of Object.entries(JSON.parse(readFileSync(join(root, 'content/burofaxlegal.json'), 'utf8')).campaigns || {})) {
+  const path = `/campanas/${slug}/`;
+  const file = join(dist, 'burofaxlegal.es', path, 'index.html');
+  if (!existsSync(file)) { fail(`campaña ausente: ${path}`); continue; }
+  const html = readFileSync(file, 'utf8');
+  if (!html.includes(`href="https://burofaxlegal.es${path}"`)) fail(`${path}: canonical incorrecto`);
+  if (!html.includes(campaign.draftBanner) || campaign.reviewStatus !== 'pending') fail(`${path}: falta estado de revisión`);
+  if (!html.includes('"@type":"LegalService"')) fail(`${path}: falta LegalService`);
+  for (const feed of ['sitemap.xml', 'llms.txt']) {
+    if (readFileSync(join(dist, 'burofaxlegal.es', feed), 'utf8').includes(path)) fail(`${path}: campaña en ${feed}`);
+  }
 }
 
 // 10. fuentes externas vivas + anclas BOE

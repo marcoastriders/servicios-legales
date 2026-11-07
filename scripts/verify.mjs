@@ -368,6 +368,12 @@ for (const [slug, campaign] of Object.entries(JSON.parse(readFileSync(join(root,
   if (!html.includes(`href="https://burofaxlegal.es${path}"`)) fail(`${path}: canonical incorrecto`);
   if (!html.includes(campaign.draftBanner) || campaign.reviewStatus !== 'pending') fail(`${path}: falta estado de revisión`);
   if (!html.includes('"@type":"LegalService"')) fail(`${path}: falta LegalService`);
+  if ((html.match(/<h1/g) || []).length !== 1) fail(`${path}: debe tener exactamente un H1`);
+  if (!html.includes(campaign.readTime)) fail(`${path}: falta el tiempo de lectura`);
+  if ((html.match(/<strong>/g) || []).length < 8) fail(`${path}: faltan destacados para lectura por encima`);
+  if (!html.includes('class="bf-flow"') || !html.includes('<figcaption>')) fail(`${path}: falta el gráfico de proceso con pie`);
+  if (!html.includes('Qué no incluye')) fail(`${path}: falta la tabla incluye/no incluye`);
+  if (!html.includes('Ejemplo ficticio')) fail(`${path}: falta el ejemplo marcado como ficticio`);
   for (const feed of ['sitemap.xml', 'llms.txt']) {
     if (readFileSync(join(dist, 'burofaxlegal.es', feed), 'utf8').includes(path)) fail(`${path}: campaña en ${feed}`);
   }

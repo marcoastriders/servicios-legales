@@ -1542,36 +1542,103 @@
   "campaigns": {
     "impago-alquiler": {
       "reviewStatus": "pending",
-      "title": "¿Tu inquilino no paga? Revisa cómo reclamar | BurofaxLegal",
-      "description": "Revisa el contrato, las rentas pendientes y las comunicaciones para preparar un requerimiento de pago. Recibe presupuesto antes de contratar.",
-      "h1": "¿Tu inquilino no paga el alquiler? Prepara la reclamación con una abogada",
-      "intro": "Antes de enviar un requerimiento, conviene comprobar qué debes reclamar y cómo dejar constancia. Carla revisa tu contrato, las cantidades pendientes y las comunicaciones que ya hayas enviado.",
+      "title": "¿Tu inquilino no paga? Revisa esto antes de reclamar | BurofaxLegal",
+      "description": "Contrato, cantidades, avisos y documentos: los 5 puntos que conviene revisar antes de enviar un burofax por impago de alquiler. Desde 99 € IVA incluido.",
+      "h1": "¿Tu inquilino no paga el alquiler? Antes de reclamar, revisa estos 5 puntos",
+      "kicker": "Impago de alquiler · guía práctica",
+      "readTime": "Lectura: 8 min",
+      "intro": "Cuando faltan rentas, el primer impulso es enviar un burofax y esperar lo mejor. Antes conviene comprobar qué dice el contrato, qué cantidad reclamas de verdad y qué avisos ya has enviado. Estos son los cinco puntos que se revisan antes de redactar un requerimiento, con las normas enlazadas para que compruebes cada dato por ti mismo.",
+      "actionLabel": "Un primer paso claro",
+      "actionNote": "Envía tu caso y la documentación disponible. Carla revisará el alcance antes de proponerte un presupuesto cerrado.",
       "draftBanner": "Borrador de campaña · pendiente de revisión jurídica",
       "ctaText": "Enviar mi caso para recibir presupuesto",
       "ctaHref": "/cuenta-tu-caso/?asunto=impago-alquiler",
       "price": "Desde 99 € IVA incluido, según la complejidad. El envío de Correos y sus servicios adicionales se pagan aparte.",
+      "takeaways": {
+        "h2": "Qué te llevas leyendo esta guía",
+        "items": [
+          "Qué mirar en tu contrato y en tus cuentas antes de reclamar nada.",
+          "Qué consigue un burofax, qué no resuelve y en qué momento conviene.",
+          "La lista de documentos para recibir un presupuesto cerrado, sin sorpresas."
+        ]
+      },
+      "authority": {
+        "h2": "Qué respalda esta guía",
+        "html": "<p><strong>Cada afirmación jurídica enlaza su norma en el BOE</strong>, con la fecha de comprobación al final de la página: puedes abrirla y leerla. Detrás del servicio está Carla Morales, abogada civil y mercantil colegiada en el Ilustre Colegio de Abogados de Jerez, que revisa cada encargo antes de redactar. El estado de revisión de esta propia página está indicado arriba.</p>"
+      },
       "sections": [
         {
-          "h2": "Primero, revisar qué se reclama",
-          "html": "<p>Incluye el estudio del contrato y de la documentación que aportes, el cálculo de las rentas pendientes y la revisión de otros conceptos que puedan reclamarse. La abogada redacta el requerimiento, concreta la cantidad exigida, indica cómo pagar y fija un plazo adecuado al caso.</p><p>También incluye la explicación del texto y las indicaciones para contratar un burofax con certificación del contenido y prueba de entrega, como el acuse de recibo o la certificación de entrega. Debes conservar el escrito y los justificantes del envío.</p><p>La presentación de una demanda, la tramitación del desahucio y la negociación posterior con el inquilino requieren un encargo separado. El precio de Correos corresponde al envío y a los servicios adicionales contratados.</p>"
+          "h2": "1. El contrato: qué datos cambian tu reclamación",
+          "html": "<p>Antes de escribir nada, saca cuatro datos del contrato: renta pactada, día de pago, gastos a cargo del inquilino y fianza depositada. <strong>En vivienda, si el contrato no fija otro día, la renta se paga durante los primeros siete días de cada mes</strong> (artículo 17.2 de la Ley de Arrendamientos Urbanos). Apunta también las modificaciones firmadas: una prórroga, una reducción de renta o un aplazamiento cambian la cuenta.</p><p>Mira la cláusula de gastos, pero con cabeza: <strong>una cláusula no basta si contradice una norma imperativa</strong>. Si algo no se ajusta a la ley, es mejor corregirlo antes de reclamarlo, no después.</p>"
         },
         {
-          "h2": "Qué aporta el burofax y qué no garantiza",
-          "html": "<p>El requerimiento reclama la deuda y deja constancia de la comunicación. No garantiza que el inquilino pague ni recupera por sí solo la vivienda.</p><p>La enervación permite, cuando procede, finalizar el desahucio mediante el pago íntegro de lo reclamado y de lo adeudado hasta ese momento. El artículo 22.4 LEC la excluye si existe un requerimiento fehaciente con al menos 30 días de antelación a la demanda y la deuda no se ha pagado al presentarla. También limita su repetición, con la excepción legal por causas imputables al arrendador.</p><p>En arrendamientos de vivienda, el artículo 22.6 LEC contiene además una excepción vinculada a la suspensión del procedimiento prevista en el artículo 441.5 y a la persistencia del impago. El envío, por sí solo, no garantiza ningún efecto: la abogada debe revisar el contenido, la comunicación al destinatario, las fechas y las circunstancias procesales antes de valorar una demanda.</p>"
+          "h2": "2. Las cantidades: qué reclamas y cómo lo acreditas",
+          "html": "<p>Haz una lista mes a mes: fecha, importe y si se pagó o no. Suma rentas, gastos que el contrato cargue al inquilino e intereses de mora cuando procedan. <strong>Sólo se reclaman conceptos exigibles y acreditados</strong>: los intereses válidamente pactados o, en su defecto, el interés legal se revisan con los artículos 1100 y 1108 del Código Civil.</p><p>Lo que no puedas demostrar con recibos o transferencias, déjalo fuera de la cifra. Una lista con fechas convence más que una suma redonda y evita discutir los importes más adelante.</p>"
         },
         {
-          "h2": "Requerimiento de pago y negociación previa",
-          "html": "<p>Con carácter general, una demanda civil de desahucio por impago exige intentar previamente un medio adecuado de solución de controversias (MASC). Una simple exigencia de pago no acredita por sí sola una negociación. Debe existir una auténtica invitación a negociar o propuesta, sobre el mismo objeto del futuro litigio, y documentarse el intento conforme a los artículos 2, 5 y 10 de la Ley Orgánica 1/2025.</p><p>La negociación y su documentación están sujetas a la confidencialidad del artículo 9, con las excepciones legales. Recomendamos documentar separadamente el requerimiento de pago y la actuación MASC. Si necesitas esta última, debe concretarse en el encargo.</p><p>El artículo 264.4.º LEC exige aportar la acreditación del intento cuando sea obligatorio, o la declaración responsable prevista para el desconocimiento del domicilio o medio de requerimiento.</p>"
+          "h2": "3. Tus avisos previos: qué contar y qué separar",
+          "html": "<p>Reúne lo que ya enviaste por escrito: emails, mensajes, cartas o un primer burofax. Las llamadas te sirven a ti, pero no dejan prueba de lo que se dijo. <mark>Una exigencia de pago no acredita por sí sola una negociación</mark>: si tu caso exige un intento previo de solución de controversias, ese trámite tiene requisitos propios, se documenta aparte y su contenido queda sujeto a confidencialidad con las excepciones legales.</p><p>Cuando sea exigible, <strong>el artículo 264.4 de la Ley de Enjuiciamiento Civil obliga a aportar la acreditación de ese intento</strong>. Deja preparadas las dos cosas por separado: el requerimiento de pago y la invitación a negociar.</p>"
         },
         {
-          "h2": "Qué documentos conviene enviar",
-          "html": "<p>Necesitamos el contrato y sus modificaciones, los datos del arrendador y del arrendatario, la dirección de la vivienda y un domicilio para el requerimiento. Aporta una relación de mensualidades impagadas, justificantes de cobros y gastos, comunicaciones anteriores y los datos de la cuenta en la que solicitas el pago.</p><p>Indica si hubo un desahucio anterior, si ya has enviado requerimientos o si existe un procedimiento judicial abierto. Esa información permite valorar el alcance del nuevo escrito.</p><p>Si el contrato ya termina y faltan las llaves, revisa el <a href=\"/burofax-entrega-de-llaves/\">burofax de requerimiento de entrega de llaves</a>. Para comunicar el fin del alquiler, consulta el <a href=\"/burofax-no-renovacion-alquiler/\">burofax de no renovación</a>.</p>"
+          "h2": "4. Qué consigue un burofax y qué no",
+          "html": "<p>Un burofax deja constancia fehaciente del texto, de la fecha y, si contratas las opciones adecuadas, del resultado de la entrega. <mark>No garantiza que el inquilino pague ni recupera por sí solo la vivienda.</mark> Sirve para probar que reclamaste, cuándo lo hiciste y qué dijiste.</p><p>Por eso la redacción se cuida. La enervación permite, cuando procede, cerrar el desahucio mediante el pago íntegro de lo reclamado y de lo adeudado hasta ese momento, y <strong>el artículo 22.4 de la Ley de Enjuiciamiento Civil la excluye si hubo requerimiento fehaciente al menos 30 días antes de demandar y la deuda seguía impagada al presentar la demanda</strong>, con los demás requisitos legales. El artículo 22.6 añade otra excepción en vivienda, vinculada a la suspensión del procedimiento del artículo 441.5. El envío, por sí solo, no decide nada: fechas y circunstancias se revisan antes de valorar una demanda.</p>"
         },
         {
-          "h2": "Recibe presupuesto antes de contratar",
-          "html": "<ol><li>Envía tu caso y los documentos que tengas.</li><li>Carla valora la documentación y te indica el alcance y el presupuesto que corresponden.</li><li>Si aceptas, abonas el servicio y se prepara el requerimiento con las indicaciones para el envío fehaciente.</li></ol>"
+          "h2": "5. Los documentos para recibir un presupuesto cerrado",
+          "html": "<p>Esto es lo que conviene tener a mano antes de pedir presupuesto:</p><ul class=\"bf-doccheck\" role=\"list\"><li><label><input type=\"checkbox\"> Contrato y cualquier modificación firmada</label></li><li><label><input type=\"checkbox\"> Relación de rentas impagadas con sus fechas</label></li><li><label><input type=\"checkbox\"> Justificantes de cobros, gastos e intereses</label></li><li><label><input type=\"checkbox\"> Comunicaciones previas con el inquilino</label></li><li><label><input type=\"checkbox\"> Datos de las partes, dirección de la vivienda y un domicilio para el requerimiento</label></li><li><label><input type=\"checkbox\"> Cuenta en la que se pide el pago</label></li><li><label><input type=\"checkbox\"> Indicación de si hay un procedimiento abierto o burofaxes anteriores</label></li></ul><p>Si el contrato ya terminó y faltan las llaves, mira el <a href=\"/burofax-entrega-de-llaves/\">burofax de entrega de llaves</a>; para comunicar el fin del alquiler, el <a href=\"/burofax-no-renovacion-alquiler/\">burofax de no renovación</a>.</p>"
         }
       ],
+      "flow": {
+        "h2": "Cómo funciona, paso a paso",
+        "caption": "El recorrido completo, desde que envías tu caso hasta que decides enviar el burofax.",
+        "steps": [
+          {
+            "t": "Envías tu caso",
+            "d": "Contrato, cantidades pendientes y mensajes, por el canal que prefieras."
+          },
+          {
+            "t": "Se valora el alcance",
+            "d": "Carla revisa los documentos y confirma si el burofax encaja en tu situación."
+          },
+          {
+            "t": "Recibes presupuesto cerrado",
+            "d": "Importe, qué incluye y qué queda fuera, por escrito y sin compromiso."
+          },
+          {
+            "t": "Redacción y envío",
+            "d": "Si aceptas, se redacta y revisa el texto. Tú lo envías por Correos y conservas los justificantes."
+          }
+        ]
+      },
+      "scope": {
+        "caption": "Qué incluye el servicio de redacción y qué queda fuera",
+        "head": [
+          "Qué incluye",
+          "Qué no incluye"
+        ],
+        "rows": [
+          [
+            "Estudio del contrato y de la documentación que aportes",
+            "El envío postal: se contrata aparte con Correos"
+          ],
+          [
+            "Cálculo de rentas, gastos e intereses exigibles",
+            "Que el inquilino llegue a pagar"
+          ],
+          [
+            "Redacción y revisión del requerimiento por abogada",
+            "La negociación posterior o el desahucio"
+          ],
+          [
+            "Explicación del texto e indicaciones para enviarlo con certificación",
+            "La defensa en juicio si la reclamación sigue adelante"
+          ]
+        ]
+      },
+      "example": {
+        "h2": "Ejemplo de un caso bien preparado",
+        "html": "<p><strong>Ejemplo ficticio.</strong> Elena alquila un piso por 780 € al mes; el inquilino dejó de pagar enero y febrero y no contesta a los mensajes de marzo. Antes de reclamar reúne el contrato, los dos recibos impagados, el justificante de la fianza y las conversaciones con el inquilino. Con esos datos se calcula la deuda, se redacta el requerimiento y se eligen las opciones de envío con certificación. El presupuesto llega cerrado por escrito; quien decide si seguir es Elena.</p>"
+      },
       "faqs": [
         {
           "q": "¿Sirve para cualquier tipo de alquiler?",

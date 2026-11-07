@@ -231,7 +231,7 @@ const blockTable = (caption, head, rows) => `
   <table>
     <caption>${esc(caption)}</caption>
     <thead><tr>${head.map((h) => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead>
-    <tbody>${rows.map((r) => `<tr>${r.map((c) => `<td>${c}</td>`).join('')}</tr>`).join('\n')}</tbody>
+    <tbody>${rows.map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('\n')}</tbody>
   </table>
 </figure>`;
 
@@ -260,6 +260,15 @@ const blockSources = (sources) => {
 };
 
 const sections = (list) => list.map((s) => `<section><h2>${esc(s.h2)}</h2>\n${s.html}</section>`).join('\n');
+
+const flowFigure = (flow) => `
+<figure class="bf-flow">
+  <h2>${esc(flow.h2)}</h2>
+  <ol class="bf-flow-steps" role="list">
+${flow.steps.map((s, i) => `    <li><span class="bf-flow-num" aria-hidden="true">${i + 1}</span><strong>${esc(s.t)}</strong><span class="bf-flow-desc">${esc(s.d)}</span></li>`).join('\n')}
+  </ol>
+  <figcaption>${esc(flow.caption)}</figcaption>
+</figure>`;
 
 // ---------- páginas ----------
 function renderHome(site) {
@@ -538,9 +547,32 @@ function renderCampaign(site, slug, campaign) {
   const cta = (secondary = false) => `<a class="${secondary ? 'boton-sec' : 'boton'}" href="${esc(campaign.ctaHref)}">${esc(campaign.ctaText)}</a>`;
   const body = `<article class="bf-campaign">
 <p class="bf-campaign-draft">${esc(campaign.draftBanner)}</p>
-<header class="bf-campaign-hero"><h1>${esc(campaign.h1)}</h1>${blockAnswer(esc(campaign.intro))}${cta()}</header>
+<header class="bf-campaign-hero">
+  <div class="bf-campaign-hero-copy">
+    <p class="bf-campaign-kicker">${esc(campaign.kicker)} · ${esc(campaign.readTime)}</p>
+    <h1>${esc(campaign.h1)}</h1>
+    ${blockAnswer(esc(campaign.intro))}
+  </div>
+  <aside class="bf-campaign-hero-action" aria-label="Solicitar presupuesto">
+    <p class="bf-campaign-action-label">${esc(campaign.actionLabel)}</p>
+    <p class="bf-campaign-price">${esc(campaign.price)}</p>
+    ${cta()}
+    <p class="bf-campaign-action-note">${esc(campaign.actionNote)}</p>
+  </aside>
+</header>
+<section class="bf-campaign-takeaways">
+  <h2>${esc(campaign.takeaways.h2)}</h2>
+  <ul role="list">${campaign.takeaways.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>
+</section>
+<section class="bf-campaign-authority">
+  <h2>${esc(campaign.authority.h2)}</h2>
+  ${campaign.authority.html}
+</section>
 ${sections(campaign.sections)}
-<p class="bf-campaign-price">${esc(campaign.price)}</p>
+${flowFigure(campaign.flow)}
+${blockTable(campaign.scope.caption, campaign.scope.head, campaign.scope.rows)}
+<section class="bf-campaign-example"><h2>${esc(campaign.example.h2)}</h2>
+${campaign.example.html}</section>
 ${cta(true)}
 ${blockFaq(campaign.faqs)}
 ${blockSources(campaign.sources)}

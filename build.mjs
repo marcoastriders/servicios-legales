@@ -544,7 +544,7 @@ ${blockCta(site)}`;
 
 function renderCampaign(site, slug, campaign) {
   const path = `/campanas/${slug}/`;
-  const cta = (secondary = false) => `<a class="${secondary ? 'boton-sec' : 'boton'}" href="${esc(campaign.ctaHref)}">${esc(campaign.ctaText)}</a>`;
+  const cta = () => `<a class="boton" href="${esc(campaign.ctaHref)}">${esc(campaign.ctaText)}</a>`;
   const body = `<article class="bf-campaign">
 <p class="bf-campaign-draft">${esc(campaign.draftBanner)}</p>
 <header class="bf-campaign-hero">
@@ -553,12 +553,6 @@ function renderCampaign(site, slug, campaign) {
     <h1>${esc(campaign.h1)}</h1>
     ${blockAnswer(esc(campaign.intro))}
   </div>
-  <aside class="bf-campaign-hero-action" aria-label="Solicitar presupuesto">
-    <p class="bf-campaign-action-label">${esc(campaign.actionLabel)}</p>
-    <p class="bf-campaign-price">${esc(campaign.price)}</p>
-    ${cta()}
-    <p class="bf-campaign-action-note">${esc(campaign.actionNote)}</p>
-  </aside>
 </header>
 <section class="bf-campaign-takeaways">
   <h2>${esc(campaign.takeaways.h2)}</h2>
@@ -573,10 +567,14 @@ ${flowFigure(campaign.flow)}
 ${blockTable(campaign.scope.caption, campaign.scope.head, campaign.scope.rows)}
 <section class="bf-campaign-example"><h2>${esc(campaign.example.h2)}</h2>
 ${campaign.example.html}</section>
-${cta(true)}
 ${blockFaq(campaign.faqs)}
 ${blockSources(campaign.sources)}
 ${blockTrustCarla(site)}
+<section class="bf-campaign-cta" aria-label="Siguiente paso">
+  <p class="bf-campaign-cta-price"><strong>${esc(campaign.price)}</strong></p>
+  <p>${esc(campaign.actionNote)}</p>
+  ${cta()}
+</section>
 </article>`;
   return layout(site, { crumbs: [{ name: 'Inicio', path: '/' }, { name: campaign.h1, path }] }, {
     title: campaign.title, description: campaign.description, path, body,

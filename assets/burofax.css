@@ -3,17 +3,12 @@
 .site-burofaxlegal.page-campaign #analytics-consent[hidden] { display: none; }
 .site-burofaxlegal .bf-campaign { max-width: 72rem; margin-inline: auto; overflow-wrap: anywhere; }
 .site-burofaxlegal .bf-campaign .bf-campaign-draft { padding: .8rem 1rem; border: 1px solid var(--bf-copper-text); color: var(--bf-ink); font-weight: 600; }
-.site-burofaxlegal .bf-campaign .bf-campaign-hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(18rem, .75fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; padding: clamp(3rem, 7vw, 6rem) clamp(1.5rem, 5vw, 4rem); margin-inline: calc(-1 * clamp(1.5rem, 5vw, 4rem)); background: var(--bf-ink); color: var(--bf-parch); border-bottom: 0; }
+.site-burofaxlegal .bf-campaign .bf-campaign-hero { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; align-items: center; padding: clamp(3rem, 7vw, 6rem) clamp(1.5rem, 5vw, 4rem); margin-inline: calc(-1 * clamp(1.5rem, 5vw, 4rem)); background: var(--bf-ink); color: var(--bf-parch); border-bottom: 0; }
 .site-burofaxlegal .bf-campaign .bf-campaign-hero-copy { min-width: 0; }
 .site-burofaxlegal .bf-campaign .bf-campaign-kicker,
 .site-burofaxlegal .bf-campaign .bf-campaign-action-label { margin: 0 0 1rem; font-size: .78rem; line-height: 1.4; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--bf-copper-light); }
 .site-burofaxlegal .bf-campaign .bf-campaign-hero h1 { max-width: 16ch; margin: 0 0 1.5rem; font-size: clamp(2.4rem, 5vw, 5rem); line-height: 1.04; color: var(--bf-parch); }
 .site-burofaxlegal .bf-campaign .bf-campaign-hero .respuesta-directa { max-width: 60ch; margin: 0; color: var(--bf-parch-dim); }
-.site-burofaxlegal .bf-campaign .bf-campaign-hero-action { padding: clamp(1.5rem, 4vw, 2.5rem); background: var(--bf-parch); color: var(--bf-ink); border-top: 4px solid var(--bf-copper); }
-.site-burofaxlegal .bf-campaign .bf-campaign-hero-action .bf-campaign-action-label { color: var(--bf-copper-text); }
-.site-burofaxlegal .bf-campaign .bf-campaign-hero-action .bf-campaign-price { margin: 0 0 1.5rem; padding: 0; border: 0; font-size: 1.15rem; line-height: 1.5; font-weight: 600; }
-.site-burofaxlegal .bf-campaign .bf-campaign-hero-action .boton { display: flex; width: 100%; box-sizing: border-box; justify-content: center; }
-.site-burofaxlegal .bf-campaign .bf-campaign-action-note { margin: 1rem 0 0; font-size: .9rem; line-height: 1.55; color: var(--tinta-suave); }
 .site-burofaxlegal .bf-campaign section { margin-block: 2.5rem; }
 /* DESIGN.md: la prosa nunca supera la medida de lectura; solo las figuras se
    permiten más anchas, y siempre alineadas al mismo filo izquierdo. */
@@ -49,21 +44,21 @@
 .site-burofaxlegal .bf-campaign .bf-campaign-example { margin-block: clamp(2.5rem, 5vw, 3.5rem); padding: clamp(1.5rem, 4vw, 2.5rem); background: var(--bf-ink); color: var(--bf-parch); border-top: 4px solid var(--bf-copper); }
 .site-burofaxlegal .bf-campaign .bf-campaign-example h2 { margin-top: 0; color: var(--bf-parch); font-size: clamp(1.5rem, 2.6vw, 2.1rem); }
 .site-burofaxlegal .bf-campaign .bf-campaign-example p { margin-bottom: 0; max-width: 65ch; }
+.site-burofaxlegal .bf-campaign .bf-campaign-cta { max-width: var(--bf-reading); margin: clamp(3rem, 8vw, 6rem) auto 0; padding: clamp(1.5rem, 4vw, 2.5rem) 0 0; border-top: 1px solid var(--linea); }
+.site-burofaxlegal .bf-campaign .bf-campaign-cta p { margin-block: .6rem; }
+.site-burofaxlegal .bf-campaign .bf-campaign-cta-price { font-size: 1.2rem; }
+.site-burofaxlegal .bf-campaign .bf-campaign-cta .boton { display: inline-flex; margin-top: .75rem; }
 @media (max-width: 48rem) {
  .site-burofaxlegal .bf-campaign .bf-flow-steps { grid-template-columns: 1fr; gap: 1.25rem; }
  .site-burofaxlegal .bf-campaign .bf-flow-steps li { padding-top: 0; padding-left: 2.9rem; }
  .site-burofaxlegal .bf-campaign .bf-flow-steps li:not(:last-child)::after { top: 2.15rem; bottom: -1.1rem; left: .95rem; right: auto; width: 2px; height: auto; }
  .site-burofaxlegal .bf-campaign .bf-flow-num { top: .1rem; }
 }
-@media (max-width: 60rem) {
- .site-burofaxlegal .bf-campaign .bf-campaign-hero { grid-template-columns: 1fr; gap: 2rem; }
- .site-burofaxlegal .bf-campaign .bf-campaign-hero h1 { max-width: 19ch; }
-}
+
 @media (max-width: 30rem) {
  .site-burofaxlegal .bf-campaign .bf-campaign-hero { padding-inline: 1.25rem; margin-inline: -1.25rem; }
  .site-burofaxlegal .bf-campaign .bf-campaign-hero h1 { font-size: clamp(1.9rem, 8vw, 2.4rem); }
- .site-burofaxlegal .bf-campaign .boton,
- .site-burofaxlegal .bf-campaign .boton-sec { display: block; width: 100%; box-sizing: border-box; }
+ .site-burofaxlegal .bf-campaign .bf-campaign-cta .boton { display: flex; width: 100%; box-sizing: border-box; }
 }
 
 @font-face { font-family: 'BF Bodoni'; src: url('/assets/fonts/bf-bodoni.ttf') format('truetype'); font-weight: 400; font-display: swap; }
